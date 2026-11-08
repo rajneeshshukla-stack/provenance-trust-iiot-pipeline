@@ -1,0 +1,16 @@
+name: deploy
+services:
+  pbti:
+    networks:
+      default: null
+    volumes:
+      - type: bind
+        source: /home/claude/PBTI_v3/02_work/policy_container/build/pbti-iiot/results
+        target: /opt/pbti/results
+        bind: {}
+    build:
+      context: /home/claude/PBTI_v3/02_work/policy_container/build/pbti-iiot
+      dockerfile: deploy/Dockerfile
+networks:
+  default:
+    name: deploy_default

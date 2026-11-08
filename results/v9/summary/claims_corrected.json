@@ -1,0 +1,311 @@
+{
+ "tree": "/home/claude/PBTI_v9/corrected_tree",
+ "claims": {
+  "A1_O1_equal_every_seed": {
+   "statement": "review-schedule evaluation: B5 retained exactly as many forged observations as PBTI in every seed of every workload under every schedule (Section 6.1, 6.3)",
+   "holds": true,
+   "detail": {
+    "violations": []
+   }
+  },
+  "A1_matched_event_all_equiv": {
+   "statement": "B5ev vs PBTI-Rev: every primary outcome identical or equivalent within the margins in the four workloads (abstract, Sections 6.1, 6.3, 10)",
+   "holds": true,
+   "detail": {
+    "n": 20,
+    "not_identical_or_equivalent": []
+   }
+  },
+  "A1_only_event_all_equiv": {
+   "statement": "only with event-driven review was every primary outcome identical or equivalent in all four workloads (Section 6.3)",
+   "holds": true,
+   "detail": {
+    "schedules_all_equivalent": [
+     "B5-event"
+    ]
+   }
+  },
+  "A1_worse_cells_slow_schedules": {
+   "statement": "B5 withheld more than PBTI-R beyond the margin, and made fewer observations available within 5 s, only with R >= 5 s or the 10 s cadence (Section 6.3)",
+   "holds": true,
+   "detail": {
+    "W_worse": 13,
+    "AV5_worse": 20,
+    "offending": []
+   }
+  },
+  "A1_d0c1_mixed_NLX_unresolved": {
+   "statement": "B5 minus PBTI-R exposure at R = 0, C = 1 s (mixed): significant, interval crosses the -60 record-second boundary (Section 6.3)",
+   "holds": true,
+   "detail": {
+    "class": "different, within margin",
+    "mean_d": -72.49654999999994,
+    "ci95": [
+     -89.57061999999996,
+     -56.08852499999986
+    ],
+    "p_holm": 0.0001602172851562
+   }
+  },
+  "A1_H1d_fast_review_raises_exposure": {
+   "statement": "every schedule with R <= 5 s, and event-driven review, raised B5's mixed-workload exposure relative to the one-shot schedule beyond the margin (Section 6.3)",
+   "holds": true,
+   "detail": {
+    "worse": [
+     "B5-d0c1",
+     "B5-d0c10",
+     "B5-d1c1",
+     "B5-d1c10",
+     "B5-d5c1",
+     "B5-d5c10",
+     "B5-event"
+    ],
+    "expected": [
+     "B5-d0c1",
+     "B5-d0c10",
+     "B5-d1c1",
+     "B5-d1c10",
+     "B5-d5c1",
+     "B5-d5c10",
+     "B5-event"
+    ]
+   }
+  },
+  "A1_H1a_pattern": {
+   "statement": "one-shot B5 vs PBTI: identical O1 in all four workloads, W worse beyond the margin in E5, E8 and the mixed workload, exposure better beyond the margin in the mixed workload (Section 6.3)",
+   "holds": true,
+   "detail": {
+    "S05_stolen_key/O1": "identical",
+    "S08_seq_reuse_bug/O1": "identical",
+    "S12_beyond_horizon/O1": "identical",
+    "S99_mixed/O1": "identical",
+    "S05_stolen_key/O2": "identical",
+    "S08_seq_reuse_bug/O2": "identical",
+    "S12_beyond_horizon/O2": "better beyond margin",
+    "S99_mixed/O2": "equivalent within margin (significant difference)",
+    "S05_stolen_key/NLX": "equivalent within margin (significant difference)",
+    "S08_seq_reuse_bug/NLX": "identical",
+    "S12_beyond_horizon/NLX": "identical",
+    "S99_mixed/NLX": "better beyond margin",
+    "S05_stolen_key/W": "worse beyond margin",
+    "S08_seq_reuse_bug/W": "worse beyond margin",
+    "S12_beyond_horizon/W": "better beyond margin",
+    "S99_mixed/W": "worse beyond margin",
+    "S05_stolen_key/AV5": "worse beyond margin",
+    "S08_seq_reuse_bug/AV5": "worse beyond margin",
+    "S12_beyond_horizon/AV5": "identical",
+    "S99_mixed/AV5": "worse beyond margin"
+   }
+  },
+  "A1_H1b_pattern": {
+   "statement": "event-driven B5 vs PBTI: W equivalent in E5 and E8, B5 withheld less (better beyond the margin) in E11b and the mixed workload (Sections 6.1, 6.3)",
+   "holds": true,
+   "detail": {
+    "S05_stolen_key/O1": "identical",
+    "S08_seq_reuse_bug/O1": "identical",
+    "S12_beyond_horizon/O1": "identical",
+    "S99_mixed/O1": "identical",
+    "S05_stolen_key/O2": "identical",
+    "S08_seq_reuse_bug/O2": "identical",
+    "S12_beyond_horizon/O2": "better beyond margin",
+    "S99_mixed/O2": "equivalent within margin (significant difference)",
+    "S05_stolen_key/NLX": "equivalent within margin (significant difference)",
+    "S08_seq_reuse_bug/NLX": "identical",
+    "S12_beyond_horizon/NLX": "identical",
+    "S99_mixed/NLX": "equivalent within margin (significant difference)",
+    "S05_stolen_key/W": "equivalent within margin (significant difference)",
+    "S08_seq_reuse_bug/W": "equivalent within margin (significant difference)",
+    "S12_beyond_horizon/W": "better beyond margin",
+    "S99_mixed/W": "better beyond margin",
+    "S05_stolen_key/AV5": "equivalent within margin (significant difference)",
+    "S08_seq_reuse_bug/AV5": "identical",
+    "S12_beyond_horizon/AV5": "identical",
+    "S99_mixed/AV5": "equivalent within margin (significant difference)"
+   }
+  },
+  "A3F_SH_withholds_more_than_Bev": {
+   "statement": "PBTI-SH withheld more than event-driven B5 in all four factorial cells (Section 6.1)",
+   "holds": true,
+   "detail": {
+    "comparisons": [
+     [
+      "run3",
+      "PBTI-SH",
+      "B5-event",
+      1.0171289409722213,
+      "worse beyond margin"
+     ],
+     [
+      "run4",
+      "PBTI-SH",
+      "B5-event",
+      2.891934670138889,
+      "worse beyond margin"
+     ],
+     [
+      "run8",
+      "PBTI-SH",
+      "B5-event",
+      0.9002463541666662,
+      "worse beyond margin"
+     ],
+     [
+      "run15",
+      "PBTI-SH",
+      "B5-event",
+      3.0084159895833347,
+      "worse beyond margin"
+     ]
+    ]
+   }
+  },
+  "sweep_B5_no_significant_cell": {
+   "statement": "B5 differed significantly from PBTI in no sweep cell (Section 6.7)",
+   "holds": true,
+   "detail": {
+    "tests": 94,
+    "significant": []
+   }
+  },
+  "A1_subset_ordering": {
+   "statement": "no matched run violated the ordering B5 <= PBTI-R (Section 5.2)",
+   "holds": true,
+   "detail": {
+    "runs": 800,
+    "violations": 0
+   }
+  },
+  "main_O2_differs_only_E11b": {
+   "statement": "main evaluation: B5's end-of-run losses identical to PBTI's in every scenario but E11b (Sections 6.2, 10)",
+   "holds": true,
+   "detail": {
+    "not_identical": [
+     "S12_beyond_horizon"
+    ]
+   }
+  },
+  "attacker_all_retain": {
+   "statement": "consistent impersonator: every pipeline retained forgeries at the end (limitations table)",
+   "holds": true,
+   "detail": {
+    "PBTI": 88.7,
+    "PBTI-R-hist": 88.7,
+    "PBTI-R-event": 88.7,
+    "B5c-hist": 88.35,
+    "B5c-event": 88.55,
+    "B5-hist": 88.35,
+    "B5-event": 88.55
+   }
+  },
+  "attacker_oneshot_exposes_less": {
+   "statement": "consistent impersonator: one-shot B5 had less exposure than PBTI (limitations table; Section 6.5)",
+   "holds": true,
+   "detail": {
+    "mean_d": -5912.3547,
+    "class": "better beyond margin"
+   }
+  },
+  "attacker_event_close": {
+   "statement": "consistent impersonator: event-driven B5 and PBTI-R stay within the registered exposure margin of each other (limitations table)",
+   "holds": true,
+   "detail": {
+    "mean_d": -22.368850000000133,
+    "class": "equivalent within margin"
+   }
+  },
+  "B5S_identical_to_historical": {
+   "statement": "B5s (no recovery): every primary outcome of every rerun equals the historical run (docs/BASELINES.md)",
+   "holds": true,
+   "detail": {
+    "Main evaluation (15 scenarios, seeds 1--20)": {
+     "runs": 300,
+     "rerun": 300,
+     "changed": 0
+    },
+    "Mixed workload (seeds 1--20)": {
+     "runs": 20,
+     "rerun": 20,
+     "changed": 0
+    },
+    "Re-execution with the tracer": {
+     "runs": 320,
+     "rerun": 320,
+     "changed": 0
+    },
+    "Selective-hold grid": {
+     "runs": 420,
+     "rerun": 420,
+     "changed": 0
+    },
+    "Selective-hold factorial cells": {
+     "runs": 160,
+     "rerun": 160,
+     "changed": 0
+    }
+   }
+  },
+  "all_specifications_rerun": {
+   "statement": "every B5/B5s specification of every stage was rerun (Sections 5.6, S3)",
+   "holds": true,
+   "detail": {
+    "Main evaluation (15 scenarios, seeds 1--20)/B5": [
+     300,
+     300
+    ],
+    "Main evaluation (15 scenarios, seeds 1--20)/B5S": [
+     300,
+     300
+    ],
+    "Mixed workload (seeds 1--20)/B5": [
+     20,
+     20
+    ],
+    "Mixed workload (seeds 1--20)/B5S": [
+     20,
+     20
+    ],
+    "Stressor sweep/B5": [
+     940,
+     940
+    ],
+    "Sensitivity factorial/B5": [
+     320,
+     320
+    ],
+    "SKAB replay/B5": [
+     69,
+     69
+    ],
+    "Re-execution with the tracer/B5": [
+     320,
+     320
+    ],
+    "Re-execution with the tracer/B5S": [
+     320,
+     320
+    ],
+    "Review-schedule evaluation (seeds 21--40)/B5": [
+     880,
+     880
+    ],
+    "Selective-hold grid/B5": [
+     840,
+     840
+    ],
+    "Selective-hold grid/B5S": [
+     420,
+     420
+    ],
+    "Selective-hold factorial cells/B5": [
+     320,
+     320
+    ],
+    "Selective-hold factorial cells/B5S": [
+     160,
+     160
+    ]
+   }
+  }
+ },
+ "all_hold": true
+}

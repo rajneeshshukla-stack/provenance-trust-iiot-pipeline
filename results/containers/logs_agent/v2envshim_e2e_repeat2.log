@@ -1,0 +1,8 @@
+# image: pbti:v2-envshim  repeat 2 of the unchanged e2e smoke
+# start: 2026-11-04T05:22:21Z
+rep 1 rate 20 B3: p50 1.61 ms p99 6.24 ms thr 20/s
+rep 1 rate 20 B2: p50 1.49 ms p99 8.40 ms thr 20/s
+rep 1 rate 20 PBTI: p50 1.77 ms p99 4.07 ms thr 20/s
+rep 1 rate 20 B1: p50 1.29 ms p99 4.66 ms thr 20/s
+# exit_code: 0
+# end: 2026-11-04T05:23:00Z

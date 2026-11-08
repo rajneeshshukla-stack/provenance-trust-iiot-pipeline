@@ -1,0 +1,1054 @@
+{
+ "v3_scenarios_b5.jsonl|B5": {
+  "runs": 300,
+  "same_O1_O2": 300,
+  "runs_with_any_difference": 40,
+  "audits_new": {
+   "run": 75,
+   "pass": 75
+  },
+  "differences": {
+   "S05_stolen_key|1": {
+    "holds": [
+     782,
+     846
+    ]
+   },
+   "S05_stolen_key|2": {
+    "holds": [
+     782,
+     853
+    ]
+   },
+   "S05_stolen_key|3": {
+    "holds": [
+     800,
+     872
+    ]
+   },
+   "S05_stolen_key|4": {
+    "holds": [
+     783,
+     860
+    ]
+   },
+   "S05_stolen_key|5": {
+    "holds": [
+     772,
+     847
+    ]
+   },
+   "S05_stolen_key|6": {
+    "holds": [
+     784,
+     862
+    ]
+   },
+   "S05_stolen_key|7": {
+    "holds": [
+     781,
+     860
+    ]
+   },
+   "S05_stolen_key|8": {
+    "holds": [
+     790,
+     859
+    ]
+   },
+   "S05_stolen_key|9": {
+    "holds": [
+     794,
+     858
+    ]
+   },
+   "S05_stolen_key|10": {
+    "holds": [
+     766,
+     832
+    ]
+   },
+   "S05_stolen_key|11": {
+    "holds": [
+     793,
+     854
+    ]
+   },
+   "S05_stolen_key|12": {
+    "holds": [
+     752,
+     841
+    ]
+   },
+   "S05_stolen_key|13": {
+    "holds": [
+     785,
+     860
+    ]
+   },
+   "S05_stolen_key|14": {
+    "holds": [
+     768,
+     854
+    ]
+   },
+   "S05_stolen_key|15": {
+    "holds": [
+     776,
+     843
+    ]
+   },
+   "S05_stolen_key|16": {
+    "holds": [
+     776,
+     834
+    ]
+   },
+   "S05_stolen_key|17": {
+    "holds": [
+     784,
+     871
+    ]
+   },
+   "S05_stolen_key|18": {
+    "holds": [
+     757,
+     821
+    ]
+   },
+   "S05_stolen_key|19": {
+    "holds": [
+     792,
+     863
+    ]
+   },
+   "S05_stolen_key|20": {
+    "holds": [
+     797,
+     855
+    ]
+   },
+   "S08_seq_reuse_bug|1": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|2": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|3": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|4": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|5": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|6": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|7": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|8": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|9": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|10": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|11": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|12": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|13": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|14": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|15": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|16": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|17": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|18": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|19": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|20": {
+    "holds": [
+     398,
+     402
+    ]
+   }
+  }
+ },
+ "v3_scenarios_b5.jsonl|B5S": {
+  "runs": 300,
+  "same_O1_O2": 300,
+  "runs_with_any_difference": 40,
+  "audits_new": {
+   "run": 75,
+   "pass": 75
+  },
+  "differences": {
+   "S05_stolen_key|1": {
+    "holds": [
+     782,
+     846
+    ]
+   },
+   "S05_stolen_key|2": {
+    "holds": [
+     782,
+     853
+    ]
+   },
+   "S05_stolen_key|3": {
+    "holds": [
+     800,
+     872
+    ]
+   },
+   "S05_stolen_key|4": {
+    "holds": [
+     783,
+     860
+    ]
+   },
+   "S05_stolen_key|5": {
+    "holds": [
+     772,
+     847
+    ]
+   },
+   "S05_stolen_key|6": {
+    "holds": [
+     784,
+     862
+    ]
+   },
+   "S05_stolen_key|7": {
+    "holds": [
+     781,
+     860
+    ]
+   },
+   "S05_stolen_key|8": {
+    "holds": [
+     790,
+     859
+    ]
+   },
+   "S05_stolen_key|9": {
+    "holds": [
+     794,
+     858
+    ]
+   },
+   "S05_stolen_key|10": {
+    "holds": [
+     766,
+     832
+    ]
+   },
+   "S05_stolen_key|11": {
+    "holds": [
+     793,
+     854
+    ]
+   },
+   "S05_stolen_key|12": {
+    "holds": [
+     752,
+     841
+    ]
+   },
+   "S05_stolen_key|13": {
+    "holds": [
+     785,
+     860
+    ]
+   },
+   "S05_stolen_key|14": {
+    "holds": [
+     768,
+     854
+    ]
+   },
+   "S05_stolen_key|15": {
+    "holds": [
+     776,
+     843
+    ]
+   },
+   "S05_stolen_key|16": {
+    "holds": [
+     776,
+     834
+    ]
+   },
+   "S05_stolen_key|17": {
+    "holds": [
+     784,
+     871
+    ]
+   },
+   "S05_stolen_key|18": {
+    "holds": [
+     757,
+     821
+    ]
+   },
+   "S05_stolen_key|19": {
+    "holds": [
+     792,
+     863
+    ]
+   },
+   "S05_stolen_key|20": {
+    "holds": [
+     797,
+     855
+    ]
+   },
+   "S08_seq_reuse_bug|1": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|2": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|3": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|4": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|5": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|6": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|7": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|8": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|9": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|10": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|11": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|12": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|13": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|14": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|15": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|16": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|17": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|18": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|19": {
+    "holds": [
+     398,
+     402
+    ]
+   },
+   "S08_seq_reuse_bug|20": {
+    "holds": [
+     398,
+     402
+    ]
+   }
+  }
+ },
+ "v3_mixed_b5.jsonl|B5": {
+  "runs": 20,
+  "same_O1_O2": 20,
+  "runs_with_any_difference": 20,
+  "audits_new": {
+   "run": 20,
+   "pass": 20
+  },
+  "differences": {
+   "S99_mixed|1": {
+    "holds": [
+     939,
+     1019
+    ],
+    "slots_HELD": [
+     137,
+     145
+    ]
+   },
+   "S99_mixed|2": {
+    "holds": [
+     1008,
+     1092
+    ],
+    "slots_HELD": [
+     151,
+     159
+    ]
+   },
+   "S99_mixed|3": {
+    "holds": [
+     892,
+     975
+    ],
+    "slots_HELD": [
+     121,
+     135
+    ]
+   },
+   "S99_mixed|4": {
+    "holds": [
+     930,
+     999
+    ],
+    "slots_HELD": [
+     119,
+     133
+    ]
+   },
+   "S99_mixed|5": {
+    "derived_versions": [
+     5197,
+     5203
+    ],
+    "derived_corrections": [
+     4488,
+     4494
+    ],
+    "store_bytes": [
+     10270758,
+     10292643
+    ],
+    "store_bytes_per_reach": [
+     1427.4854760250173,
+     1430.527171646977
+    ],
+    "recovered_n": [
+     918,
+     941
+    ],
+    "recovery_ms_p95": [
+     191514.0,
+     191436.0
+    ],
+    "review[RELEASED_HOLD]": [
+     862,
+     885
+    ],
+    "holds": [
+     995,
+     1088
+    ],
+    "slots_HELD": [
+     131,
+     141
+    ]
+   },
+   "S99_mixed|6": {
+    "derived_versions": [
+     5215,
+     5217
+    ],
+    "derived_corrections": [
+     4505,
+     4507
+    ],
+    "store_bytes": [
+     10343132,
+     10348838
+    ],
+    "store_bytes_per_reach": [
+     1437.544405837387,
+     1438.3374565670604
+    ],
+    "recovered_n": [
+     925,
+     931
+    ],
+    "recovery_ms_p95": [
+     192328.0,
+     192301.0
+    ],
+    "review[RELEASED_HOLD]": [
+     864,
+     870
+    ],
+    "holds": [
+     1020,
+     1119
+    ],
+    "slots_HELD": [
+     154,
+     163
+    ]
+   },
+   "S99_mixed|7": {
+    "holds": [
+     1016,
+     1091
+    ],
+    "slots_HELD": [
+     146,
+     152
+    ]
+   },
+   "S99_mixed|8": {
+    "holds": [
+     1006,
+     1092
+    ],
+    "slots_HELD": [
+     146,
+     152
+    ]
+   },
+   "S99_mixed|9": {
+    "holds": [
+     995,
+     1088
+    ],
+    "slots_HELD": [
+     152,
+     159
+    ]
+   },
+   "S99_mixed|10": {
+    "holds": [
+     989,
+     1065
+    ],
+    "slots_HELD": [
+     132,
+     142
+    ]
+   },
+   "S99_mixed|11": {
+    "derived_versions": [
+     5177,
+     5183
+    ],
+    "derived_corrections": [
+     4468,
+     4474
+    ],
+    "store_bytes": [
+     10270950,
+     10296460
+    ],
+    "store_bytes_per_reach": [
+     1427.5121612230716,
+     1431.057678943711
+    ],
+    "recovered_n": [
+     900,
+     927
+    ],
+    "recovery_ms_p50": [
+     65390.0,
+     65903.0
+    ],
+    "recovery_ms_p95": [
+     190978.64999999997,
+     190667.0
+    ],
+    "review[RELEASED_HOLD]": [
+     849,
+     876
+    ],
+    "holds": [
+     978,
+     1068
+    ],
+    "slots_HELD": [
+     127,
+     136
+    ]
+   },
+   "S99_mixed|12": {
+    "holds": [
+     959,
+     1028
+    ],
+    "slots_HELD": [
+     143,
+     147
+    ]
+   },
+   "S99_mixed|13": {
+    "holds": [
+     968,
+     1046
+    ],
+    "slots_HELD": [
+     150,
+     154
+    ]
+   },
+   "S99_mixed|14": {
+    "holds": [
+     1036,
+     1129
+    ],
+    "slots_HELD": [
+     152,
+     160
+    ]
+   },
+   "S99_mixed|15": {
+    "holds": [
+     903,
+     985
+    ],
+    "slots_HELD": [
+     139,
+     145
+    ]
+   },
+   "S99_mixed|16": {
+    "holds": [
+     936,
+     1009
+    ],
+    "slots_HELD": [
+     141,
+     148
+    ]
+   },
+   "S99_mixed|17": {
+    "derived_versions": [
+     5178,
+     5180
+    ],
+    "derived_corrections": [
+     4470,
+     4472
+    ],
+    "store_bytes": [
+     10237512,
+     10244207
+    ],
+    "store_bytes_per_reach": [
+     1422.864767199444,
+     1423.7952744961779
+    ],
+    "recovered_n": [
+     887,
+     894
+    ],
+    "recovery_ms_p95": [
+     192584.9,
+     192582.45
+    ],
+    "review[RELEASED_HOLD]": [
+     828,
+     835
+    ],
+    "holds": [
+     951,
+     1026
+    ],
+    "slots_HELD": [
+     122,
+     135
+    ]
+   },
+   "S99_mixed|18": {
+    "holds": [
+     939,
+     1017
+    ],
+    "slots_HELD": [
+     134,
+     141
+    ]
+   },
+   "S99_mixed|19": {
+    "store_bytes": [
+     10276862,
+     10280746
+    ],
+    "store_bytes_per_reach": [
+     1428.3338429464907,
+     1428.8736622654621
+    ],
+    "review[RELEASE_FAILED]": [
+     55,
+     59
+    ],
+    "holds": [
+     965,
+     1034
+    ],
+    "slots_HELD": [
+     126,
+     136
+    ]
+   },
+   "S99_mixed|20": {
+    "holds": [
+     931,
+     1001
+    ],
+    "slots_HELD": [
+     129,
+     137
+    ]
+   }
+  }
+ },
+ "v3_mixed_b5.jsonl|B5S": {
+  "runs": 20,
+  "same_O1_O2": 20,
+  "runs_with_any_difference": 20,
+  "audits_new": {
+   "run": 20,
+   "pass": 20
+  },
+  "differences": {
+   "S99_mixed|1": {
+    "holds": [
+     939,
+     1019
+    ],
+    "slots_HELD": [
+     937,
+     945
+    ]
+   },
+   "S99_mixed|2": {
+    "holds": [
+     1008,
+     1092
+    ],
+    "slots_HELD": [
+     1007,
+     1015
+    ]
+   },
+   "S99_mixed|3": {
+    "holds": [
+     892,
+     975
+    ],
+    "slots_HELD": [
+     892,
+     906
+    ]
+   },
+   "S99_mixed|4": {
+    "holds": [
+     930,
+     999
+    ],
+    "slots_HELD": [
+     929,
+     943
+    ]
+   },
+   "S99_mixed|5": {
+    "holds": [
+     995,
+     1064
+    ],
+    "slots_HELD": [
+     993,
+     1002
+    ]
+   },
+   "S99_mixed|6": {
+    "holds": [
+     1020,
+     1113
+    ],
+    "slots_HELD": [
+     1018,
+     1027
+    ]
+   },
+   "S99_mixed|7": {
+    "holds": [
+     1016,
+     1091
+    ],
+    "slots_HELD": [
+     1015,
+     1021
+    ]
+   },
+   "S99_mixed|8": {
+    "holds": [
+     1006,
+     1092
+    ],
+    "slots_HELD": [
+     1005,
+     1011
+    ]
+   },
+   "S99_mixed|9": {
+    "holds": [
+     995,
+     1088
+    ],
+    "slots_HELD": [
+     995,
+     1002
+    ]
+   },
+   "S99_mixed|10": {
+    "holds": [
+     989,
+     1065
+    ],
+    "slots_HELD": [
+     988,
+     998
+    ]
+   },
+   "S99_mixed|11": {
+    "holds": [
+     978,
+     1041
+    ],
+    "slots_HELD": [
+     976,
+     985
+    ]
+   },
+   "S99_mixed|12": {
+    "holds": [
+     959,
+     1028
+    ],
+    "slots_HELD": [
+     958,
+     962
+    ]
+   },
+   "S99_mixed|13": {
+    "holds": [
+     968,
+     1046
+    ],
+    "slots_HELD": [
+     968,
+     972
+    ]
+   },
+   "S99_mixed|14": {
+    "holds": [
+     1036,
+     1129
+    ],
+    "slots_HELD": [
+     1035,
+     1043
+    ]
+   },
+   "S99_mixed|15": {
+    "holds": [
+     903,
+     985
+    ],
+    "slots_HELD": [
+     903,
+     909
+    ]
+   },
+   "S99_mixed|16": {
+    "holds": [
+     936,
+     1009
+    ],
+    "slots_HELD": [
+     935,
+     942
+    ]
+   },
+   "S99_mixed|17": {
+    "holds": [
+     951,
+     1018
+    ],
+    "slots_HELD": [
+     950,
+     962
+    ]
+   },
+   "S99_mixed|18": {
+    "holds": [
+     939,
+     1017
+    ],
+    "slots_HELD": [
+     938,
+     945
+    ]
+   },
+   "S99_mixed|19": {
+    "holds": [
+     965,
+     1030
+    ],
+    "slots_HELD": [
+     965,
+     971
+    ]
+   },
+   "S99_mixed|20": {
+    "holds": [
+     931,
+     1001
+    ],
+    "slots_HELD": [
+     930,
+     938
+    ]
+   }
+  }
+ }
+}

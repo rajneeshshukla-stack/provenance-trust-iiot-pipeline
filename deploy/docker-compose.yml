@@ -1,0 +1,18 @@
+# V3: single-container reproduction of the experiments. Results go to ../results_container so that a run never
+# overwrites the published raw results in ../results. The volume hides the image's results/ directory, and the
+# regression tests compare against the stored raw results, so seed the volume first (from the repository root):
+#   mkdir results_container && cp -a results/. results_container/ && sudo chown -R 10001:10001 results_container
+#   docker compose -f deploy/docker-compose.yml run --rm pbti make test
+# Checked in the study environment: with an empty volume 7 regression tests fail (stored results not found); with the
+# seeded volume 113 passed, 1 skipped (results/containers/v3_final/compose/). The default command (CMD of
+# Dockerfile.v3) runs the full revision-2 pipeline and takes hours.
+# The MQTT end-to-end harness starts its own Mosquitto broker with a generated test PKI.
+services:
+  pbti:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile.v3
+      additional_contexts:
+        pbti_deploy: .
+    volumes:
+      - ../results_container:/opt/pbti/results

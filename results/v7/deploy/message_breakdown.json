@@ -1,0 +1,98 @@
+{
+ "n_messages": 2000,
+ "topology": "4 gateways x 6 devices (1 legacy per gateway), seed 1",
+ "mean_wire_bytes_json": {
+  "B1": 219.429,
+  "B2": 220.429,
+  "B3": 292.427,
+  "PBTI": 639.316
+ },
+ "ratio_PBTI_to_B2_json": 2.9003261821266713,
+ "pbti_field_bytes_mean": {
+  "obs/pl": 73.429,
+  "obs/did": 18.0,
+  "obs/aid": 18.0,
+  "obs/ts": 11.0,
+  "obs/sch": 21.0,
+  "obs/v": 6.0,
+  "obs/typ": 17.0,
+  "obs/ep": 7.501,
+  "obs/seq": 8.88,
+  "obs/prev": 52.508,
+  "obs/kid": 21.998,
+  "osig": 96.0,
+  "rel/v": 6.0,
+  "rel/typ": 19.0,
+  "rel/wid": 53.0,
+  "rel/wkid": 18.0,
+  "rel/odig": 53.0,
+  "rel/rts": 12.0,
+  "rel/mode": 14.0,
+  "rsig": 96.0
+ },
+ "pbti_group_bytes_mean": {
+  "content and identifiers also carried by B2 (pl, did, aid, ts, sch)": 141.429,
+  "observation-statement additions (v, typ, ep, seq, prev, kid)": 113.887,
+  "origin signature (osig, base64url)": 96.0,
+  "relay statement (v, typ, wid, wkid, odig, rts, mode)": 175.0,
+  "relay signature (rsig, base64url)": 96.0
+ },
+ "pbti_json_structure_and_key_overhead_bytes": 17.0,
+ "pbti_only_bytes_vs_B2": 418.88700000000006,
+ "binary_estimate_text_keys": {
+  "B2": 197.424,
+  "PBTI": 499.072
+ },
+ "binary_estimate_int_keys": {
+  "B2": 147.424,
+  "PBTI": 434.072
+ },
+ "ratio_PBTI_to_B2_binary_text_keys": 2.5279196045060375,
+ "ratio_PBTI_to_B2_binary_int_keys": 2.9443781202517907,
+ "sample_pbti_message": {
+  "obs": {
+   "aid": "pa-c2-a01",
+   "did": "pa-c2-d01",
+   "ep": 2000,
+   "kid": "wk:gw2:1",
+   "pl": {
+    "flow_m3h": 11.96,
+    "press_bar": 4.996,
+    "temp_c": 61.43,
+    "vib_mm_s": 2.096
+   },
+   "prev": "_8CdO_Z6JrehVTLfGG_U-GUEMvsx9hk8BXZGDh6_r9A",
+   "sch": "telemetry.v1",
+   "seq": 1,
+   "ts": 10012,
+   "typ": "pbti.obs",
+   "v": 1
+  },
+  "osig": "VWnGqHwxbPX5iJOUNwAAnXtjX29TGkG7KbmYZrr9v1SEWfRL9y-pRN9KZ8uF7nLLLK6MiNTuNf7CGhGk8LElDg",
+  "rel": {
+   "mode": "live",
+   "odig": "LcVeTJn7wMlE2t-d-MIrGKiITWBMyIaLHL5WfIO0YiU",
+   "rts": 10012,
+   "typ": "pbti.relay",
+   "v": 1,
+   "wid": "spiffe://plant-a.example/cell2/gw2/collector",
+   "wkid": "wk:gw2:1"
+  },
+  "rsig": "WYM_SxmqIpMKDxeoakucahQFwFN2BV56omvDt9FUKETJ-K0sbK2ujeygAi9ma7uNh8wyQKW2weqShnRl14_YCQ"
+ },
+ "sample_b2_message": {
+  "aid": "pa-c2-a01",
+  "did": "pa-c2-d01",
+  "mid": "000000000000001f",
+  "pl": {
+   "flow_m3h": 11.96,
+   "press_bar": 4.996,
+   "temp_c": 61.43,
+   "vib_mm_s": 2.096
+  },
+  "sch": "telemetry.v1",
+  "ts": 10012,
+  "wid": "spiffe://plant-a.example/cell2/gw2/collector"
+ },
+ "note": "Byte counts are exact for the prototype's canonical JSON; the binary sizes are an engineering estimate of the same fields in CBOR, not an implemented or measured format."
+}

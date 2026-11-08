@@ -1,0 +1,10 @@
+# image: pbti:v2-envshim
+# check: make_test (timeout 900s, --cpus=1.0)
+# cmd: docker run --rm --cpus=1.0  pbti:v2-envshim make test
+# start: 2026-11-04T05:04:23Z
+python3 -m pytest -q
+......................................................................   [100%]
+70 passed in 168.07s (0:02:48)
+# exit_code: 0
+# end: 2026-11-04T05:07:13Z
+# wall_s: 169.497622733

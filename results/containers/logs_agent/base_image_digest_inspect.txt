@@ -1,0 +1,17 @@
+Name:      docker.io/library/python:3.13-slim
+MediaType: application/vnd.oci.image.index.v1+json
+Digest:    sha256:ae14d4ce8771606477a81446e7ef429edd6762305fc50c84507c1041fa8285d1
+           
+Manifests: 
+  Name:        docker.io/library/python:3.13-slim@sha256:aaf08c5490d52cd92bc27142a5215b1e47355a5eaf9adfad2a0fbc022d0b5490
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    linux/amd64
+  Annotations: 
+    org.opencontainers.image.base.name:       debian:trixie-slim
+    org.opencontainers.image.created:         2026-10-28T01:54:08Z
+    org.opencontainers.image.revision:        152874b138f0b1c4699fbdcb52b174608cfbfff5
+---
+Name:      docker.io/library/python:3.13.18-slim-trixie
+MediaType: application/vnd.oci.image.index.v1+json
+Digest:    sha256:ae14d4ce8771606477a81446e7ef429edd6762305fc50c84507c1041fa8285d1
+           

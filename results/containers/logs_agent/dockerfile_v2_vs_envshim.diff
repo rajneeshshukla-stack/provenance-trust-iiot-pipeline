@@ -1,0 +1,4 @@
+5c5
+< RUN pip install --no-cache-dir -r requirements.txt
+---
+> RUN --mount=type=secret,id=pipca,required=true PIP_CERT=/run/secrets/pipca pip install --no-cache-dir -r requirements.txt

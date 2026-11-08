@@ -1,0 +1,24 @@
+\begin{tabular}{lrrrrrr}
+\toprule
+\textbf{Configuration} & \textbf{Non-legit.} & \textbf{Missing} & \textbf{Quar.} & \textbf{Dup.} & \textbf{CV wrong \%} & \textbf{$\mu$s/msg}\\
+\midrule
+B1 (baseline) & 485.5 & 282.6 & 0 & 0 & 28.1 & 51\\
+B2 (baseline) & 380.3 & 340.9 & 0 & 0 & 22.8 & 53\\
+B3 (baseline) & 215.1 & 272.6 & 0 & 0 & 6.8 & 239\\
+B4 (baseline) & 147.7 & 327.6 & 0 & 0 & 3.5 & 266\\
+\midrule
+PBTI (full) & 5.2 & 335 & 60.1 & 0 & 0.8 & 494\\
+Ab1 no relay signature & 5.9$^{*}$ & 362.4$^{*}$ & 60.6 & 0 & 3.2$^{*}$ & 323$^{*}$\\
+Ab2 static policy & 30.4$^{*}$ & 482.3$^{*}$ & 60.1 & 0 & 3.6$^{*}$ & 478\\
+Ab3 no origin signature & 30.1$^{*}$ & 335 & 60.1 & 0 & 21.0$^{*}$ & 342$^{*}$\\
+Ab4 no prev link & 14.3$^{*}$ & 332.8$^{*}$ & 60.1 & 0 & 0.8 & 484\\
+Ab5 edge-assigned identity & 72$^{*}$ & 273$^{*}$ & 60.0 & 48.1$^{*}$ & 1.0$^{*}$ & 495\\
+Ab6 no conflict detection & 40.7$^{*}$ & 300.2$^{*}$ & 60.1 & 0 & 1.0$^{*}$ & 478\\
+Ab7 no horizon/epoch checks & 35.1$^{*}$ & 274.9$^{*}$ & 0$^{*}$ & 0 & 4.6$^{*}$ & 489\\
+Ab8 arrival-order state & 5.2 & 335 & 60.1 & 0 & 7.4$^{*}$ & 481\\
+Ab9 no evidence commitment & 5.2 & 335 & 0$^{*}$ & 0 & 0.8 & 424$^{*}$\\
+Ab10 no quarantine & 5.2 & 335 & 0$^{*}$ & 0 & 0.8 & 477\\
+Ab11 no revocation/taint & 45.5$^{*}$ & 329.9$^{*}$ & 60.1 & 0 & 0.8$^{*}$ & 475\\
+Ab12 volatile edge buffer & 5.0 & 517.5$^{*}$ & 60.6 & 0 & 0.8 & 498\\
+\bottomrule
+\end{tabular}

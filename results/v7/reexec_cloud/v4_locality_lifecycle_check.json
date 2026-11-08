@@ -1,0 +1,137 @@
+{
+ "python": "3.13.18",
+ "source_sha256": {
+  "attacks.py": "1c37de560e82611bfd2752fbf3ea5a68c4924d6a9da5c6b857dc8ae705fd5f97",
+  "audit.py": "01a0bd21e270bd92e6051d890b92b9a66d868fb35270223ee2c95976809154cb",
+  "b5.py": "19dc116609e87f561ebd28ff2cb7e94a1307395d829bbba9d304804a0566816a",
+  "baselines.py": "aa23100b398e1f7e1f9daa9565af165dd0bcc922f50b7df60c85df45b0ea1db9",
+  "canonical.py": "835d6092c782236ecfbfbf2903120cb55329c017c7853481a3c8f8bb68231624",
+  "crypto.py": "2469111e7ee8a95754f7f5901293a3a033e8d16768b1c22afa8550c6542c4a10",
+  "dataset.py": "0eed388c1252e41c03fa6452f5c8c4c27ef3b1037ec591868d2ea7b1608d0924",
+  "envelope.py": "6a1027d89786be2b0071b956caf83b546cd63445a8889f934e36a28e593dc8ef",
+  "evidence.py": "b091f23a751c4fdf0b8db11401eb7178b2d21bf13e84cbd9ccd5032a341b8572",
+  "identity.py": "d8895548016a5cf84bcbe6bca2935a45ac67031456871d72cdfbb4eb0adb82f1",
+  "oracle.py": "a6f6a7d6511b98984fe45ae89260ba91ac71aa6c9274d82ce763bcff9c113c5d",
+  "policy.py": "a578f2117f4874020f21c3f5b867c582cdeefbb5fb25aa28edc9c94eca4cc33b",
+  "processor.py": "cedbb4c97733b9fbfd16a07caa46853170ba1d472c1f26788eb6f8ec31e2b0eb",
+  "realtime.py": "54f78ce2dedb51f2703dfffcf8d2d128a31de24ee72bf7df9ad71b624b9b9f97",
+  "registry.py": "0160acfc11e51fdee9781f798bc887f5ad519f8cfa2db0fe7abbe5af287a5a0c",
+  "review.py": "6de3ea62d7802777050b038c62f65e912e795f93f596ccba5026836be70ae18c",
+  "scenarios.py": "92ceb88be58a4c9f133dd343fb590ef4b5b147f2924b7e681e2c0c0f86f14050",
+  "selective.py": "dc66ac8d2405e5f91dfc906251264d305d148e47b464f5e783e7daf73f3a5175",
+  "sim.py": "f18180146eb1b150fc2dfd244bf27cff70452627df8fbe84fef886693eee7fdc",
+  "store.py": "11fa47f50befd07b63fdcb7e29059aa4b621bb662c7c86d326d22416245c8c99",
+  "sweep.py": "7e776358ae8136a2e7d31173de8c9db524967ddb4356f476211937c7253d8f08",
+  "temporal.py": "bb3270864b63231400c6a85a02e5e314c8f007d27255034edaa28cfa09ad9f4a",
+  "timewitness.py": "c13675c27d7b48ed28ed499833a8a78e0286a20797a33aba0ea86fafbb0b395a",
+  "verifier.py": "9c2deed4ed42f392033401be01c809a167331dce33e5eff0e465befeb36724c4"
+ },
+ "this_file_sha256": "73c61221b2e248aa3d256c2d4ab56057931ae170416e49cd85ee276fc9a9b2ec",
+ "M": {
+  "U1_one_epoch_seq0-2_prev_null": {
+   "statements": 14,
+   "base_sets": 16384,
+   "cases": 487424,
+   "cases_with_class_change": 173700,
+   "cases_bound_attained": 640,
+   "violations": [],
+   "seconds": 2.6
+  },
+  "U2_two_epochs_seq0-1": {
+   "statements": 12,
+   "base_sets": 4096,
+   "cases": 92160,
+   "cases_with_class_change": 67952,
+   "cases_bound_attained": 1680,
+   "violations": [],
+   "seconds": 0.4
+  }
+ },
+ "L": {
+  "exhaustive_U2_single": {
+   "cases": 24576,
+   "violations": 0,
+   "not_admitted": 0,
+   "changed": 13824,
+   "seconds": 51.0
+  },
+  "random_batches_2_3": {
+   "cases": 4000,
+   "violations": 0,
+   "not_admitted_statements": 0,
+   "changed": 2638,
+   "bound_attained": 1,
+   "seconds": 10.1
+  },
+  "violation_examples": []
+ },
+ "C": {
+  "exhaustive": {
+   "exhaustive_max_len": 4,
+   "sequences": 30940,
+   "seconds": 30.1
+  },
+  "random": {
+   "sequences": 20000,
+   "seed": 2,
+   "seconds": 33.5
+  },
+  "alphabet": [
+   "dG0",
+   "dG1",
+   "dF1",
+   "dG2",
+   "dR2",
+   "dH0",
+   "dH1",
+   "CLOSE",
+   "REV_EARLY",
+   "REV_LATE",
+   "REL",
+   "REL_STALE",
+   "REJ"
+  ],
+  "stats": {
+   "sequences": 50940,
+   "operations": 251106,
+   "violations": 0,
+   "outcomes": {
+    "RELEASE_FAILED:QUARANTINE": 3281,
+    "REJECTED": 2155,
+    "RELEASED": 926,
+    "UNAUTHORIZED_REVIEWER": 2239,
+    "RELEASE_FAILED:DUPLICATE": 36,
+    "RELEASE_FAILED:CONFLICT": 47,
+    "STALE_REVIEW": 10
+   },
+   "dispositions": {
+    "ACCEPT/COMMITTED": 71481,
+    "DUPLICATE/RETRY": 10504,
+    "CONFLICT/EQUIVOCATION": 5745,
+    "CONFLICT/LINK_MISMATCH": 1913,
+    "QUARANTINE/REVOKED_BUFFERED": 31844,
+    "QUARANTINE/KEY_EXPIRED": 11482,
+    "DUPLICATE/SUSPECTED_REPLAY": 1470,
+    "QUARANTINE/STALE_SLOT": 565
+   },
+   "failed_release_admitted_evidence": 47
+  },
+  "violation_examples": [],
+  "constants": {
+   "gap_close_ms": 3000,
+   "rotation_grace_ms": 3000,
+   "k1_exp_ms": 4000
+  }
+ },
+ "source_unchanged_during_run": true,
+ "seconds_total": 127.8,
+ "log": [
+  "[M] U1_one_epoch_seq0-2_prev_null: 487424 cases, 173700 with a class change, bound 2|S| attained in 640, violations 0",
+  "[M] U2_two_epochs_seq0-1: 92160 cases, 67952 with a class change, bound 2|S| attained in 1680, violations 0",
+  "[L] exhaustive U2 single statements: 24576 cases, 13824 with a change, 0 not admitted, violations 0",
+  "[L] random batches of 2-3 (seed 1): 4000 cases, 2638 with a change, bound attained 1, violations 0",
+  "[C] exhaustive sequences of length <= 4: 30940 sequences, violations 0",
+  "[C] random sequences of length 5..8 (seed 2): 20000; total violations 0"
+ ],
+ "all_pass": true
+}

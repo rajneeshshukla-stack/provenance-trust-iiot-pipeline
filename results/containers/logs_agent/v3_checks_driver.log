@@ -1,0 +1,5 @@
+env exit=0
+make_test exit=0
+smoke exit=0
+e2e exit=0
+done v3

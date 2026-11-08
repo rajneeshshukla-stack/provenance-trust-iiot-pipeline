@@ -1,0 +1,97 @@
+outcome,arm,cell,mean
+O1,PBTI,2,0.0
+O1,PBTI,3,1.4
+O1,PBTI,4,2.5
+O1,PBTI,5,0.0
+O1,PBTI,8,1.65
+O1,PBTI,9,0.0
+O1,PBTI,14,0.0
+O1,PBTI,15,0.85
+O1,"B5, one-shot",2,0.0
+O1,"B5, one-shot",3,0.4
+O1,"B5, one-shot",4,0.85
+O1,"B5, one-shot",5,0.0
+O1,"B5, one-shot",8,0.5
+O1,"B5, one-shot",9,0.0
+O1,"B5, one-shot",14,0.0
+O1,"B5, one-shot",15,0.25
+O1,"B5, event-driven",2,0.0
+O1,"B5, event-driven",3,1.15
+O1,"B5, event-driven",4,1.5
+O1,"B5, event-driven",5,0.0
+O1,"B5, event-driven",8,0.8
+O1,"B5, event-driven",9,0.0
+O1,"B5, event-driven",14,0.0
+O1,"B5, event-driven",15,0.5
+O1,B5s (no recovery),2,0.0
+O1,B5s (no recovery),3,0.0
+O1,B5s (no recovery),4,0.35
+O1,B5s (no recovery),5,0.0
+O1,B5s (no recovery),8,0.15
+O1,B5s (no recovery),9,0.0
+O1,B5s (no recovery),14,0.0
+O1,B5s (no recovery),15,0.0
+O1,PBTI-SH,2,0.0
+O1,PBTI-SH,3,0.0
+O1,PBTI-SH,4,0.0
+O1,PBTI-SH,5,0.0
+O1,PBTI-SH,8,0.0
+O1,PBTI-SH,9,0.0
+O1,PBTI-SH,14,0.0
+O1,PBTI-SH,15,0.0
+O1,"PBTI-SH, 30 s timeout",2,0.0
+O1,"PBTI-SH, 30 s timeout",3,1.4
+O1,"PBTI-SH, 30 s timeout",4,2.5
+O1,"PBTI-SH, 30 s timeout",5,0.0
+O1,"PBTI-SH, 30 s timeout",8,1.65
+O1,"PBTI-SH, 30 s timeout",9,0.0
+O1,"PBTI-SH, 30 s timeout",14,0.0
+O1,"PBTI-SH, 30 s timeout",15,0.85
+W,PBTI,2,21.693207065972224
+W,PBTI,3,20.45534579861111
+W,PBTI,4,40.54097197916666
+W,PBTI,5,3.96878234375
+W,PBTI,8,22.68888607638889
+W,PBTI,9,21.42432265625
+W,PBTI,14,4.113727222222222
+W,PBTI,15,35.083744392361105
+W,"B5, one-shot",2,29.780060972222223
+W,"B5, one-shot",3,28.724624600694447
+W,"B5, one-shot",4,47.86393107638889
+W,"B5, one-shot",5,12.585966354166668
+W,"B5, one-shot",8,30.98757548611111
+W,"B5, one-shot",9,29.66753637152777
+W,"B5, one-shot",14,12.967287586805554
+W,"B5, one-shot",15,43.32134371527778
+W,"B5, event-driven",2,22.00365578125
+W,"B5, event-driven",3,20.58287484375
+W,"B5, event-driven",4,40.849019288194455
+W,"B5, event-driven",5,3.983702256944445
+W,"B5, event-driven",8,22.85994434027778
+W,"B5, event-driven",9,21.657450572916662
+W,"B5, event-driven",14,4.128394114583334
+W,"B5, event-driven",15,35.62056467013889
+W,B5s (no recovery),2,49.45905402777778
+W,B5s (no recovery),3,49.50952043402778
+W,B5s (no recovery),4,65.4564657986111
+W,B5s (no recovery),5,34.782494131944446
+W,B5s (no recovery),8,51.25565767361111
+W,B5s (no recovery),9,49.61045232638889
+W,B5s (no recovery),14,35.22500560763889
+W,B5s (no recovery),15,61.832710746527766
+W,PBTI-SH,2,24.690762378472225
+W,PBTI-SH,3,21.600003784722222
+W,PBTI-SH,4,43.740953958333336
+W,PBTI-SH,5,4.371146909722222
+W,PBTI-SH,8,23.760190694444443
+W,PBTI-SH,9,24.25331467013889
+W,PBTI-SH,14,4.514233437499999
+W,PBTI-SH,15,38.628980659722224
+W,"PBTI-SH, 30 s timeout",2,22.17062348958333
+W,"PBTI-SH, 30 s timeout",3,20.72849336805556
+W,"PBTI-SH, 30 s timeout",4,41.04069354166667
+W,"PBTI-SH, 30 s timeout",5,4.163612187499999
+W,"PBTI-SH, 30 s timeout",8,22.95016008680556
+W,"PBTI-SH, 30 s timeout",9,21.920843697916663
+W,"PBTI-SH, 30 s timeout",14,4.306438298611111
+W,"PBTI-SH, 30 s timeout",15,35.666065347222215

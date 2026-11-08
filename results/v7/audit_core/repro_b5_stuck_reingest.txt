@@ -1,0 +1,5 @@
+PBTIVerifier   seq2:QUARANTINE/STALE_TS seq3:ACCEPT seq4:ACCEPT review1:['RELEASED'] review2:[]
+               authoritative seqs=[0, 2, 3, 4] held=[] pending cases (seq)=[] case(seq2)=RELEASED
+B5FeedLevel    seq2:QUARANTINE/STALE_TS seq3:QUARANTINE seq4:QUARANTINE review1:['RELEASE_FAILED:QUARANTINE/FEED_FORK_HOLD', 'RELEASED_HOLD', 'RELEASED_HOLD'] review2:[]
+               authoritative seqs=[0, 3, 4] held=[1, 2] pending cases (seq)=[] case(seq2)=REJECTED
+RESULT: DEFECT REPRODUCED: seq 2 recovered by PBTI-R but stuck in B5 (held, no pending case)

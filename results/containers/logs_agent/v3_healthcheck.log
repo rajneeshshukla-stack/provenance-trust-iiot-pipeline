@@ -1,0 +1,8 @@
+# image: pbti:v3
+# configured: {"Test":["CMD","python3","-c","import shutil, sys; sys.path.insert(0, '/opt/pbti/src'); import pbti.verifier, pbti.policy, paho.mqtt.client, cryptography; sys.exit(0 if shutil.which('mosquitto') else 1)"],"Interval":60000000000,"Timeout":10000000000,"StartPeriod":20000000000,"Retries":3}
+# cmd: docker run -d --cpus=0.5 --health-interval=5s --health-start-period=0s --health-retries=1 pbti:v3 sleep 60
+# t+5s status: starting
+# t+10s status: healthy
+# t+15s status: healthy
+# t+20s status: healthy
+# last probe: {"Start":"2026-11-03T23:23:45.032920336-06:00","End":"2026-11-03T23:23:46.433396615-06:00","ExitCode":0,"Output":""}

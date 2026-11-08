@@ -1,0 +1,106 @@
+attacker,arm,ref,outcome,n,mean_d,ci95,p_wilcoxon,class,source
+registered,B5c-hist,PBTI,O1,20,0.0,"(0.0, 0.0)",1.0,identical,registered comparison H1a
+registered,B5c-hist,PBTI,O2,20,-52.3,"(-54.95, -49.35)",8.782404130245517e-05,equivalent within margin (significant difference),registered comparison H1a
+registered,B5c-hist,PBTI,NLX,20,-1759.0772500000005,"(-1884.5415399999997, -1637.185065)",1.9073486328125e-06,better beyond margin,registered comparison H1a
+registered,B5c-hist,PBTI,W,20,5.87960104933982,"(5.7291210465601115, 6.044852238533704)",1.9073486328125e-06,worse beyond margin,registered comparison H1a
+registered,B5c-hist,PBTI,AV5,20,-0.1144336344683808,"(-0.11564993050729676, -0.11309937456567062)",8.844915021211901e-05,worse beyond margin,registered comparison H1a
+registered,B5c-event,PBTI,O1,20,0.0,"(0.0, 0.0)",1.0,identical,registered comparison H1b
+registered,B5c-event,PBTI,O2,20,-58.75,"(-59.6, -57.75)",8.306279703932927e-05,equivalent within margin (significant difference),registered comparison H1b
+registered,B5c-event,PBTI,NLX,20,-42.703649999999946,"(-58.94863624999997, -28.111793749999986)",1.9073486328125e-06,equivalent within margin (significant difference),registered comparison H1b
+registered,B5c-event,PBTI,W,20,-2.352337359277276,"(-2.386010670083393, -2.3136365088603195)",1.9073486328125e-06,better beyond margin,registered comparison H1b
+registered,B5c-event,PBTI,AV5,20,-0.0004239054899235,"(-0.000548992355802658, -0.00030576789437111176)",0.0001265345176495,equivalent within margin (significant difference),registered comparison H1b
+registered,B5c-hist,PBTI-R-hist,O1,20,0.0,"(0.0, 0.0)",1.0,identical,registered comparison H1c
+registered,B5c-hist,PBTI-R-hist,O2,20,1.5,"(1.0, 2.05)",0.0005685311886285,equivalent within margin (significant difference),registered comparison H1c
+registered,B5c-hist,PBTI-R-hist,NLX,20,-1759.0772500000005,"(-1887.188905, -1637.4154025)",1.9073486328125e-06,better beyond margin,registered comparison H1c
+registered,B5c-hist,PBTI-R-hist,W,20,7.52372891591383,"(7.377349244961778, 7.695858767373175)",1.9073486328125e-06,worse beyond margin,registered comparison H1c
+registered,B5c-hist,PBTI-R-hist,AV5,20,-0.1144336344683808,"(-0.11565670604586516, -0.113092425295344)",8.844915021211901e-05,worse beyond margin,registered comparison H1c
+registered,B5c-event,PBTI-R-event,O1,20,0.0,"(0.0, 0.0)",1.0,identical,registered comparison H1c
+registered,B5c-event,PBTI-R-event,O2,20,0.8,"(0.4, 1.2)",0.0042455851556912,equivalent within margin,registered comparison H1c
+registered,B5c-event,PBTI-R-event,NLX,20,-42.703649999999946,"(-59.25558874999999, -28.324141249999837)",1.9073486328125e-06,equivalent within margin (significant difference),registered comparison H1c
+registered,B5c-event,PBTI-R-event,W,20,0.0432735510771363,"(0.02686464141765062, 0.061243893849895446)",1.9073486328125e-06,equivalent within margin (significant difference),registered comparison H1c
+registered,B5c-event,PBTI-R-event,AV5,20,-0.0004239054899235,"(-0.0005489923558026577, -0.00030576789437111176)",0.0001265345176495,equivalent within margin (significant difference),registered comparison H1c
+registered,PBTI-R-event,PBTI,O1,20,0.0,"(0.0, 0.0)",1.0,identical,recomputed (exploratory)
+registered,PBTI-R-event,PBTI,O2,20,-59.55,"(-60.25, -58.75)",7.724940674866038e-05,equivalent within margin,recomputed (exploratory)
+registered,PBTI-R-event,PBTI,NLX,20,0.0,"(0.0, 0.0)",1.0,identical,recomputed (exploratory)
+registered,PBTI-R-event,PBTI,W,20,-2.3956109103544128,"(-2.4245129190410006, -2.3641878328700487)",1.9073486328125e-06,better beyond margin,recomputed (exploratory)
+registered,PBTI-R-event,PBTI,AV5,20,0.0,"(0.0, 0.0)",1.0,identical,recomputed (exploratory)
+registered,B5-hist,B5c-hist,O1,20,0.0,"(0.0, 0.0)",1.0,identical,recomputed (exploratory)
+registered,B5-hist,B5c-hist,O2,20,0.0,"(0.0, 0.0)",1.0,identical,recomputed (exploratory)
+registered,B5-hist,B5c-hist,NLX,20,0.0,"(0.0, 0.0)",1.0,identical,recomputed (exploratory)
+registered,B5-hist,B5c-hist,W,20,0.0,"(0.0, 0.0)",1.0,identical,recomputed (exploratory)
+registered,B5-hist,B5c-hist,AV5,20,0.0,"(0.0, 0.0)",1.0,identical,recomputed (exploratory)
+registered,B5-event,B5c-event,O1,20,0.0,"(0.0, 0.0)",1.0,identical,recomputed (exploratory)
+registered,B5-event,B5c-event,O2,20,0.1,"(0.0, 0.25)",0.5,equivalent within margin,recomputed (exploratory)
+registered,B5-event,B5c-event,NLX,20,-0.6745499999999197,"(-1.3473499999998246, -0.2244499999999789)",0.0078125,equivalent within margin,recomputed (exploratory)
+registered,B5-event,B5c-event,W,20,0.004349589993051417,"(0.00040770604586534367, 0.010149085997221)",3.814697265625e-06,equivalent within margin,recomputed (exploratory)
+registered,B5-event,B5c-event,AV5,20,-2.7797081306463188e-05,"(-6.254343293953801e-05, 0.0)",0.25,equivalent within margin,recomputed (exploratory)
+consistent,B5c-hist,PBTI,O1,20,-0.35,"(-0.6, -0.15)",0.03125,equivalent within margin,recomputed (exploratory)
+consistent,B5c-hist,PBTI,O2,20,-53.65,"(-56.3, -50.8)",8.621447994652249e-05,equivalent within margin,recomputed (exploratory)
+consistent,B5c-hist,PBTI,NLX,20,-5912.3547,"(-6993.31955875, -4742.251157500001)",1.9073486328125e-06,better beyond margin,recomputed (exploratory)
+consistent,B5c-hist,PBTI,W,20,4.774156574009729,"(4.6670056610493384, 4.895028474635163)",1.9073486328125e-06,worse beyond margin,recomputed (exploratory)
+consistent,B5c-hist,PBTI,AV5,20,-0.10106323835997219,"(-0.10207800555941626, -0.09989576094510076)",8.832385863081277e-05,worse beyond margin,recomputed (exploratory)
+consistent,B5c-event,PBTI,O1,20,-0.15,"(-0.3, 0.0)",0.25,equivalent within margin,recomputed (exploratory)
+consistent,B5c-event,PBTI,O2,20,-58.6,"(-59.6, -57.4)",8.246690806096905e-05,equivalent within margin,recomputed (exploratory)
+consistent,B5c-event,PBTI,NLX,20,-22.368850000000133,"(-46.99271875000017, -0.7346287500002612)",0.001953125,equivalent within margin,recomputed (exploratory)
+consistent,B5c-event,PBTI,W,20,-2.347705656706046,"(-2.388232634642113, -2.2985915828700505)",1.9073486328125e-06,better beyond margin,recomputed (exploratory)
+consistent,B5c-event,PBTI,AV5,20,-0.000389159138290468,"(-0.0005003474635163098, -0.0002988186240444557)",8.258582437385928e-05,equivalent within margin,recomputed (exploratory)
+consistent,B5c-hist,PBTI-R-hist,O1,20,-0.35,"(-0.6, -0.15)",0.03125,equivalent within margin,recomputed (exploratory)
+consistent,B5c-hist,PBTI-R-hist,O2,20,1.15,"(0.75, 1.6)",0.0004152844206976803,equivalent within margin,recomputed (exploratory)
+consistent,B5c-hist,PBTI-R-hist,NLX,20,-5912.3547,"(-6988.072703749998, -4672.257132500001)",1.9073486328125e-06,better beyond margin,recomputed (exploratory)
+consistent,B5c-hist,PBTI-R-hist,W,20,6.44976463516331,"(6.361081436414178, 6.540257112230715)",1.9073486328125e-06,worse beyond margin,recomputed (exploratory)
+consistent,B5c-hist,PBTI-R-hist,AV5,20,-0.10106323835997219,"(-0.10210562890896455, -0.09992355802640722)",8.832385863081277e-05,worse beyond margin,recomputed (exploratory)
+consistent,B5c-event,PBTI-R-event,O1,20,-0.15,"(-0.3, 0.0)",0.25,equivalent within margin,recomputed (exploratory)
+consistent,B5c-event,PBTI-R-event,O2,20,0.75,"(0.45, 1.1)",0.00048828125,equivalent within margin,recomputed (exploratory)
+consistent,B5c-event,PBTI-R-event,NLX,20,-22.368850000000133,"(-47.33587499999999, -0.762231249999891)",0.001953125,equivalent within margin,recomputed (exploratory)
+consistent,B5c-event,PBTI-R-event,W,20,0.04092619874913091,"(0.027355035615010584, 0.056790943015982524)",1.9073486328125e-06,equivalent within margin,recomputed (exploratory)
+consistent,B5c-event,PBTI-R-event,AV5,20,-0.000389159138290468,"(-0.0004933981931897147, -0.0002988186240444557)",8.258582437385928e-05,equivalent within margin,recomputed (exploratory)
+consistent,PBTI-R-event,PBTI,O1,20,0.0,"(0.0, 0.0)",1.0,identical,recomputed (exploratory)
+consistent,PBTI-R-event,PBTI,O2,20,-59.35,"(-60.25, -58.2)",8.16381443238923e-05,equivalent within margin,recomputed (exploratory)
+consistent,PBTI-R-event,PBTI,NLX,20,0.0,"(0.0, 0.0)",1.0,identical,recomputed (exploratory)
+consistent,PBTI-R-event,PBTI,W,20,-2.388631855455177,"(-2.4245791136205685, -2.3403518076789434)",1.9073486328125e-06,better beyond margin,recomputed (exploratory)
+consistent,PBTI-R-event,PBTI,AV5,20,0.0,"(0.0, 0.0)",1.0,identical,recomputed (exploratory)
+consistent,B5-hist,B5c-hist,O1,20,0.0,"(0.0, 0.0)",1.0,identical,recomputed (exploratory)
+consistent,B5-hist,B5c-hist,O2,20,0.0,"(0.0, 0.0)",1.0,identical,recomputed (exploratory)
+consistent,B5-hist,B5c-hist,NLX,20,0.0,"(0.0, 0.0)",1.0,identical,recomputed (exploratory)
+consistent,B5-hist,B5c-hist,W,20,0.0,"(0.0, 0.0)",1.0,identical,recomputed (exploratory)
+consistent,B5-hist,B5c-hist,AV5,20,0.0,"(0.0, 0.0)",1.0,identical,recomputed (exploratory)
+consistent,B5-event,B5c-event,O1,20,0.0,"(0.0, 0.0)",1.0,identical,recomputed (exploratory)
+consistent,B5-event,B5c-event,O2,20,0.0,"(0.0, 0.0)",1.0,identical,recomputed (exploratory)
+consistent,B5-event,B5c-event,NLX,20,0.0,"(0.0, 0.0)",1.0,identical,recomputed (exploratory)
+consistent,B5-event,B5c-event,W,20,0.0005668728283529489,"(0.00041362473940230964, 0.0007372840514244716)",1.9073486328125e-06,equivalent within margin,recomputed (exploratory)
+consistent,B5-event,B5c-event,AV5,20,-1.3898540653223268e-05,"(-3.474635163305817e-05, 0.0)",0.5,equivalent within margin,recomputed (exploratory)
+consistent minus registered,PBTI,PBTI,O1,20,84.2,"(74.7, 89.8)",8.596886147715013e-05,worse beyond margin,recomputed (exploratory)
+consistent minus registered,PBTI,PBTI,O2,20,88.7,"(76.05, 98.05)",0.00010305922341480608,worse beyond margin,recomputed (exploratory)
+consistent minus registered,PBTI,PBTI,NLX,20,20530.740999999998,"(18073.21082625, 21955.008917500003)",3.814697265625e-06,worse beyond margin,recomputed (exploratory)
+consistent minus registered,PBTI,PBTI,W,20,2.7636722932592077,"(2.2868642552119534, 3.108336893154968)",3.814697265625e-06,worse beyond margin,recomputed (exploratory)
+consistent minus registered,PBTI,PBTI,AV5,20,-0.012161223071577498,"(-0.013794301598332193, -0.009360667129951372)",0.0001399457931085244,"significant, margin unresolved",recomputed (exploratory)
+consistent minus registered,PBTI-R-hist,PBTI-R-hist,O1,20,84.2,"(74.69875000000002, 89.8)",8.596886147715013e-05,worse beyond margin,recomputed (exploratory)
+consistent minus registered,PBTI-R-hist,PBTI-R-hist,O2,20,87.7,"(74.45, 97.85)",0.00010305922341480608,worse beyond margin,recomputed (exploratory)
+consistent minus registered,PBTI-R-hist,PBTI-R-hist,NLX,20,20530.740999999998,"(18062.240867499997, 21963.16908)",3.814697265625e-06,worse beyond margin,recomputed (exploratory)
+consistent minus registered,PBTI-R-hist,PBTI-R-hist,W,20,2.732192098679639,"(2.248498624565671, 3.090384594336345)",3.814697265625e-06,worse beyond margin,recomputed (exploratory)
+consistent minus registered,PBTI-R-hist,PBTI-R-hist,AV5,20,-0.012161223071577498,"(-0.013780403057678942, -0.00936761640027799)",0.0001399457931085244,"significant, margin unresolved",recomputed (exploratory)
+consistent minus registered,PBTI-R-event,PBTI-R-event,O1,20,84.2,"(74.7, 89.8)",8.596886147715013e-05,worse beyond margin,recomputed (exploratory)
+consistent minus registered,PBTI-R-event,PBTI-R-event,O2,20,88.9,"(76.1, 98.05)",0.00010248649056818514,worse beyond margin,recomputed (exploratory)
+consistent minus registered,PBTI-R-event,PBTI-R-event,NLX,20,20530.740999999998,"(18041.78074, 21969.1770225)",3.814697265625e-06,worse beyond margin,recomputed (exploratory)
+consistent minus registered,PBTI-R-event,PBTI-R-event,W,20,2.770651348158443,"(2.296266229325921, 3.1092150434329384)",3.814697265625e-06,worse beyond margin,recomputed (exploratory)
+consistent minus registered,PBTI-R-event,PBTI-R-event,AV5,20,-0.012161223071577498,"(-0.01378735232800557, -0.009430159833217521)",0.0001399457931085244,"significant, margin unresolved",recomputed (exploratory)
+consistent minus registered,B5c-hist,B5c-hist,O1,20,83.85,"(74.45, 89.45)",8.683086254706037e-05,worse beyond margin,recomputed (exploratory)
+consistent minus registered,B5c-hist,B5c-hist,O2,20,87.35,"(74.04875000000001, 96.75)",0.0001027725553214571,worse beyond margin,recomputed (exploratory)
+consistent minus registered,B5c-hist,B5c-hist,NLX,20,16377.463549999997,"(14178.458898750003, 18121.96423125)",1.9073486328125e-06,worse beyond margin,recomputed (exploratory)
+consistent minus registered,B5c-hist,B5c-hist,W,20,1.6582278179291177,"(1.1051492621612238, 2.0550550919040993)",0.0004825592041015625,worse beyond margin,recomputed (exploratory)
+consistent minus registered,B5c-hist,B5c-hist,AV5,20,0.0012091730368311404,"(-0.0005559416261292416, 0.004120917303683131)",0.9702015901694435,equivalent within margin,recomputed (exploratory)
+consistent minus registered,B5c-event,B5c-event,O1,20,84.05,"(74.65, 89.7)",8.658390851382302e-05,worse beyond margin,recomputed (exploratory)
+consistent minus registered,B5c-event,B5c-event,O2,20,88.85,"(76.1, 97.75)",0.0001027725553214571,worse beyond margin,recomputed (exploratory)
+consistent minus registered,B5c-event,B5c-event,NLX,20,20551.075800000002,"(18062.14037375, 21990.29555125)",3.814697265625e-06,worse beyond margin,recomputed (exploratory)
+consistent minus registered,B5c-event,B5c-event,W,20,2.768303995830438,"(2.3194894034051425, 3.099604200833913)",3.814697265625e-06,worse beyond margin,recomputed (exploratory)
+consistent minus registered,B5c-event,B5c-event,AV5,20,-0.012126476719944396,"(-0.013717859624739393, -0.009429986101459342)",0.00011976557956128949,"significant, margin unresolved",recomputed (exploratory)
+consistent minus registered,B5-hist,B5-hist,O1,20,83.85,"(74.3, 89.4)",8.683086254706037e-05,worse beyond margin,recomputed (exploratory)
+consistent minus registered,B5-hist,B5-hist,O2,20,87.35,"(74.45, 97.0)",0.0001027725553214571,worse beyond margin,recomputed (exploratory)
+consistent minus registered,B5-hist,B5-hist,NLX,20,16377.463549999997,"(14205.71977875, 18117.4815525)",1.9073486328125e-06,worse beyond margin,recomputed (exploratory)
+consistent minus registered,B5-hist,B5-hist,W,20,1.6582278179291177,"(1.1058241167477414, 2.061070890201529)",0.0004825592041015625,worse beyond margin,recomputed (exploratory)
+consistent minus registered,B5-hist,B5-hist,AV5,20,0.0012091730368311404,"(-0.0005837387074357047, 0.00414193884642115)",0.9702015901694435,equivalent within margin,recomputed (exploratory)
+consistent minus registered,B5-event,B5-event,O1,20,84.05,"(74.3, 89.6)",8.658390851382302e-05,worse beyond margin,recomputed (exploratory)
+consistent minus registered,B5-event,B5-event,O2,20,88.75,"(75.95, 97.55)",0.0001027725553214571,worse beyond margin,recomputed (exploratory)
+consistent minus registered,B5-event,B5-event,NLX,20,20551.750350000002,"(18102.93973875, 21980.678373749997)",3.814697265625e-06,worse beyond margin,recomputed (exploratory)
+consistent minus registered,B5-event,B5-event,W,20,2.7645212786657387,"(2.2929911507991645, 3.09612546247394)",3.814697265625e-06,worse beyond margin,recomputed (exploratory)
+consistent minus registered,B5-event,B5-event,AV5,20,-0.012112578179291155,"(-0.013710910354412765, -0.009388464211257807)",0.00011943826132027338,"significant, margin unresolved",recomputed (exploratory)

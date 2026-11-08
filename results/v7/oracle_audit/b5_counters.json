@@ -1,0 +1,55 @@
+[
+ {
+  "run": "A0_core/B5-hist/S05_stolen_key/1",
+  "holds_counter": 846,
+  "true_hold_episodes": 781,
+  "distinct_identities_ever_held": 781,
+  "held_distinct_ever_(run_v4)": 68,
+  "held_end": 65,
+  "legit_quarantined": 19,
+  "legit_quarantined_composition": {
+   "slot CONTESTED (absorbing: never releasable)": 19
+  },
+  "legit_missing": 215,
+  "recovered_n": 716,
+  "stored_holds": 846,
+  "stored_legit_quarantined": 19,
+  "stored_held_distinct_ever": 68
+ },
+ {
+  "run": "A1_review/B5-hist/S99_mixed/21",
+  "holds_counter": 995,
+  "true_hold_episodes": 931,
+  "distinct_identities_ever_held": 931,
+  "held_distinct_ever_(run_v4)": 84,
+  "held_end": 146,
+  "legit_quarantined": 35,
+  "legit_quarantined_composition": {
+   "slot CONTESTED (absorbing: never releasable)": 25,
+   "no-slot (quarantined before admission), case REJECTED": 8,
+   "held, case REJECTED": 2
+  },
+  "legit_missing": 296,
+  "recovered_n": 837,
+  "stored_holds": 995,
+  "stored_legit_quarantined": 35,
+  "stored_held_distinct_ever": 84
+ },
+ {
+  "run": "A0_core/B5-hist/S08_seq_reuse_bug/1",
+  "holds_counter": 402,
+  "true_hold_episodes": 398,
+  "distinct_identities_ever_held": 398,
+  "held_distinct_ever_(run_v4)": 8,
+  "held_end": 8,
+  "legit_quarantined": 4,
+  "legit_quarantined_composition": {
+   "slot CONTESTED (absorbing: never releasable)": 4
+  },
+  "legit_missing": 12,
+  "recovered_n": 390,
+  "stored_holds": 402,
+  "stored_legit_quarantined": 4,
+  "stored_held_distinct_ever": 8
+ }
+]

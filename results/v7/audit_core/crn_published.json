@@ -1,0 +1,27 @@
+{
+ "A0_core.jsonl": {
+  "groups": 320,
+  "mismatching_groups": 0,
+  "examples": []
+ },
+ "A1_review.jsonl": {
+  "groups": 80,
+  "mismatching_groups": 0,
+  "examples": []
+ },
+ "A3_factorial.jsonl": {
+  "groups": 160,
+  "mismatching_groups": 0,
+  "examples": []
+ },
+ "A3_scenarios.jsonl": {
+  "groups": 320,
+  "mismatching_groups": 0,
+  "examples": []
+ },
+ "A3_selective.jsonl": {
+  "groups": 420,
+  "mismatching_groups": 0,
+  "examples": []
+ }
+}

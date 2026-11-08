@@ -1,0 +1,57 @@
+outcome,arm,suppressed_pct,mean
+O1,PBTI,0,0.0
+O1,PBTI,1.0,0.05
+O1,PBTI,5.0,0.65
+O1,PBTI,10.0,2.0
+O1,"PBTI-R, one-shot",0,0.0
+O1,"PBTI-R, one-shot",1.0,0.05
+O1,"PBTI-R, one-shot",5.0,0.65
+O1,"PBTI-R, one-shot",10.0,2.0
+O1,"B5, one-shot",0,0.0
+O1,"B5, one-shot",1.0,0.05
+O1,"B5, one-shot",5.0,0.45
+O1,"B5, one-shot",10.0,0.9
+O1,"B5, event-driven",0,0.0
+O1,"B5, event-driven",1.0,0.05
+O1,"B5, event-driven",5.0,0.6
+O1,"B5, event-driven",10.0,1.6
+O1,B5s (no recovery),0,0.0
+O1,B5s (no recovery),1.0,0.0
+O1,B5s (no recovery),5.0,0.4
+O1,B5s (no recovery),10.0,0.5
+O1,PBTI-SH,0,0.0
+O1,PBTI-SH,1.0,0.0
+O1,PBTI-SH,5.0,0.0
+O1,PBTI-SH,10.0,0.0
+O1,"PBTI-SH, 30 s timeout",0,0.0
+O1,"PBTI-SH, 30 s timeout",1.0,0.05
+O1,"PBTI-SH, 30 s timeout",5.0,0.65
+O1,"PBTI-SH, 30 s timeout",10.0,2.0
+W,PBTI,0,1.633662326388889
+W,PBTI,1.0,3.9002801909722224
+W,PBTI,5.0,12.990357638888886
+W,PBTI,10.0,22.795466302083334
+W,"PBTI-R, one-shot",0,1.633662326388889
+W,"PBTI-R, one-shot",1.0,3.9002801909722224
+W,"PBTI-R, one-shot",5.0,12.990357638888886
+W,"PBTI-R, one-shot",10.0,22.795466302083334
+W,"B5, one-shot",0,9.906026284722222
+W,"B5, one-shot",1.0,12.069340329861111
+W,"B5, one-shot",5.0,20.773569357638884
+W,"B5, one-shot",10.0,29.96457192708333
+W,"B5, event-driven",0,1.6398246006944444
+W,"B5, event-driven",1.0,3.9064305902777776
+W,"B5, event-driven",5.0,13.00389034722222
+W,"B5, event-driven",10.0,22.83007911458333
+W,B5s (no recovery),0,30.819220729166663
+W,B5s (no recovery),1.0,32.72732644097223
+W,B5s (no recovery),5.0,40.33797907986112
+W,B5s (no recovery),10.0,47.82498859375
+W,PBTI-SH,0,2.0104945486111108
+W,PBTI-SH,1.0,4.348485590277777
+W,PBTI-SH,5.0,13.71404819444444
+W,PBTI-SH,10.0,23.74666388888888
+W,"PBTI-SH, 30 s timeout",0,1.8021959375
+W,"PBTI-SH, 30 s timeout",1.0,4.076471701388889
+W,"PBTI-SH, 30 s timeout",5.0,13.19503777777778
+W,"PBTI-SH, 30 s timeout",10.0,23.020361805555552

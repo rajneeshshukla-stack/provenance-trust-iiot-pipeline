@@ -1,0 +1,11 @@
+# harness sha256: 61710d41b689c1581e935c2d09562f823f913cf7c136275df02ef7ca498f70fe
+# which opa: not found
+# --- run 1: --backend opa (no binary; expected to stop with the BLOCKED message)
+RuntimeError: BLOCKED: no 'opa' binary on PATH (and --opa-bin not given); this harness does not download OPA. Install OPA by an approved route, or use --backend regopy.
+# exit_code: 1
+# --- run 2: --backend opa --opa-dry-run scratch/opa_dry --max-grid 5 (writes data files + exact commands; executes nothing)
+backend=opa wall=0.2s versions=5 -> scratch/parity_opa_dryrun.json
+# exit_code: 0
+# example commands (not executed):
+opa eval --format=json --data /home/claude/PBTI_v3/01_repo_base/pbti-iiot/policies/admission.rego --data scratch/opa_dry/data_main_v1.json 'x := {i: [a, r] | some i; c := data.parity_cases[i]; a := data.pbti.admission.allow with input as c; r := data.pbti.admission.reason with input as c}'
+opa eval --format=json --data /home/claude/PBTI_v3/01_repo_base/pbti-iiot/policies/admission.rego --data scratch/opa_dry/data_main_v2.json 'x := {i: [a, r] | some i; c := data.parity_cases[i]; a := data.pbti.admission.allow with input as c; r := data.pbti.admission.reason with input as c}'

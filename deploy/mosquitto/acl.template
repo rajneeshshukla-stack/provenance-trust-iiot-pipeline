@@ -1,0 +1,6 @@
+user verifier
+topic read pbti/#
+
+# one block per gateway (client certificate CN = gwN)
+user gw1
+topic write pbti/gw1/#

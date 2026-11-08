@@ -1,0 +1,14 @@
+# Template used by experiments/run_mqtt_e2e.py (paths are filled in at run time).
+per_listener_settings true
+listener 8883 127.0.0.1
+cafile {PKI}/ca.crt
+certfile {PKI}/server.crt
+keyfile {PKI}/server.key
+require_certificate true
+use_identity_as_username true
+allow_anonymous false
+acl_file {PKI}/acl
+max_inflight_messages 0
+max_queued_messages 0
+persistence false
+log_dest none

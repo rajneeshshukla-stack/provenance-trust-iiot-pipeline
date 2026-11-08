@@ -1,0 +1,66 @@
+{
+ "compared": 66,
+ "identical": 66,
+ "missing_historical": [],
+ "errors_new": 0,
+ "differences": [],
+ "by_arm": {
+  "B4": {
+   "compared": 16,
+   "identical": 16
+  },
+  "PBTI": {
+   "compared": 16,
+   "identical": 16
+  },
+  "B5-hist": {
+   "compared": 16,
+   "identical": 16
+  },
+  "B5S": {
+   "compared": 16,
+   "identical": 16
+  },
+  "PBTI-R-hist": {
+   "compared": 2,
+   "identical": 2
+  }
+ },
+ "metadata_values": {
+  "ablation_name='full'->None": 62,
+  "kind='scenario'->'scenario'": 61,
+  "ablation_name='baseline'->None": 4,
+  "kind='ablation'->'scenario'": 5
+ },
+ "skipped_fields": [
+  "ablation_name",
+  "audit_findings",
+  "audit_pass",
+  "audit_replay_s",
+  "audit_static_s",
+  "devsign_us_mean",
+  "ingest_us_mean",
+  "ingest_us_p50",
+  "ingest_us_p95",
+  "ingest_us_p99",
+  "kind",
+  "wall_s",
+  "wrap_us_mean"
+ ],
+ "excluded": {
+  "timing_substrings": [
+   "_us",
+   "wall",
+   "ingest",
+   "wrap",
+   "devsign"
+  ],
+  "suffix": "_s",
+  "audit_prefix": "audit",
+  "runner_metadata": [
+   "ablation_name",
+   "kind"
+  ]
+ },
+ "n_field_comparisons_total": 2762
+}

@@ -1,0 +1,2397 @@
+[
+ {
+  "case": "case_A_forged_and_genuine_share_identity",
+  "field": "receipts",
+  "expected": [
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED",
+   "CONFLICT/EQUIVOCATION",
+   "ACCEPT/COMMITTED"
+  ],
+  "repo": [
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED",
+   "CONFLICT/EQUIVOCATION",
+   "ACCEPT/COMMITTED"
+  ],
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_A_forged_and_genuine_share_identity",
+  "field": "nonlegit_auth",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_A_forged_and_genuine_share_identity",
+  "field": "legit_missing",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_A_forged_and_genuine_share_identity",
+  "field": "tm_nl_rec_s",
+  "expected": 0.0,
+  "repo": 0.0,
+  "ref": 0.0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_A_forged_and_genuine_share_identity",
+  "field": "tm_nl_pairs_ever",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_A_forged_and_genuine_share_identity",
+  "field": "tm_wh_rec_s",
+  "expected": 27.7,
+  "repo": 27.7,
+  "ref": 27.7,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_A_forged_and_genuine_share_identity",
+  "field": "W",
+  "expected": 9.233333333333333,
+  "repo": 9.233333333333333,
+  "ref": 9.233333333333333,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_A_forged_and_genuine_share_identity",
+  "field": "tm_avail_1s",
+  "expected": 1.0,
+  "repo": 1.0,
+  "ref": 1.0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_A_forged_and_genuine_share_identity",
+  "field": "tm_avail_5s",
+  "expected": 1.0,
+  "repo": 1.0,
+  "ref": 1.0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_A_forged_and_genuine_share_identity",
+  "field": "tm_never_avail",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_A_forged_and_genuine_share_identity",
+  "field": "tm_withdrawn",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_A_forged_and_genuine_share_identity",
+  "field": "tm_withdrawn_end",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_A_forged_and_genuine_share_identity",
+  "field": "tm_first_km_p50_s",
+  "expected": 0.1,
+  "repo": 0.1,
+  "ref": 0.1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_A_forged_and_genuine_share_identity",
+  "field": "tm_zero_flips",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_A_forged_and_genuine_share_identity",
+  "field": "tm_transitions",
+  "expected": 4,
+  "repo": 4,
+  "ref": 4,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_A_forged_and_genuine_share_identity",
+  "field": "tm_end_state_matches_authoritative",
+  "expected": true,
+  "repo": true,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_A_forged_and_genuine_share_identity",
+  "field": "win_total",
+  "expected": 1,
+  "repo": 1,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_A_forged_and_genuine_share_identity",
+  "field": "win_exact",
+  "expected": 0,
+  "repo": 0,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_A_forged_and_genuine_share_identity",
+  "field": "win_incomplete",
+  "expected": 1,
+  "repo": 1,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_A_forged_and_genuine_share_identity",
+  "field": "win_corrupt",
+  "expected": 0,
+  "repo": 0,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_A_forged_and_genuine_share_identity",
+  "field": "cv_assets",
+  "expected": 1,
+  "repo": 1,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_A_forged_and_genuine_share_identity",
+  "field": "cv_correct",
+  "expected": 1,
+  "repo": 1,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_A_forged_and_genuine_share_identity",
+  "field": "ref:O1_pair/O2_pair",
+  "expected": null,
+  "repo": null,
+  "ref": [
+   0,
+   1
+  ],
+  "match_repo": null,
+  "match_ref": null
+ },
+ {
+  "case": "case_B_front_running_same_ms_zero_flip_of_forgery",
+  "field": "receipts",
+  "expected": [
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED",
+   "CONFLICT/EQUIVOCATION",
+   "ACCEPT/COMMITTED"
+  ],
+  "repo": [
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED",
+   "CONFLICT/EQUIVOCATION",
+   "ACCEPT/COMMITTED"
+  ],
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_B_front_running_same_ms_zero_flip_of_forgery",
+  "field": "nonlegit_auth",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_B_front_running_same_ms_zero_flip_of_forgery",
+  "field": "legit_missing",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_B_front_running_same_ms_zero_flip_of_forgery",
+  "field": "tm_nl_rec_s",
+  "expected": 0.0,
+  "repo": 0.0,
+  "ref": 0.0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_B_front_running_same_ms_zero_flip_of_forgery",
+  "field": "tm_nl_pairs_ever",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_B_front_running_same_ms_zero_flip_of_forgery",
+  "field": "tm_zero_flips",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_B_front_running_same_ms_zero_flip_of_forgery",
+  "field": "tm_wh_rec_s",
+  "expected": 28.2,
+  "repo": 28.2,
+  "ref": 28.2,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_B_front_running_same_ms_zero_flip_of_forgery",
+  "field": "W",
+  "expected": 9.4,
+  "repo": 9.4,
+  "ref": 9.4,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_B_front_running_same_ms_zero_flip_of_forgery",
+  "field": "tm_avail_5s",
+  "expected": 0.6666666666666666,
+  "repo": 0.6666666666666666,
+  "ref": 0.6666666666666666,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_B_front_running_same_ms_zero_flip_of_forgery",
+  "field": "tm_never_avail",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_B_front_running_same_ms_zero_flip_of_forgery",
+  "field": "tm_withdrawn",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_B_front_running_same_ms_zero_flip_of_forgery",
+  "field": "tm_first_km_p50_s",
+  "expected": 0.1,
+  "repo": 0.1,
+  "ref": 0.1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_B_front_running_same_ms_zero_flip_of_forgery",
+  "field": "tm_first_km_p90_s",
+  "expected": null,
+  "repo": null,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_B_front_running_same_ms_zero_flip_of_forgery",
+  "field": "tm_transitions",
+  "expected": 4,
+  "repo": 4,
+  "ref": 4,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_B_front_running_same_ms_zero_flip_of_forgery",
+  "field": "ref:O1_pair/O2_pair",
+  "expected": null,
+  "repo": null,
+  "ref": [
+   0,
+   1
+  ],
+  "match_repo": null,
+  "match_ref": null
+ },
+ {
+  "case": "case_C_brief_forgery_withdrawn_by_successor",
+  "field": "receipts",
+  "expected": [
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED"
+  ],
+  "repo": [
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED"
+  ],
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_C_brief_forgery_withdrawn_by_successor",
+  "field": "nonlegit_auth",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_C_brief_forgery_withdrawn_by_successor",
+  "field": "legit_missing",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_C_brief_forgery_withdrawn_by_successor",
+  "field": "tm_nl_rec_s",
+  "expected": 3.0,
+  "repo": 3.0,
+  "ref": 3.0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_C_brief_forgery_withdrawn_by_successor",
+  "field": "tm_nl_pairs_ever",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_C_brief_forgery_withdrawn_by_successor",
+  "field": "tm_nl_auth_end",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_C_brief_forgery_withdrawn_by_successor",
+  "field": "tm_wh_rec_s",
+  "expected": 28.2,
+  "repo": 28.2,
+  "ref": 28.2,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_C_brief_forgery_withdrawn_by_successor",
+  "field": "W",
+  "expected": 9.4,
+  "repo": 9.4,
+  "ref": 9.4,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_C_brief_forgery_withdrawn_by_successor",
+  "field": "tm_avail_5s",
+  "expected": 0.6666666666666666,
+  "repo": 0.6666666666666666,
+  "ref": 0.6666666666666666,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_C_brief_forgery_withdrawn_by_successor",
+  "field": "tm_never_avail",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_C_brief_forgery_withdrawn_by_successor",
+  "field": "tm_withdrawn",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_C_brief_forgery_withdrawn_by_successor",
+  "field": "tm_nl_contained",
+  "expected": 1,
+  "repo": 1,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_C_brief_forgery_withdrawn_by_successor",
+  "field": "tm_nl_contained_undirected",
+  "expected": 0,
+  "repo": 0,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_C_brief_forgery_withdrawn_by_successor",
+  "field": "tm_contain_lat_max_s",
+  "expected": 0.0,
+  "repo": 0.0,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_C_brief_forgery_withdrawn_by_successor",
+  "field": "legit_quarantined",
+  "expected": 0,
+  "repo": 0,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_C_brief_forgery_withdrawn_by_successor",
+  "field": "legit_lost_unrecoverable",
+  "expected": 1,
+  "repo": 1,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_C_brief_forgery_withdrawn_by_successor",
+  "field": "ref:O1_pair/O2_pair",
+  "expected": null,
+  "repo": null,
+  "ref": [
+   0,
+   1
+  ],
+  "match_repo": null,
+  "match_ref": null
+ },
+ {
+  "case": "case_D_quarantine_then_release",
+  "field": "receipts",
+  "expected": [
+   "ACCEPT/COMMITTED",
+   "QUARANTINE/STALE_TS",
+   "RELEASED"
+  ],
+  "repo": [
+   "ACCEPT/COMMITTED",
+   "QUARANTINE/STALE_TS",
+   "RELEASED"
+  ],
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_D_quarantine_then_release",
+  "field": "nonlegit_auth",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_D_quarantine_then_release",
+  "field": "legit_missing",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_D_quarantine_then_release",
+  "field": "legit_quarantined",
+  "expected": 0,
+  "repo": 0,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_D_quarantine_then_release",
+  "field": "tm_wh_rec_s",
+  "expected": 14.1,
+  "repo": 14.1,
+  "ref": 14.1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_D_quarantine_then_release",
+  "field": "W",
+  "expected": 7.05,
+  "repo": 7.05,
+  "ref": 7.05,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_D_quarantine_then_release",
+  "field": "tm_avail_1s",
+  "expected": 0.5,
+  "repo": 0.5,
+  "ref": 0.5,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_D_quarantine_then_release",
+  "field": "tm_avail_5s",
+  "expected": 0.5,
+  "repo": 0.5,
+  "ref": 0.5,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_D_quarantine_then_release",
+  "field": "tm_avail_30s",
+  "expected": 1.0,
+  "repo": 1.0,
+  "ref": 1.0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_D_quarantine_then_release",
+  "field": "tm_avail_60s",
+  "expected": 1.0,
+  "repo": 1.0,
+  "ref": 1.0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_D_quarantine_then_release",
+  "field": "tm_never_avail",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_D_quarantine_then_release",
+  "field": "tm_withdrawn",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_D_quarantine_then_release",
+  "field": "tm_first_km_p50_s",
+  "expected": 0.1,
+  "repo": 0.1,
+  "ref": 0.1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_D_quarantine_then_release",
+  "field": "tm_first_km_p90_s",
+  "expected": 14.0,
+  "repo": 14.0,
+  "ref": 14.0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_D_quarantine_then_release",
+  "field": "tm_first_km_p99_s",
+  "expected": 14.0,
+  "repo": 14.0,
+  "ref": 14.0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_D_quarantine_then_release",
+  "field": "recovered_n",
+  "expected": 1,
+  "repo": 1,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_D_quarantine_then_release",
+  "field": "win_total",
+  "expected": 1,
+  "repo": 1,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_D_quarantine_then_release",
+  "field": "win_exact",
+  "expected": 1,
+  "repo": 1,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_D_quarantine_then_release",
+  "field": "win_incomplete",
+  "expected": 0,
+  "repo": 0,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_D_quarantine_then_release",
+  "field": "win_corrupt",
+  "expected": 0,
+  "repo": 0,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_D_quarantine_then_release",
+  "field": "cv_correct",
+  "expected": 1,
+  "repo": 1,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_D_quarantine_then_release",
+  "field": "ref:O1_pair/O2_pair",
+  "expected": null,
+  "repo": null,
+  "ref": [
+   0,
+   0
+  ],
+  "match_repo": null,
+  "match_ref": null
+ },
+ {
+  "case": "case_E_b5_hold_then_release",
+  "field": "receipts",
+  "expected": [
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED",
+   "CONFLICT/EQUIVOCATION",
+   "QUARANTINE/FEED_FORK_HOLD",
+   "QUARANTINE/FEED_FORK_HOLD",
+   "RELEASED_HOLD",
+   "RELEASED_HOLD"
+  ],
+  "repo": [
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED",
+   "CONFLICT/EQUIVOCATION",
+   "QUARANTINE/FEED_FORK_HOLD",
+   "QUARANTINE/FEED_FORK_HOLD",
+   "RELEASED_HOLD",
+   "RELEASED_HOLD"
+  ],
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_E_b5_hold_then_release",
+  "field": "nonlegit_auth",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_E_b5_hold_then_release",
+  "field": "legit_missing",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_E_b5_hold_then_release",
+  "field": "tm_nl_rec_s",
+  "expected": 0.0,
+  "repo": 0.0,
+  "ref": 0.0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_E_b5_hold_then_release",
+  "field": "tm_wh_rec_s",
+  "expected": 40.6,
+  "repo": 40.6,
+  "ref": 40.6,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_E_b5_hold_then_release",
+  "field": "W",
+  "expected": 10.15,
+  "repo": 10.15,
+  "ref": 10.15,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_E_b5_hold_then_release",
+  "field": "tm_avail_1s",
+  "expected": 0.5,
+  "repo": 0.5,
+  "ref": 0.5,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_E_b5_hold_then_release",
+  "field": "tm_avail_5s",
+  "expected": 0.5,
+  "repo": 0.5,
+  "ref": 0.5,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_E_b5_hold_then_release",
+  "field": "tm_avail_30s",
+  "expected": 1.0,
+  "repo": 1.0,
+  "ref": 1.0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_E_b5_hold_then_release",
+  "field": "tm_withdrawn",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_E_b5_hold_then_release",
+  "field": "tm_withdrawn_end",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_E_b5_hold_then_release",
+  "field": "tm_never_avail",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_E_b5_hold_then_release",
+  "field": "tm_first_km_p50_s",
+  "expected": 0.1,
+  "repo": 0.1,
+  "ref": 0.1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_E_b5_hold_then_release",
+  "field": "tm_first_km_p90_s",
+  "expected": 7.0,
+  "repo": 7.0,
+  "ref": 7.0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_E_b5_hold_then_release",
+  "field": "tm_transitions",
+  "expected": 5,
+  "repo": 5,
+  "ref": 5,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_E_b5_hold_then_release",
+  "field": "recovered_n",
+  "expected": 2,
+  "repo": 2,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_E_b5_hold_then_release",
+  "field": "legit_quarantined",
+  "expected": 0,
+  "repo": 0,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_E_b5_hold_then_release",
+  "field": "legit_lost_unrecoverable",
+  "expected": 1,
+  "repo": 1,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_E_b5_hold_then_release",
+  "field": "holds",
+  "expected": 3,
+  "repo": 4,
+  "ref": null,
+  "match_repo": false,
+  "match_ref": null
+ },
+ {
+  "case": "case_E_b5_hold_then_release",
+  "field": "held_distinct_ever",
+  "expected": 3,
+  "repo": 2,
+  "ref": null,
+  "match_repo": false,
+  "match_ref": null
+ },
+ {
+  "case": "case_E_b5_hold_then_release",
+  "field": "ref:O1_pair/O2_pair",
+  "expected": null,
+  "repo": null,
+  "ref": [
+   0,
+   1
+  ],
+  "match_repo": null,
+  "match_ref": null
+ },
+ {
+  "case": "case_E2_b5_rehold_after_release",
+  "field": "receipts",
+  "expected": [
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED",
+   "CONFLICT/EQUIVOCATION",
+   "QUARANTINE/FEED_FORK_HOLD",
+   "QUARANTINE/FEED_FORK_HOLD",
+   "RELEASED_HOLD",
+   "RELEASED_HOLD",
+   "CONFLICT/EQUIVOCATION",
+   "REJECTED"
+  ],
+  "repo": [
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED",
+   "CONFLICT/EQUIVOCATION",
+   "QUARANTINE/FEED_FORK_HOLD",
+   "QUARANTINE/FEED_FORK_HOLD",
+   "RELEASED_HOLD",
+   "RELEASED_HOLD",
+   "CONFLICT/EQUIVOCATION",
+   "REJECTED"
+  ],
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_E2_b5_rehold_after_release",
+  "field": "nonlegit_auth",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_E2_b5_rehold_after_release",
+  "field": "legit_missing",
+  "expected": 3,
+  "repo": 3,
+  "ref": 3,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_E2_b5_rehold_after_release",
+  "field": "tm_nl_rec_s",
+  "expected": 0.0,
+  "repo": 0.0,
+  "ref": 0.0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_E2_b5_rehold_after_release",
+  "field": "tm_wh_rec_s",
+  "expected": 76.6,
+  "repo": 76.6,
+  "ref": 76.6,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_E2_b5_rehold_after_release",
+  "field": "W",
+  "expected": 19.15,
+  "repo": 19.15,
+  "ref": 19.15,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_E2_b5_rehold_after_release",
+  "field": "tm_withdrawn",
+  "expected": 3,
+  "repo": 3,
+  "ref": 3,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_E2_b5_rehold_after_release",
+  "field": "tm_withdrawn_end",
+  "expected": 3,
+  "repo": 3,
+  "ref": 3,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_E2_b5_rehold_after_release",
+  "field": "tm_never_avail",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_E2_b5_rehold_after_release",
+  "field": "tm_avail_5s",
+  "expected": 0.5,
+  "repo": 0.5,
+  "ref": 0.5,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_E2_b5_rehold_after_release",
+  "field": "tm_avail_30s",
+  "expected": 1.0,
+  "repo": 1.0,
+  "ref": 1.0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_E2_b5_rehold_after_release",
+  "field": "tm_transitions",
+  "expected": 7,
+  "repo": 7,
+  "ref": 7,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_E2_b5_rehold_after_release",
+  "field": "legit_quarantined",
+  "expected": 1,
+  "repo": 2,
+  "ref": null,
+  "match_repo": false,
+  "match_ref": null
+ },
+ {
+  "case": "case_E2_b5_rehold_after_release",
+  "field": "legit_lost_unrecoverable",
+  "expected": 2,
+  "repo": 1,
+  "ref": null,
+  "match_repo": false,
+  "match_ref": null
+ },
+ {
+  "case": "case_E2_b5_rehold_after_release",
+  "field": "holds",
+  "expected": 5,
+  "repo": 6,
+  "ref": null,
+  "match_repo": false,
+  "match_ref": null
+ },
+ {
+  "case": "case_E2_b5_rehold_after_release",
+  "field": "ref:O1_pair/O2_pair",
+  "expected": null,
+  "repo": null,
+  "ref": [
+   0,
+   3
+  ],
+  "match_repo": null,
+  "match_ref": null
+ },
+ {
+  "case": "case_F_never_released_censoring",
+  "field": "receipts",
+  "expected": [
+   "ACCEPT/COMMITTED",
+   "QUARANTINE/STALE_TS",
+   "QUARANTINE/STALE_TS"
+  ],
+  "repo": [
+   "ACCEPT/COMMITTED",
+   "QUARANTINE/STALE_TS",
+   "QUARANTINE/STALE_TS"
+  ],
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_F_never_released_censoring",
+  "field": "legit_missing",
+  "expected": 2,
+  "repo": 2,
+  "ref": 2,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_F_never_released_censoring",
+  "field": "legit_quarantined",
+  "expected": 2,
+  "repo": 2,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_F_never_released_censoring",
+  "field": "legit_lost_unrecoverable",
+  "expected": 0,
+  "repo": 0,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_F_never_released_censoring",
+  "field": "tm_wh_rec_s",
+  "expected": 55.1,
+  "repo": 55.1,
+  "ref": 55.1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_F_never_released_censoring",
+  "field": "W",
+  "expected": 18.366666666666667,
+  "repo": 18.366666666666667,
+  "ref": 18.366666666666667,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_F_never_released_censoring",
+  "field": "tm_avail_5s",
+  "expected": 0.3333333333333333,
+  "repo": 0.3333333333333333,
+  "ref": 0.3333333333333333,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_F_never_released_censoring",
+  "field": "tm_avail_60s",
+  "expected": 0.3333333333333333,
+  "repo": 0.3333333333333333,
+  "ref": 0.3333333333333333,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_F_never_released_censoring",
+  "field": "tm_never_avail",
+  "expected": 2,
+  "repo": 2,
+  "ref": 2,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_F_never_released_censoring",
+  "field": "tm_first_km_p50_s",
+  "expected": null,
+  "repo": null,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_F_never_released_censoring",
+  "field": "tm_first_km_p90_s",
+  "expected": null,
+  "repo": null,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_F_never_released_censoring",
+  "field": "nonlegit_auth",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_F_never_released_censoring",
+  "field": "tm_nl_rec_s",
+  "expected": 0.0,
+  "repo": 0.0,
+  "ref": 0.0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_F_never_released_censoring",
+  "field": "ref:O1_pair/O2_pair",
+  "expected": null,
+  "repo": null,
+  "ref": [
+   0,
+   2
+  ],
+  "match_repo": null,
+  "match_ref": null
+ },
+ {
+  "case": "case_G_duplicate_and_replay",
+  "field": "receipts",
+  "expected": [
+   "ACCEPT/COMMITTED",
+   "DUPLICATE/RETRY",
+   "ACCEPT/COMMITTED",
+   "DUPLICATE/SUSPECTED_REPLAY"
+  ],
+  "repo": [
+   "ACCEPT/COMMITTED",
+   "DUPLICATE/RETRY",
+   "ACCEPT/COMMITTED",
+   "DUPLICATE/SUSPECTED_REPLAY"
+  ],
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_G_duplicate_and_replay",
+  "field": "nonlegit_auth",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_G_duplicate_and_replay",
+  "field": "legit_missing",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_G_duplicate_and_replay",
+  "field": "dup_auth",
+  "expected": 0,
+  "repo": 0,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_G_duplicate_and_replay",
+  "field": "tm_wh_rec_s",
+  "expected": 0.2,
+  "repo": 0.2,
+  "ref": 0.2,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_G_duplicate_and_replay",
+  "field": "W",
+  "expected": 0.1,
+  "repo": 0.1,
+  "ref": 0.1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_G_duplicate_and_replay",
+  "field": "tm_avail_1s",
+  "expected": 1.0,
+  "repo": 1.0,
+  "ref": 1.0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_G_duplicate_and_replay",
+  "field": "tm_transitions",
+  "expected": 2,
+  "repo": 2,
+  "ref": 2,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_G_duplicate_and_replay",
+  "field": "tm_nl_rec_s",
+  "expected": 0.0,
+  "repo": 0.0,
+  "ref": 0.0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_G_duplicate_and_replay",
+  "field": "tm_zero_flips",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_G_duplicate_and_replay",
+  "field": "ref:O1_pair/O2_pair",
+  "expected": null,
+  "repo": null,
+  "ref": [
+   0,
+   0
+  ],
+  "match_repo": null,
+  "match_ref": null
+ },
+ {
+  "case": "case_H_suppressed_message",
+  "field": "receipts",
+  "expected": [
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED"
+  ],
+  "repo": [
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED"
+  ],
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_H_suppressed_message",
+  "field": "legit_missing",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_H_suppressed_message",
+  "field": "legit_quarantined",
+  "expected": 0,
+  "repo": 0,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_H_suppressed_message",
+  "field": "legit_lost_unrecoverable",
+  "expected": 1,
+  "repo": 1,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_H_suppressed_message",
+  "field": "tm_wh_rec_s",
+  "expected": 28.2,
+  "repo": 28.2,
+  "ref": 28.2,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_H_suppressed_message",
+  "field": "W",
+  "expected": 9.4,
+  "repo": 9.4,
+  "ref": 9.4,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_H_suppressed_message",
+  "field": "tm_never_avail",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_H_suppressed_message",
+  "field": "tm_avail_5s",
+  "expected": 0.6666666666666666,
+  "repo": 0.6666666666666666,
+  "ref": 0.6666666666666666,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_H_suppressed_message",
+  "field": "tm_first_km_p50_s",
+  "expected": 0.1,
+  "repo": 0.1,
+  "ref": 0.1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_H_suppressed_message",
+  "field": "tm_first_km_p90_s",
+  "expected": null,
+  "repo": null,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_H_suppressed_message",
+  "field": "tm_nl_rec_s",
+  "expected": 0.0,
+  "repo": 0.0,
+  "ref": 0.0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_H_suppressed_message",
+  "field": "nonlegit_auth",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_H_suppressed_message",
+  "field": "ref:O1_pair/O2_pair",
+  "expected": null,
+  "repo": null,
+  "ref": [
+   0,
+   1
+  ],
+  "match_repo": null,
+  "match_ref": null
+ },
+ {
+  "case": "case_I_taint_after_revocation",
+  "field": "receipts",
+  "expected": [
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED"
+  ],
+  "repo": [
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED"
+  ],
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_I_taint_after_revocation",
+  "field": "nonlegit_auth",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_I_taint_after_revocation",
+  "field": "legit_missing",
+  "expected": 2,
+  "repo": 2,
+  "ref": 2,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_I_taint_after_revocation",
+  "field": "taint_events",
+  "expected": 3,
+  "repo": 3,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_I_taint_after_revocation",
+  "field": "tm_wh_rec_s",
+  "expected": 44.3,
+  "repo": 44.3,
+  "ref": 44.3,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_I_taint_after_revocation",
+  "field": "W",
+  "expected": 14.766666666666666,
+  "repo": 14.766666666666666,
+  "ref": 14.766666666666666,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_I_taint_after_revocation",
+  "field": "tm_nl_rec_s",
+  "expected": 3.9,
+  "repo": 3.9,
+  "ref": 3.9,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_I_taint_after_revocation",
+  "field": "tm_nl_pairs_ever",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_I_taint_after_revocation",
+  "field": "tm_nl_auth_end",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_I_taint_after_revocation",
+  "field": "tm_avail_1s",
+  "expected": 1.0,
+  "repo": 1.0,
+  "ref": 1.0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_I_taint_after_revocation",
+  "field": "tm_never_avail",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_I_taint_after_revocation",
+  "field": "tm_withdrawn",
+  "expected": 2,
+  "repo": 2,
+  "ref": 2,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_I_taint_after_revocation",
+  "field": "tm_withdrawn_end",
+  "expected": 2,
+  "repo": 2,
+  "ref": 2,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_I_taint_after_revocation",
+  "field": "tm_nl_contained",
+  "expected": 1,
+  "repo": 1,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_I_taint_after_revocation",
+  "field": "tm_nl_contained_undirected",
+  "expected": 0,
+  "repo": 0,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_I_taint_after_revocation",
+  "field": "tm_contain_lat_max_s",
+  "expected": 0.0,
+  "repo": 0.0,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_I_taint_after_revocation",
+  "field": "tm_transitions",
+  "expected": 7,
+  "repo": 7,
+  "ref": 7,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_I_taint_after_revocation",
+  "field": "ref:O1_pair/O2_pair",
+  "expected": null,
+  "repo": null,
+  "ref": [
+   0,
+   2
+  ],
+  "match_repo": null,
+  "match_ref": null
+ },
+ {
+  "case": "case_J_deadline_boundaries",
+  "field": "receipts",
+  "expected": [
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED"
+  ],
+  "repo": [
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED"
+  ],
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_J_deadline_boundaries",
+  "field": "tm_avail_1s",
+  "expected": 0.25,
+  "repo": 0.25,
+  "ref": 0.25,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_J_deadline_boundaries",
+  "field": "tm_avail_5s",
+  "expected": 0.75,
+  "repo": 0.75,
+  "ref": 0.75,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_J_deadline_boundaries",
+  "field": "tm_avail_30s",
+  "expected": 1.0,
+  "repo": 1.0,
+  "ref": 1.0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_J_deadline_boundaries",
+  "field": "tm_avail_60s",
+  "expected": 1.0,
+  "repo": 1.0,
+  "ref": 1.0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_J_deadline_boundaries",
+  "field": "tm_wh_rec_s",
+  "expected": 12.002,
+  "repo": 12.002,
+  "ref": 12.002,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_J_deadline_boundaries",
+  "field": "W",
+  "expected": 3.0005,
+  "repo": 3.0005,
+  "ref": 3.0005,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_J_deadline_boundaries",
+  "field": "tm_first_km_p50_s",
+  "expected": 1.001,
+  "repo": 1.001,
+  "ref": 1.001,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_J_deadline_boundaries",
+  "field": "tm_first_km_p90_s",
+  "expected": 5.001,
+  "repo": 5.001,
+  "ref": 5.001,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_J_deadline_boundaries",
+  "field": "tm_first_km_p99_s",
+  "expected": 5.001,
+  "repo": 5.001,
+  "ref": 5.001,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_J_deadline_boundaries",
+  "field": "tm_alert_true",
+  "expected": 4,
+  "repo": 4,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_J_deadline_boundaries",
+  "field": "tm_alert_missed",
+  "expected": 1,
+  "repo": 1,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_J_deadline_boundaries",
+  "field": "ref:O1_pair/O2_pair",
+  "expected": null,
+  "repo": null,
+  "ref": [
+   0,
+   0
+  ],
+  "match_repo": null,
+  "match_ref": null
+ },
+ {
+  "case": "case_K_genuine_zero_duration",
+  "field": "receipts",
+  "expected": [
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED",
+   "CONFLICT/EQUIVOCATION",
+   "ACCEPT/COMMITTED"
+  ],
+  "repo": [
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED",
+   "CONFLICT/EQUIVOCATION",
+   "ACCEPT/COMMITTED"
+  ],
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_K_genuine_zero_duration",
+  "field": "tm_zero_flips",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_K_genuine_zero_duration",
+  "field": "tm_never_avail",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_K_genuine_zero_duration",
+  "field": "tm_withdrawn",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_K_genuine_zero_duration",
+  "field": "tm_avail_5s",
+  "expected": 0.6666666666666666,
+  "repo": 0.6666666666666666,
+  "ref": 0.6666666666666666,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_K_genuine_zero_duration",
+  "field": "tm_wh_rec_s",
+  "expected": 28.2,
+  "repo": 28.2,
+  "ref": 28.2,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_K_genuine_zero_duration",
+  "field": "W",
+  "expected": 9.4,
+  "repo": 9.4,
+  "ref": 9.4,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_K_genuine_zero_duration",
+  "field": "legit_missing",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_K_genuine_zero_duration",
+  "field": "tm_nl_rec_s",
+  "expected": 0.0,
+  "repo": 0.0,
+  "ref": 0.0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_K_genuine_zero_duration",
+  "field": "ref:O1_pair/O2_pair",
+  "expected": null,
+  "repo": null,
+  "ref": [
+   0,
+   1
+  ],
+  "match_repo": null,
+  "match_ref": null
+ },
+ {
+  "case": "case_L_drain_phase",
+  "field": "receipts",
+  "expected": [
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED"
+  ],
+  "repo": [
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED"
+  ],
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_L_drain_phase",
+  "field": "nonlegit_auth",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_L_drain_phase",
+  "field": "legit_missing",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_L_drain_phase",
+  "field": "tm_nl_rec_s",
+  "expected": 2.0,
+  "repo": 2.0,
+  "ref": 2.0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_L_drain_phase",
+  "field": "tm_nl_auth_end",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_L_drain_phase",
+  "field": "tm_wh_rec_s",
+  "expected": 26.8,
+  "repo": 26.8,
+  "ref": 26.8,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_L_drain_phase",
+  "field": "W",
+  "expected": 6.7,
+  "repo": 6.7,
+  "ref": 6.7,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_L_drain_phase",
+  "field": "tm_avail_5s",
+  "expected": 0.25,
+  "repo": 0.25,
+  "ref": 0.25,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_L_drain_phase",
+  "field": "tm_avail_30s",
+  "expected": 0.5,
+  "repo": 0.5,
+  "ref": 0.5,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_L_drain_phase",
+  "field": "tm_never_avail",
+  "expected": 2,
+  "repo": 2,
+  "ref": 2,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_L_drain_phase",
+  "field": "tm_zero_flips",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_L_drain_phase",
+  "field": "tm_first_km_p50_s",
+  "expected": 6.0,
+  "repo": 6.0,
+  "ref": 6.0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_L_drain_phase",
+  "field": "tm_first_km_p90_s",
+  "expected": null,
+  "repo": null,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_L_drain_phase",
+  "field": "win_total",
+  "expected": 2,
+  "repo": 2,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_L_drain_phase",
+  "field": "win_exact",
+  "expected": 1,
+  "repo": 1,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_L_drain_phase",
+  "field": "win_corrupt",
+  "expected": 1,
+  "repo": 1,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_L_drain_phase",
+  "field": "win_incomplete",
+  "expected": 0,
+  "repo": 0,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_L_drain_phase",
+  "field": "cv_correct",
+  "expected": 0,
+  "repo": 0,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_L_drain_phase",
+  "field": "ref:O1_pair/O2_pair",
+  "expected": null,
+  "repo": null,
+  "ref": [
+   1,
+   1
+  ],
+  "match_repo": null,
+  "match_ref": null
+ },
+ {
+  "case": "case_M_forgery_under_genuine_identity_retained",
+  "field": "receipts",
+  "expected": [
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED"
+  ],
+  "repo": [
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED"
+  ],
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_M_forgery_under_genuine_identity_retained",
+  "field": "nonlegit_auth",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_M_forgery_under_genuine_identity_retained",
+  "field": "legit_missing",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_M_forgery_under_genuine_identity_retained",
+  "field": "tm_nl_rec_s",
+  "expected": 27.9,
+  "repo": 27.9,
+  "ref": 27.9,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_M_forgery_under_genuine_identity_retained",
+  "field": "tm_nl_auth_end",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_M_forgery_under_genuine_identity_retained",
+  "field": "tm_wh_rec_s",
+  "expected": 28.1,
+  "repo": 28.1,
+  "ref": 28.1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_M_forgery_under_genuine_identity_retained",
+  "field": "W",
+  "expected": 14.05,
+  "repo": 14.05,
+  "ref": 14.05,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_M_forgery_under_genuine_identity_retained",
+  "field": "tm_never_avail",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_M_forgery_under_genuine_identity_retained",
+  "field": "tm_avail_5s",
+  "expected": 0.5,
+  "repo": 0.5,
+  "ref": 0.5,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_M_forgery_under_genuine_identity_retained",
+  "field": "win_total",
+  "expected": 1,
+  "repo": 1,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_M_forgery_under_genuine_identity_retained",
+  "field": "win_corrupt",
+  "expected": 1,
+  "repo": 1,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_M_forgery_under_genuine_identity_retained",
+  "field": "win_exact",
+  "expected": 0,
+  "repo": 0,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_M_forgery_under_genuine_identity_retained",
+  "field": "cv_correct",
+  "expected": 0,
+  "repo": 0,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_M_forgery_under_genuine_identity_retained",
+  "field": "ref:O1_pair/O2_pair",
+  "expected": null,
+  "repo": null,
+  "ref": [
+   1,
+   1
+  ],
+  "match_repo": null,
+  "match_ref": null
+ },
+ {
+  "case": "case_N_relabelled_genuine_content",
+  "field": "receipts",
+  "expected": [
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED"
+  ],
+  "repo": [
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED"
+  ],
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_N_relabelled_genuine_content",
+  "field": "nonlegit_auth",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_N_relabelled_genuine_content",
+  "field": "dup_auth",
+  "expected": 1,
+  "repo": 1,
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_N_relabelled_genuine_content",
+  "field": "legit_missing",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_N_relabelled_genuine_content",
+  "field": "tm_nl_rec_s",
+  "expected": 26.9,
+  "repo": 26.9,
+  "ref": 26.9,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_N_relabelled_genuine_content",
+  "field": "tm_nl_auth_end",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_N_relabelled_genuine_content",
+  "field": "ref:O1_pair/O2_pair",
+  "expected": null,
+  "repo": null,
+  "ref": [
+   1,
+   0
+  ],
+  "match_repo": null,
+  "match_ref": null
+ },
+ {
+  "case": "case_O_pbti_sh_provisional_to_end",
+  "field": "receipts",
+  "expected": [
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED",
+   "CONFLICT/EQUIVOCATION",
+   "ACCEPT/COMMITTED"
+  ],
+  "repo": [
+   "ACCEPT/COMMITTED",
+   "ACCEPT/COMMITTED",
+   "CONFLICT/EQUIVOCATION",
+   "ACCEPT/COMMITTED"
+  ],
+  "ref": null,
+  "match_repo": true,
+  "match_ref": null
+ },
+ {
+  "case": "case_O_pbti_sh_provisional_to_end",
+  "field": "nonlegit_auth",
+  "expected": 0,
+  "repo": 0,
+  "ref": 0,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_O_pbti_sh_provisional_to_end",
+  "field": "legit_missing",
+  "expected": 2,
+  "repo": 2,
+  "ref": 2,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_O_pbti_sh_provisional_to_end",
+  "field": "tm_wh_rec_s",
+  "expected": 54.6,
+  "repo": 54.6,
+  "ref": 54.6,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_O_pbti_sh_provisional_to_end",
+  "field": "W",
+  "expected": 18.2,
+  "repo": 18.2,
+  "ref": 18.2,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_O_pbti_sh_provisional_to_end",
+  "field": "tm_never_avail",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_O_pbti_sh_provisional_to_end",
+  "field": "tm_withdrawn",
+  "expected": 1,
+  "repo": 1,
+  "ref": 1,
+  "match_repo": true,
+  "match_ref": true
+ },
+ {
+  "case": "case_O_pbti_sh_provisional_to_end",
+  "field": "legit_quarantined",
+  "expected": 1,
+  "repo": 0,
+  "ref": null,
+  "match_repo": false,
+  "match_ref": null
+ },
+ {
+  "case": "case_O_pbti_sh_provisional_to_end",
+  "field": "legit_lost_unrecoverable",
+  "expected": 1,
+  "repo": 2,
+  "ref": null,
+  "match_repo": false,
+  "match_ref": null
+ },
+ {
+  "case": "case_O_pbti_sh_provisional_to_end",
+  "field": "ref:O1_pair/O2_pair",
+  "expected": null,
+  "repo": null,
+  "ref": [
+   0,
+   2
+  ],
+  "match_repo": null,
+  "match_ref": null
+ }
+]

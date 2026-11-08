@@ -1,0 +1,51 @@
+{
+ "campaign": "A3_scenarios",
+ "description": "A3 controls: PBTI-SH on E1-E15 and the mixed workload (seeds 1-20, paired with the A0 rows of PBTI, B4, B5 and B5s): benign sequence faults (E8), outages (E11, E11b), full impersonation as negative control (E5), key compromise (E14, E15); PBTI-SH-T30 on E5, E8, E14 and the mixed workload.",
+ "seeds": {
+  "start": 1,
+  "n": 20
+ },
+ "audit_seeds": 2,
+ "design": [
+  {
+   "kind": "scenario",
+   "scenarios": [
+    "S01_normal",
+    "S02_payload_tamper",
+    "S03_metadata_tamper",
+    "S04_unauthorized",
+    "S05_stolen_key",
+    "S06_replay",
+    "S07_duplicates",
+    "S08_seq_reuse_bug",
+    "S09_reorder",
+    "S10_delay_clock",
+    "S11_disconnect_recover",
+    "S12_beyond_horizon",
+    "S13_rotation",
+    "S14_revocation",
+    "S15_edge_compromise",
+    "S99_mixed"
+   ]
+  }
+ ],
+ "arms": [
+  {
+   "arm": "PBTI-SH",
+   "system": "PBTI-SH"
+  },
+  {
+   "arm": "PBTI-SH-T30",
+   "system": "PBTI-SH",
+   "cfg": {
+    "sh_timeout_ms": 30000
+   },
+   "scenarios": [
+    "S05_stolen_key",
+    "S08_seq_reuse_bug",
+    "S14_revocation",
+    "S99_mixed"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+# image: pbti:v3  hardened runtime: --read-only --tmpfs /tmp:rw,exec,size=256m --cap-drop ALL --security-opt no-new-privileges --cpus=1.0
+# cmd: python3 experiments/run_mqtt_e2e.py --rates 20 --reps 1 --warm 1 --measure 3 --drain 1 --out /out/mqtt_e2e_smoke.jsonl
+# start: 2026-11-04T05:24:18Z
+rep 1 rate 20 B3: p50 1.53 ms p99 6.70 ms thr 20/s
+rep 1 rate 20 B2: p50 2.80 ms p99 12.44 ms thr 20/s
+rep 1 rate 20 PBTI: p50 1.72 ms p99 5.59 ms thr 20/s
+rep 1 rate 20 B1: p50 1.25 ms p99 5.91 ms thr 20/s
+# exit_code: 0
+# end: 2026-11-04T05:25:03Z

@@ -1,0 +1,2 @@
+{"system": "B5", "scenario": "S99_mixed", "seed": 21, "cfg": {}, "outcomes": {"FEED_FORK_HOLD|REJECTED": 91, "FEED_FORK_HOLD|RELEASED_HOLD": 785, "FEED_FORK_HOLD|RELEASE_FAILED:CONFLICT": 38, "STALE_TS|REJECTED": 15, "STALE_TS|RELEASED": 52, "STALE_TS|RELEASE_FAILED:DUPLICATE/SUSPECTED_REPLAY": 23}, "held_end": 146, "pending_cases": 23}
+{"system": "PBTI-R", "scenario": "S99_mixed", "seed": 21, "cfg": {}, "outcomes": {"STALE_TS|REJECTED": 15, "STALE_TS|RELEASED": 52, "STALE_TS|RELEASE_FAILED:DUPLICATE/SUSPECTED_REPLAY": 23}, "held_end": 0, "pending_cases": 23}

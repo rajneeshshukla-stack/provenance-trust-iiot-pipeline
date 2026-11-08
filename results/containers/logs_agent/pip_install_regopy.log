@@ -1,0 +1,11 @@
+Collecting regopy
+  Downloading regopy-1.5.2-cp313-cp313-manylinux_2_34_x86_64.whl.metadata (5.6 kB)
+Downloading regopy-1.5.2-cp313-cp313-manylinux_2_34_x86_64.whl (7.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.8/7.8 MB 1.1 MB/s  0:00:07
+Installing collected packages: regopy
+Successfully installed regopy-1.5.2
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+real	0m9.025s
+user	0m0.788s
+sys	0m0.151s

@@ -1,0 +1,15 @@
+# regopy 1.5.2 (HEAD:74af308, Sat, 4 Jul 2026 15:51:41 +0100) GNU 14.2.1 on linux
+# probe6.py: trivial policy 'allow if input.a == 1'
+trivial_set_input True {"expressions":[true], "bindings":{"x":true}}
+[probe6 trivial_set_input exit=0]
+trivial_with True undefined
+[probe6 trivial_with exit=0]
+trivial_with_default True undefined
+[probe6 trivial_with_default exit=0]
+# probe5.py: admission.rego with 'with input as' (exit 139 = SIGSEGV)
+/bin/bash: line 1: 16000 Segmentation fault      python3 -I probe5.py $k
+[probe5 simple_with exit=139]
+/bin/bash: line 1: 16002 Segmentation fault      python3 -I probe5.py $k
+[probe5 with_data_ref exit=139]
+/bin/bash: line 1: 16004 Segmentation fault      python3 -I probe5.py $k
+[probe5 wrapper_module exit=139]

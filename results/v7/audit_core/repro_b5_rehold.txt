@@ -1,0 +1,19 @@
+A) feed resumed before the late successor arrives
+  alt seq1: CONFLICT fork: {('d1', 0): {'seq': 1, 't': 2050}}
+  seq3: QUARANTINE
+  seq4: QUARANTINE
+  seq5: QUARANTINE
+  review@6.1s: ['RELEASED_HOLD', 'RELEASED_HOLD', 'RELEASED_HOLD'] fork: {} authoritative: [0, 3, 4, 5]
+  late seq2 arrives @7s: QUARANTINE fork: {('d1', 0): {'seq': 1, 't': 7000}} fork_events: 2
+  authoritative after late seq2: [0]
+  case states 3,4,5: ['QUARANTINED', 'QUARANTINED', 'QUARANTINED']
+B) feed still forked (one case pending) when the late successor arrives
+  alt seq1: CONFLICT fork: {('d1', 0): {'seq': 1, 't': 2050}}
+  seq3: QUARANTINE
+  seq4: QUARANTINE
+  seq5: QUARANTINE
+  review@6.1s: ['RELEASED_HOLD'] fork: {('d1', 0): {'seq': 1, 't': 2050}} authoritative: [0, 3]
+  late seq2 arrives @7s: QUARANTINE fork: {('d1', 0): {'seq': 1, 't': 2050}} fork_events: 1
+  authoritative after late seq2: [0]
+  case states 3,4,5: ['QUARANTINED', 'QUARANTINED', 'QUARANTINED']
+RESULT: DEFECT REPRODUCED: released observations 3,4(,5) were withdrawn again without new fork evidence

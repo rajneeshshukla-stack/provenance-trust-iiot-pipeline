@@ -1,0 +1,63 @@
+{
+ "campaign": "A3_factorial",
+ "description": "A3 amendment 1: PBTI-SH and the A3 comparators on the eight V3 fractional-factorial cells with equivocation high (runs 2, 3, 4, 5, 8, 9, 14, 15 at 10%), of which runs 3, 4, 8 and 15 also have suppressed runs high (the condition in which B5 retained fewer forgeries than PBTI in V3). 120 s production, 180 s drain. Fresh seeds 21-40. Added after the A3 pilot (seed 101) showed that the preregistered joint grid, which lacks the factorial's other delivery factors, produced almost no retained forgeries.",
+ "seeds": {
+  "start": 21,
+  "n": 20
+ },
+ "audit_seeds": 2,
+ "design": [
+  {
+   "kind": "factorial",
+   "high": 0.1,
+   "runs": [
+    2,
+    3,
+    4,
+    5,
+    8,
+    9,
+    14,
+    15
+   ]
+  }
+ ],
+ "arms": [
+  {
+   "arm": "PBTI",
+   "system": "PBTI"
+  },
+  {
+   "arm": "PBTI-SH",
+   "system": "PBTI-SH"
+  },
+  {
+   "arm": "PBTI-SH-T30",
+   "system": "PBTI-SH",
+   "cfg": {
+    "sh_timeout_ms": 30000
+   }
+  },
+  {
+   "arm": "B5-hist",
+   "system": "B5"
+  },
+  {
+   "arm": "B5-event",
+   "system": "B5",
+   "cfg": {
+    "review_mode": "event",
+    "review_delay_ms": 0,
+    "review_rule": "defer"
+   }
+  },
+  {
+   "arm": "B5S",
+   "system": "B5S"
+  },
+  {
+   "arm": "PBTI-R-hist",
+   "system": "PBTI-R"
+  }
+ ]
+}

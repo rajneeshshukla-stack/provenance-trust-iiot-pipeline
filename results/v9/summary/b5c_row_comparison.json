@@ -1,0 +1,432 @@
+{
+ "missing_corrected_files": [],
+ "files": {
+  "results/raw/v3_scenarios_b5.jsonl": {
+   "B5": {
+    "rows": 300,
+    "replaced": 300,
+    "missing_corrected": 0,
+    "rows_with_outcome_change": 0,
+    "changed_fields": {
+     "holds": 40
+    },
+    "nofork_rows": 260,
+    "nofork_rows_identical": 260,
+    "nofork_mismatch": []
+   },
+   "B5S": {
+    "rows": 300,
+    "replaced": 300,
+    "missing_corrected": 0,
+    "rows_with_outcome_change": 0,
+    "changed_fields": {
+     "holds": 40
+    },
+    "nofork_rows": 260,
+    "nofork_rows_identical": 260,
+    "nofork_mismatch": []
+   },
+   "unused_corrected_rows": {
+    "B5": 0,
+    "B5S": 0
+   }
+  },
+  "results/raw/v3_mixed_b5.jsonl": {
+   "B5": {
+    "rows": 20,
+    "replaced": 20,
+    "missing_corrected": 0,
+    "rows_with_outcome_change": 0,
+    "changed_fields": {
+     "holds": 20,
+     "store_bytes": 20,
+     "store_bytes_per_reach": 20
+    },
+    "nofork_rows": 0,
+    "nofork_rows_identical": 0,
+    "nofork_mismatch": []
+   },
+   "B5S": {
+    "rows": 20,
+    "replaced": 20,
+    "missing_corrected": 0,
+    "rows_with_outcome_change": 0,
+    "changed_fields": {
+     "holds": 20
+    },
+    "nofork_rows": 0,
+    "nofork_rows_identical": 0,
+    "nofork_mismatch": []
+   },
+   "unused_corrected_rows": {
+    "B5": 0,
+    "B5S": 0
+   }
+  },
+  "results/raw/v3_sweep.jsonl": {
+   "B5": {
+    "rows": 940,
+    "replaced": 940,
+    "missing_corrected": 0,
+    "rows_with_outcome_change": 0,
+    "changed_fields": {
+     "holds": 140,
+     "store_bytes": 60,
+     "store_bytes_per_reach": 60
+    },
+    "nofork_rows": 799,
+    "nofork_rows_identical": 799,
+    "nofork_mismatch": []
+   },
+   "unused_corrected_rows": {
+    "B5": 0
+   }
+  },
+  "results/raw/v3_factorial.jsonl": {
+   "B5": {
+    "rows": 320,
+    "replaced": 320,
+    "missing_corrected": 0,
+    "rows_with_outcome_change": 31,
+    "changed_fields": {
+     "holds": 160,
+     "derived_corrections": 25,
+     "derived_versions": 28,
+     "legit_auth": 31,
+     "legit_missing": 31,
+     "legit_quarantined": 31,
+     "recovered_n": 31,
+     "recovery_ms_p95": 30,
+     "review[RELEASED_HOLD]": 31,
+     "slots_HELD": 31,
+     "store_bytes": 33,
+     "store_bytes_per_reach": 33,
+     "win_exact": 17,
+     "win_incomplete": 17,
+     "recovery_ms_p50": 6,
+     "cv_correct": 1,
+     "review[REJECTED]": 4
+    },
+    "nofork_rows": 160,
+    "nofork_rows_identical": 160,
+    "nofork_mismatch": []
+   },
+   "unused_corrected_rows": {
+    "B5": 0
+   }
+  },
+  "results/raw/v3_replay_skab.jsonl": {
+   "B5": {
+    "rows": 69,
+    "replaced": 69,
+    "missing_corrected": 0,
+    "rows_with_outcome_change": 0,
+    "changed_fields": {
+     "holds": 60,
+     "store_bytes": 60,
+     "store_bytes_per_reach": 60
+    },
+    "nofork_rows": 9,
+    "nofork_rows_identical": 9,
+    "nofork_mismatch": []
+   },
+   "unused_corrected_rows": {
+    "B5": 0
+   }
+  },
+  "results/v4/raw/A0_core.jsonl": {
+   "B5": {
+    "rows": 320,
+    "replaced": 320,
+    "missing_corrected": 0,
+    "rows_with_outcome_change": 0,
+    "changed_fields": {
+     "held_distinct_ever": 60,
+     "holds": 60,
+     "store_bytes": 20,
+     "store_bytes_per_reach": 20
+    },
+    "nofork_rows": 260,
+    "nofork_rows_identical": 260,
+    "nofork_mismatch": []
+   },
+   "B5S": {
+    "rows": 320,
+    "replaced": 320,
+    "missing_corrected": 0,
+    "rows_with_outcome_change": 0,
+    "changed_fields": {
+     "held_distinct_ever": 60,
+     "holds": 60
+    },
+    "nofork_rows": 260,
+    "nofork_rows_identical": 260,
+    "nofork_mismatch": []
+   },
+   "unused_corrected_rows": {
+    "B5": 0,
+    "B5S": 0
+   }
+  },
+  "results/v4/raw/A1_review.jsonl": {
+   "B5": {
+    "rows": 880,
+    "replaced": 880,
+    "missing_corrected": 0,
+    "rows_with_outcome_change": 203,
+    "changed_fields": {
+     "held_distinct_ever": 660,
+     "holds": 660,
+     "derived_corrections": 177,
+     "derived_versions": 178,
+     "fork_events": 173,
+     "legit_rx_quarantined": 199,
+     "recovered_n": 200,
+     "resumed_feeds": 170,
+     "review[REJECTED]": 129,
+     "review[RELEASED_HOLD]": 200,
+     "review_decisions": 203,
+     "review_deferrals": 83,
+     "rx[equivocation-front]ACCEPT/COMMITTED": 80,
+     "rx[equivocation-front]QUARANTINE/FEED_FORK_HOLD": 80,
+     "rx[legit]ACCEPT/COMMITTED": 199,
+     "rx[legit]QUARANTINE/FEED_FORK_HOLD": 199,
+     "store_bytes": 320,
+     "store_bytes_per_reach": 320,
+     "tm_avail_1s": 197,
+     "tm_first_km_p90_s": 119,
+     "tm_fresh_stale_frac": 195,
+     "tm_fresh_stale_mean_s": 197,
+     "tm_transitions": 134,
+     "tm_wh_rec_norm": 198,
+     "tm_wh_rec_s": 198,
+     "tm_zero_flips": 72,
+     "legit_lost_unrecoverable": 107,
+     "legit_quarantined": 109,
+     "tm_avail_30s": 97,
+     "tm_avail_5s": 122,
+     "tm_avail_60s": 97,
+     "tm_never_avail": 97,
+     "tm_withdrawn": 97,
+     "tm_withdrawn_end": 93,
+     "tm_alert_missed": 38,
+     "tm_alert_retract_true": 19,
+     "recovery_ms_p95": 143,
+     "recovery_ms_p50": 45,
+     "tm_fresh_stale_p95_s": 17,
+     "recovery_ms_max": 9,
+     "event_review_rounds": 40,
+     "tm_first_km_p50_s": 9,
+     "held_end": 6,
+     "legit_auth": 6,
+     "legit_missing": 6,
+     "rx[legit-dup]ACCEPT/COMMITTED": 4,
+     "rx[legit-dup]QUARANTINE/FEED_FORK_HOLD": 4,
+     "slots_HELD": 6,
+     "rx[impersonation]ACCEPT/COMMITTED": 26,
+     "rx[impersonation]QUARANTINE/FEED_FORK_HOLD": 26,
+     "tm_alert_false": 16,
+     "tm_alert_false_retracted": 16,
+     "tm_dw_corr_lat_max_s": 1,
+     "tm_dw_corr_lat_med_s": 2,
+     "tm_dw_corr_n": 13,
+     "tm_dw_nl_s": 19,
+     "tm_nl_contained": 16,
+     "tm_nl_pairs_ever": 16,
+     "tm_nl_rec_norm": 26,
+     "tm_nl_rec_s": 26,
+     "tm_nl_contained_undirected": 12,
+     "review[RELEASE_FAILED]": 3,
+     "win_exact": 1,
+     "win_incomplete": 1
+    },
+    "nofork_rows": 220,
+    "nofork_rows_identical": 220,
+    "nofork_mismatch": []
+   },
+   "unused_corrected_rows": {
+    "B5": 0
+   }
+  },
+  "results/v4/raw/A3_selective.jsonl": {
+   "B5": {
+    "rows": 840,
+    "replaced": 840,
+    "missing_corrected": 0,
+    "rows_with_outcome_change": 197,
+    "changed_fields": {
+     "held_distinct_ever": 680,
+     "holds": 680,
+     "derived_corrections": 172,
+     "derived_versions": 172,
+     "event_review_rounds": 179,
+     "fork_events": 197,
+     "legit_rx_quarantined": 181,
+     "recovered_n": 179,
+     "recovery_ms_p95": 163,
+     "resumed_feeds": 197,
+     "review[RELEASED_HOLD]": 179,
+     "review_decisions": 197,
+     "review_deferrals": 187,
+     "rx[legit]ACCEPT/COMMITTED": 181,
+     "rx[legit]QUARANTINE/FEED_FORK_HOLD": 181,
+     "store_bytes": 197,
+     "store_bytes_per_reach": 197,
+     "tm_avail_1s": 171,
+     "tm_fresh_stale_frac": 167,
+     "tm_fresh_stale_mean_s": 169,
+     "tm_wh_rec_norm": 171,
+     "tm_wh_rec_s": 171,
+     "tm_first_km_p99_s": 19,
+     "tm_first_km_p90_s": 31,
+     "review[REJECTED]": 53,
+     "rx[equivocation-front]ACCEPT/COMMITTED": 53,
+     "rx[equivocation-front]QUARANTINE/FEED_FORK_HOLD": 53,
+     "tm_transitions": 74,
+     "tm_zero_flips": 44,
+     "legit_lost_unrecoverable": 45,
+     "legit_quarantined": 45,
+     "recovery_ms_max": 14,
+     "recovery_ms_p50": 46,
+     "tm_avail_30s": 21,
+     "tm_avail_5s": 22,
+     "tm_avail_60s": 21,
+     "tm_never_avail": 21,
+     "tm_withdrawn": 21,
+     "tm_withdrawn_end": 20,
+     "tm_first_km_p50_s": 2,
+     "cv_wrong": 2,
+     "cv_wrong_rate": 2,
+     "held_end": 1,
+     "legit_auth": 1,
+     "legit_missing": 1,
+     "nonlegit_auth": 1,
+     "slots_HELD": 1,
+     "tm_alert_false": 1,
+     "tm_alert_false_open_end": 1,
+     "tm_dw_nl_s": 1,
+     "tm_nl_auth_end": 1,
+     "tm_nl_pairs_ever": 1,
+     "tm_nl_rec_norm": 1,
+     "tm_nl_rec_s": 1,
+     "win_corrupt": 1,
+     "win_incomplete": 1,
+     "tm_alert_missed": 1,
+     "tm_alert_retract_true": 2,
+     "tm_fresh_stale_p95_s": 1
+    },
+    "nofork_rows": 160,
+    "nofork_rows_identical": 160,
+    "nofork_mismatch": []
+   },
+   "B5S": {
+    "rows": 420,
+    "replaced": 420,
+    "missing_corrected": 0,
+    "rows_with_outcome_change": 0,
+    "changed_fields": {
+     "held_distinct_ever": 340,
+     "holds": 340
+    },
+    "nofork_rows": 80,
+    "nofork_rows_identical": 80,
+    "nofork_mismatch": []
+   },
+   "unused_corrected_rows": {
+    "B5": 0,
+    "B5S": 0
+   }
+  },
+  "results/v4/raw/A3_factorial.jsonl": {
+   "B5": {
+    "rows": 320,
+    "replaced": 320,
+    "missing_corrected": 0,
+    "rows_with_outcome_change": 192,
+    "changed_fields": {
+     "held_distinct_ever": 320,
+     "holds": 320,
+     "derived_corrections": 160,
+     "derived_versions": 174,
+     "event_review_rounds": 149,
+     "fork_events": 147,
+     "legit_rx_quarantined": 149,
+     "recovered_n": 192,
+     "recovery_ms_p50": 117,
+     "recovery_ms_p95": 187,
+     "resumed_feeds": 147,
+     "review[RELEASED_HOLD]": 192,
+     "review_decisions": 192,
+     "review_deferrals": 144,
+     "rx[legit]ACCEPT/COMMITTED": 149,
+     "rx[legit]QUARANTINE/FEED_FORK_HOLD": 149,
+     "store_bytes": 193,
+     "store_bytes_per_reach": 193,
+     "tm_avail_1s": 139,
+     "tm_first_km_p90_s": 26,
+     "tm_fresh_stale_frac": 134,
+     "tm_fresh_stale_mean_s": 141,
+     "tm_wh_rec_norm": 184,
+     "tm_wh_rec_s": 184,
+     "rx[equivocation-front]ACCEPT/COMMITTED": 36,
+     "rx[equivocation-front]QUARANTINE/FEED_FORK_HOLD": 36,
+     "legit_lost_unrecoverable": 54,
+     "legit_quarantined": 114,
+     "review[REJECTED]": 49,
+     "tm_avail_30s": 32,
+     "tm_avail_5s": 39,
+     "tm_avail_60s": 47,
+     "tm_never_avail": 88,
+     "tm_transitions": 162,
+     "tm_withdrawn": 43,
+     "tm_withdrawn_end": 28,
+     "held_end": 74,
+     "legit_auth": 74,
+     "legit_missing": 74,
+     "slots_HELD": 74,
+     "tm_zero_flips": 22,
+     "recovery_ms_max": 15,
+     "cv_wrong": 1,
+     "cv_wrong_rate": 1,
+     "tm_first_km_p50_s": 8,
+     "rx[legit-dup]ACCEPT/COMMITTED": 3,
+     "rx[legit-dup]QUARANTINE/FEED_FORK_HOLD": 3,
+     "tm_alert_missed": 13,
+     "tm_first_km_p99_s": 7,
+     "tm_alert_retract_true": 11,
+     "win_exact": 31,
+     "win_incomplete": 31,
+     "nonlegit_auth": 1,
+     "tm_alert_false": 1,
+     "tm_alert_false_open_end": 1,
+     "tm_dw_nl_s": 1,
+     "tm_nl_auth_end": 1,
+     "tm_nl_pairs_ever": 1,
+     "tm_nl_rec_norm": 1,
+     "tm_nl_rec_s": 1,
+     "win_corrupt": 1
+    },
+    "nofork_rows": 0,
+    "nofork_rows_identical": 0,
+    "nofork_mismatch": []
+   },
+   "B5S": {
+    "rows": 160,
+    "replaced": 160,
+    "missing_corrected": 0,
+    "rows_with_outcome_change": 0,
+    "changed_fields": {
+     "held_distinct_ever": 160,
+     "holds": 160
+    },
+    "nofork_rows": 0,
+    "nofork_rows_identical": 0,
+    "nofork_mismatch": []
+   },
+   "unused_corrected_rows": {
+    "B5": 0,
+    "B5S": 0
+   }
+  }
+ }
+}

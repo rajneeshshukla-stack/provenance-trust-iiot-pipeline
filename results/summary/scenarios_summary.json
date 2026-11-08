@@ -1,0 +1,3602 @@
+[
+ {
+  "scenario": "S01_normal",
+  "system": "PBTI",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S01_normal",
+  "system": "B1",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S01_normal",
+  "system": "B2",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S01_normal",
+  "system": "B3",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S01_normal",
+  "system": "B4",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S02_payload_tamper",
+  "system": "PBTI",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 354.85,
+  "legit_missing_sd": 17.80678463247558,
+  "legit_missing_ci": [
+   347.7,
+   362.65
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 284.6,
+  "win_incomplete_sd": 12.504315044689257,
+  "win_incomplete_ci": [
+   279.35,
+   289.85
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S02_payload_tamper",
+  "system": "B1",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 354.85,
+  "nonlegit_auth_sd": 17.80678463247558,
+  "nonlegit_auth_ci": [
+   347.5,
+   362.6
+  ],
+  "legit_missing": 354.85,
+  "legit_missing_sd": 17.80678463247558,
+  "legit_missing_ci": [
+   347.55,
+   362.7
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 284.6,
+  "win_corrupt_sd": 12.504315044689257,
+  "win_corrupt_ci": [
+   279.35,
+   289.85
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.053537326388888896,
+  "cv_wrong_rate_sd": 0.018051686560947095,
+  "cv_wrong_rate_ci": [
+   0.04591959635416666,
+   0.061089409722222224
+  ]
+ },
+ {
+  "scenario": "S02_payload_tamper",
+  "system": "B2",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 354.85,
+  "nonlegit_auth_sd": 17.80678463247558,
+  "nonlegit_auth_ci": [
+   347.54875,
+   362.75
+  ],
+  "legit_missing": 354.85,
+  "legit_missing_sd": 17.80678463247558,
+  "legit_missing_ci": [
+   347.6,
+   362.5
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 284.6,
+  "win_corrupt_sd": 12.504315044689257,
+  "win_corrupt_ci": [
+   279.25,
+   289.85
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.053537326388888896,
+  "cv_wrong_rate_sd": 0.018051686560947095,
+  "cv_wrong_rate_ci": [
+   0.0458984375,
+   0.06117621527777779
+  ]
+ },
+ {
+  "scenario": "S02_payload_tamper",
+  "system": "B3",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 354.85,
+  "legit_missing_sd": 17.80678463247558,
+  "legit_missing_ci": [
+   347.75,
+   362.60125
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 284.6,
+  "win_incomplete_sd": 12.504315044689257,
+  "win_incomplete_ci": [
+   279.15,
+   289.95124999999996
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S02_payload_tamper",
+  "system": "B4",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 354.85,
+  "legit_missing_sd": 17.80678463247558,
+  "legit_missing_ci": [
+   347.6,
+   362.75
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 284.6,
+  "win_incomplete_sd": 12.504315044689257,
+  "win_incomplete_ci": [
+   279.1,
+   289.8
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S03_metadata_tamper",
+  "system": "PBTI",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 427.7,
+  "legit_missing_sd": 22.261838955580703,
+  "legit_missing_ci": [
+   417.95,
+   436.80125
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 328.0,
+  "win_incomplete_sd": 12.744451837234074,
+  "win_incomplete_ci": [
+   322.24875,
+   333.15
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S03_metadata_tamper",
+  "system": "B1",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 427.6,
+  "nonlegit_auth_sd": 22.290899724468634,
+  "nonlegit_auth_ci": [
+   417.89875,
+   436.70124999999996
+  ],
+  "legit_missing": 427.9,
+  "legit_missing_sd": 22.292080255222103,
+  "legit_missing_ci": [
+   418.3,
+   437.15124999999995
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 326.5,
+  "win_corrupt_sd": 12.80008223657793,
+  "win_corrupt_ci": [
+   321.0,
+   332.0
+  ],
+  "win_incomplete": 124.8,
+  "win_incomplete_sd": 6.871757608616514,
+  "win_incomplete_ci": [
+   121.9,
+   127.7
+  ],
+  "cv_wrong_rate": 0.13587239583333333,
+  "cv_wrong_rate_sd": 0.0264250812683929,
+  "cv_wrong_rate_ci": [
+   0.12489149305555555,
+   0.1478515625
+  ]
+ },
+ {
+  "scenario": "S03_metadata_tamper",
+  "system": "B2",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 225.65,
+  "nonlegit_auth_sd": 16.046888532639198,
+  "nonlegit_auth_ci": [
+   218.85,
+   232.4
+  ],
+  "legit_missing": 427.9,
+  "legit_missing_sd": 22.292080255222103,
+  "legit_missing_ci": [
+   418.35,
+   437.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 195.65,
+  "win_corrupt_sd": 12.587692401707313,
+  "win_corrupt_ci": [
+   190.15,
+   201.05
+  ],
+  "win_incomplete": 168.4,
+  "win_incomplete_sd": 8.598653505361357,
+  "win_incomplete_ci": [
+   164.85,
+   172.2
+  ],
+  "cv_wrong_rate": 0.030555555555555558,
+  "cv_wrong_rate_sd": 0.015072309618611168,
+  "cv_wrong_rate_ci": [
+   0.024457465277777778,
+   0.037131076388888885
+  ]
+ },
+ {
+  "scenario": "S03_metadata_tamper",
+  "system": "B3",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 427.7,
+  "legit_missing_sd": 22.261838955580703,
+  "legit_missing_ci": [
+   417.85,
+   436.9
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 328.0,
+  "win_incomplete_sd": 12.744451837234074,
+  "win_incomplete_ci": [
+   322.25,
+   333.10125
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S03_metadata_tamper",
+  "system": "B4",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 427.7,
+  "legit_missing_sd": 22.261838955580703,
+  "legit_missing_ci": [
+   418.0,
+   436.9
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 328.0,
+  "win_incomplete_sd": 12.744451837234074,
+  "win_incomplete_ci": [
+   322.25,
+   333.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S04_unauthorized",
+  "system": "PBTI",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S04_unauthorized",
+  "system": "B1",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 100.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   100.0,
+   100.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 76.35,
+  "win_corrupt_sd": 3.937338133682116,
+  "win_corrupt_ci": [
+   74.65,
+   78.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0017144097222222224,
+  "cv_wrong_rate_sd": 0.0011130350866873535,
+  "cv_wrong_rate_ci": [
+   0.0012586805555555556,
+   0.002191840277777778
+  ]
+ },
+ {
+  "scenario": "S04_unauthorized",
+  "system": "B2",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S04_unauthorized",
+  "system": "B3",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 15.2,
+  "nonlegit_auth_sd": 3.7360265974484315,
+  "nonlegit_auth_ci": [
+   13.65,
+   16.8
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 11.95,
+  "win_corrupt_sd": 2.394621165511528,
+  "win_corrupt_ci": [
+   10.95,
+   12.95
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.00030381944444444445,
+  "cv_wrong_rate_sd": 0.0006154211341118909,
+  "cv_wrong_rate_ci": [
+   8.680555555555555e-05,
+   0.0006076388888888888
+  ]
+ },
+ {
+  "scenario": "S04_unauthorized",
+  "system": "B4",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S05_stolen_key",
+  "system": "PBTI",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 150.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   150.0,
+   150.0
+  ],
+  "legit_missing": 222.55,
+  "legit_missing_sd": 9.207977090830708,
+  "legit_missing_ci": [
+   218.65,
+   226.55
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 15.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   15.0,
+   15.0
+  ],
+  "win_incomplete": 47.25,
+  "win_incomplete_sd": 4.744803251425378,
+  "win_incomplete_ci": [
+   45.2,
+   49.25
+  ],
+  "cv_wrong_rate": 0.030946180555555557,
+  "cv_wrong_rate_sd": 0.001064078765807508,
+  "cv_wrong_rate_ci": [
+   0.030490451388888885,
+   0.03140190972222222
+  ]
+ },
+ {
+  "scenario": "S05_stolen_key",
+  "system": "B1",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 298.85,
+  "nonlegit_auth_sd": 6.823141736611863,
+  "nonlegit_auth_ci": [
+   296.1,
+   301.9
+  ],
+  "legit_missing": 198.85,
+  "legit_missing_sd": 6.823141736611863,
+  "legit_missing_ci": [
+   196.1,
+   201.9
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 89.85,
+  "win_corrupt_sd": 3.856300381399113,
+  "win_corrupt_ci": [
+   88.2,
+   91.5
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.03585069444444444,
+  "cv_wrong_rate_sd": 0.001632508145769539,
+  "cv_wrong_rate_ci": [
+   0.035177951388888885,
+   0.036566840277777776
+  ]
+ },
+ {
+  "scenario": "S05_stolen_key",
+  "system": "B2",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 298.85,
+  "nonlegit_auth_sd": 6.823141736611863,
+  "nonlegit_auth_ci": [
+   296.1,
+   301.95
+  ],
+  "legit_missing": 198.85,
+  "legit_missing_sd": 6.823141736611863,
+  "legit_missing_ci": [
+   196.15,
+   201.85
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 89.85,
+  "win_corrupt_sd": 3.856300381399113,
+  "win_corrupt_ci": [
+   88.25,
+   91.5
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.03585069444444444,
+  "cv_wrong_rate_sd": 0.001632508145769539,
+  "cv_wrong_rate_ci": [
+   0.03517795138888889,
+   0.036566840277777776
+  ]
+ },
+ {
+  "scenario": "S05_stolen_key",
+  "system": "B3",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 298.85,
+  "nonlegit_auth_sd": 6.823141736611863,
+  "nonlegit_auth_ci": [
+   296.15,
+   301.9
+  ],
+  "legit_missing": 198.85,
+  "legit_missing_sd": 6.823141736611863,
+  "legit_missing_ci": [
+   196.15,
+   201.95
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 89.85,
+  "win_corrupt_sd": 3.856300381399113,
+  "win_corrupt_ci": [
+   88.3,
+   91.5
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.03585069444444444,
+  "cv_wrong_rate_sd": 0.001632508145769539,
+  "cv_wrong_rate_ci": [
+   0.035177951388888885,
+   0.0365451388888889
+  ]
+ },
+ {
+  "scenario": "S05_stolen_key",
+  "system": "B4",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 289.75,
+  "nonlegit_auth_sd": 8.103767804643649,
+  "nonlegit_auth_ci": [
+   286.4,
+   293.25
+  ],
+  "legit_missing": 288.9,
+  "legit_missing_sd": 7.906692701356504,
+  "legit_missing_ci": [
+   285.7,
+   292.35
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 88.2,
+  "win_corrupt_sd": 4.124381931367351,
+  "win_corrupt_ci": [
+   86.4,
+   90.0
+  ],
+  "win_incomplete": 8.9,
+  "win_incomplete_sd": 1.4473205733717955,
+  "win_incomplete_ci": [
+   8.3,
+   9.55
+  ],
+  "cv_wrong_rate": 0.0896484375,
+  "cv_wrong_rate_sd": 0.011485432351218567,
+  "cv_wrong_rate_ci": [
+   0.08480902777777778,
+   0.09461859809027778
+  ]
+ },
+ {
+  "scenario": "S06_replay",
+  "system": "PBTI",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S06_replay",
+  "system": "B1",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 212.1,
+  "nonlegit_auth_sd": 13.89395930838859,
+  "nonlegit_auth_ci": [
+   206.2,
+   217.9
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 188.75,
+  "win_corrupt_sd": 10.330715571078622,
+  "win_corrupt_ci": [
+   184.5,
+   193.3
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.30062934027777777,
+  "cv_wrong_rate_sd": 0.023871434326637922,
+  "cv_wrong_rate_ci": [
+   0.28990831163194447,
+   0.3103521050347222
+  ]
+ },
+ {
+  "scenario": "S06_replay",
+  "system": "B2",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 212.1,
+  "nonlegit_auth_sd": 13.89395930838859,
+  "nonlegit_auth_ci": [
+   206.35,
+   218.15
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 188.75,
+  "win_corrupt_sd": 10.330715571078622,
+  "win_corrupt_ci": [
+   184.45,
+   193.2
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.30062934027777777,
+  "cv_wrong_rate_sd": 0.023871434326637922,
+  "cv_wrong_rate_ci": [
+   0.2897129991319444,
+   0.31037326388888886
+  ]
+ },
+ {
+  "scenario": "S06_replay",
+  "system": "B3",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S06_replay",
+  "system": "B4",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S07_duplicates",
+  "system": "PBTI",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S07_duplicates",
+  "system": "B1",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S07_duplicates",
+  "system": "B2",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S07_duplicates",
+  "system": "B3",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S07_duplicates",
+  "system": "B4",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S08_seq_reuse_bug",
+  "system": "PBTI",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 12.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   12.0,
+   12.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 8.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   8.0,
+   8.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S08_seq_reuse_bug",
+  "system": "B1",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S08_seq_reuse_bug",
+  "system": "B2",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S08_seq_reuse_bug",
+  "system": "B3",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S08_seq_reuse_bug",
+  "system": "B4",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 4.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   4.0,
+   4.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 4.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   4.0,
+   4.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S09_reorder",
+  "system": "PBTI",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S09_reorder",
+  "system": "B1",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S09_reorder",
+  "system": "B2",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S09_reorder",
+  "system": "B3",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S09_reorder",
+  "system": "B4",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S10_delay_clock",
+  "system": "PBTI",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S10_delay_clock",
+  "system": "B1",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 68.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   68.0,
+   68.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 8.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   8.0,
+   8.0
+  ],
+  "cv_wrong_rate": 0.004383680555555556,
+  "cv_wrong_rate_sd": 0.00013359093126108783,
+  "cv_wrong_rate_ci": [
+   0.004340277777777778,
+   0.004448784722222222
+  ]
+ },
+ {
+  "scenario": "S10_delay_clock",
+  "system": "B2",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 68.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   68.0,
+   68.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 8.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   8.0,
+   8.0
+  ],
+  "cv_wrong_rate": 0.004383680555555556,
+  "cv_wrong_rate_sd": 0.00013359093126108783,
+  "cv_wrong_rate_ci": [
+   0.004340277777777778,
+   0.004448784722222222
+  ]
+ },
+ {
+  "scenario": "S10_delay_clock",
+  "system": "B3",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 68.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   68.0,
+   68.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 8.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   8.0,
+   8.0
+  ],
+  "cv_wrong_rate": 0.004383680555555556,
+  "cv_wrong_rate_sd": 0.00013359093126108783,
+  "cv_wrong_rate_ci": [
+   0.004340277777777778,
+   0.004448784722222222
+  ]
+ },
+ {
+  "scenario": "S10_delay_clock",
+  "system": "B4",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S11_disconnect_recover",
+  "system": "PBTI",
+  "n": 20,
+  "reach": 7195.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S11_disconnect_recover",
+  "system": "B1",
+  "n": 20,
+  "reach": 7195.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S11_disconnect_recover",
+  "system": "B2",
+  "n": 20,
+  "reach": 7195.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S11_disconnect_recover",
+  "system": "B3",
+  "n": 20,
+  "reach": 7195.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S11_disconnect_recover",
+  "system": "B4",
+  "n": 20,
+  "reach": 7195.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S12_beyond_horizon",
+  "system": "PBTI",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 193.35,
+  "legit_missing_sd": 1.1367080817685316,
+  "legit_missing_ci": [
+   192.9,
+   193.85
+  ],
+  "legit_quarantined": 193.35,
+  "legit_quarantined_sd": 1.1367080817685316,
+  "legit_quarantined_ci": [
+   192.9,
+   193.85
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 24.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   24.0,
+   24.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S12_beyond_horizon",
+  "system": "B1",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S12_beyond_horizon",
+  "system": "B2",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 193.35,
+  "legit_missing_sd": 1.1367080817685316,
+  "legit_missing_ci": [
+   192.9,
+   193.85
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 24.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   24.0,
+   24.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S12_beyond_horizon",
+  "system": "B3",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S12_beyond_horizon",
+  "system": "B4",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 193.35,
+  "legit_missing_sd": 1.1367080817685316,
+  "legit_missing_ci": [
+   192.9,
+   193.85
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 24.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   24.0,
+   24.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S13_rotation",
+  "system": "PBTI",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S13_rotation",
+  "system": "B1",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S13_rotation",
+  "system": "B2",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S13_rotation",
+  "system": "B3",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 230.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   230.0,
+   230.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 23.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   23.0,
+   23.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S13_rotation",
+  "system": "B4",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 0.0,
+  "legit_missing_sd": 0.0,
+  "legit_missing_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S14_revocation",
+  "system": "PBTI",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 0.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "legit_missing": 270.15,
+  "legit_missing_sd": 0.36634754853252327,
+  "legit_missing_ci": [
+   270.0,
+   270.3
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 0.0,
+  "win_corrupt_sd": 0.0,
+  "win_corrupt_ci": [
+   0.0,
+   0.0
+  ],
+  "win_incomplete": 30.15,
+  "win_incomplete_sd": 0.3663475485325232,
+  "win_incomplete_ci": [
+   30.0,
+   30.3
+  ],
+  "cv_wrong_rate": 0.016666666666666673,
+  "cv_wrong_rate_sd": 0.0007764124921874266,
+  "cv_wrong_rate_ci": [
+   0.01649305555555556,
+   0.017013888888888894
+  ]
+ },
+ {
+  "scenario": "S14_revocation",
+  "system": "B1",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 239.95,
+  "nonlegit_auth_sd": 0.223606797749979,
+  "nonlegit_auth_ci": [
+   239.85,
+   240.0
+  ],
+  "legit_missing": 159.95,
+  "legit_missing_sd": 0.223606797749979,
+  "legit_missing_ci": [
+   159.85,
+   160.0
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 40.55,
+  "win_corrupt_sd": 0.8870412083230168,
+  "win_corrupt_ci": [
+   40.15,
+   40.9
+  ],
+  "win_incomplete": 0.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   0.0,
+   0.0
+  ],
+  "cv_wrong_rate": 0.017382812499999997,
+  "cv_wrong_rate_sd": 0.0018812409249515053,
+  "cv_wrong_rate_ci": [
+   0.016558159722222222,
+   0.01814236111111111
+  ]
+ },
+ {
+  "scenario": "S14_revocation",
+  "system": "B2",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 199.95,
+  "nonlegit_auth_sd": 0.223606797749979,
+  "nonlegit_auth_ci": [
+   199.85,
+   200.0
+  ],
+  "legit_missing": 190.15,
+  "legit_missing_sd": 0.36634754853252327,
+  "legit_missing_ci": [
+   190.0,
+   190.3
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 25.1,
+  "win_corrupt_sd": 0.3077935056255462,
+  "win_corrupt_ci": [
+   25.0,
+   25.25
+  ],
+  "win_incomplete": 6.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   6.0,
+   6.0
+  ],
+  "cv_wrong_rate": 0.01701388888888889,
+  "cv_wrong_rate_sd": 0.0016991683504499761,
+  "cv_wrong_rate_ci": [
+   0.016319444444444442,
+   0.017708333333333336
+  ]
+ },
+ {
+  "scenario": "S14_revocation",
+  "system": "B3",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 199.95,
+  "nonlegit_auth_sd": 0.223606797749979,
+  "nonlegit_auth_ci": [
+   199.85,
+   200.0
+  ],
+  "legit_missing": 175.15,
+  "legit_missing_sd": 0.36634754853252327,
+  "legit_missing_ci": [
+   175.0,
+   175.3
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 25.1,
+  "win_corrupt_sd": 0.3077935056255462,
+  "win_corrupt_ci": [
+   25.0,
+   25.25
+  ],
+  "win_incomplete": 3.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   3.0,
+   3.0
+  ],
+  "cv_wrong_rate": 0.01701388888888889,
+  "cv_wrong_rate_sd": 0.0016991683504499761,
+  "cv_wrong_rate_ci": [
+   0.016319444444444442,
+   0.017708333333333336
+  ]
+ },
+ {
+  "scenario": "S14_revocation",
+  "system": "B4",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 199.95,
+  "nonlegit_auth_sd": 0.223606797749979,
+  "nonlegit_auth_ci": [
+   199.85,
+   200.0
+  ],
+  "legit_missing": 190.15,
+  "legit_missing_sd": 0.36634754853252327,
+  "legit_missing_ci": [
+   190.0,
+   190.3
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 25.1,
+  "win_corrupt_sd": 0.3077935056255462,
+  "win_corrupt_ci": [
+   25.0,
+   25.25
+  ],
+  "win_incomplete": 6.0,
+  "win_incomplete_sd": 0.0,
+  "win_incomplete_ci": [
+   6.0,
+   6.0
+  ],
+  "cv_wrong_rate": 0.018402777777777785,
+  "cv_wrong_rate_sd": 0.0007764124921874266,
+  "cv_wrong_rate_ci": [
+   0.01822916666666667,
+   0.018750000000000006
+  ]
+ },
+ {
+  "scenario": "S15_edge_compromise",
+  "system": "PBTI",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 15.85,
+  "nonlegit_auth_sd": 3.3915529745158586,
+  "nonlegit_auth_ci": [
+   14.4,
+   17.3
+  ],
+  "legit_missing": 89.55,
+  "legit_missing_sd": 9.944450978468238,
+  "legit_missing_ci": [
+   85.25,
+   93.8
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 12.6,
+  "win_corrupt_sd": 2.3708759207472134,
+  "win_corrupt_ci": [
+   11.55,
+   13.55
+  ],
+  "win_incomplete": 66.6,
+  "win_incomplete_sd": 7.583916499651365,
+  "win_incomplete_ci": [
+   63.45,
+   69.85
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "scenario": "S15_edge_compromise",
+  "system": "B1",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 100.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   100.0,
+   100.0
+  ],
+  "legit_missing": 89.95,
+  "legit_missing_sd": 10.049744694321973,
+  "legit_missing_ci": [
+   85.65,
+   94.2
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 77.1,
+  "win_corrupt_sd": 3.6113855046447054,
+  "win_corrupt_ci": [
+   75.5,
+   78.6
+  ],
+  "win_incomplete": 41.9,
+  "win_incomplete_sd": 5.004208754953963,
+  "win_incomplete_ci": [
+   39.85,
+   44.15
+  ],
+  "cv_wrong_rate": 0.0034722222222222225,
+  "cv_wrong_rate_sd": 0.0011265376467414067,
+  "cv_wrong_rate_ci": [
+   0.002973090277777778,
+   0.003949652777777778
+  ]
+ },
+ {
+  "scenario": "S15_edge_compromise",
+  "system": "B2",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 100.0,
+  "nonlegit_auth_sd": 0.0,
+  "nonlegit_auth_ci": [
+   100.0,
+   100.0
+  ],
+  "legit_missing": 89.95,
+  "legit_missing_sd": 10.049744694321973,
+  "legit_missing_ci": [
+   85.7,
+   94.3
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 77.1,
+  "win_corrupt_sd": 3.6113855046447054,
+  "win_corrupt_ci": [
+   75.5,
+   78.55124999999998
+  ],
+  "win_incomplete": 41.9,
+  "win_incomplete_sd": 5.004208754953963,
+  "win_incomplete_ci": [
+   39.85,
+   44.1
+  ],
+  "cv_wrong_rate": 0.0034722222222222225,
+  "cv_wrong_rate_sd": 0.0011265376467414067,
+  "cv_wrong_rate_ci": [
+   0.002973090277777778,
+   0.003949652777777778
+  ]
+ },
+ {
+  "scenario": "S15_edge_compromise",
+  "system": "B3",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 15.85,
+  "nonlegit_auth_sd": 3.3915529745158586,
+  "nonlegit_auth_ci": [
+   14.45,
+   17.3
+  ],
+  "legit_missing": 89.55,
+  "legit_missing_sd": 9.944450978468238,
+  "legit_missing_ci": [
+   85.44875,
+   93.8
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 12.6,
+  "win_corrupt_sd": 2.3708759207472134,
+  "win_corrupt_ci": [
+   11.55,
+   13.55
+  ],
+  "win_incomplete": 66.6,
+  "win_incomplete_sd": 7.583916499651365,
+  "win_incomplete_ci": [
+   63.5,
+   69.85
+  ],
+  "cv_wrong_rate": 0.0004991319444444444,
+  "cv_wrong_rate_sd": 0.00045138449587380967,
+  "cv_wrong_rate_ci": [
+   0.0003255208333333333,
+   0.0007161458333333333
+  ]
+ },
+ {
+  "scenario": "S15_edge_compromise",
+  "system": "B4",
+  "n": 20,
+  "reach": 7200.0,
+  "nonlegit_auth": 15.85,
+  "nonlegit_auth_sd": 3.3915529745158586,
+  "nonlegit_auth_ci": [
+   14.45,
+   17.3
+  ],
+  "legit_missing": 89.55,
+  "legit_missing_sd": 9.944450978468238,
+  "legit_missing_ci": [
+   85.25,
+   93.85
+  ],
+  "legit_quarantined": 0.0,
+  "legit_quarantined_sd": 0.0,
+  "legit_quarantined_ci": [
+   0.0,
+   0.0
+  ],
+  "dup_auth": 0.0,
+  "dup_auth_sd": 0.0,
+  "dup_auth_ci": [
+   0.0,
+   0.0
+  ],
+  "win_corrupt": 12.6,
+  "win_corrupt_sd": 2.3708759207472134,
+  "win_corrupt_ci": [
+   11.6,
+   13.6
+  ],
+  "win_incomplete": 66.6,
+  "win_incomplete_sd": 7.583916499651365,
+  "win_incomplete_ci": [
+   63.3,
+   69.85
+  ],
+  "cv_wrong_rate": 0.0,
+  "cv_wrong_rate_sd": 0.0,
+  "cv_wrong_rate_ci": [
+   0.0,
+   0.0
+  ]
+ }
+]

@@ -1,0 +1,77 @@
+{
+ "bytes": 209786365,
+ "excluded": {
+  "cache": [
+   ".pytest_cache/"
+  ],
+  "checks of an earlier manuscript; replaced by tools/manuscript/check_manuscript.py": [
+   "tools/v7/check_v7_manuscript.py"
+  ],
+  "contents list of an earlier deliverable": [
+   "research/V3/PACKAGE_CONTENTS.md"
+  ],
+  "development and campaign console logs of earlier stages (not evidence referenced by any record)": [
+   "logs/"
+  ],
+  "earlier manuscript draft, PDFs and a copy of the earlier Data S1; recreated as an output directory by tools/v9/regenerate_analysis.sh": [
+   "paper_v7/"
+  ],
+  "earlier manuscript drafts": [
+   "research/V3/manuscript/",
+   "research/V4/manuscript/"
+  ],
+  "earlier manuscript drafts and PDFs; the frozen analysis scripts recreate paper/generated and paper/figures as output directories": [
+   "paper/"
+  ],
+  "editing-copy export of an earlier manuscript": [
+   "tools/v7/docx_normalize.py",
+   "tools/v7/export_manuscript_v7.py"
+  ],
+  "packaging scripts of an earlier deliverable": [
+   "research/V3/workspace_scripts/"
+  ],
+  "packaging tool of an earlier deliverable": [
+   "tools/v7/build_package_v7.py"
+  ],
+  "progress logs of the V9 reruns (rows, manifests and the verification record carry the evidence)": [
+   "results/v9/b5c_refmodel_full.log",
+   "results/v9/b5c_refmodel_validation.log",
+   "results/v9/run_all_b5c.log",
+   "results/v9/run_e04.log"
+  ],
+  "submission administration draft of an earlier version": [
+   "research/COVER_LETTER.md",
+   "research/V3/COVER_LETTER_DRAFT.md"
+  ],
+  "superseded by the V9 author-completion list (response folder)": [
+   "research/V3/AUTHOR_RELEASE_CHECKLIST.md"
+  ],
+  "superseded claim matrix of an earlier manuscript; current mapping: Document S1, principal findings table": [
+   "research/EVIDENCE_MATRIX.md"
+  ],
+  "superseded internal review notes of an earlier stage": [
+   "research/REVIEWER_STRESS_TEST.md"
+  ],
+  "superseded open-item list (marked historical); current items: V9 author-completion list": [
+   "research/OPEN_RESEARCH_ITEMS.md"
+  ],
+  "superseded overview of an earlier manuscript stage": [
+   "research/README_RESEARCH.md"
+  ],
+  "superseded planning template (marked as such)": [
+   "research/RESULTS_TEMPLATE.md"
+  ],
+  "word count of an earlier abstract": [
+   "tools/v7/abstract_words.py"
+  ]
+ },
+ "files": 744,
+ "manuscript_files": 77,
+ "note": "tree_sha256 hashes the sorted (path, file SHA-256) pairs of every file except this manifest; the verification outputs listed above were written by tools/v9/verify_v9.py before later manuscript-text changes (title; author block; declarations and Supplementary Materials statement; consolidated AI-use and verification statements), which touched no code, result or generated file",
+ "tree_sha256": "6d21d50b83799a64f60a7d1a578fd0bc8e0daf596e4f91d4ad86a890cda126f4",
+ "verification_outputs": [
+  "results/v9/summary/verification_record.json",
+  "results/v9/summary/pytest_v9.xml",
+  "results/v9/summary/A0_corrected_consistency.json"
+ ]
+}

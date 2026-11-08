@@ -1,0 +1,8 @@
+pytest	0	2026-11-05T23:31:02Z	2026-11-05T23:32:52Z	python3 -m pytest -q tests/
+A0_core	0	2026-11-05T23:32:52Z	2026-11-05T23:43:26Z	python3 experiments/run_v4.py experiments/v4_configs/A0_core.json --seeds 1 2 --workers 2 --out /home/claude/PBTI_v7/results/reexec_cloud/A0_core_subset.jsonl
+A1_review	0	2026-11-05T23:43:26Z	2026-11-06T00:09:52Z	python3 experiments/run_v4.py experiments/v4_configs/A1_review.json --seeds 21 22 --workers 2 --out /home/claude/PBTI_v7/results/reexec_cloud/A1_review_subset.jsonl
+A3_selective	0	2026-11-06T00:09:52Z	2026-11-06T00:34:38Z	python3 experiments/run_v4.py experiments/v4_configs/A3_selective.json --seeds 21 22 --workers 2 --out /home/claude/PBTI_v7/results/reexec_cloud/A3_selective_subset.jsonl
+A3_scenarios	0	2026-11-06T00:34:38Z	2026-11-06T00:41:55Z	python3 experiments/run_v4.py experiments/v4_configs/A3_scenarios.json --seeds 1 2 --workers 2 --out /home/claude/PBTI_v7/results/reexec_cloud/A3_scenarios_subset.jsonl
+A3_factorial	0	2026-11-06T00:41:55Z	2026-11-06T00:50:01Z	python3 experiments/run_v4.py experiments/v4_configs/amendment1/A3_factorial.json --seeds 21 22 --workers 2 --out /home/claude/PBTI_v7/results/reexec_cloud/A3_factorial_subset.jsonl
+A5_matrix	0	2026-11-06T00:50:01Z	2026-11-06T00:50:01Z	python3 scripts/a5_lifecycle_matrix.py
+formal_check	0	2026-11-06T00:50:01Z	2026-11-06T00:52:09Z	python3 formal/v4_locality_lifecycle_check.py --out /home/claude/PBTI_v7/results/reexec_cloud/v4_locality_lifecycle_check.json

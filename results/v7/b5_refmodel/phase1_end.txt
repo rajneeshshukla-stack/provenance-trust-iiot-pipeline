@@ -1,0 +1,6 @@
+phase1_end_utc: 2026-11-05T23:50:01Z
+files read before this time: docs/BASELINES.md docs/STATE_MACHINE.md docs/PROTOCOL_SPECIFICATION.md research/V3/PREREGISTRATION.md research/V3/PREREGISTRATION_AMENDMENTS.md research/V4/PREREGISTRATION_V4.md research/V4/DECISION_LOG.md (D03,D05) research/V3/CHANGELOG_V2_TO_V3.md (grep B5) research/V4/CHANGELOG_V3_TO_V4.md (grep) paper/main.tex (B5, review, metrics paragraphs) paper/supplementary.tex (B5 table caption, review tests paragraph)
+not read before this time: src/pbti/b5.py src/pbti/review.py src/pbti/sim.py (nor any other src/ or tests/ file)
+unit tests: 26 passed
+050f0a6d2ee3c71a31cb7752761a31dc537a6afee068fafaebd0c9bce59d5e9f  refmodel.py
+101cf089d7465132f7bccbcf34d9a445ea098e0899e9ce506545d92b400828cc  test_refmodel.py

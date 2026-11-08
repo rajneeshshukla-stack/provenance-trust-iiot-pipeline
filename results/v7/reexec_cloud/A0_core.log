@@ -1,0 +1,7 @@
+[A0_core] 25/132 runs, 0 errors, 120s
+[A0_core] 50/132 runs, 0 errors, 239s
+[A0_core] 75/132 runs, 0 errors, 359s
+[A0_core] 100/132 runs, 0 errors, 476s
+[A0_core] 125/132 runs, 0 errors, 593s
+[A0_core] 132/132 runs, 0 errors, 634s
+written /home/claude/PBTI_v7/results/reexec_cloud/A0_core_subset.jsonl errors 0

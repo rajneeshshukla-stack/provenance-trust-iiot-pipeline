@@ -1,0 +1,15 @@
+comparison,workload,outcome,mean_difference_ci95,relative,margin,class,evidence_level
+B5_60/10 - PBTI,E5,W,"+6.39 [6.34, 6.45]",--,0.60,worse,A
+B5_60/10 - PBTI,E5,AV5,"-0.102 [-0.103, -0.101]",-10%,0.010,worse,A
+B5_60/10 - PBTI,Mixed,NLX,"-1,759 [-1,885, -1,637]",-51%,60,better,A
+B5_60/10 - PBTI,Mixed,W,"+5.88 [5.73, 6.04]",--,0.60,worse,A
+B5_ev - PBTI,E5,W,"+0.009 [0.009, 0.010]",--,0.60,equivalent (s),A
+B5_ev - PBTI,Mixed,W,"-2.35 [-2.38, -2.31]",--,0.60,better,A
+B5_ev - PBTI,E11b,O2,"-193.2 [-193.7, -192.8]",-100%,72,better,A
+B5_ev - PBTI-R_ev,Mixed,W,"+0.048 [0.032, 0.065]",--,0.60,equivalent (s),A
+B5_ev - PBTI-R_ev,Mixed,NLX,"-43 [-60, -29]",-1%,60,equivalent (s),A
+PBTI-SH - PBTI,4 cells,NLX,-607 to -194,-100 to -99%,60,better 4/4,C
+PBTI-SH - PBTI,4 cells,O2,+12.2 to +40.7,+4 to +10%,28.8,"equivalent (s) 2/4, worse 2/4",C
+PBTI-SH - B5_60/10,4 cells,W,-7.23 to -4.12,--,0.60,better 4/4,C
+PBTI-SH - B5_60/10,4 cells,O2,+8.8 to +32.0,+3 to +7%,28.8,"equivalent (s) 2/4, worse 1/4, different within margin 1/4",C
+PBTI-SH - B5_ev,4 cells,W,+0.90 to +2.92,--,0.60,worse 4/4,C

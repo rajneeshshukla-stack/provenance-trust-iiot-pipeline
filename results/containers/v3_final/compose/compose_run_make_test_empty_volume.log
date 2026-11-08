@@ -1,0 +1,244 @@
+ Network deploy_default Creating 
+ Network deploy_default Creating 
+ Network deploy_default Created 
+ Network deploy_default Created 
+ Image deploy-pbti Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 607B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile.v3
+#2 transferring dockerfile: 3.98kB 0.0s done
+#2 DONE 0.0s
+
+#3 [context pbti_deploy] load .dockerignore
+#3 transferring pbti_deploy: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/python:3.13.18-slim-trixie@sha256:ae14d4ce8771606477a81446e7ef429edd6762305fc50c84507c1041fa8285d1
+#4 DONE 1.0s
+
+#5 [stage-0 1/8] FROM docker.io/library/python:3.13.18-slim-trixie@sha256:ae14d4ce8771606477a81446e7ef429edd6762305fc50c84507c1041fa8285d1
+#5 resolve docker.io/library/python:3.13.18-slim-trixie@sha256:ae14d4ce8771606477a81446e7ef429edd6762305fc50c84507c1041fa8285d1 0.0s done
+#5 DONE 0.0s
+
+#6 [context pbti_deploy] load from client
+#6 transferring pbti_deploy: 44B done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 2.38MB 0.1s
+#7 transferring context: 3.02MB 0.1s done
+#7 DONE 0.2s
+
+#8 [stage-0 2/8] RUN apt-get update  && apt-get install -y --no-install-recommends         "mosquitto=2.0.21-1" "make=4.4.1-2" "tini=0.19.0-3+b8"  && rm -rf /var/lib/apt/lists/*
+#8 CACHED
+
+#9 [stage-0 3/8] RUN groupadd --system --gid 10001 pbti  && useradd --system --uid 10001 --gid 10001 --home-dir /home/pbti --create-home --shell /usr/sbin/nologin pbti
+#9 CACHED
+
+#10 [stage-0 4/8] WORKDIR /opt/pbti
+#10 CACHED
+
+#11 [stage-0 5/8] COPY --from=pbti_deploy requirements.lock.txt /tmp/requirements.lock.txt
+#11 CACHED
+
+#12 [stage-0 6/8] RUN --mount=type=secret,id=pipca,required=false     if [ -s /run/secrets/pipca ]; then export PIP_CERT=/run/secrets/pipca; fi;     pip install --require-hashes --no-deps --only-binary=:all: -r /tmp/requirements.lock.txt  && pip check  && rm -f /tmp/requirements.lock.txt
+#12 CACHED
+
+#13 [stage-0 7/8] COPY --chown=root:root . .
+#13 DONE 0.3s
+
+#14 [stage-0 8/8] RUN mkdir -p results/raw results/summary paper/generated paper/figures  && chown -R 10001:10001 results paper/generated paper/figures
+#14 DONE 1.0s
+
+#15 exporting to image
+#15 exporting layers
+#15 exporting layers 1.2s done
+#15 exporting manifest sha256:09455b430886b09e55b267851dd4dd872e607e89a2dcfad7f61051713766c498 0.0s done
+#15 exporting config sha256:64724fa974103062242ffa02312a3dec06894771606ecbea78ac9cace87f1535 0.0s done
+#15 exporting attestation manifest sha256:15128643f7830958809aebd302ebf3960059b4cc628db299ebd4b78fcca56181
+#15 exporting attestation manifest sha256:15128643f7830958809aebd302ebf3960059b4cc628db299ebd4b78fcca56181 0.0s done
+#15 exporting manifest list sha256:ba9d4bd60604530cf5c8c1da0614049655d176f094773aee9b26e8c873c1cc8c 0.0s done
+#15 naming to docker.io/library/deploy-pbti:latest done
+#15 unpacking to docker.io/library/deploy-pbti:latest
+#15 unpacking to docker.io/library/deploy-pbti:latest 0.4s done
+#15 DONE 1.8s
+
+#16 resolving provenance for metadata file
+#16 DONE 0.0s
+ Image deploy-pbti Built 
+ Container deploy-pbti-run-e1ead45c6f0e Creating 
+ Container deploy-pbti-run-e1ead45c6f0e Created 
+python3 -m pytest -q --junitxml=results/summary/pytest_v3.xml
+......................................................................FF [ 63%]
+FFFFF..............s......................                               [100%]
+=================================== FAILURES ===================================
+____ test_stored_outcomes_reproduced[scenarios.jsonl-S05_stolen_key-PBTI-3] ____
+
+fname = 'scenarios.jsonl', scenario = 'S05_stolen_key', system = 'PBTI'
+seed = 3
+
+    @pytest.mark.parametrize("fname,scenario,system,seed", CASES)
+    def test_stored_outcomes_reproduced(fname, scenario, system, seed):
+>       stored = _stored(fname, scenario, system, seed)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_regression_v2_outcomes.py:41: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+fname = 'scenarios.jsonl', scenario = 'S05_stolen_key', system = 'PBTI'
+seed = 3
+
+    def _stored(fname, scenario, system, seed):
+>       for line in open(ROOT / "results" / "raw" / fname):
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/opt/pbti/results/raw/scenarios.jsonl'
+
+tests/test_regression_v2_outcomes.py:32: FileNotFoundError
+__ test_stored_outcomes_reproduced[scenarios.jsonl-S08_seq_reuse_bug-PBTI-2] ___
+
+fname = 'scenarios.jsonl', scenario = 'S08_seq_reuse_bug', system = 'PBTI'
+seed = 2
+
+    @pytest.mark.parametrize("fname,scenario,system,seed", CASES)
+    def test_stored_outcomes_reproduced(fname, scenario, system, seed):
+>       stored = _stored(fname, scenario, system, seed)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_regression_v2_outcomes.py:41: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+fname = 'scenarios.jsonl', scenario = 'S08_seq_reuse_bug', system = 'PBTI'
+seed = 2
+
+    def _stored(fname, scenario, system, seed):
+>       for line in open(ROOT / "results" / "raw" / fname):
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/opt/pbti/results/raw/scenarios.jsonl'
+
+tests/test_regression_v2_outcomes.py:32: FileNotFoundError
+_ test_stored_outcomes_reproduced[scenarios_part2.jsonl-S12_beyond_horizon-PBTI-12] _
+
+fname = 'scenarios_part2.jsonl', scenario = 'S12_beyond_horizon'
+system = 'PBTI', seed = 12
+
+    @pytest.mark.parametrize("fname,scenario,system,seed", CASES)
+    def test_stored_outcomes_reproduced(fname, scenario, system, seed):
+>       stored = _stored(fname, scenario, system, seed)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_regression_v2_outcomes.py:41: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+fname = 'scenarios_part2.jsonl', scenario = 'S12_beyond_horizon'
+system = 'PBTI', seed = 12
+
+    def _stored(fname, scenario, system, seed):
+>       for line in open(ROOT / "results" / "raw" / fname):
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/opt/pbti/results/raw/scenarios_part2.jsonl'
+
+tests/test_regression_v2_outcomes.py:32: FileNotFoundError
+_ test_stored_outcomes_reproduced[scenarios_part2.jsonl-S14_revocation-B3-15] __
+
+fname = 'scenarios_part2.jsonl', scenario = 'S14_revocation', system = 'B3'
+seed = 15
+
+    @pytest.mark.parametrize("fname,scenario,system,seed", CASES)
+    def test_stored_outcomes_reproduced(fname, scenario, system, seed):
+>       stored = _stored(fname, scenario, system, seed)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_regression_v2_outcomes.py:41: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+fname = 'scenarios_part2.jsonl', scenario = 'S14_revocation', system = 'B3'
+seed = 15
+
+    def _stored(fname, scenario, system, seed):
+>       for line in open(ROOT / "results" / "raw" / fname):
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/opt/pbti/results/raw/scenarios_part2.jsonl'
+
+tests/test_regression_v2_outcomes.py:32: FileNotFoundError
+_ test_stored_outcomes_reproduced[scenarios_part3_b4.jsonl-S05_stolen_key-B4-7] _
+
+fname = 'scenarios_part3_b4.jsonl', scenario = 'S05_stolen_key', system = 'B4'
+seed = 7
+
+    @pytest.mark.parametrize("fname,scenario,system,seed", CASES)
+    def test_stored_outcomes_reproduced(fname, scenario, system, seed):
+>       stored = _stored(fname, scenario, system, seed)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_regression_v2_outcomes.py:41: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+fname = 'scenarios_part3_b4.jsonl', scenario = 'S05_stolen_key', system = 'B4'
+seed = 7
+
+    def _stored(fname, scenario, system, seed):
+>       for line in open(ROOT / "results" / "raw" / fname):
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/opt/pbti/results/raw/scenarios_part3_b4.jsonl'
+
+tests/test_regression_v2_outcomes.py:32: FileNotFoundError
+_ test_stored_outcomes_reproduced[scenarios_part3_b4.jsonl-S14_revocation-B4-4] _
+
+fname = 'scenarios_part3_b4.jsonl', scenario = 'S14_revocation', system = 'B4'
+seed = 4
+
+    @pytest.mark.parametrize("fname,scenario,system,seed", CASES)
+    def test_stored_outcomes_reproduced(fname, scenario, system, seed):
+>       stored = _stored(fname, scenario, system, seed)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_regression_v2_outcomes.py:41: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+fname = 'scenarios_part3_b4.jsonl', scenario = 'S14_revocation', system = 'B4'
+seed = 4
+
+    def _stored(fname, scenario, system, seed):
+>       for line in open(ROOT / "results" / "raw" / fname):
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/opt/pbti/results/raw/scenarios_part3_b4.jsonl'
+
+tests/test_regression_v2_outcomes.py:32: FileNotFoundError
+_____ test_stored_outcomes_reproduced[scenarios.jsonl-S07_duplicates-B2-5] _____
+
+fname = 'scenarios.jsonl', scenario = 'S07_duplicates', system = 'B2', seed = 5
+
+    @pytest.mark.parametrize("fname,scenario,system,seed", CASES)
+    def test_stored_outcomes_reproduced(fname, scenario, system, seed):
+>       stored = _stored(fname, scenario, system, seed)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_regression_v2_outcomes.py:41: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+fname = 'scenarios.jsonl', scenario = 'S07_duplicates', system = 'B2', seed = 5
+
+    def _stored(fname, scenario, system, seed):
+>       for line in open(ROOT / "results" / "raw" / fname):
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/opt/pbti/results/raw/scenarios.jsonl'
+
+tests/test_regression_v2_outcomes.py:32: FileNotFoundError
+=========================== short test summary info ============================
+FAILED tests/test_regression_v2_outcomes.py::test_stored_outcomes_reproduced[scenarios.jsonl-S05_stolen_key-PBTI-3]
+FAILED tests/test_regression_v2_outcomes.py::test_stored_outcomes_reproduced[scenarios.jsonl-S08_seq_reuse_bug-PBTI-2]
+FAILED tests/test_regression_v2_outcomes.py::test_stored_outcomes_reproduced[scenarios_part2.jsonl-S12_beyond_horizon-PBTI-12]
+FAILED tests/test_regression_v2_outcomes.py::test_stored_outcomes_reproduced[scenarios_part2.jsonl-S14_revocation-B3-15]
+FAILED tests/test_regression_v2_outcomes.py::test_stored_outcomes_reproduced[scenarios_part3_b4.jsonl-S05_stolen_key-B4-7]
+FAILED tests/test_regression_v2_outcomes.py::test_stored_outcomes_reproduced[scenarios_part3_b4.jsonl-S14_revocation-B4-4]
+FAILED tests/test_regression_v2_outcomes.py::test_stored_outcomes_reproduced[scenarios.jsonl-S07_duplicates-B2-5]
+7 failed, 106 passed, 1 skipped in 140.30s (0:02:20)
+make: *** [Makefile:31: test] Error 1
+
+
+real	2m27.305s
+user	0m0.304s
+sys	0m0.173s
+exit=2

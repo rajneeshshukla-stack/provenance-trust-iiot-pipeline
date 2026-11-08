@@ -1,0 +1,24 @@
+cffi==2.1.1: 100 files
+contourpy==1.4.0: 70 files
+cryptography==50.0.1: 46 files
+cycler==0.12.1: 2 files
+fonttools==4.68.0: 65 files
+iniconfig==2.3.1: 2 files
+kiwisolver==1.5.1: 141 files
+matplotlib==3.11.2: 53 files
+numpy==2.5.3: 66 files
+packaging==26.3: 2 files
+paho-mqtt==2.1.0: 2 files
+pandas==3.0.5: 42 files
+pillow==13.0.0: 83 files
+pluggy==1.7.0: 2 files
+psutil==7.2.2: 21 files
+pycparser==3.12: 2 files
+Pygments==2.21.0: 2 files
+pyparsing==3.3.3: 2 files
+pytest==9.1.1: 2 files
+python-dateutil==4.0.0: 2 files
+PyYAML==6.0.3: 73 files
+scipy==1.18.1: 61 files
+tzdata==2026.6: 2 files
+wrote deploy/requirements.lock.txt: 23 packages (9 top-level)

@@ -1,0 +1,33 @@
+# cmd: nice -n 10 python3 -I parity_test.py --backend regopy --out parity_results.json
+# harness sha256: 61710d41b689c1581e935c2d09562f823f913cf7c136275df02ef7ca498f70fe
+# start: 2026-11-04T05:25:42Z
+backend=regopy wall=192.0s versions=5 -> parity_results.json
+  grid_all_versions                  n= 34560 exact= 34286 allow_match= 34560 reason_mm= 274 allow_mm=  0 py_err=  0 rego_err=  0 both_err=  0 permit_one_side=  0 ver_sel_err=0
+  grid_v1                            n=  6912 exact=  6868 allow_match=  6912 reason_mm=  44 allow_mm=  0 py_err=  0 rego_err=  0 both_err=  0 permit_one_side=  0 ver_sel_err=0
+  grid_v2                            n=  6912 exact=  6868 allow_match=  6912 reason_mm=  44 allow_mm=  0 py_err=  0 rego_err=  0 both_err=  0 permit_one_side=  0 ver_sel_err=0
+  grid_v3                            n=  6912 exact=  6870 allow_match=  6912 reason_mm=  42 allow_mm=  0 py_err=  0 rego_err=  0 both_err=  0 permit_one_side=  0 ver_sel_err=0
+  grid_v4                            n=  6912 exact=  6812 allow_match=  6912 reason_mm= 100 allow_mm=  0 py_err=  0 rego_err=  0 both_err=  0 permit_one_side=  0 ver_sel_err=0
+  grid_v5                            n=  6912 exact=  6868 allow_match=  6912 reason_mm=  44 allow_mm=  0 py_err=  0 rego_err=  0 both_err=  0 permit_one_side=  0 ver_sel_err=0
+  boundary_all                       n=   304 exact=   160 allow_match=   264 reason_mm= 104 allow_mm=  0 py_err= 40 rego_err=  0 both_err=  0 permit_one_side=  0 ver_sel_err=0
+  asset_not_assigned                 n=    15 exact=    15 allow_match=    15 reason_mm=   0 allow_mm=  0 py_err=  0 rego_err=  0 both_err=  0 permit_one_side=  0 ver_sel_err=0
+  baseline_permit                    n=     3 exact=     3 allow_match=     3 reason_mm=   0 allow_mm=  0 py_err=  0 rego_err=  0 both_err=  0 permit_one_side=  0 ver_sel_err=0
+  device_moved                       n=    18 exact=    14 allow_match=    18 reason_mm=   4 allow_mm=  0 py_err=  0 rego_err=  0 both_err=  0 permit_one_side=  0 ver_sel_err=0
+  empty_strings                      n=    12 exact=     6 allow_match=    12 reason_mm=   6 allow_mm=  0 py_err=  0 rego_err=  0 both_err=  0 permit_one_side=  0 ver_sel_err=0
+  inactive_device                    n=    12 exact=    10 allow_match=    12 reason_mm=   2 allow_mm=  0 py_err=  0 rego_err=  0 both_err=  0 permit_one_side=  0 ver_sel_err=0
+  inactive_workload                  n=    15 exact=     8 allow_match=    15 reason_mm=   7 allow_mm=  0 py_err=  0 rego_err=  0 both_err=  0 permit_one_side=  0 ver_sel_err=0
+  malformed_policy_document          n=    47 exact=     7 allow_match=    12 reason_mm=   5 allow_mm= 27 py_err=  8 rego_err=  0 both_err=  0 permit_one_side= 27 ver_sel_err=0
+  missing_fields                     n=    13 exact=     7 allow_match=    13 reason_mm=   6 allow_mm=  0 py_err=  0 rego_err=  0 both_err=  0 permit_one_side=  0 ver_sel_err=0
+  origin_kind_mismatch               n=    10 exact=     2 allow_match=    10 reason_mm=   8 allow_mm=  0 py_err=  0 rego_err=  0 both_err=  0 permit_one_side=  0 ver_sel_err=0
+  schema_not_allowed                 n=    20 exact=     0 allow_match=    20 reason_mm=  20 allow_mm=  0 py_err=  0 rego_err=  0 both_err=  0 permit_one_side=  0 ver_sel_err=0
+  unknown_device                     n=    14 exact=    14 allow_match=    14 reason_mm=   0 allow_mm=  0 py_err=  0 rego_err=  0 both_err=  0 permit_one_side=  0 ver_sel_err=0
+  unknown_workload                   n=    18 exact=     0 allow_match=    18 reason_mm=  18 allow_mm=  0 py_err=  0 rego_err=  0 both_err=  0 permit_one_side=  0 ver_sel_err=0
+  version_selection_clock_boundary   n=    64 exact=    61 allow_match=    64 reason_mm=   3 allow_mm=  0 py_err=  0 rego_err=  0 both_err=  0 permit_one_side=  0 ver_sel_err=0
+  wrong_types                        n=    90 exact=    20 allow_match=    50 reason_mm=  30 allow_mm=  0 py_err= 40 rego_err=  0 both_err=  0 permit_one_side=  0 ver_sel_err=0
+  reason confusion: {('ORIGIN_SIGNER_INVALID', 'DEVICE_NOT_REGISTERED'): 29, ('ORIGIN_SIGNER_TOO_WEAK', 'DEVICE_NOT_REGISTERED'): 205, ('WORKLOAD_NOT_REGISTERED', 'DEVICE_NOT_REGISTERED'): 104, ('SCHEMA_NOT_ALLOWED', 'DEVICE_NOT_REGISTERED'): 45}
+  properties: {'v5_vs_v2_decision_differences': {'python': 0, 'rego': 0}, 'v2_vs_v1_decision_differences': {'python': 6, 'rego': 6}, 'v3_vs_v2_decision_differences': {'python': 288, 'rego': 286}, 'v4_vs_v3_decision_differences': {'python': 69, 'rego': 58}}
+  HEADLINE well_formed_requests_on_well_formed_policy: {'n': 34749, 'allow_match': 34749, 'exact_match': 34413, 'reason_mismatch': 336, 'allow_mismatch': 0, 'python_error': 0, 'rego_error': 0, 'permit_by_one_side_only': 0}
+  HEADLINE malformed_requests (missing_fields, wrong_types, empty_strings): {'n': 115, 'allow_match': 75, 'exact_match': 33, 'reason_mismatch': 42, 'allow_mismatch': 0, 'python_error': 40, 'rego_error': 0, 'permit_by_one_side_only': 0}
+  HEADLINE malformed_policy_document: {'n': 47, 'allow_match': 12, 'exact_match': 7, 'reason_mismatch': 5, 'allow_mismatch': 27, 'python_error': 8, 'rego_error': 0, 'permit_by_one_side_only': 27}
+  HEADLINE all_cases: {'n': 34911, 'allow_match': 34836, 'exact_match': 34453, 'reason_mismatch': 383, 'allow_mismatch': 27, 'python_error': 48, 'rego_error': 0, 'permit_by_one_side_only': 27}
+# exit_code: 0
+# end: 2026-11-04T05:28:54Z

@@ -1,0 +1,2 @@
+{"scenario": "S05_stolen_key", "seed": 21, "holds": 871, "double_counted": 71, "arrival_holds": 797, "held_distinct_ever(state events)": 74, "distinct ever held (true)": 800}
+{"scenario": "S08_seq_reuse_bug", "seed": 21, "holds": 402, "double_counted": 4, "arrival_holds": 394, "held_distinct_ever(state events)": 8, "distinct ever held (true)": 398}

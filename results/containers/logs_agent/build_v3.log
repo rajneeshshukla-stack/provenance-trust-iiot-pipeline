@@ -1,0 +1,200 @@
+# cmd: docker build --progress=plain -f /home/claude/PBTI_v3/02_work/policy_container/deploy/Dockerfile.v3 --build-context pbti_deploy=/home/claude/PBTI_v3/02_work/policy_container/deploy --secret id=pipca,src=/root/.ccr/ca-bundle.crt -t pbti:v3 .  (cwd=/home/claude/PBTI_v3/02_work/policy_container/build/pbti-iiot)
+# start: 2026-11-04T05:15:41Z
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.v3
+#1 transferring dockerfile: 3.97kB done
+#1 DONE 0.0s
+
+#2 [context pbti_deploy] load .dockerignore
+#2 transferring pbti_deploy: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.13.18-slim-trixie@sha256:ae14d4ce8771606477a81446e7ef429edd6762305fc50c84507c1041fa8285d1
+#3 DONE 0.0s
+
+#4 [stage-0 1/8] FROM docker.io/library/python:3.13.18-slim-trixie@sha256:ae14d4ce8771606477a81446e7ef429edd6762305fc50c84507c1041fa8285d1
+#4 resolve docker.io/library/python:3.13.18-slim-trixie@sha256:ae14d4ce8771606477a81446e7ef429edd6762305fc50c84507c1041fa8285d1 0.0s done
+#4 CACHED
+
+#5 [internal] load build context
+#5 transferring context: 30B
+#5 transferring context: 9.01kB 0.0s done
+#5 DONE 0.0s
+
+#6 [context pbti_deploy] load from client
+#6 transferring pbti_deploy: 72.95kB 0.0s done
+#6 DONE 0.1s
+
+#7 [stage-0 2/8] RUN apt-get update  && apt-get install -y --no-install-recommends         "mosquitto=2.0.21-1" "make=4.4.1-2" "tini=0.19.0-3+b8"  && rm -rf /var/lib/apt/lists/*
+#7 0.371 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.384 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.411 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.435 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9678 kB]
+#7 0.583 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [1108 B]
+#7 0.603 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [296 kB]
+#7 1.913 Fetched 10.1 MB in 2s (6212 kB/s)
+#7 1.913 Reading package lists...
+#7 2.804 Reading package lists...
+#7 3.568 Building dependency tree...
+#7 3.761 Reading state information...
+#7 3.971 The following additional packages will be installed:
+#7 3.973   libcjson1 libdlt2 libmosquitto1 libwebsockets19t64 libwrap0
+#7 3.975 Suggested packages:
+#7 3.975   make-doc apparmor
+#7 4.073 The following NEW packages will be installed:
+#7 4.076   libcjson1 libdlt2 libmosquitto1 libwebsockets19t64 libwrap0 make mosquitto
+#7 4.076   tini
+#7 4.167 0 upgraded, 8 newly installed, 0 to remove and 1 not upgraded.
+#7 4.167 Need to get 1492 kB of archives.
+#7 4.167 After this operation, 4474 kB of additional disk space will be used.
+#7 4.167 Get:1 http://deb.debian.org/debian trixie/main amd64 libcjson1 amd64 1.7.18-3.1+deb13u1 [29.8 kB]
+#7 4.188 Get:2 http://deb.debian.org/debian trixie/main amd64 libmosquitto1 amd64 2.0.21-1 [96.1 kB]
+#7 4.223 Get:3 http://deb.debian.org/debian trixie/main amd64 libdlt2 amd64 2.18.10-10+b1 [62.4 kB]
+#7 4.247 Get:4 http://deb.debian.org/debian-security trixie-security/main amd64 libwebsockets19t64 amd64 4.3.5-1+deb13u3 [231 kB]
+#7 4.282 Get:5 http://deb.debian.org/debian trixie/main amd64 libwrap0 amd64 7.6.q-36 [55.3 kB]
+#7 4.301 Get:6 http://deb.debian.org/debian trixie/main amd64 mosquitto amd64 2.0.21-1 [274 kB]
+#7 4.324 Get:7 http://deb.debian.org/debian trixie/main amd64 make amd64 4.4.1-2 [463 kB]
+#7 4.349 Get:8 http://deb.debian.org/debian trixie/main amd64 tini amd64 0.19.0-3+b8 [280 kB]
+#7 4.570 debconf: unable to initialize frontend: Dialog
+#7 4.570 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#7 4.570 debconf: falling back to frontend: Readline
+#7 4.570 debconf: unable to initialize frontend: Readline
+#7 4.570 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/x86_64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8, <STDIN> line 8.)
+#7 4.570 debconf: falling back to frontend: Teletype
+#7 4.586 debconf: unable to initialize frontend: Teletype
+#7 4.586 debconf: (This frontend requires a controlling tty.)
+#7 4.586 debconf: falling back to frontend: Noninteractive
+#7 5.513 Fetched 1492 kB in 0s (5725 kB/s)
+#7 5.560 Selecting previously unselected package libcjson1:amd64.
+#7 5.560 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 5658 files and directories currently installed.)
+#7 5.560 Preparing to unpack .../0-libcjson1_1.7.18-3.1+deb13u1_amd64.deb ...
+#7 5.575 Unpacking libcjson1:amd64 (1.7.18-3.1+deb13u1) ...
+#7 5.639 Selecting previously unselected package libmosquitto1:amd64.
+#7 5.640 Preparing to unpack .../1-libmosquitto1_2.0.21-1_amd64.deb ...
+#7 5.648 Unpacking libmosquitto1:amd64 (2.0.21-1) ...
+#7 5.732 Selecting previously unselected package libdlt2:amd64.
+#7 5.732 Preparing to unpack .../2-libdlt2_2.18.10-10+b1_amd64.deb ...
+#7 5.747 Unpacking libdlt2:amd64 (2.18.10-10+b1) ...
+#7 5.840 Selecting previously unselected package libwebsockets19t64:amd64.
+#7 5.840 Preparing to unpack .../3-libwebsockets19t64_4.3.5-1+deb13u3_amd64.deb ...
+#7 5.847 Unpacking libwebsockets19t64:amd64 (4.3.5-1+deb13u3) ...
+#7 5.965 Selecting previously unselected package libwrap0:amd64.
+#7 5.965 Preparing to unpack .../4-libwrap0_7.6.q-36_amd64.deb ...
+#7 5.975 Unpacking libwrap0:amd64 (7.6.q-36) ...
+#7 6.077 Selecting previously unselected package mosquitto.
+#7 6.077 Preparing to unpack .../5-mosquitto_2.0.21-1_amd64.deb ...
+#7 6.089 Unpacking mosquitto (2.0.21-1) ...
+#7 6.175 Selecting previously unselected package make.
+#7 6.177 Preparing to unpack .../6-make_4.4.1-2_amd64.deb ...
+#7 6.187 Unpacking make (4.4.1-2) ...
+#7 6.299 Selecting previously unselected package tini.
+#7 6.299 Preparing to unpack .../7-tini_0.19.0-3+b8_amd64.deb ...
+#7 6.307 Unpacking tini (0.19.0-3+b8) ...
+#7 6.480 Setting up libmosquitto1:amd64 (2.0.21-1) ...
+#7 6.499 Setting up libcjson1:amd64 (1.7.18-3.1+deb13u1) ...
+#7 6.523 Setting up libwebsockets19t64:amd64 (4.3.5-1+deb13u3) ...
+#7 6.544 Setting up libwrap0:amd64 (7.6.q-36) ...
+#7 6.571 Setting up make (4.4.1-2) ...
+#7 6.595 Setting up tini (0.19.0-3+b8) ...
+#7 6.607 Setting up libdlt2:amd64 (2.18.10-10+b1) ...
+#7 6.631 Setting up mosquitto (2.0.21-1) ...
+#7 6.980 invoke-rc.d: could not determine current runlevel
+#7 6.999 invoke-rc.d: policy-rc.d denied execution of start.
+#7 7.151 Processing triggers for libc-bin (2.41-12+deb13u4) ...
+#7 DONE 7.4s
+
+#8 [stage-0 3/8] RUN groupadd --system --gid 10001 pbti  && useradd --system --uid 10001 --gid 10001 --home-dir /home/pbti --create-home --shell /usr/sbin/nologin pbti
+#8 0.311 useradd warning: pbti's uid 10001 is greater than SYS_UID_MAX 999
+#8 DONE 0.4s
+
+#9 [stage-0 4/8] WORKDIR /opt/pbti
+#9 DONE 0.0s
+
+#10 [stage-0 5/8] COPY --from=pbti_deploy requirements.lock.txt /tmp/requirements.lock.txt
+#10 DONE 0.1s
+
+#11 [stage-0 6/8] RUN --mount=type=secret,id=pipca,required=false     if [ -s /run/secrets/pipca ]; then export PIP_CERT=/run/secrets/pipca; fi;     pip install --require-hashes --no-deps --only-binary=:all: -r /tmp/requirements.lock.txt  && pip check  && rm -f /tmp/requirements.lock.txt
+#11 2.444 Collecting cffi==2.1.1 (from -r /tmp/requirements.lock.txt (line 7))
+#11 3.026   Downloading cffi-2.1.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (221 kB)
+#11 3.210 Collecting contourpy==1.4.0 (from -r /tmp/requirements.lock.txt (line 109))
+#11 3.792   Downloading contourpy-1.4.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (384 kB)
+#11 4.048 Collecting cryptography==50.0.1 (from -r /tmp/requirements.lock.txt (line 181))
+#11 4.681   Downloading cryptography-50.0.1-cp311-abi3-manylinux_2_34_x86_64.whl (4.7 MB)
+#11 6.087      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 3.3 MB/s  0:00:01
+#11 6.130 Collecting cycler==0.12.1 (from -r /tmp/requirements.lock.txt (line 229))
+#11 6.823   Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#11 7.024 Collecting fonttools==4.68.0 (from -r /tmp/requirements.lock.txt (line 233))
+#11 8.453   Downloading fonttools-4.68.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.4 MB)
+#11 11.45      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.4/5.4 MB 1.8 MB/s  0:00:02
+#11 11.52 Collecting iniconfig==2.3.1 (from -r /tmp/requirements.lock.txt (line 300))
+#11 13.72   Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+#11 13.87 Collecting kiwisolver==1.5.1 (from -r /tmp/requirements.lock.txt (line 304))
+#11 15.48   Downloading kiwisolver-1.5.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.5 MB)
+#11 15.88      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 3.8 MB/s  0:00:00
+#11 16.18 Collecting matplotlib==3.11.2 (from -r /tmp/requirements.lock.txt (line 447))
+#11 18.04   Downloading matplotlib-3.11.2-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.9 MB)
+#11 24.51      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.9/9.9 MB 1.5 MB/s  0:00:06
+#11 24.83 Collecting numpy==2.5.3 (from -r /tmp/requirements.lock.txt (line 502))
+#11 25.83   Downloading numpy-2.5.3-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+#11 33.33      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 2.2 MB/s  0:00:07
+#11 33.41 Collecting packaging==26.3 (from -r /tmp/requirements.lock.txt (line 570))
+#11 34.47   Downloading packaging-26.3-py3-none-any.whl (129 kB)
+#11 34.52 Collecting paho-mqtt==2.1.0 (from -r /tmp/requirements.lock.txt (line 574))
+#11 35.57   Downloading paho_mqtt-2.1.0-py3-none-any.whl (67 kB)
+#11 35.75 Collecting pandas==3.0.5 (from -r /tmp/requirements.lock.txt (line 578))
+#11 36.57   Downloading pandas-3.0.5-cp313-cp313-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (10.9 MB)
+#11 39.97      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.9/10.9 MB 3.2 MB/s  0:00:03
+#11 40.42 Collecting pillow==13.0.0 (from -r /tmp/requirements.lock.txt (line 622))
+#11 40.98   Downloading pillow-13.0.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
+#11 42.24      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 5.6 MB/s  0:00:01
+#11 42.29 Collecting pluggy==1.7.0 (from -r /tmp/requirements.lock.txt (line 707))
+#11 43.48   Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+#11 43.61 Collecting psutil==7.2.2 (from -r /tmp/requirements.lock.txt (line 711))
+#11 44.40   Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+#11 44.49 Collecting pycparser==3.12 (from -r /tmp/requirements.lock.txt (line 734))
+#11 45.78   Downloading pycparser-3.12-py3-none-any.whl (62 kB)
+#11 45.84 Collecting Pygments==2.21.0 (from -r /tmp/requirements.lock.txt (line 738))
+#11 47.35   Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+#11 47.74      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 3.7 MB/s  0:00:00
+#11 47.81 Collecting pyparsing==3.3.3 (from -r /tmp/requirements.lock.txt (line 742))
+#11 49.66   Downloading pyparsing-3.3.3-py3-none-any.whl (126 kB)
+#11 49.73 Collecting pytest==9.1.1 (from -r /tmp/requirements.lock.txt (line 746))
+#11 51.40   Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+#11 51.71 Collecting python-dateutil==4.0.0 (from -r /tmp/requirements.lock.txt (line 750))
+#11 53.04   Downloading python_dateutil-4.0.0-py3-none-any.whl (92 kB)
+#11 53.18 Collecting PyYAML==6.0.3 (from -r /tmp/requirements.lock.txt (line 754))
+#11 54.88   Downloading pyyaml-6.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (801 kB)
+#11 55.50      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 801.6/801.6 kB 1.4 MB/s  0:00:00
+#11 55.75 Collecting scipy==1.18.1 (from -r /tmp/requirements.lock.txt (line 829))
+#11 57.38   Downloading scipy-1.18.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+#11 74.36      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 2.1 MB/s  0:00:16
+#11 74.49 Collecting tzdata==2026.6 (from -r /tmp/requirements.lock.txt (line 892))
+#11 75.35   Downloading tzdata-2026.6-py2.py3-none-any.whl (348 kB)
+#11 75.62 Installing collected packages: tzdata, scipy, PyYAML, python-dateutil, pytest, pyparsing, Pygments, pycparser, psutil, pluggy, pillow, pandas, paho-mqtt, packaging, numpy, matplotlib, kiwisolver, iniconfig, fonttools, cycler, cryptography, contourpy, cffi
+#11 98.31 
+#11 98.32 Successfully installed PyYAML-6.0.3 Pygments-2.21.0 cffi-2.1.1 contourpy-1.4.0 cryptography-50.0.1 cycler-0.12.1 fonttools-4.68.0 iniconfig-2.3.1 kiwisolver-1.5.1 matplotlib-3.11.2 numpy-2.5.3 packaging-26.3 paho-mqtt-2.1.0 pandas-3.0.5 pillow-13.0.0 pluggy-1.7.0 psutil-7.2.2 pycparser-3.12 pyparsing-3.3.3 pytest-9.1.1 python-dateutil-4.0.0 scipy-1.18.1 tzdata-2026.6
+#11 98.32 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#11 99.83 No broken requirements found.
+#11 DONE 100.5s
+
+#12 [stage-0 7/8] COPY --chown=root:root . .
+#12 DONE 0.2s
+
+#13 [stage-0 8/8] RUN mkdir -p results/raw results/summary paper/generated paper/figures  && chown -R 10001:10001 results paper/generated paper/figures
+#13 DONE 0.5s
+
+#14 exporting to image
+#14 exporting layers
+#14 exporting layers 21.3s done
+#14 exporting manifest sha256:924c092d6ce80953d7324d7e358f6e24ef5f3ae95bf20c856d4e4bcb713c8b4d 0.0s done
+#14 exporting config sha256:6d23b2e50191358aaac78dab7ad4f262fdde0dc1109e33a0bba22d06392012cf 0.0s done
+#14 exporting attestation manifest sha256:879bb5cd22f98c2cfdce71a7ab8190de73b0376f71d75c0252d031fb60de5306 0.0s done
+#14 exporting manifest list sha256:93d2ed9f2ce4f190b1ac83080d110f3776d84073a2dcb6fc25c0759cacbf110d
+#14 exporting manifest list sha256:93d2ed9f2ce4f190b1ac83080d110f3776d84073a2dcb6fc25c0759cacbf110d 0.0s done
+#14 naming to docker.io/library/pbti:v3 done
+#14 unpacking to docker.io/library/pbti:v3
+#14 unpacking to docker.io/library/pbti:v3 5.0s done
+#14 DONE 26.4s
+# exit_code: 0
+# end: 2026-11-04T05:17:57Z

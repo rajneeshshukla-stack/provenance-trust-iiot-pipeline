@@ -1,0 +1,497 @@
+{
+ "a5_regenerated_equals_stored": true,
+ "rows": 68,
+ "corrected_b5_differences": [],
+ "e09_superseded_snapshot": [
+  {
+   "pipeline": "PBTI",
+   "policy": "none",
+   "first_decision": "STALE_REVIEW",
+   "state_after_first_decision": "QUARANTINED",
+   "case_state_end": "RELEASED",
+   "genuine_recovered": true,
+   "review_log": [
+    {
+     "t_ms": 19000,
+     "event": "REVIEW_OPEN",
+     "case": "05c4a00e7257"
+    },
+    {
+     "t_ms": 19500,
+     "event": "REVIEW",
+     "case": "05c4a00e7257",
+     "decision": "RELEASE",
+     "snapshot_taken_at_ms": null
+    },
+    {
+     "t_ms": 30000,
+     "event": "REVIEW_OPEN",
+     "case": "05c4a00e7257"
+    },
+    {
+     "t_ms": 30000,
+     "event": "REVIEW",
+     "case": "05c4a00e7257",
+     "decision": "RELEASE",
+     "snapshot_taken_at_ms": null
+    }
+   ],
+   "review_records": [
+    {
+     "t_ms": 19500,
+     "outcome": "STALE_REVIEW",
+     "decision": "RELEASE",
+     "snapshot_succ_implied": false
+    },
+    {
+     "t_ms": 30000,
+     "outcome": "RELEASED",
+     "decision": "RELEASE",
+     "snapshot_succ_implied": true
+    }
+   ]
+  },
+  {
+   "pipeline": "PBTI",
+   "policy": "discretionary",
+   "first_decision": "STALE_REVIEW",
+   "state_after_first_decision": "QUARANTINED",
+   "case_state_end": "RELEASED",
+   "genuine_recovered": true,
+   "review_log": [
+    {
+     "t_ms": 19000,
+     "event": "REVIEW_OPEN",
+     "case": "05c4a00e7257"
+    },
+    {
+     "t_ms": 19500,
+     "event": "REVIEW",
+     "case": "05c4a00e7257",
+     "decision": "RELEASE",
+     "snapshot_taken_at_ms": null
+    },
+    {
+     "t_ms": 30000,
+     "event": "REVIEW_OPEN",
+     "case": "05c4a00e7257"
+    },
+    {
+     "t_ms": 30000,
+     "event": "REVIEW",
+     "case": "05c4a00e7257",
+     "decision": "RELEASE",
+     "snapshot_taken_at_ms": null
+    }
+   ],
+   "review_records": [
+    {
+     "t_ms": 19500,
+     "outcome": "STALE_REVIEW",
+     "decision": "RELEASE",
+     "snapshot_succ_implied": false
+    },
+    {
+     "t_ms": 30000,
+     "outcome": "RELEASED",
+     "decision": "RELEASE",
+     "snapshot_succ_implied": true
+    }
+   ]
+  },
+  {
+   "pipeline": "PBTI",
+   "policy": "witness",
+   "first_decision": "STALE_REVIEW",
+   "state_after_first_decision": "QUARANTINED",
+   "case_state_end": "RELEASED",
+   "genuine_recovered": true,
+   "review_log": [
+    {
+     "t_ms": 19000,
+     "event": "REVIEW_OPEN",
+     "case": "05c4a00e7257"
+    },
+    {
+     "t_ms": 19500,
+     "event": "REVIEW",
+     "case": "05c4a00e7257",
+     "decision": "RELEASE",
+     "snapshot_taken_at_ms": null
+    },
+    {
+     "t_ms": 30000,
+     "event": "REVIEW_OPEN",
+     "case": "05c4a00e7257"
+    },
+    {
+     "t_ms": 30000,
+     "event": "REVIEW",
+     "case": "05c4a00e7257",
+     "decision": "RELEASE",
+     "snapshot_taken_at_ms": null
+    }
+   ],
+   "review_records": [
+    {
+     "t_ms": 19500,
+     "outcome": "STALE_REVIEW",
+     "decision": "RELEASE",
+     "snapshot_succ_implied": false
+    },
+    {
+     "t_ms": 30000,
+     "outcome": "RELEASED",
+     "decision": "RELEASE",
+     "snapshot_succ_implied": true
+    }
+   ]
+  },
+  {
+   "pipeline": "B5",
+   "policy": "none",
+   "first_decision": "STALE_REVIEW",
+   "state_after_first_decision": "QUARANTINED",
+   "case_state_end": "RELEASED",
+   "genuine_recovered": true,
+   "review_log": [
+    {
+     "t_ms": 19000,
+     "event": "REVIEW_OPEN",
+     "case": "05c4a00e7257"
+    },
+    {
+     "t_ms": 19500,
+     "event": "REVIEW",
+     "case": "05c4a00e7257",
+     "decision": "RELEASE",
+     "snapshot_taken_at_ms": null
+    },
+    {
+     "t_ms": 30000,
+     "event": "REVIEW_OPEN",
+     "case": "05c4a00e7257"
+    },
+    {
+     "t_ms": 30000,
+     "event": "REVIEW",
+     "case": "05c4a00e7257",
+     "decision": "RELEASE",
+     "snapshot_taken_at_ms": null
+    }
+   ],
+   "review_records": [
+    {
+     "t_ms": 19500,
+     "outcome": "STALE_REVIEW",
+     "decision": "RELEASE",
+     "snapshot_succ_implied": false
+    },
+    {
+     "t_ms": 30000,
+     "outcome": "RELEASED",
+     "decision": "RELEASE",
+     "snapshot_succ_implied": true
+    }
+   ]
+  },
+  {
+   "pipeline": "B5",
+   "policy": "discretionary",
+   "first_decision": "STALE_REVIEW",
+   "state_after_first_decision": "QUARANTINED",
+   "case_state_end": "RELEASED",
+   "genuine_recovered": true,
+   "review_log": [
+    {
+     "t_ms": 19000,
+     "event": "REVIEW_OPEN",
+     "case": "05c4a00e7257"
+    },
+    {
+     "t_ms": 19500,
+     "event": "REVIEW",
+     "case": "05c4a00e7257",
+     "decision": "RELEASE",
+     "snapshot_taken_at_ms": null
+    },
+    {
+     "t_ms": 30000,
+     "event": "REVIEW_OPEN",
+     "case": "05c4a00e7257"
+    },
+    {
+     "t_ms": 30000,
+     "event": "REVIEW",
+     "case": "05c4a00e7257",
+     "decision": "RELEASE",
+     "snapshot_taken_at_ms": null
+    }
+   ],
+   "review_records": [
+    {
+     "t_ms": 19500,
+     "outcome": "STALE_REVIEW",
+     "decision": "RELEASE",
+     "snapshot_succ_implied": false
+    },
+    {
+     "t_ms": 30000,
+     "outcome": "RELEASED",
+     "decision": "RELEASE",
+     "snapshot_succ_implied": true
+    }
+   ]
+  },
+  {
+   "pipeline": "B5",
+   "policy": "witness",
+   "first_decision": "STALE_REVIEW",
+   "state_after_first_decision": "QUARANTINED",
+   "case_state_end": "RELEASED",
+   "genuine_recovered": true,
+   "review_log": [
+    {
+     "t_ms": 19000,
+     "event": "REVIEW_OPEN",
+     "case": "05c4a00e7257"
+    },
+    {
+     "t_ms": 19500,
+     "event": "REVIEW",
+     "case": "05c4a00e7257",
+     "decision": "RELEASE",
+     "snapshot_taken_at_ms": null
+    },
+    {
+     "t_ms": 30000,
+     "event": "REVIEW_OPEN",
+     "case": "05c4a00e7257"
+    },
+    {
+     "t_ms": 30000,
+     "event": "REVIEW",
+     "case": "05c4a00e7257",
+     "decision": "RELEASE",
+     "snapshot_taken_at_ms": null
+    }
+   ],
+   "review_records": [
+    {
+     "t_ms": 19500,
+     "outcome": "STALE_REVIEW",
+     "decision": "RELEASE",
+     "snapshot_succ_implied": false
+    },
+    {
+     "t_ms": 30000,
+     "outcome": "RELEASED",
+     "decision": "RELEASE",
+     "snapshot_succ_implied": true
+    }
+   ]
+  },
+  {
+   "pipeline": "B5",
+   "policy": "none",
+   "first_decision": "STALE_REVIEW",
+   "state_after_first_decision": "QUARANTINED",
+   "case_state_end": "RELEASED",
+   "genuine_recovered": true,
+   "review_log": [
+    {
+     "t_ms": 19000,
+     "event": "REVIEW_OPEN",
+     "case": "05c4a00e7257"
+    },
+    {
+     "t_ms": 19500,
+     "event": "REVIEW",
+     "case": "05c4a00e7257",
+     "decision": "RELEASE",
+     "snapshot_taken_at_ms": null
+    },
+    {
+     "t_ms": 30000,
+     "event": "REVIEW_OPEN",
+     "case": "05c4a00e7257"
+    },
+    {
+     "t_ms": 30000,
+     "event": "REVIEW",
+     "case": "05c4a00e7257",
+     "decision": "RELEASE",
+     "snapshot_taken_at_ms": null
+    }
+   ],
+   "review_records": [
+    {
+     "t_ms": 19500,
+     "outcome": "STALE_REVIEW",
+     "decision": "RELEASE",
+     "snapshot_succ_implied": false
+    },
+    {
+     "t_ms": 30000,
+     "outcome": "RELEASED",
+     "decision": "RELEASE",
+     "snapshot_succ_implied": true
+    }
+   ]
+  },
+  {
+   "pipeline": "B5",
+   "policy": "discretionary",
+   "first_decision": "STALE_REVIEW",
+   "state_after_first_decision": "QUARANTINED",
+   "case_state_end": "RELEASED",
+   "genuine_recovered": true,
+   "review_log": [
+    {
+     "t_ms": 19000,
+     "event": "REVIEW_OPEN",
+     "case": "05c4a00e7257"
+    },
+    {
+     "t_ms": 19500,
+     "event": "REVIEW",
+     "case": "05c4a00e7257",
+     "decision": "RELEASE",
+     "snapshot_taken_at_ms": null
+    },
+    {
+     "t_ms": 30000,
+     "event": "REVIEW_OPEN",
+     "case": "05c4a00e7257"
+    },
+    {
+     "t_ms": 30000,
+     "event": "REVIEW",
+     "case": "05c4a00e7257",
+     "decision": "RELEASE",
+     "snapshot_taken_at_ms": null
+    }
+   ],
+   "review_records": [
+    {
+     "t_ms": 19500,
+     "outcome": "STALE_REVIEW",
+     "decision": "RELEASE",
+     "snapshot_succ_implied": false
+    },
+    {
+     "t_ms": 30000,
+     "outcome": "RELEASED",
+     "decision": "RELEASE",
+     "snapshot_succ_implied": true
+    }
+   ]
+  },
+  {
+   "pipeline": "B5",
+   "policy": "witness",
+   "first_decision": "STALE_REVIEW",
+   "state_after_first_decision": "QUARANTINED",
+   "case_state_end": "RELEASED",
+   "genuine_recovered": true,
+   "review_log": [
+    {
+     "t_ms": 19000,
+     "event": "REVIEW_OPEN",
+     "case": "05c4a00e7257"
+    },
+    {
+     "t_ms": 19500,
+     "event": "REVIEW",
+     "case": "05c4a00e7257",
+     "decision": "RELEASE",
+     "snapshot_taken_at_ms": null
+    },
+    {
+     "t_ms": 30000,
+     "event": "REVIEW_OPEN",
+     "case": "05c4a00e7257"
+    },
+    {
+     "t_ms": 30000,
+     "event": "REVIEW",
+     "case": "05c4a00e7257",
+     "decision": "RELEASE",
+     "snapshot_taken_at_ms": null
+    }
+   ],
+   "review_records": [
+    {
+     "t_ms": 19500,
+     "outcome": "STALE_REVIEW",
+     "decision": "RELEASE",
+     "snapshot_succ_implied": false
+    },
+    {
+     "t_ms": 30000,
+     "outcome": "RELEASED",
+     "decision": "RELEASE",
+     "snapshot_succ_implied": true
+    }
+   ]
+  }
+ ],
+ "e10_widths": [
+  {
+   "pipeline": "PBTI",
+   "width_s": 0.0,
+   "genuine_recovered": true,
+   "genuine_withheld": false,
+   "case_state": "RELEASED"
+  },
+  {
+   "pipeline": "PBTI",
+   "width_s": 5.0,
+   "genuine_recovered": true,
+   "genuine_withheld": false,
+   "case_state": "RELEASED"
+  },
+  {
+   "pipeline": "PBTI",
+   "width_s": 30.0,
+   "genuine_recovered": false,
+   "genuine_withheld": true,
+   "case_state": "REJECTED"
+  },
+  {
+   "pipeline": "PBTI",
+   "width_s": 120.0,
+   "genuine_recovered": false,
+   "genuine_withheld": true,
+   "case_state": "REJECTED"
+  },
+  {
+   "pipeline": "B5",
+   "width_s": 0.0,
+   "genuine_recovered": true,
+   "genuine_withheld": false,
+   "case_state": "RELEASED"
+  },
+  {
+   "pipeline": "B5",
+   "width_s": 5.0,
+   "genuine_recovered": true,
+   "genuine_withheld": false,
+   "case_state": "RELEASED"
+  },
+  {
+   "pipeline": "B5",
+   "width_s": 30.0,
+   "genuine_recovered": false,
+   "genuine_withheld": true,
+   "case_state": "REJECTED"
+  },
+  {
+   "pipeline": "B5",
+   "width_s": 120.0,
+   "genuine_recovered": false,
+   "genuine_withheld": true,
+   "case_state": "REJECTED"
+  }
+ ]
+}

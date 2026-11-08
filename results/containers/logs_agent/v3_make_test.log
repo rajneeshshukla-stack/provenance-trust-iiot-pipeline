@@ -1,0 +1,10 @@
+# image: pbti:v3
+# check: make_test (timeout 900s, --cpus=1.0)
+# cmd: docker run --rm --cpus=1.0  pbti:v3 make test
+# start: 2026-11-04T05:18:08Z
+python3 -m pytest -q
+......................................................................   [100%]
+70 passed in 141.42s (0:02:21)
+# exit_code: 0
+# end: 2026-11-04T05:20:31Z
+# wall_s: 142.944208143

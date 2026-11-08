@@ -1,0 +1,66 @@
+(venv) sangeeta_pandey@DESKTOP-4J4F82I:~/pbti_verify/PBTI_V9_Response_and_Author_Completion/PBTI_V9_Response_and_Author_Completion/9_AUTHOR_VERIFICATION_KIT$ cd ~/pbti_verify/PBTI_V9_Response_and_Author_Completion/PBTI_V9_Response_and_Author_Completion/9_AUTHOR_VERIFICATION_KIT
+export WORKERS=4
+sh run_author_verification.sh "/mnt/c/Users/Sangeeta pandey/OneDrive/Desktop/Future Internet-MDPI- Paper2/V12/PBTI_V9_Research_Package (1)/PBTI_V9_Research_Package/03_Research_Repository/PBTI_V9_repository" ~/pbti_verify/out_run "Rajneesh Shukla"
+PBTI V9 author verification by 'Rajneesh Shukla'; logs in /home/sangeeta_pandey/pbti_verify/out_run
+[2026-11-07T10:30:10Z] 00_environment: running
+[2026-11-07T10:30:10Z] 00_environment: exit 0
+[2026-11-07T10:30:10Z] 01_integrity_before: running
+[2026-11-07T10:30:15Z] 01_integrity_before: exit 0
+[2026-11-07T10:30:15Z] 02_file_hashes: running
+[2026-11-07T10:30:16Z] 02_file_hashes: exit 0
+[2026-11-07T10:30:16Z] 03_frozen_files: running
+[2026-11-07T10:30:16Z] 03_frozen_files: exit 0
+[2026-11-07T10:30:16Z] 04_regression_tests: running
+[2026-11-07T10:30:19Z] 04_regression_tests: exit 0
+[2026-11-07T10:30:19Z] 05_reexecution: running (progress below)
+copying repository to /home/sangeeta_pandey/pbti_verify/out_run/reexecution/scratch_repo (the stored results stay untouched)
+{
+ "time_utc": "2026-11-07T10:30:24+00:00",
+ "cpu_model": "Intel(R) Core(TM) i5-10310U CPU @ 1.70GHz",
+ "logical_cpus": 8,
+ "memory_gib": 7.65,
+ "os": "Ubuntu 26.04.1 LTS",
+ "python": "3.14.4",
+ "source_sha256_src_pbti_aggregate": "0b29dadba59fef4a9e7cd96334518b8d549761fe72d31b3bab9e3caf5e0d85ca"
+}
+[2026-11-07T10:33:11Z] pytest exit=0
+[2026-11-07T10:47:03Z] A0_core exit=0
+[2026-11-07T13:04:12Z] A1_review exit=0
+[2026-11-07T13:57:48Z] A3_selective exit=0
+[2026-11-07T14:01:57Z] A3_scenarios exit=0
+[2026-11-07T14:06:39Z] A3_factorial exit=0
+[2026-11-07T14:06:39Z] A5_matrix exit=0
+[2026-11-07T14:09:15Z] formal_check exit=0
+DIFFERENCES OR FAILURES FOUND - see details
+{"compared": 754, "identical": 754, "different": 0, "errors_in_new": 0, "n_field_comparisons": 77881, "missing_in_stored": 0, "not_reexecuted": 0}
+report: /home/sangeeta_pandey/pbti_verify/out_run/reexecution/REEXECUTION_REPORT.md
+you may delete /home/sangeeta_pandey/pbti_verify/out_run/reexecution/scratch_repo after reading the report
+[2026-11-07T14:09:16Z] 05_reexecution: exit 0
+[2026-11-07T14:09:16Z] 06_proverif: skipped (ProVerif not found (proverif); install ProVerif 2.05 or set PROVERIF=/path/to/proverif)
+[2026-11-07T14:09:16Z] 08_integrity_after: running
+[2026-11-07T14:09:23Z] 08_integrity_after: exit 0
+
+# PBTI V9 — author-run verification: summary
+
+* Executor: Rajneesh Shukla
+* Started (UTC): 2026-11-07T10:30:10Z; finished (UTC): 2026-11-07T14:09:23+00:00
+* Machine: Ubuntu 26.04.1 LTS (x86_64), Intel(R) Core(TM) i5-10310U CPU @ 1.70GHz, 8 logical CPUs, 7.7 GiB RAM, WSL: True
+* Python 3.14.4; pinned packages installed: True
+* ProVerif: None
+* WORKERS: 4
+
+| Check | Status | Detail |
+|---|---|---|
+| Repository integrity (before and after) | **PASS** | tree SHA-256 6d21d50b83799a64… vs manifest 6d21d50b83799a64…; 744 files; unchanged after the run: True |
+| Frozen-file check (scripts/verify_prereg_hashes.py) | **PASS** | exit 0 |
+| Corrected-comparator regression tests (tests/test_b5_corrected.py) | **PASS** | exit 0; 12 passed in 3.28s |
+| Re-execution kit (tools/reexec/reproduce_subset.sh) | **CHECK** | 754 of 754 re-executed runs identical to the stored runs (timing fields excluded; 77881 field comparisons; different 0, errors 0); sub-steps {'pytest': 0, 'A0_core': 0, 'A1_review': 0, 'A3_selective': 0, 'A3_scenarios': 0, 'A3_factorial': 0, 'A5_matrix': 0, 'formal_check': 0}; lifecycle matrix 68 of 68 rows identical; bounded locality check: all invariants pass True, identical False (differing fields ['/python', '/source_sha256/b5_corrected.py']; explained: False, the check records the SHA-256 of every source file and the V9 repository adds one); configuration digests equal: True; source digest equal: False (explained: True; the V9 repository adds src/pbti/b5_corrected.py, which these runners do not load; the digest of src/ without it equals the digest stored with the original runs). Re-execution kit's own verdict line: "DIFFERENCES OR FAILURES FOUND - see details" |
+| ProVerif models (3) against the stored RESULT lines | **NOT RUN** | ProVerif not found |
+
+Not every automated check passed or ran; the details above and the logs in this folder say which.
+
+The manual reviews (ProVerif model assumptions, Proposition 1 proof, comparator code, manuscript) are recorded in the log sheet, not here.
+
+Summary: /home/sangeeta_pandey/pbti_verify/out_run/SUMMARY.md
+Return this file with the log sheet: /home/sangeeta_pandey/pbti_verify/out_run.tar.gz
+(venv) sangeeta_pandey@DESKTOP-4J4F82I:~/pbti_verify/PBTI_V9_Response_and_Author_Completion/PBTI_V9_Response_and_Author_Completion/9_AUTHOR_VERIFICATION_KIT$

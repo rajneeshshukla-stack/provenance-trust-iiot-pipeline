@@ -1,0 +1,12 @@
+{"scenario": "S99_mixed", "seed": 1, "cfg": {}, "rehold_noev_calls": 54, "rehold_released": 0, "rehold_released_ev": 0, "stuck_reingest": 0, "fork_calls": 157}
+{"scenario": "S99_mixed", "seed": 2, "cfg": {}, "rehold_noev_calls": 62, "rehold_released": 0, "rehold_released_ev": 0, "stuck_reingest": 0, "fork_calls": 170}
+{"scenario": "S99_mixed", "seed": 3, "cfg": {}, "rehold_noev_calls": 57, "rehold_released": 0, "rehold_released_ev": 0, "stuck_reingest": 0, "fork_calls": 159}
+{"scenario": "S99_mixed", "seed": 4, "cfg": {}, "rehold_noev_calls": 40, "rehold_released": 0, "rehold_released_ev": 0, "stuck_reingest": 0, "fork_calls": 133}
+{"scenario": "S99_mixed", "seed": 5, "cfg": {}, "rehold_noev_calls": 44, "rehold_released": 9, "rehold_released_ev": 15, "stuck_reingest": 0, "fork_calls": 135}
+{"scenario": "S99_mixed", "seed": 23, "cfg": {}, "rehold_noev_calls": 47, "rehold_released": 0, "rehold_released_ev": 3, "stuck_reingest": 0, "fork_calls": 139}
+{"scenario": "S99_mixed", "seed": 24, "cfg": {}, "rehold_noev_calls": 40, "rehold_released": 0, "rehold_released_ev": 4, "stuck_reingest": 0, "fork_calls": 130}
+{"scenario": "S99_mixed", "seed": 25, "cfg": {}, "rehold_noev_calls": 50, "rehold_released": 0, "rehold_released_ev": 0, "stuck_reingest": 0, "fork_calls": 136}
+{"scenario": "S99_mixed", "seed": 26, "cfg": {}, "rehold_noev_calls": 45, "rehold_released": 30, "rehold_released_ev": 0, "stuck_reingest": 0, "fork_calls": 125}
+{"scenario": "S99_mixed", "seed": 23, "cfg": {"review_mode": "event", "review_delay_ms": 0, "review_rule": "defer"}, "rehold_noev_calls": 47, "rehold_released": 2, "rehold_released_ev": 143, "stuck_reingest": 0, "fork_calls": 139}
+{"scenario": "S99_mixed", "seed": 24, "cfg": {"review_mode": "event", "review_delay_ms": 0, "review_rule": "defer"}, "rehold_noev_calls": 40, "rehold_released": 4, "rehold_released_ev": 52, "stuck_reingest": 0, "fork_calls": 130}
+{"scenario": "S99_mixed", "seed": 25, "cfg": {"review_mode": "event", "review_delay_ms": 0, "review_rule": "defer"}, "rehold_noev_calls": 50, "rehold_released": 2, "rehold_released_ev": 104, "stuck_reingest": 0, "fork_calls": 136}

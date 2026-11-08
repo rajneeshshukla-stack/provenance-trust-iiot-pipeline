@@ -1,0 +1,402 @@
+[
+ {
+  "outcome": "W",
+  "cell": "S99_mixed",
+  "arm": "B5-d1c10",
+  "ref": "PBTI-R-d1c10",
+  "variant": "published-rows",
+  "mean_d": 0.6952034259902711,
+  "ci95": [
+   0.6697425283182769,
+   0.7204874626476723
+  ],
+  "ci90": [
+   0.6736618971507993,
+   0.7168376660875599
+  ],
+  "p_holm": 9.1552734375e-05,
+  "class": "worse beyond margin",
+  "published_class": "worse beyond margin",
+  "published_mean_d": 0.6952034259902711
+ },
+ {
+  "outcome": "W",
+  "cell": "S99_mixed",
+  "arm": "B5-d1c10",
+  "ref": "PBTI-R-d1c10",
+  "variant": "no-rehold-B5",
+  "mean_d": 0.679351681723419,
+  "ci95": [
+   0.6520145203266164,
+   0.707406757470465
+  ],
+  "ci90": [
+   0.65622164037526,
+   0.7027673644892289
+  ],
+  "p_holm": 9.1552734375e-05,
+  "class": "worse beyond margin",
+  "published_class": "worse beyond margin",
+  "published_mean_d": 0.6952034259902711
+ },
+ {
+  "outcome": "W",
+  "cell": "S99_mixed",
+  "arm": "B5-d5c1",
+  "ref": "PBTI-R-d5c1",
+  "variant": "published-rows",
+  "mean_d": 0.6992952328005551,
+  "ci95": [
+   0.6753500953787347,
+   0.7250171822446133
+  ],
+  "ci90": [
+   0.678957846073662,
+   0.7209814628214024
+  ],
+  "p_holm": 9.1552734375e-05,
+  "class": "worse beyond margin",
+  "published_class": "worse beyond margin",
+  "published_mean_d": 0.6992952328005551
+ },
+ {
+  "outcome": "W",
+  "cell": "S99_mixed",
+  "arm": "B5-d5c1",
+  "ref": "PBTI-R-d5c1",
+  "variant": "no-rehold-B5",
+  "mean_d": 0.6894954829742865,
+  "ci95": [
+   0.6669124417998606,
+   0.7132907133425972
+  ],
+  "ci90": [
+   0.6704411382904779,
+   0.7094571188325206
+  ],
+  "p_holm": 9.1552734375e-05,
+  "class": "worse beyond margin",
+  "published_class": "worse beyond margin",
+  "published_mean_d": 0.6992952328005551
+ },
+ {
+  "outcome": "AV5",
+  "cell": "S99_mixed",
+  "arm": "B5-d1c10",
+  "ref": "PBTI-R-d1c10",
+  "variant": "published-rows",
+  "mean_d": -0.06555941626129257,
+  "ci95": [
+   -0.06715079916608757,
+   -0.0639819318971508
+  ],
+  "ci90": [
+   -0.06689367616400278,
+   -0.06422515635858236
+  ],
+  "p_holm": 0.0033278477480494857,
+  "class": "worse beyond margin",
+  "published_class": "worse beyond margin",
+  "published_mean_d": -0.06555941626129255
+ },
+ {
+  "outcome": "AV5",
+  "cell": "S99_mixed",
+  "arm": "B5-d1c10",
+  "ref": "PBTI-R-d1c10",
+  "variant": "no-rehold-B5",
+  "mean_d": -0.06497567755385684,
+  "ci95": [
+   -0.06671299513551077,
+   -0.06330785267546908
+  ],
+  "ci90": [
+   -0.06640027797081308,
+   -0.06356497567755386
+  ],
+  "p_holm": 0.0033278477480494857,
+  "class": "worse beyond margin",
+  "published_class": "worse beyond margin",
+  "published_mean_d": -0.06555941626129255
+ },
+ {
+  "outcome": "AV5",
+  "cell": "S99_mixed",
+  "arm": "B5-d5c1",
+  "ref": "PBTI-R-d5c1",
+  "variant": "published-rows",
+  "mean_d": -0.11443363446838084,
+  "ci95": [
+   -0.11563585823488536,
+   -0.11315496872828354
+  ],
+  "ci90": [
+   -0.11545517720639334,
+   -0.11337039610840863
+  ],
+  "p_holm": 0.0033278477480494857,
+  "class": "worse beyond margin",
+  "published_class": "worse beyond margin",
+  "published_mean_d": -0.11443363446838081
+ },
+ {
+  "outcome": "AV5",
+  "cell": "S99_mixed",
+  "arm": "B5-d5c1",
+  "ref": "PBTI-R-d5c1",
+  "variant": "no-rehold-B5",
+  "mean_d": -0.11443363446838084,
+  "ci95": [
+   -0.11563585823488536,
+   -0.11315496872828354
+  ],
+  "ci90": [
+   -0.11545517720639334,
+   -0.11337039610840863
+  ],
+  "p_holm": 0.0033278477480494857,
+  "class": "worse beyond margin",
+  "published_class": "worse beyond margin",
+  "published_mean_d": -0.11443363446838081
+ },
+ {
+  "outcome": "O2",
+  "cell": "S99_mixed",
+  "arm": "B5-d1c10",
+  "ref": "PBTI-R-d1c10",
+  "variant": "published-rows",
+  "mean_d": 1.15,
+  "ci95": [
+   0.75,
+   1.55
+  ],
+  "ci90": [
+   0.8,
+   1.5
+  ],
+  "p_holm": 0.020356094225354688,
+  "class": "equivalent within margin (significant difference)",
+  "published_class": "equivalent within margin (significant difference)",
+  "published_mean_d": 1.15
+ },
+ {
+  "outcome": "O2",
+  "cell": "S99_mixed",
+  "arm": "B5-d1c10",
+  "ref": "PBTI-R-d1c10",
+  "variant": "no-rehold-B5",
+  "mean_d": 1.1,
+  "ci95": [
+   0.7,
+   1.5
+  ],
+  "ci90": [
+   0.75,
+   1.45
+  ],
+  "p_holm": 0.027978724112682193,
+  "class": "equivalent within margin (significant difference)",
+  "published_class": "equivalent within margin (significant difference)",
+  "published_mean_d": 1.15
+ },
+ {
+  "outcome": "O2",
+  "cell": "S99_mixed",
+  "arm": "B5-d5c1",
+  "ref": "PBTI-R-d5c1",
+  "variant": "published-rows",
+  "mean_d": 1.15,
+  "ci95": [
+   0.75,
+   1.55
+  ],
+  "ci90": [
+   0.8,
+   1.5
+  ],
+  "p_holm": 0.020356094225354688,
+  "class": "equivalent within margin (significant difference)",
+  "published_class": "equivalent within margin (significant difference)",
+  "published_mean_d": 1.15
+ },
+ {
+  "outcome": "O2",
+  "cell": "S99_mixed",
+  "arm": "B5-d5c1",
+  "ref": "PBTI-R-d5c1",
+  "variant": "no-rehold-B5",
+  "mean_d": 1.15,
+  "ci95": [
+   0.75,
+   1.55
+  ],
+  "ci90": [
+   0.8,
+   1.5
+  ],
+  "p_holm": 0.020356094225354688,
+  "class": "equivalent within margin (significant difference)",
+  "published_class": "equivalent within margin (significant difference)",
+  "published_mean_d": 1.15
+ },
+ {
+  "outcome": "O1",
+  "cell": "S99_mixed",
+  "arm": "B5-d1c10",
+  "ref": "PBTI-R-d1c10",
+  "variant": "published-rows",
+  "mean_d": 0.0,
+  "ci95": [
+   0.0,
+   0.0
+  ],
+  "ci90": [
+   0.0,
+   0.0
+  ],
+  "p_holm": 1.0,
+  "class": "identical",
+  "published_class": "identical",
+  "published_mean_d": 0.0
+ },
+ {
+  "outcome": "O1",
+  "cell": "S99_mixed",
+  "arm": "B5-d1c10",
+  "ref": "PBTI-R-d1c10",
+  "variant": "no-rehold-B5",
+  "mean_d": 0.0,
+  "ci95": [
+   0.0,
+   0.0
+  ],
+  "ci90": [
+   0.0,
+   0.0
+  ],
+  "p_holm": 1.0,
+  "class": "identical",
+  "published_class": "identical",
+  "published_mean_d": 0.0
+ },
+ {
+  "outcome": "O1",
+  "cell": "S99_mixed",
+  "arm": "B5-d5c1",
+  "ref": "PBTI-R-d5c1",
+  "variant": "published-rows",
+  "mean_d": 0.0,
+  "ci95": [
+   0.0,
+   0.0
+  ],
+  "ci90": [
+   0.0,
+   0.0
+  ],
+  "p_holm": 1.0,
+  "class": "identical",
+  "published_class": "identical",
+  "published_mean_d": 0.0
+ },
+ {
+  "outcome": "O1",
+  "cell": "S99_mixed",
+  "arm": "B5-d5c1",
+  "ref": "PBTI-R-d5c1",
+  "variant": "no-rehold-B5",
+  "mean_d": 0.0,
+  "ci95": [
+   0.0,
+   0.0
+  ],
+  "ci90": [
+   0.0,
+   0.0
+  ],
+  "p_holm": 1.0,
+  "class": "identical",
+  "published_class": "identical",
+  "published_mean_d": 0.0
+ },
+ {
+  "outcome": "NLX",
+  "cell": "S99_mixed",
+  "arm": "B5-d1c10",
+  "ref": "PBTI-R-d1c10",
+  "variant": "published-rows",
+  "mean_d": -406.58675,
+  "ci95": [
+   -457.21811750000006,
+   -360.32139249999994
+  ],
+  "ci90": [
+   -448.9909674999999,
+   -367.1635149999999
+  ],
+  "p_holm": 0.00016021728515625,
+  "class": "better beyond margin",
+  "published_class": "better beyond margin",
+  "published_mean_d": -406.58674999999994
+ },
+ {
+  "outcome": "NLX",
+  "cell": "S99_mixed",
+  "arm": "B5-d1c10",
+  "ref": "PBTI-R-d1c10",
+  "variant": "no-rehold-B5",
+  "mean_d": -405.46594999999996,
+  "ci95": [
+   -456.11791500000004,
+   -359.04529375
+  ],
+  "ci90": [
+   -448.3013625,
+   -366.100785
+  ],
+  "p_holm": 0.00016021728515625,
+  "class": "better beyond margin",
+  "published_class": "better beyond margin",
+  "published_mean_d": -406.58674999999994
+ },
+ {
+  "outcome": "NLX",
+  "cell": "S99_mixed",
+  "arm": "B5-d5c1",
+  "ref": "PBTI-R-d5c1",
+  "variant": "published-rows",
+  "mean_d": -398.98275,
+  "ci95": [
+   -453.8888875,
+   -350.81147749999997
+  ],
+  "ci90": [
+   -444.75664000000006,
+   -357.53482750000006
+  ],
+  "p_holm": 0.00016021728515625,
+  "class": "better beyond margin",
+  "published_class": "better beyond margin",
+  "published_mean_d": -398.98275
+ },
+ {
+  "outcome": "NLX",
+  "cell": "S99_mixed",
+  "arm": "B5-d5c1",
+  "ref": "PBTI-R-d5c1",
+  "variant": "no-rehold-B5",
+  "mean_d": -398.98275,
+  "ci95": [
+   -453.8888875,
+   -350.81147749999997
+  ],
+  "ci90": [
+   -444.75664000000006,
+   -357.53482750000006
+  ],
+  "p_holm": 0.00016021728515625,
+  "class": "better beyond margin",
+  "published_class": "better beyond margin",
+  "published_mean_d": -398.98275
+ }
+]

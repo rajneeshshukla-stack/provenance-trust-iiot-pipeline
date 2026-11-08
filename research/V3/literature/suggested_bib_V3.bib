@@ -1,0 +1,311 @@
+% suggested_bib_V3.bib -- new or corrected references proposed by the V3 literature audit (3 November 2026).
+% All DOIs were checked against the Crossref REST API (api.crossref.org/works/{DOI}) or, for dataset DOIs,
+% the DataCite REST API (api.datacite.org/dois/{DOI}) on 3 November 2026. Web documents carry url and urldate.
+% Field style follows paper/references.bib (MDPI template). Nothing here has been merged into references.bib.
+% Key: [NEW] = not in references.bib; [CORRECTED] = replaces the entry with the same key; [METADATA ONLY] =
+% bibliographic record verified but content not read -- read the paper before citing it for any content claim.
+
+% ---------------------------------------------------------------- standards, specifications, documentation
+
+% [NEW] COSE Receipts; defines the RFC9162_SHA256 verifiable data structure used by SCITT receipts.
+% Crossref: 10.17487/rfc9942, report, RFC Editor, issued 2026-06; authors O. Steele, H. Birkholz, A. Delignat-Lavaud, C. Fournet.
+@misc{rfc9942,
+  author = {Steele, O. and Birkholz, H. and Delignat-Lavaud, A. and Fournet, C.},
+  title = {{CBOR Object Signing and Encryption (COSE) Receipts}},
+  howpublished = {RFC 9942},
+  publisher = {RFC Editor},
+  year = {2026},
+  doi = {10.17487/RFC9942},
+  url = {https://www.rfc-editor.org/info/rfc9942/}
+}
+
+% [CORRECTED] ACE pub-sub profile: same document, status note updated (Datatracker, 3 Nov 2026: -05 of 6 July 2026 is
+% the latest revision; WG state "In WG Last Call" since 8 January 2026; intended status Standards Track).
+@misc{ietf_ace_coap_pubsub,
+  author = {Palombini, Francesca and Sengul, Cigdem and Tiloca, Marco},
+  title = {{CoAP} Publish-Subscribe Profile for Authentication and Authorization for Constrained Environments ({ACE})},
+  howpublished = {Internet-Draft draft-ietf-ace-coap-pubsub-profile-05, IETF ACE Working Group},
+  year = {2026},
+  note = {Work in progress; in WG Last Call; intended status Standards Track. Available online: \url{https://datatracker.ietf.org/doc/draft-ietf-ace-coap-pubsub-profile/05/} (accessed on 3 November 2026)},
+  url = {https://datatracker.ietf.org/doc/draft-ietf-ace-coap-pubsub-profile/05/},
+  urldate = {3 November 2026}
+}
+
+% [NEW] Scuttlebutt Protocol Guide -- the source for "Ed25519 over canonical JSON (ECMA-262 JSON.stringify format)",
+% which the ICN 2019 paper (tarr2019ssb) does not state. Hosted on GitHub Pages (repository ssbc/scuttlebutt-protocol-guide).
+@misc{ssb_protocol_guide,
+  author = {{Secure Scuttlebutt Consortium}},
+  title = {Scuttlebutt Protocol Guide: Message Format and Signature},
+  howpublished = {Online documentation},
+  url = {https://ssbc.github.io/scuttlebutt-protocol-guide/},
+  urldate = {3 November 2026},
+  note = {Available online: \url{https://ssbc.github.io/scuttlebutt-protocol-guide/} (accessed on 3 November 2026)}
+}
+
+% [NEW] Current Kafka documentation for the idempotent-producer configuration constraints
+% (enable.idempotence default true; requires max.in.flight.requests.per.connection <= 5, retries > 0, acks=all).
+% Page footer: "Last modified October 22, 2026: MINOR: Add 4.4 release".
+@misc{kafka44_producerconfigs,
+  author = {{Apache Kafka}},
+  title = {Apache {Kafka} 4.4 Documentation: Producer Configs},
+  howpublished = {Apache Software Foundation, product documentation},
+  year = {2026},
+  url = {https://kafka.apache.org/44/configuration/producer-configs/},
+  urldate = {3 November 2026},
+  note = {Available online: \url{https://kafka.apache.org/44/configuration/producer-configs/} (accessed on 3 November 2026)}
+}
+
+% [CORRECTED] NiFi: the current release line is 2.x (NiFi 2.12.0 released 2026-09-13); the Data Provenance text quoted
+% in the audit is identical in the 1.x and 2.x guides. Replace the 1.x URL with the 2.x guide (or keep 1.x and say so).
+@misc{nifi_userguide,
+  author = {{Apache NiFi Team}},
+  title = {Apache {NiFi} User Guide: Data Provenance},
+  howpublished = {Apache Software Foundation, product documentation (NiFi 2.x)},
+  url = {https://nifi.apache.org/nifi-docs/user-guide.html},
+  urldate = {3 November 2026},
+  note = {Available online: \url{https://nifi.apache.org/nifi-docs/user-guide.html} (accessed on 3 November 2026)}
+}
+
+% [CORRECTED] Mor dissertation: unchanged bibliographic data (Fall 2019, UC Berkeley), with the equivalent
+% technical-report number added (UCB/EECS-2020-10, 10 January 2020), whose PDF was read in the audit.
+@phdthesis{mor2019thesis,
+  author = {Mor, Nitesh},
+  title = {Global Data Plane: A Widely Distributed Storage and Communication Infrastructure},
+  school = {University of California, Berkeley},
+  address = {Berkeley, CA, USA},
+  type = {{PhD} Dissertation},
+  year = {2019},
+  url = {https://escholarship.org/uc/item/25b9n38g},
+  urldate = {3 November 2026},
+  note = {Also available as Technical Report UCB/EECS-2020-10, EECS Department, University of California, Berkeley, 10 January 2020: \url{https://www2.eecs.berkeley.edu/Pubs/TechRpts/2020/EECS-2020-10.html} (accessed on 3 November 2026)}
+}
+
+% [NEW] NIST SP 800-82 Rev. 4 initial public draft (21 September 2026; comments due 30 November 2026).
+% Crossref: 10.6028/NIST.SP.800-82r4.ipd lists only K. Stouffer; the CSRC page lists the nine authors below.
+% Cite only as a draft.
+@techreport{nist_sp800_82r4ipd,
+  author = {Stouffer, Keith and Pease, Michael and Tang, CheeYee and Hahn, Adam and Gilsinn, Jim and Rebori-Carretero, Daniel and Alexander, Otis and Fialk, Michael and Silva, Zackary Louis},
+  title = {Guide to Operational Technology ({OT}) Security},
+  institution = {National Institute of Standards and Technology},
+  address = {Gaithersburg, MD, USA},
+  type = {NIST Special Publication},
+  number = {800-82 Rev. 4 (Initial Public Draft)},
+  year = {2026},
+  doi = {10.6028/NIST.SP.800-82r4.ipd},
+  url = {https://csrc.nist.gov/pubs/sp/800/82/r4/ipd},
+  urldate = {3 November 2026}
+}
+
+% [CORRECTED, optional] add url to the existing SP 800-207A entry (bibliographic data unchanged; Crossref issued 2023-09-13).
+@techreport{nist_sp800_207a,
+  author = {Chandramouli, Ramaswamy and Butcher, Zack},
+  title = {A Zero Trust Architecture Model for Access Control in Cloud-Native Applications in Multi-Location Environments},
+  institution = {National Institute of Standards and Technology},
+  address = {Gaithersburg, MD, USA},
+  type = {NIST Special Publication},
+  number = {800-207A},
+  year = {2023},
+  doi = {10.6028/NIST.SP.800-207A},
+  url = {https://doi.org/10.6028/NIST.SP.800-207A}
+}
+
+% ---------------------------------------------------------------- intrusion recovery
+
+% [NEW] Retro (USENIX open-access proceedings; no DOI). Fields from the USENIX BibTeX on the paper page.
+@inproceedings{kim2010retro,
+  author = {Kim, Taesoo and Wang, Xi and Zeldovich, Nickolai and Kaashoek, M. Frans},
+  title = {Intrusion Recovery Using Selective Re-execution},
+  booktitle = {9th USENIX Symposium on Operating Systems Design and Implementation (OSDI 10)},
+  publisher = {USENIX Association},
+  address = {Vancouver, BC, Canada},
+  year = {2010},
+  url = {https://www.usenix.org/conference/osdi10/intrusion-recovery-using-selective-re-execution},
+  urldate = {3 November 2026}
+}
+
+% ---------------------------------------------------------------- recent (2023-2026) peer-reviewed work
+
+% [NEW] Crossref: IEEE Access 11, 55677-55691 (2023). Abstract read.
+@article{jaigirdar2023secprov,
+  title = {Security-Aware Provenance for Transparency in {IoT} Data Propagation},
+  author = {Jaigirdar, Fariha Tasmin and Tan, Boyu and Rudolph, Carsten and Bain, Chris},
+  journal = {IEEE Access},
+  volume = {11},
+  pages = {55677--55691},
+  year = {2023},
+  publisher = {Institute of Electrical and Electronics Engineers (IEEE)},
+  doi = {10.1109/ACCESS.2023.3280928}
+}
+
+% [NEW] Crossref: Future Internet 18(10), 557, published 2026-10-16 (same journal as the target venue). Full text read via WebFetch (evaluation section partly).
+@article{lazzaro2026vciot,
+  title = {Verifiable Credentials for {IoT} Devices in the Context of the {eIDAS} Trust Framework},
+  author = {Lazzaro, Sara and Licciardi, Carmen and Buccafurri, Francesco},
+  journal = {Future Internet},
+  volume = {18},
+  number = {10},
+  pages = {557},
+  year = {2026},
+  publisher = {MDPI AG},
+  doi = {10.3390/fi18100557}
+}
+
+% [NEW] Crossref: ICECET 2026, Rome, Italy, pp. 1-7. Abstract read.
+@inproceedings{yousaf2026smqtt,
+  title = {{SMQTT}: An End-to-End Security Framework for {MQTT}-Based Industrial {IoT} Communications},
+  author = {Yousaf, Fraz and Veltri, Luca and Penzotti, Gabriele and Zanichelli, Francesco},
+  booktitle = {2026 6th International Conference on Electrical, Computer and Energy Technologies (ICECET)},
+  publisher = {IEEE},
+  address = {Rome, Italy},
+  year = {2026},
+  pages = {1--7},
+  doi = {10.1109/ICECET65726.2026.11632926}
+}
+
+% [NEW] Crossref: SCECS 2026, Xuzhou, China, pp. 284-290. Abstract read.
+@inproceedings{wang2026apex,
+  title = {Auditable Zero-Trust Sensor-Cloud Repositories: Append-Only Logging and Anomaly Detection for Misbehavior Discovery},
+  author = {Wang, Yutong and Chen, Jiayi and Wu, Kexin and Zhou, Zhengshu and Zhu, Yi and Zhi, Qiang},
+  booktitle = {2026 International Conference on Sensor-Cloud and Edge Computing System (SCECS)},
+  publisher = {IEEE},
+  address = {Xuzhou, China},
+  year = {2026},
+  pages = {284--290},
+  doi = {10.1109/SCECS69812.2026.11565876}
+}
+
+% [NEW] Crossref: CASCON 2025, Toronto, pp. 601-602 (two-page paper). Abstract read. Crossref splits the first author's
+% name as given "Shabnam Saderi", family "Oskouei"; the third author's given name is recorded as "Ali.A".
+@inproceedings{oskouei2025bimqtt,
+  title = {{BI-MQTT}: Broker-Independent Integrity for Publish--Subscribe Messaging with Ring Signatures},
+  author = {Oskouei, Shabnam Saderi and Mandal, Kalikinkar and Ghorbani, Ali A.},
+  booktitle = {2025 IEEE International Conference on Collaborative Advances in Software and COmputiNg (CASCON)},
+  publisher = {IEEE},
+  address = {Toronto, ON, Canada},
+  year = {2025},
+  pages = {601--602},
+  doi = {10.1109/CASCON66301.2025.00104}
+}
+
+% [NEW][METADATA ONLY] Crossref: J. Inf. Secur. Appl. 85, 103840 (Sept 2024). Content not read.
+@article{faraj2024zircon,
+  title = {{ZIRCON}: Zero-watermarking-based approach for data integrity and secure provenance in {IoT} networks},
+  author = {Faraj, Omair and Meg{\'i}as, David and Garcia-Alfaro, Joaquin},
+  journal = {J. Inf. Secur. Appl.},
+  volume = {85},
+  pages = {103840},
+  year = {2024},
+  publisher = {Elsevier BV},
+  doi = {10.1016/j.jisa.2024.103840}
+}
+
+% [NEW][METADATA ONLY] Crossref: J. Syst. Archit. 181, 104022 (Dec 2026). Content not read.
+@article{yuan2026iiotaudit,
+  title = {A lightweight edge--cloud public auditing architecture with blockchain-assisted data provenance for {IIoT}},
+  author = {Yuan, Yilin and Mu, Xianpei and Dang, Yue and Chen, Xingsheng and Gao, Bo and Li, Zichen},
+  journal = {J. Syst. Archit.},
+  volume = {181},
+  pages = {104022},
+  year = {2026},
+  publisher = {Elsevier BV},
+  doi = {10.1016/j.sysarc.2026.104022}
+}
+
+% ---------------------------------------------------------------- datasets (only if a dataset replay is added in V3)
+
+% SKAB -- DataCite: 10.34740/kaggle/dsv/1693952, "SKAB - Skoltech Anomaly Benchmark", Kaggle, 2020. Repository licence GPL-3.0.
+@misc{katser2020skab,
+  author = {Katser, Iurii D. and Kozitsin, Vyacheslav O.},
+  title = {Skoltech Anomaly Benchmark ({SKAB})},
+  howpublished = {Kaggle dataset; repository \url{https://github.com/waico/SKAB} (GNU GPL v3), commit b2c0d46c2971dcbfe71e26087b6d231998bb91c2},
+  publisher = {Kaggle},
+  year = {2020},
+  doi = {10.34740/KAGGLE/DSV/1693952},
+  url = {https://github.com/waico/SKAB},
+  urldate = {3 November 2026}
+}
+
+% HAI -- Crossref: CSET '21, ACM, pp. 36-40. Dataset licence CC BY-SA 4.0 (README).
+@inproceedings{shin2021hai,
+  title = {Two {ICS} Security Datasets and Anomaly Detection Contest on the {HIL}-based Augmented {ICS} Testbed},
+  author = {Shin, Hyeok-Ki and Lee, Woomyo and Yun, Jeong-Han and Min, Byung-Gil},
+  booktitle = {Cyber Security Experimentation and Test Workshop (CSET '21)},
+  publisher = {ACM},
+  year = {2021},
+  pages = {36--40},
+  doi = {10.1145/3474718.3474719}
+}
+% README: cite this entry for HAI 22.04 / 23.05 / HAIEnd 23.05, and shin2021hai for HAI 21.03 (contributors: The Affiliated Institute of ETRI, Daejeon).
+@misc{hai_github,
+  author = {Shin, Hyeok-Ki and Lee, Woomyo and Choi, Seungoh and Yun, Jeong-Han and Min, Byung-Gil},
+  title = {{HAI} Security Datasets},
+  howpublished = {GitHub repository (HAI 20.07, 21.03, 22.04, 23.05; HAIEnd 23.05), licence CC BY-SA 4.0, commit 2a814cebc9a66b06c9e5cd545e2d72e65d383737},
+  year = {2023},
+  url = {https://github.com/icsdataset/hai},
+  urldate = {3 November 2026}
+}
+
+% MetroPT-3 -- DataCite: 10.24432/c5vw3r, UCI Machine Learning Repository, 2021; licence CC BY 4.0. Authors as in the UCI citation.
+@misc{davari2021metropt3,
+  author = {Davari, Narjes and Veloso, Bruno and Ribeiro, Rita and Gama, Jo{\~a}o},
+  title = {{MetroPT-3} Dataset},
+  howpublished = {UCI Machine Learning Repository},
+  year = {2021},
+  doi = {10.24432/C5VW3R},
+  url = {https://archive.ics.uci.edu/dataset/791},
+  urldate = {3 November 2026}
+}
+
+% Hydraulic test rig -- DataCite: 10.24432/c5cw21, UCI Machine Learning Repository, 2015; licence CC BY 4.0.
+@misc{helwig2015hydraulic,
+  author = {Helwig, Nikolai and Pignanelli, Eliseo and Sch{\"u}tze, Andreas},
+  title = {Condition monitoring of hydraulic systems},
+  howpublished = {UCI Machine Learning Repository},
+  year = {2015},
+  doi = {10.24432/C5CW21},
+  url = {https://archive.ics.uci.edu/dataset/447},
+  urldate = {3 November 2026}
+}
+
+% NAB -- Crossref: Neurocomputing 262, 134-147 (Nov 2017). Repository licence MIT (LICENSE.txt).
+@article{ahmad2017nab,
+  title = {Unsupervised real-time anomaly detection for streaming data},
+  author = {Ahmad, Subutai and Lavin, Alexander and Purdy, Scott and Agha, Zuha},
+  journal = {Neurocomputing},
+  volume = {262},
+  pages = {134--147},
+  year = {2017},
+  publisher = {Elsevier BV},
+  doi = {10.1016/j.neucom.2017.04.070}
+}
+
+% TON_IoT -- Crossref-verified citation papers required by the UNSW terms (the page requires eight papers; these
+% are the three with journal DOIs). Use only for academic, non-redistributed experiments (see V3_DATASETS.md).
+@article{alsaedi2020toniot,
+  title = {{TON\_IoT} Telemetry Dataset: A New Generation Dataset of {IoT} and {IIoT} for Data-Driven Intrusion Detection Systems},
+  author = {Alsaedi, Abdullah and Moustafa, Nour and Tari, Zahir and Mahmood, Abdun and Anwar, Adnan},
+  journal = {IEEE Access},
+  volume = {8},
+  pages = {165130--165150},
+  year = {2020},
+  doi = {10.1109/ACCESS.2020.3022862}
+}
+@article{moustafa2021toniot,
+  title = {A new distributed architecture for evaluating {AI}-based security systems at the edge: Network {TON\_IoT} datasets},
+  author = {Moustafa, Nour},
+  journal = {Sustain. Cities Soc.},
+  volume = {72},
+  pages = {102994},
+  year = {2021},
+  doi = {10.1016/j.scs.2021.102994}
+}
+@article{booij2022toniot,
+  title = {{ToN\_IoT}: The Role of Heterogeneity and the Need for Standardization of Features and Attack Types in {IoT} Network Intrusion Data Sets},
+  author = {Booij, Tim M. and Chiscop, Irina and Meeuwissen, Erik and Moustafa, Nour and den Hartog, Frank T. H.},
+  journal = {IEEE Internet Things J.},
+  volume = {9},
+  number = {1},
+  pages = {485--496},
+  year = {2022},
+  doi = {10.1109/JIOT.2021.3085194}
+}

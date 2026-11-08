@@ -1,0 +1,99 @@
+{
+ "note": "Provenance of the exploratory analyses added in the final V7 revision (evidence level B). The repository copies used were byte-identical in src/, experiments/run_v4.py and the frozen configurations to the assembled V6 repository; the registered source digest of every confirmatory campaign is 8dfae6decd80e501....",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v242-x86_64-with-glibc2.39",
+  "versions": {
+   "cryptography": "50.0.1",
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "pandas": "3.0.5"
+  },
+  "cpu_count": 2
+ },
+ "w_decomposition": {
+  "script": "tools/v7/w_decomposition.py",
+  "script_sha256_as_run": "147771f804a27087830622d894519e0f7e1f12cd74bd67300eed681f8e7dbdc5",
+  "script_sha256_delivered": "6babe7b087fae57185c4e6b8d3ae8b9f8a7344b4866710caa1b286872105ba81",
+  "difference_between_versions": "only the AUDIT constant (absolute workspace path replaced by a path relative to the script)",
+  "capture_module": "tools/oracle_audit/capture.py",
+  "capture_sha256": "9a1726c901e3b1450cf5d632dc5a36924c92587196aaf991e4a168012f539d74",
+  "repository_copy_source_digest": "8dfae6decd80e5019e269df1e017d19ed479c402c34348d12bac9ff2b0a2aef1",
+  "configs_sha256": {
+   "experiments/v4_configs/A1_review.json": "7bb565bc8248ba66037ff7aa6a45f23545de2283dbe6835bbbdc7a7ac440feb8",
+   "experiments/v4_configs/amendment1/A3_factorial.json": "0ce7c110265349dcc299f9a7e37e818b641401b3fb74ca7170e1aee117b406ac",
+   "experiments/run_v4.py": "85d5ac6495c18ffa82579a93eb096c75287f218c63eacf2c7b35104669c9442c"
+  },
+  "seeds": "21-40",
+  "runs": 400,
+  "commands": [
+   "python3 -B tools/v7/w_decomposition.py 0 2 results/v7_analysis/w_decomposition/part0.jsonl",
+   "python3 -B tools/v7/w_decomposition.py 1 2 results/v7_analysis/w_decomposition/part1.jsonl",
+   "cat part0.jsonl part1.jsonl > all.jsonl",
+   "python3 -B tools/v7/w_decomposition.py --aggregate results/v7_analysis/w_decomposition/all.jsonl results/v7_analysis/w_decomposition_summary.json"
+  ],
+  "outputs": {
+   "results/v7_analysis/w_decomposition/all.jsonl": {
+    "sha256": "2b69fdae5693d9aed236c57c98e1ee9f2b052178c3b69b01832b1b9f304d28f2",
+    "modified_utc": "2026-11-06T02:04:33Z"
+   },
+   "results/v7_analysis/w_decomposition/part0.jsonl": {
+    "sha256": "2ca2e08e3db155b20a7b96ebee1fe2fe0844831ce6a4dec0518291edabcc4257",
+    "modified_utc": "2026-11-06T02:04:09Z"
+   },
+   "results/v7_analysis/w_decomposition/part0.log": {
+    "sha256": "5a25356febc89d513cec12e6b9cc30f2f191a061df1292e4fc68ad4b169c9906",
+    "modified_utc": "2026-11-06T02:04:09Z"
+   },
+   "results/v7_analysis/w_decomposition/part1.jsonl": {
+    "sha256": "ca4471f5bc1b3e5f8f16ee764f91b7b6b0f395720de16026b71242a2cdfd2b75",
+    "modified_utc": "2026-11-06T02:04:18Z"
+   },
+   "results/v7_analysis/w_decomposition/part1.log": {
+    "sha256": "0ef1439bb09837b6249692bd7f1ca461aa77cfe9f282e7d9a6571e1c1da93b1c",
+    "modified_utc": "2026-11-06T02:04:18Z"
+   },
+   "results/v7_analysis/w_decomposition_summary.json": {
+    "sha256": "4a453a28559d7fe9857dbed750b184d7c21a996a22cdb2a4aec8fb05610f080b",
+    "modified_utc": "2026-11-06T02:04:33Z"
+   }
+  },
+  "check": true
+ },
+ "consistent_impersonator": {
+  "script": "tools/v7/consistent_impersonator_check.py",
+  "script_sha256": "5cb3ec86f76202224f339e384806631be69c9ac0314086ac584189f572838315",
+  "repository_copy_source_digest": "8dfae6decd80e5019e269df1e017d19ed479c402c34348d12bac9ff2b0a2aef1",
+  "seeds": "21-25",
+  "arms": [
+   "PBTI",
+   "B5-hist",
+   "B5-event",
+   "PBTI-R-event"
+  ],
+  "variants": [
+   "registered",
+   "consistent"
+  ],
+  "runs": 40,
+  "outputs": {
+   "results/v7_analysis/consistent_impersonator.jsonl": {
+    "sha256": "03e9e6456623ac70bda0c3564275068ac8a8859a488c141f032e06b7ef20806d",
+    "modified_utc": "2026-11-06T01:54:31Z"
+   },
+   "results/v7_analysis/consistent_impersonator.log": {
+    "sha256": "95f7fe31ba86e8d9a28a2376bbd114788e0f2d21269f47df561c1e5a2bd9d4af",
+    "modified_utc": "2026-11-06T01:54:31Z"
+   }
+  },
+  "check": "registered attacker reproduced the stored rows in all 20 registered runs (field matches_stored)"
+ },
+ "subset_property_check": {
+  "script": "tools/v7/analysis_v7.py (macros XSubsetRuns, XSubsetViolations)",
+  "script_sha256": "fe492eb254dca3db752669da8c136106b4e932b5464f71456040be37921ac6f8",
+  "input": "results/v4/raw/A1_review.jsonl (stored, unchanged)",
+  "input_sha256": "41906680a374fd913d8b380ad93a80a12f067a5fd360477cc375454a4f3f0ef7",
+  "runs": 800,
+  "violations": 0
+ }
+}

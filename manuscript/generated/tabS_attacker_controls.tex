@@ -1,0 +1,35 @@
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X lrrrr@{}}
+\toprule
+Trace & Pipeline & \makecell[r]{Forged authoritative\\at end} & \makecell[r]{Forged exposure\\(record-s)} & \makecell[r]{Genuine authoritative\\at end} & \makecell[r]{Genuine withheld\\(record-s)}\\
+\midrule
+T1 forged version, contradicting successor admitted & \sys & 0/1 & 1.0 & 9/9 & 0.0\\
+ & PBTI-R & 0/1 & 1.0 & 9/9 & 0.0\\
+ & B5 (historical) & 0/1 & 1.0 & 9/9 & 255.9\\
+ & B5 (corrected) & 0/1 & 1.0 & 9/9 & 255.9\\
+\addlinespace
+T2 forged version, successors suppressed & \sys & 1/1 & 194.0 & 5/5 & 0.0\\
+ & PBTI-R & 1/1 & 194.0 & 5/5 & 0.0\\
+ & B5 (historical) & 1/1 & 194.0 & 5/5 & 0.0\\
+ & B5 (corrected) & 1/1 & 194.0 & 5/5 & 0.0\\
+\addlinespace
+T3 consistent takeover of the rest of the feed & \sys & 5/5 & 959.9 & 5/5 & 0.0\\
+ & PBTI-R & 5/5 & 959.9 & 5/5 & 0.0\\
+ & B5 (historical) & 5/5 & 959.9 & 5/5 & 0.0\\
+ & B5 (corrected) & 5/5 & 959.9 & 5/5 & 0.0\\
+\addlinespace
+T4 forgeries at identities the device does not use & \sys & 3/3 & 564.3 & 10/10 & 0.0\\
+ & PBTI-R & 3/3 & 564.3 & 10/10 & 0.0\\
+ & B5 (historical) & 3/3 & 564.3 & 10/10 & 0.0\\
+ & B5 (corrected) & 3/3 & 564.3 & 10/10 & 0.0\\
+\addlinespace
+T5 as T4, the device later reaches them & \sys & 0/3 & 93.4 & 11/15 & 629.9\\
+ & PBTI-R & 0/3 & 93.4 & 11/15 & 629.9\\
+ & B5 (historical) & 0/3 & 87.4 & 11/15 & 629.9\\
+ & B5 (corrected) & 0/3 & 87.4 & 11/15 & 629.9\\
+\addlinespace
+T6 forged epoch advance (drain 20 s) & \sys & 5/5 & 974.9 & 5/10 & 815.0\\
+ & PBTI-R & 5/5 & 974.9 & 10/10 & 315.0\\
+ & B5 (historical) & 5/5 & 974.9 & 10/10 & 315.0\\
+ & B5 (corrected) & 5/5 & 974.9 & 10/10 & 315.0\\
+\bottomrule
+\end{tabularx}

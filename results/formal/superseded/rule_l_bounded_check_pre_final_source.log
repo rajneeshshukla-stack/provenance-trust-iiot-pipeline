@@ -1,0 +1,796 @@
+PBTI Rule L -- bounded exhaustive check against the reference implementation
+date (UTC)      : 2026-11-04T05:20:31Z
+host            : Linux-6.18.44-fc-v233-x86_64-with-glibc2.39, 2 CPUs, Python 3.13.18, cryptography 50.0.1
+source          : /home/claude/PBTI_v3/01_repo_v3/src/pbti  (tree digest 97bfea56cecf90c8369766ab755e5a2ef4afc496e539e177020276c1739158f8)
+                  sha256 0160acfc11e51fdee9781f798bc887f5ad519f8cfa2db0fe7abbe5af287a5a0c  registry.py
+                  sha256 7ddffbfeae3dfe5eb388e9447ee04eb33676adc1cec7897fec5ebc4e37cf11e1  verifier.py
+                  sha256 30cf8e57a54744e290e013aa0f339f4703d27c153c460f90b80dafce6e18ffe5  envelope.py
+                  sha256 2469111e7ee8a95754f7f5901293a3a033e8d16768b1c22afa8550c6542c4a10  crypto.py
+                  sha256 835d6092c782236ecfbfbf2903120cb55329c017c7853481a3c8f8bb68231624  canonical.py
+                  sha256 29c69fea14876d5a8ac3a1385b80763de5542766902910fa207f57d06fea2581  identity.py
+                  sha256 03d9c4b1e4d31fa51a8fe27d8369efbb41317e86045fb4f83bae195fb26191fb  policy.py
+command         : /home/claude/PBTI_v3/02_work/formal/rule_l_bounded_check.py --workers 2
+policy params   : defaults {"epoch_drain_ms": 3600000, "gap_close_ms": 3600000, "h_max_ms": 3600000, "max_seq_jump": 100000, "on_revoked_buffered": "quarantine", "retry_window_ms": 30000, "rotation_grace_ms": 3600000, "skew_max_ms": 5000}
+identities      : did=d1 ep=0 kid=dk:d1:1 wid=spiffe://plant-a.example/cell1/gw1/collector wkid=wk:g1:1; receipts at t = 20000 + i ms; ts(G_k) = ts(F_k) = 1000 + 1000k ms
+bound           : one device, one epoch, seq 0..N-1, per slot G_k plus at most one alternative F_k;
+                  prev(G_k)=cd(G_{k-1}); standard: prev(F_k) in {cd(G_{k-1}), cd(F_{k-1})}; extended: also null (k>=1)
+
+A   clone_registry vs copy.deepcopy on 400 random reachable registries: 0 mismatches
+
+B   mirror engine, exhaustive prefix-tree walk, S4 re-delivery of every admitted statement at every node
+  B[standard, N=4] feeds=34 (sizes {4: 1, 5: 4, 6: 9, 7: 12, 8: 8}), distinct contents=14
+      nodes explored (set, order pairs incl. repeats across feeds) = 1,060,190
+      distinct admitted sets = 1,088; distinct (set, order) pairs = 769,165; lattice pairs (A, A+c) checked = 4,800
+      duplicate re-deliveries checked = 7,217,566; time = 102.46 s
+      premises (nodes x slots): equivocation = 3,082,596, alternative + genuine successor = 2,322,744, gap-fill (genuine withheld) + genuine successor = 284,130
+      admitted sets with an alternative content authoritative = 553 (all with genuine content and genuine successor absent, see S3c); sets with a CONTESTED slot = 993
+      violations: {'ADMIT': 0, 'S0': 0, 'S1': 0, 'S2': 0, 'S2-digest': 0, 'S3a': 0, 'S3b': 0, "S3b'": 0, 'S3c': 0, 'S4-disp': 0, 'S4-state': 0, 'MIRROR-disp': 0, 'MIRROR-state': 0, 'EVENTS': 0, 'LOST': 0}
+  B[extended, N=4] feeds=97 (sizes {4: 1, 5: 7, 6: 23, 7: 39, 8: 27}), distinct contents=20
+      nodes explored (set, order pairs incl. repeats across feeds) = 3,540,885
+      distinct admitted sets = 2,624; distinct (set, order) pairs = 2,418,401; lattice pairs (A, A+c) checked = 12,128
+      duplicate re-deliveries checked = 24,154,864; time = 373.32 s
+      premises (nodes x slots): equivocation = 10,336,672, alternative + genuine successor = 7,744,182, gap-fill (genuine withheld) + genuine successor = 945,660
+      admitted sets with an alternative content authoritative = 1,431 (all with genuine content and genuine successor absent, see S3c); sets with a CONTESTED slot = 2,411
+      violations: {'ADMIT': 0, 'S0': 0, 'S1': 0, 'S2': 0, 'S2-digest': 0, 'S3a': 0, 'S3b': 0, "S3b'": 0, 'S3c': 0, 'S4-disp': 0, 'S4-state': 0, 'MIRROR-disp': 0, 'MIRROR-state': 0, 'EVENTS': 0, 'LOST': 0}
+
+C   unmodified PBTIVerifier with real Ed25519-signed messages (X.509 identities), compared after every receipt with the mirror (registry snapshot + disposition) and with Rule L
+  C[standard, N=3, duplicates=every-prefix, all permutations] running ...
+    ... 1/13 feeds, 35 s
+    ... 2/13 feeds, 35 s
+    ... 3/13 feeds, 60 s
+    ... 4/13 feeds, 61 s
+    ... 5/13 feeds, 64 s
+    ... 6/13 feeds, 64 s
+    ... 7/13 feeds, 67 s
+    ... 8/13 feeds, 68 s
+    ... 9/13 feeds, 68 s
+    ... 10/13 feeds, 69 s
+    ... 11/13 feeds, 69 s
+    ... 12/13 feeds, 69 s
+    ... 13/13 feeds, 70 s
+      feeds=13 (sizes {3: 1, 4: 3, 5: 5, 6: 4}); permutations run = 3,558; receipts ingested = 131,994
+      prefix nodes checked = 24,144 (distinct (set, order) nodes covered = 9,669); distinct admitted sets = 160
+      duplicate re-deliveries checked = 111,408 (RETRY 20,080, SUSPECTED_REPLAY 91,328); time = 70.1 s
+      dispositions of first deliveries: {'ACCEPT/COMMITTED': 8786, 'CONFLICT/EQUIVOCATION': 9912, 'CONFLICT/LINK_MISMATCH': 1888}; recorded state events: {'COMMITTED->CONTESTED': 8024}
+      violations: {'ADMIT': 0, 'S0': 0, 'S1': 0, 'S2': 0, 'S2-digest': 0, 'S3a': 0, 'S3b': 0, "S3b'": 0, 'S3c': 0, 'S4-disp': 0, 'S4-state': 0, 'MIRROR-disp': 0, 'MIRROR-state': 0, 'EVENTS': 0, 'LOST': 0}
+  C[extended, N=3, duplicates=every-prefix, all permutations] running ...
+    ... 3/26 feeds, 52 s
+    ... 6/26 feeds, 78 s
+    ... 9/26 feeds, 121 s
+    ... 12/26 feeds, 136 s
+    ... 15/26 feeds, 151 s
+    ... 18/26 feeds, 157 s
+    ... 21/26 feeds, 160 s
+    ... 24/26 feeds, 161 s
+    ... 26/26 feeds, 161 s
+      feeds=26 (sizes {3: 1, 4: 5, 5: 11, 6: 9}); permutations run = 7,926; receipts ingested = 295,050
+      prefix nodes checked = 53,904 (distinct (set, order) nodes covered = 21,540); distinct admitted sets = 288
+      duplicate re-deliveries checked = 249,072 (RETRY 46,382, SUSPECTED_REPLAY 202,690); time = 160.64 s
+      dispositions of first deliveries: {'ACCEPT/COMMITTED': 20156, 'CONFLICT/EQUIVOCATION': 22200, 'CONFLICT/LINK_MISMATCH': 3622}; recorded state events: {'COMMITTED->CONTESTED': 18578}
+      violations: {'ADMIT': 0, 'S0': 0, 'S1': 0, 'S2': 0, 'S2-digest': 0, 'S3a': 0, 'S3b': 0, "S3b'": 0, 'S3c': 0, 'S4-disp': 0, 'S4-state': 0, 'MIRROR-disp': 0, 'MIRROR-state': 0, 'EVENTS': 0, 'LOST': 0}
+  C[standard, N=4, duplicates=end (every 16th permutation), all permutations] running ...
+    ... 4/34 feeds, 1128 s
+    ... 8/34 feeds, 2190 s
+    ... 12/34 feeds, 2298 s
+    ... 16/34 feeds, 2410 s
+    ... 20/34 feeds, 2525 s
+    ... 24/34 feeds, 2537 s
+    ... 28/34 feeds, 2551 s
+    ... 32/34 feeds, 2553 s
+    ... 34/34 feeds, 2554 s
+      feeds=34 (sizes {4: 1, 5: 4, 6: 9, 7: 12, 8: 8}); permutations run = 390,024; receipts ingested = 3,425,892
+      prefix nodes checked = 3,435,240 (distinct (set, order) nodes covered = 1,060,190); distinct admitted sets = 1,088
+      duplicate re-deliveries checked = 380,676 (RETRY 9,388, SUSPECTED_REPLAY 371,288); time = 2553.86 s
+      dispositions of first deliveries: {'ACCEPT/COMMITTED': 1239456, 'CONFLICT/EQUIVOCATION': 1485120, 'CONFLICT/LINK_MISMATCH': 320640}; recorded state events: {'COMMITTED->CONTESTED': 1164480}
+      violations: {'ADMIT': 0, 'S0': 0, 'S1': 0, 'S2': 0, 'S2-digest': 0, 'S3a': 0, 'S3b': 0, "S3b'": 0, 'S3c': 0, 'S4-disp': 0, 'S4-state': 0, 'MIRROR-disp': 0, 'MIRROR-state': 0, 'EVENTS': 0, 'LOST': 0}
+
+D   admission non-determinism (unmodified PBTIVerifier, real signatures)
+D1  freshness horizon: policy params h_max_ms = 10000 (all other parameters default)
+    statements: G0(ts=1000) G1(ts=2000, prev=cd(G0)) F1(ts=2000, prev=cd(G0), other payload) G2(ts=3000, prev=cd(G1))
+    schedule a  all prompt:
+        t=  5000  G0       -> ACCEPT/COMMITTED
+        t=  5001  G1       -> ACCEPT/COMMITTED
+        t=  5002  F1<G0    -> CONFLICT/EQUIVOCATION
+        t=  5003  G2       -> ACCEPT/COMMITTED
+        admitted set {G0, G1, F1<G0, G2}  final: 0:COMMITTED[G] 1:CONTESTED 2:COMMITTED[G]   Rule-L(admitted set) matches: True; all 24 permutations of the admitted set -> 1 distinct final state(s)
+    schedule b  same order, F1 late:
+        t=  5000  G0       -> ACCEPT/COMMITTED
+        t=  5001  G1       -> ACCEPT/COMMITTED
+        t= 12001  F1<G0    -> QUARANTINE/STALE_TS
+        t= 12002  G2       -> ACCEPT/COMMITTED
+        admitted set {G0, G1, G2}  final: 0:COMMITTED[G] 1:COMMITTED[G] 2:COMMITTED[G]   Rule-L(admitted set) matches: True; all 6 permutations of the admitted set -> 1 distinct final state(s)
+    schedule c  G1,G2 late (F1 prompt):
+        t=  5000  G0       -> ACCEPT/COMMITTED
+        t=  5001  F1<G0    -> ACCEPT/COMMITTED
+        t= 12500  G1       -> QUARANTINE/STALE_TS
+        t= 13500  G2       -> QUARANTINE/STALE_TS
+        admitted set {G0, F1<G0}  final: 0:COMMITTED[G] 1:COMMITTED[alternative] 2:ABSENT   Rule-L(admitted set) matches: True; all 2 permutations of the admitted set -> 1 distinct final state(s)
+D2  sequence-jump guard: policy params max_seq_jump = 1 (all receipts within 5 ms, far inside h_max)
+    statements: G0 G1 G2 (genuine chain) and F2 (alternative for seq 2, prev = cd(G1))
+    all 24 arrival orders of the same 4 statements -> 5 distinct (admitted set, final state) outcomes; final state equals Rule L on the admitted set in every order: True
+      12 orders: admitted {G0} -> 0:COMMITTED[G] 1:ABSENT 2:ABSENT;  e.g. order G1 G0 F2<G1 G2: G1:QUARANTINE/SEQ_JUMP, G0:ACCEPT/COMMITTED, F2<G1:QUARANTINE/SEQ_JUMP, G2:QUARANTINE/SEQ_JUMP
+       6 orders: admitted {G0, G1} -> 0:COMMITTED[G] 1:COMMITTED[G] 2:ABSENT;  e.g. order G0 F2<G1 G2 G1: G0:ACCEPT/COMMITTED, F2<G1:QUARANTINE/SEQ_JUMP, G2:QUARANTINE/SEQ_JUMP, G1:ACCEPT/COMMITTED
+       2 orders: admitted {F2<G1, G0, G1, G2} -> 0:COMMITTED[G] 1:COMMITTED[G] 2:CONTESTED;  e.g. order G0 G1 F2<G1 G2: G0:ACCEPT/COMMITTED, G1:ACCEPT/COMMITTED, F2<G1:ACCEPT/COMMITTED, G2:CONFLICT/EQUIVOCATION
+       2 orders: admitted {G0, G1, G2} -> 0:COMMITTED[G] 1:COMMITTED[G] 2:COMMITTED[G];  e.g. order G0 F2<G1 G1 G2: G0:ACCEPT/COMMITTED, F2<G1:QUARANTINE/SEQ_JUMP, G1:ACCEPT/COMMITTED, G2:ACCEPT/COMMITTED
+       2 orders: admitted {F2<G1, G0, G1} -> 0:COMMITTED[G] 1:COMMITTED[G] 2:COMMITTED[alternative];  e.g. order G0 G2 G1 F2<G1: G0:ACCEPT/COMMITTED, G2:QUARANTINE/SEQ_JUMP, G1:ACCEPT/COMMITTED, F2<G1:ACCEPT/COMMITTED
+    retransmission of a QUARANTINED statement: G0, F2, G1, G2, F2(byte-identical again) -> G0:ACCEPT/COMMITTED, F2<G1:QUARANTINE/SEQ_JUMP, G1:ACCEPT/COMMITTED, G2:ACCEPT/COMMITTED, F2<G1:CONFLICT/EQUIVOCATION  final: 0:COMMITTED[G] 1:COMMITTED[G] 2:CONTESTED
+
+source digests unchanged during the run: False (changed: ['b5.py', 'dataset.py', 'policy.py', 'realtime.py', 'sweep.py'])
+TOTAL violations over all runs: 0
+total wall time: 3260.8 s
+
+JSON summary:
+{
+ "A_clone_validation_mismatches": 0,
+ "D_admission_examples": {
+  "D1_time_h_max": {
+   "a  all prompt": {
+    "admitted": [
+     "G0",
+     "G1",
+     "F1<G0",
+     "G2"
+    ],
+    "distinct_final_states_over_those_permutations": 1,
+    "final": "0:COMMITTED[G] 1:CONTESTED 2:COMMITTED[G]",
+    "matches_rule_l": true,
+    "permutations_of_admitted_set": 24,
+    "receipts": [
+     [
+      "G0",
+      5000,
+      "ACCEPT",
+      "COMMITTED"
+     ],
+     [
+      "G1",
+      5001,
+      "ACCEPT",
+      "COMMITTED"
+     ],
+     [
+      "F1<G0",
+      5002,
+      "CONFLICT",
+      "EQUIVOCATION"
+     ],
+     [
+      "G2",
+      5003,
+      "ACCEPT",
+      "COMMITTED"
+     ]
+    ]
+   },
+   "b  same order, F1 late": {
+    "admitted": [
+     "G0",
+     "G1",
+     "G2"
+    ],
+    "distinct_final_states_over_those_permutations": 1,
+    "final": "0:COMMITTED[G] 1:COMMITTED[G] 2:COMMITTED[G]",
+    "matches_rule_l": true,
+    "permutations_of_admitted_set": 6,
+    "receipts": [
+     [
+      "G0",
+      5000,
+      "ACCEPT",
+      "COMMITTED"
+     ],
+     [
+      "G1",
+      5001,
+      "ACCEPT",
+      "COMMITTED"
+     ],
+     [
+      "F1<G0",
+      12001,
+      "QUARANTINE",
+      "STALE_TS"
+     ],
+     [
+      "G2",
+      12002,
+      "ACCEPT",
+      "COMMITTED"
+     ]
+    ]
+   },
+   "c  G1,G2 late (F1 prompt)": {
+    "admitted": [
+     "G0",
+     "F1<G0"
+    ],
+    "distinct_final_states_over_those_permutations": 1,
+    "final": "0:COMMITTED[G] 1:COMMITTED[alternative] 2:ABSENT",
+    "matches_rule_l": true,
+    "permutations_of_admitted_set": 2,
+    "receipts": [
+     [
+      "G0",
+      5000,
+      "ACCEPT",
+      "COMMITTED"
+     ],
+     [
+      "F1<G0",
+      5001,
+      "ACCEPT",
+      "COMMITTED"
+     ],
+     [
+      "G1",
+      12500,
+      "QUARANTINE",
+      "STALE_TS"
+     ],
+     [
+      "G2",
+      13500,
+      "QUARANTINE",
+      "STALE_TS"
+     ]
+    ]
+   }
+  },
+  "D2_order_max_seq_jump": {
+   "all_orders_match_rule_l_on_admitted_set": true,
+   "outcomes": [
+    {
+     "admitted": [
+      "G0"
+     ],
+     "example_order": [
+      "G1",
+      "G0",
+      "F2<G1",
+      "G2"
+     ],
+     "example_receipts": [
+      [
+       "G1",
+       5000,
+       "QUARANTINE",
+       "SEQ_JUMP"
+      ],
+      [
+       "G0",
+       5001,
+       "ACCEPT",
+       "COMMITTED"
+      ],
+      [
+       "F2<G1",
+       5002,
+       "QUARANTINE",
+       "SEQ_JUMP"
+      ],
+      [
+       "G2",
+       5003,
+       "QUARANTINE",
+       "SEQ_JUMP"
+      ]
+     ],
+     "final": "0:COMMITTED[G] 1:ABSENT 2:ABSENT",
+     "orders": 12
+    },
+    {
+     "admitted": [
+      "G0",
+      "G1"
+     ],
+     "example_order": [
+      "G0",
+      "F2<G1",
+      "G2",
+      "G1"
+     ],
+     "example_receipts": [
+      [
+       "G0",
+       5000,
+       "ACCEPT",
+       "COMMITTED"
+      ],
+      [
+       "F2<G1",
+       5001,
+       "QUARANTINE",
+       "SEQ_JUMP"
+      ],
+      [
+       "G2",
+       5002,
+       "QUARANTINE",
+       "SEQ_JUMP"
+      ],
+      [
+       "G1",
+       5003,
+       "ACCEPT",
+       "COMMITTED"
+      ]
+     ],
+     "final": "0:COMMITTED[G] 1:COMMITTED[G] 2:ABSENT",
+     "orders": 6
+    },
+    {
+     "admitted": [
+      "F2<G1",
+      "G0",
+      "G1",
+      "G2"
+     ],
+     "example_order": [
+      "G0",
+      "G1",
+      "F2<G1",
+      "G2"
+     ],
+     "example_receipts": [
+      [
+       "G0",
+       5000,
+       "ACCEPT",
+       "COMMITTED"
+      ],
+      [
+       "G1",
+       5001,
+       "ACCEPT",
+       "COMMITTED"
+      ],
+      [
+       "F2<G1",
+       5002,
+       "ACCEPT",
+       "COMMITTED"
+      ],
+      [
+       "G2",
+       5003,
+       "CONFLICT",
+       "EQUIVOCATION"
+      ]
+     ],
+     "final": "0:COMMITTED[G] 1:COMMITTED[G] 2:CONTESTED",
+     "orders": 2
+    },
+    {
+     "admitted": [
+      "G0",
+      "G1",
+      "G2"
+     ],
+     "example_order": [
+      "G0",
+      "F2<G1",
+      "G1",
+      "G2"
+     ],
+     "example_receipts": [
+      [
+       "G0",
+       5000,
+       "ACCEPT",
+       "COMMITTED"
+      ],
+      [
+       "F2<G1",
+       5001,
+       "QUARANTINE",
+       "SEQ_JUMP"
+      ],
+      [
+       "G1",
+       5002,
+       "ACCEPT",
+       "COMMITTED"
+      ],
+      [
+       "G2",
+       5003,
+       "ACCEPT",
+       "COMMITTED"
+      ]
+     ],
+     "final": "0:COMMITTED[G] 1:COMMITTED[G] 2:COMMITTED[G]",
+     "orders": 2
+    },
+    {
+     "admitted": [
+      "F2<G1",
+      "G0",
+      "G1"
+     ],
+     "example_order": [
+      "G0",
+      "G2",
+      "G1",
+      "F2<G1"
+     ],
+     "example_receipts": [
+      [
+       "G0",
+       5000,
+       "ACCEPT",
+       "COMMITTED"
+      ],
+      [
+       "G2",
+       5001,
+       "QUARANTINE",
+       "SEQ_JUMP"
+      ],
+      [
+       "G1",
+       5002,
+       "ACCEPT",
+       "COMMITTED"
+      ],
+      [
+       "F2<G1",
+       5003,
+       "ACCEPT",
+       "COMMITTED"
+      ]
+     ],
+     "final": "0:COMMITTED[G] 1:COMMITTED[G] 2:COMMITTED[alternative]",
+     "orders": 2
+    }
+   ],
+   "retransmitted_quarantined": {
+    "final": "0:COMMITTED[G] 1:COMMITTED[G] 2:CONTESTED",
+    "receipts": [
+     [
+      "G0",
+      5000,
+      "ACCEPT",
+      "COMMITTED"
+     ],
+     [
+      "F2<G1",
+      5001,
+      "QUARANTINE",
+      "SEQ_JUMP"
+     ],
+     [
+      "G1",
+      5002,
+      "ACCEPT",
+      "COMMITTED"
+     ],
+     [
+      "G2",
+      5003,
+      "ACCEPT",
+      "COMMITTED"
+     ],
+     [
+      "F2<G1",
+      5004,
+      "CONFLICT",
+      "EQUIVOCATION"
+     ]
+    ]
+   }
+  }
+ },
+ "argv": [
+  "/home/claude/PBTI_v3/02_work/formal/rule_l_bounded_check.py",
+  "--workers",
+  "2"
+ ],
+ "runs": [
+  {
+   "N": 4,
+   "counts": {
+    "disp:ACCEPT/COMMITTED": 108229,
+    "disp:CONFLICT/EQUIVOCATION": 878772,
+    "disp:CONFLICT/LINK_MISMATCH": 73155,
+    "dup:RETRY": 613890,
+    "dup:SUSPECTED_REPLAY": 6603676,
+    "dup_redeliveries": 7217566,
+    "nodes": 1060190,
+    "obs:alternative-authoritative(node)": 136582,
+    "obs:alternative-contested(node)": 3385400,
+    "premise:S3a-equivocation": 3082596,
+    "premise:S3b'-gap-fill(genuine withheld)+genuine-successor": 284130,
+    "premise:S3b-alt+genuine-successor": 2322744
+   },
+   "distinct_admitted_sets": 1088,
+   "distinct_contents": 14,
+   "distinct_set_order_pairs": 769165,
+   "dup_redeliveries": 7217566,
+   "engine": "mirror",
+   "feed_sizes": {
+    "4": 1,
+    "5": 4,
+    "6": 9,
+    "7": 12,
+    "8": 8
+   },
+   "feeds": 34,
+   "lattice_pairs_checked": 4800,
+   "mode": "standard",
+   "nodes_explored": 1060190,
+   "seconds": 102.46,
+   "sets_with_alternative_authoritative": 553,
+   "sets_with_contested_slot": 993,
+   "violations": {
+    "ADMIT": 0,
+    "EVENTS": 0,
+    "LOST": 0,
+    "MIRROR-disp": 0,
+    "MIRROR-state": 0,
+    "S0": 0,
+    "S1": 0,
+    "S2": 0,
+    "S2-digest": 0,
+    "S3a": 0,
+    "S3b": 0,
+    "S3b'": 0,
+    "S3c": 0,
+    "S4-disp": 0,
+    "S4-state": 0
+   }
+  },
+  {
+   "N": 4,
+   "counts": {
+    "disp:ACCEPT/COMMITTED": 383205,
+    "disp:CONFLICT/EQUIVOCATION": 2942840,
+    "disp:CONFLICT/LINK_MISMATCH": 214743,
+    "dup:RETRY": 2189792,
+    "dup:SUSPECTED_REPLAY": 21965072,
+    "dup_redeliveries": 24154864,
+    "nodes": 3540885,
+    "obs:alternative-authoritative(node)": 483916,
+    "obs:alternative-contested(node)": 11324176,
+    "premise:S3a-equivocation": 10336672,
+    "premise:S3b'-gap-fill(genuine withheld)+genuine-successor": 945660,
+    "premise:S3b-alt+genuine-successor": 7744182
+   },
+   "distinct_admitted_sets": 2624,
+   "distinct_contents": 20,
+   "distinct_set_order_pairs": 2418401,
+   "dup_redeliveries": 24154864,
+   "engine": "mirror",
+   "feed_sizes": {
+    "4": 1,
+    "5": 7,
+    "6": 23,
+    "7": 39,
+    "8": 27
+   },
+   "feeds": 97,
+   "lattice_pairs_checked": 12128,
+   "mode": "extended",
+   "nodes_explored": 3540885,
+   "seconds": 373.32,
+   "sets_with_alternative_authoritative": 1431,
+   "sets_with_contested_slot": 2411,
+   "violations": {
+    "ADMIT": 0,
+    "EVENTS": 0,
+    "LOST": 0,
+    "MIRROR-disp": 0,
+    "MIRROR-state": 0,
+    "S0": 0,
+    "S1": 0,
+    "S2": 0,
+    "S2-digest": 0,
+    "S3a": 0,
+    "S3b": 0,
+    "S3b'": 0,
+    "S3c": 0,
+    "S4-disp": 0,
+    "S4-state": 0
+   }
+  },
+  {
+   "N": 3,
+   "counts": {
+    "disp:ACCEPT/COMMITTED": 8786,
+    "disp:CONFLICT/EQUIVOCATION": 9912,
+    "disp:CONFLICT/LINK_MISMATCH": 1888,
+    "distinct_prefix_nodes_covered": 9669,
+    "dup:RETRY": 20080,
+    "dup:SUSPECTED_REPLAY": 91328,
+    "dup_redeliveries": 111408,
+    "nodes": 24144,
+    "obs:alternative-authoritative(node)": 6820,
+    "obs:alternative-contested(node)": 27200,
+    "permutations": 3558,
+    "premise:S3a-equivocation": 22680,
+    "premise:S3b'-gap-fill(genuine withheld)+genuine-successor": 3800,
+    "premise:S3b-alt+genuine-successor": 15200,
+    "real_receipts": 131994,
+    "state_event:COMMITTED->CONTESTED": 8024
+   },
+   "distinct_admitted_sets": 160,
+   "distinct_prefix_nodes_covered": 9669,
+   "dup_redeliveries": 111408,
+   "duplicate_mode": "every-prefix",
+   "engine": "real PBTIVerifier",
+   "feed_sizes": {
+    "3": 1,
+    "4": 3,
+    "5": 5,
+    "6": 4
+   },
+   "feeds": 13,
+   "mode": "standard",
+   "orders": "all permutations of each universe",
+   "permutations_run": 3558,
+   "prefix_nodes_checked": 24144,
+   "real_receipts": 131994,
+   "seconds": 70.1,
+   "violations": {
+    "ADMIT": 0,
+    "EVENTS": 0,
+    "LOST": 0,
+    "MIRROR-disp": 0,
+    "MIRROR-state": 0,
+    "S0": 0,
+    "S1": 0,
+    "S2": 0,
+    "S2-digest": 0,
+    "S3a": 0,
+    "S3b": 0,
+    "S3b'": 0,
+    "S3c": 0,
+    "S4-disp": 0,
+    "S4-state": 0
+   }
+  },
+  {
+   "N": 3,
+   "counts": {
+    "disp:ACCEPT/COMMITTED": 20156,
+    "disp:CONFLICT/EQUIVOCATION": 22200,
+    "disp:CONFLICT/LINK_MISMATCH": 3622,
+    "distinct_prefix_nodes_covered": 21540,
+    "dup:RETRY": 46382,
+    "dup:SUSPECTED_REPLAY": 202690,
+    "dup_redeliveries": 249072,
+    "nodes": 53904,
+    "obs:alternative-authoritative(node)": 15910,
+    "obs:alternative-contested(node)": 60350,
+    "permutations": 7926,
+    "premise:S3a-equivocation": 50840,
+    "premise:S3b'-gap-fill(genuine withheld)+genuine-successor": 8430,
+    "premise:S3b-alt+genuine-successor": 33720,
+    "real_receipts": 295050,
+    "state_event:COMMITTED->CONTESTED": 18578
+   },
+   "distinct_admitted_sets": 288,
+   "distinct_prefix_nodes_covered": 21540,
+   "dup_redeliveries": 249072,
+   "duplicate_mode": "every-prefix",
+   "engine": "real PBTIVerifier",
+   "feed_sizes": {
+    "3": 1,
+    "4": 5,
+    "5": 11,
+    "6": 9
+   },
+   "feeds": 26,
+   "mode": "extended",
+   "orders": "all permutations of each universe",
+   "permutations_run": 7926,
+   "prefix_nodes_checked": 53904,
+   "real_receipts": 295050,
+   "seconds": 160.64,
+   "violations": {
+    "ADMIT": 0,
+    "EVENTS": 0,
+    "LOST": 0,
+    "MIRROR-disp": 0,
+    "MIRROR-state": 0,
+    "S0": 0,
+    "S1": 0,
+    "S2": 0,
+    "S2-digest": 0,
+    "S3a": 0,
+    "S3b": 0,
+    "S3b'": 0,
+    "S3c": 0,
+    "S4-disp": 0,
+    "S4-state": 0
+   }
+  },
+  {
+   "N": 4,
+   "counts": {
+    "disp:ACCEPT/COMMITTED": 1239456,
+    "disp:CONFLICT/EQUIVOCATION": 1485120,
+    "disp:CONFLICT/LINK_MISMATCH": 320640,
+    "distinct_prefix_nodes_covered": 1060190,
+    "dup:RETRY": 9388,
+    "dup:SUSPECTED_REPLAY": 371288,
+    "dup_redeliveries": 380676,
+    "nodes": 3435240,
+    "obs:alternative-authoritative(node)": 1207884,
+    "obs:alternative-contested(node)": 5370756,
+    "permutations": 390024,
+    "premise:S3a-equivocation": 4385760,
+    "premise:S3b'-gap-fill(genuine withheld)+genuine-successor": 825900,
+    "premise:S3b-alt+genuine-successor": 3303600,
+    "real_receipts": 3425892,
+    "state_event:COMMITTED->CONTESTED": 1164480
+   },
+   "distinct_admitted_sets": 1088,
+   "distinct_prefix_nodes_covered": 1060190,
+   "dup_redeliveries": 380676,
+   "duplicate_mode": "end of every 16th permutation",
+   "engine": "real PBTIVerifier",
+   "feed_sizes": {
+    "4": 1,
+    "5": 4,
+    "6": 9,
+    "7": 12,
+    "8": 8
+   },
+   "feeds": 34,
+   "mode": "standard",
+   "orders": "all permutations of each universe",
+   "permutations_run": 390024,
+   "prefix_nodes_checked": 3435240,
+   "real_receipts": 3425892,
+   "seconds": 2553.86,
+   "violations": {
+    "ADMIT": 0,
+    "EVENTS": 0,
+    "LOST": 0,
+    "MIRROR-disp": 0,
+    "MIRROR-state": 0,
+    "S0": 0,
+    "S1": 0,
+    "S2": 0,
+    "S2-digest": 0,
+    "S3a": 0,
+    "S3b": 0,
+    "S3b'": 0,
+    "S3c": 0,
+    "S4-disp": 0,
+    "S4-state": 0
+   }
+  }
+ ],
+ "source_changed_during_run": [
+  "b5.py",
+  "dataset.py",
+  "policy.py",
+  "realtime.py",
+  "sweep.py"
+ ],
+ "source_digests": {
+  "attacks.py": "1c37de560e82611bfd2752fbf3ea5a68c4924d6a9da5c6b857dc8ae705fd5f97",
+  "audit.py": "1a51c994088d23ebe219c79288b4b88c18cba06f6c61f47bf5f0319f8bccb5fb",
+  "b5.py": "1c93f10ede78b5f9277114cc6c2e317a32543523e4afc9b5862809409eddfed1",
+  "baselines.py": "a8ca66707989871673b2c3a1c218d2705773edec98f36cb08bd1e5077d5a118a",
+  "canonical.py": "835d6092c782236ecfbfbf2903120cb55329c017c7853481a3c8f8bb68231624",
+  "crypto.py": "2469111e7ee8a95754f7f5901293a3a033e8d16768b1c22afa8550c6542c4a10",
+  "envelope.py": "30cf8e57a54744e290e013aa0f339f4703d27c153c460f90b80dafce6e18ffe5",
+  "evidence.py": "b091f23a751c4fdf0b8db11401eb7178b2d21bf13e84cbd9ccd5032a341b8572",
+  "identity.py": "29c69fea14876d5a8ac3a1385b80763de5542766902910fa207f57d06fea2581",
+  "oracle.py": "a6f6a7d6511b98984fe45ae89260ba91ac71aa6c9274d82ce763bcff9c113c5d",
+  "policy.py": "03d9c4b1e4d31fa51a8fe27d8369efbb41317e86045fb4f83bae195fb26191fb",
+  "processor.py": "cedbb4c97733b9fbfd16a07caa46853170ba1d472c1f26788eb6f8ec31e2b0eb",
+  "realtime.py": "7f9e41b183a7d0694620f9caca7b86e4d4c7b6427ca7efef7ac8ad67c34e15fa",
+  "registry.py": "0160acfc11e51fdee9781f798bc887f5ad519f8cfa2db0fe7abbe5af287a5a0c",
+  "review.py": "42c41654a8b66cfdb66c1c55c13979b8826422d458e6b6dbd3f8577592bc452d",
+  "scenarios.py": "92ceb88be58a4c9f133dd343fb590ef4b5b147f2924b7e681e2c0c0f86f14050",
+  "sim.py": "41dfa2eb333ed580a14e92cc93bc0423602df97fb2f7739b768997e23ace188c",
+  "store.py": "11fa47f50befd07b63fdcb7e29059aa4b621bb662c7c86d326d22416245c8c99",
+  "sweep.py": "6818781bcff2678cfd007fb8bf24afee8a13ec0e346bca3cb0776328d483a527",
+  "verifier.py": "7ddffbfeae3dfe5eb388e9447ee04eb33676adc1cec7897fec5ebc4e37cf11e1"
+ },
+ "source_tree_digest": "97bfea56cecf90c8369766ab755e5a2ef4afc496e539e177020276c1739158f8",
+ "total_violations": 0
+}

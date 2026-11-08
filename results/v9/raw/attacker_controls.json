@@ -1,0 +1,370 @@
+{
+ "t_end_ms": 200000,
+ "review": "one-shot, R = 60 s, C = 10 s (PBTI-R, B5, B5c)",
+ "rows": [
+  {
+   "pipeline": "PBTI",
+   "forged_admitted_arrivals": 1,
+   "forged_authoritative_end": 0,
+   "forged_exposure_record_s": 1.0,
+   "genuine_arrived": 9,
+   "genuine_authoritative_end": 9,
+   "genuine_withheld_record_s": 0.0,
+   "dispositions": [
+    "ACCEPT/COMMITTED"
+   ],
+   "review_outcomes": {},
+   "trace": "T1_contradiction_admitted"
+  },
+  {
+   "pipeline": "PBTI-R",
+   "forged_admitted_arrivals": 1,
+   "forged_authoritative_end": 0,
+   "forged_exposure_record_s": 1.0,
+   "genuine_arrived": 9,
+   "genuine_authoritative_end": 9,
+   "genuine_withheld_record_s": 0.0,
+   "dispositions": [
+    "ACCEPT/COMMITTED"
+   ],
+   "review_outcomes": {},
+   "trace": "T1_contradiction_admitted"
+  },
+  {
+   "pipeline": "B5",
+   "forged_admitted_arrivals": 1,
+   "forged_authoritative_end": 0,
+   "forged_exposure_record_s": 1.0,
+   "genuine_arrived": 9,
+   "genuine_authoritative_end": 9,
+   "genuine_withheld_record_s": 255.92,
+   "dispositions": [
+    "ACCEPT/COMMITTED",
+    "QUARANTINE/FEED_FORK_HOLD"
+   ],
+   "review_outcomes": {
+    "RELEASED_HOLD": 4
+   },
+   "trace": "T1_contradiction_admitted"
+  },
+  {
+   "pipeline": "B5c",
+   "forged_admitted_arrivals": 1,
+   "forged_authoritative_end": 0,
+   "forged_exposure_record_s": 1.0,
+   "genuine_arrived": 9,
+   "genuine_authoritative_end": 9,
+   "genuine_withheld_record_s": 255.92,
+   "dispositions": [
+    "ACCEPT/COMMITTED",
+    "QUARANTINE/FEED_FORK_HOLD"
+   ],
+   "review_outcomes": {
+    "RELEASED_HOLD": 4
+   },
+   "trace": "T1_contradiction_admitted"
+  },
+  {
+   "pipeline": "PBTI",
+   "forged_admitted_arrivals": 1,
+   "forged_authoritative_end": 1,
+   "forged_exposure_record_s": 193.98,
+   "genuine_arrived": 5,
+   "genuine_authoritative_end": 5,
+   "genuine_withheld_record_s": 0.0,
+   "dispositions": [
+    "ACCEPT/COMMITTED"
+   ],
+   "review_outcomes": {},
+   "trace": "T2_contradiction_absent"
+  },
+  {
+   "pipeline": "PBTI-R",
+   "forged_admitted_arrivals": 1,
+   "forged_authoritative_end": 1,
+   "forged_exposure_record_s": 193.98,
+   "genuine_arrived": 5,
+   "genuine_authoritative_end": 5,
+   "genuine_withheld_record_s": 0.0,
+   "dispositions": [
+    "ACCEPT/COMMITTED"
+   ],
+   "review_outcomes": {},
+   "trace": "T2_contradiction_absent"
+  },
+  {
+   "pipeline": "B5",
+   "forged_admitted_arrivals": 1,
+   "forged_authoritative_end": 1,
+   "forged_exposure_record_s": 193.98,
+   "genuine_arrived": 5,
+   "genuine_authoritative_end": 5,
+   "genuine_withheld_record_s": 0.0,
+   "dispositions": [
+    "ACCEPT/COMMITTED"
+   ],
+   "review_outcomes": {},
+   "trace": "T2_contradiction_absent"
+  },
+  {
+   "pipeline": "B5c",
+   "forged_admitted_arrivals": 1,
+   "forged_authoritative_end": 1,
+   "forged_exposure_record_s": 193.98,
+   "genuine_arrived": 5,
+   "genuine_authoritative_end": 5,
+   "genuine_withheld_record_s": 0.0,
+   "dispositions": [
+    "ACCEPT/COMMITTED"
+   ],
+   "review_outcomes": {},
+   "trace": "T2_contradiction_absent"
+  },
+  {
+   "pipeline": "PBTI",
+   "forged_admitted_arrivals": 5,
+   "forged_authoritative_end": 5,
+   "forged_exposure_record_s": 959.9,
+   "genuine_arrived": 5,
+   "genuine_authoritative_end": 5,
+   "genuine_withheld_record_s": 0.0,
+   "dispositions": [
+    "ACCEPT/COMMITTED"
+   ],
+   "review_outcomes": {},
+   "trace": "T3_consistent_takeover"
+  },
+  {
+   "pipeline": "PBTI-R",
+   "forged_admitted_arrivals": 5,
+   "forged_authoritative_end": 5,
+   "forged_exposure_record_s": 959.9,
+   "genuine_arrived": 5,
+   "genuine_authoritative_end": 5,
+   "genuine_withheld_record_s": 0.0,
+   "dispositions": [
+    "ACCEPT/COMMITTED"
+   ],
+   "review_outcomes": {},
+   "trace": "T3_consistent_takeover"
+  },
+  {
+   "pipeline": "B5",
+   "forged_admitted_arrivals": 5,
+   "forged_authoritative_end": 5,
+   "forged_exposure_record_s": 959.9,
+   "genuine_arrived": 5,
+   "genuine_authoritative_end": 5,
+   "genuine_withheld_record_s": 0.0,
+   "dispositions": [
+    "ACCEPT/COMMITTED"
+   ],
+   "review_outcomes": {},
+   "trace": "T3_consistent_takeover"
+  },
+  {
+   "pipeline": "B5c",
+   "forged_admitted_arrivals": 5,
+   "forged_authoritative_end": 5,
+   "forged_exposure_record_s": 959.9,
+   "genuine_arrived": 5,
+   "genuine_authoritative_end": 5,
+   "genuine_withheld_record_s": 0.0,
+   "dispositions": [
+    "ACCEPT/COMMITTED"
+   ],
+   "review_outcomes": {},
+   "trace": "T3_consistent_takeover"
+  },
+  {
+   "pipeline": "PBTI",
+   "forged_admitted_arrivals": 3,
+   "forged_authoritative_end": 3,
+   "forged_exposure_record_s": 564.3,
+   "genuine_arrived": 10,
+   "genuine_authoritative_end": 10,
+   "genuine_withheld_record_s": 0.0,
+   "dispositions": [
+    "ACCEPT/COMMITTED"
+   ],
+   "review_outcomes": {},
+   "trace": "T4_fresh_identities"
+  },
+  {
+   "pipeline": "PBTI-R",
+   "forged_admitted_arrivals": 3,
+   "forged_authoritative_end": 3,
+   "forged_exposure_record_s": 564.3,
+   "genuine_arrived": 10,
+   "genuine_authoritative_end": 10,
+   "genuine_withheld_record_s": 0.0,
+   "dispositions": [
+    "ACCEPT/COMMITTED"
+   ],
+   "review_outcomes": {},
+   "trace": "T4_fresh_identities"
+  },
+  {
+   "pipeline": "B5",
+   "forged_admitted_arrivals": 3,
+   "forged_authoritative_end": 3,
+   "forged_exposure_record_s": 564.3,
+   "genuine_arrived": 10,
+   "genuine_authoritative_end": 10,
+   "genuine_withheld_record_s": 0.0,
+   "dispositions": [
+    "ACCEPT/COMMITTED"
+   ],
+   "review_outcomes": {},
+   "trace": "T4_fresh_identities"
+  },
+  {
+   "pipeline": "B5c",
+   "forged_admitted_arrivals": 3,
+   "forged_authoritative_end": 3,
+   "forged_exposure_record_s": 564.3,
+   "genuine_arrived": 10,
+   "genuine_authoritative_end": 10,
+   "genuine_withheld_record_s": 0.0,
+   "dispositions": [
+    "ACCEPT/COMMITTED"
+   ],
+   "review_outcomes": {},
+   "trace": "T4_fresh_identities"
+  },
+  {
+   "pipeline": "PBTI",
+   "forged_admitted_arrivals": 3,
+   "forged_authoritative_end": 0,
+   "forged_exposure_record_s": 93.36,
+   "genuine_arrived": 15,
+   "genuine_authoritative_end": 11,
+   "genuine_withheld_record_s": 629.92,
+   "dispositions": [
+    "ACCEPT/COMMITTED",
+    "CONFLICT/EQUIVOCATION",
+    "CONFLICT/LINK_MISMATCH"
+   ],
+   "review_outcomes": {},
+   "trace": "T5_fresh_identities_later_contradicted"
+  },
+  {
+   "pipeline": "PBTI-R",
+   "forged_admitted_arrivals": 3,
+   "forged_authoritative_end": 0,
+   "forged_exposure_record_s": 93.36,
+   "genuine_arrived": 15,
+   "genuine_authoritative_end": 11,
+   "genuine_withheld_record_s": 629.92,
+   "dispositions": [
+    "ACCEPT/COMMITTED",
+    "CONFLICT/EQUIVOCATION",
+    "CONFLICT/LINK_MISMATCH"
+   ],
+   "review_outcomes": {},
+   "trace": "T5_fresh_identities_later_contradicted"
+  },
+  {
+   "pipeline": "B5",
+   "forged_admitted_arrivals": 3,
+   "forged_authoritative_end": 0,
+   "forged_exposure_record_s": 87.36,
+   "genuine_arrived": 15,
+   "genuine_authoritative_end": 11,
+   "genuine_withheld_record_s": 629.92,
+   "dispositions": [
+    "ACCEPT/COMMITTED",
+    "CONFLICT/EQUIVOCATION",
+    "CONFLICT/LINK_MISMATCH"
+   ],
+   "review_outcomes": {
+    "REJECTED": 3
+   },
+   "trace": "T5_fresh_identities_later_contradicted"
+  },
+  {
+   "pipeline": "B5c",
+   "forged_admitted_arrivals": 3,
+   "forged_authoritative_end": 0,
+   "forged_exposure_record_s": 87.36,
+   "genuine_arrived": 15,
+   "genuine_authoritative_end": 11,
+   "genuine_withheld_record_s": 629.92,
+   "dispositions": [
+    "ACCEPT/COMMITTED",
+    "CONFLICT/EQUIVOCATION",
+    "CONFLICT/LINK_MISMATCH"
+   ],
+   "review_outcomes": {
+    "REJECTED": 3
+   },
+   "trace": "T5_fresh_identities_later_contradicted"
+  },
+  {
+   "pipeline": "PBTI",
+   "forged_admitted_arrivals": 5,
+   "forged_authoritative_end": 5,
+   "forged_exposure_record_s": 974.9,
+   "genuine_arrived": 10,
+   "genuine_authoritative_end": 5,
+   "genuine_withheld_record_s": 815.0,
+   "dispositions": [
+    "ACCEPT/COMMITTED",
+    "QUARANTINE/STALE_EPOCH"
+   ],
+   "review_outcomes": {},
+   "trace": "T6_epoch_advance"
+  },
+  {
+   "pipeline": "PBTI-R",
+   "forged_admitted_arrivals": 5,
+   "forged_authoritative_end": 5,
+   "forged_exposure_record_s": 974.9,
+   "genuine_arrived": 10,
+   "genuine_authoritative_end": 10,
+   "genuine_withheld_record_s": 315.0,
+   "dispositions": [
+    "ACCEPT/COMMITTED",
+    "QUARANTINE/STALE_EPOCH"
+   ],
+   "review_outcomes": {
+    "RELEASED": 5
+   },
+   "trace": "T6_epoch_advance"
+  },
+  {
+   "pipeline": "B5",
+   "forged_admitted_arrivals": 5,
+   "forged_authoritative_end": 5,
+   "forged_exposure_record_s": 974.9,
+   "genuine_arrived": 10,
+   "genuine_authoritative_end": 10,
+   "genuine_withheld_record_s": 315.0,
+   "dispositions": [
+    "ACCEPT/COMMITTED",
+    "QUARANTINE/STALE_EPOCH"
+   ],
+   "review_outcomes": {
+    "RELEASED": 5
+   },
+   "trace": "T6_epoch_advance"
+  },
+  {
+   "pipeline": "B5c",
+   "forged_admitted_arrivals": 5,
+   "forged_authoritative_end": 5,
+   "forged_exposure_record_s": 974.9,
+   "genuine_arrived": 10,
+   "genuine_authoritative_end": 10,
+   "genuine_withheld_record_s": 315.0,
+   "dispositions": [
+    "ACCEPT/COMMITTED",
+    "QUARANTINE/STALE_EPOCH"
+   ],
+   "review_outcomes": {
+    "RELEASED": 5
+   },
+   "trace": "T6_epoch_advance"
+  }
+ ]
+}

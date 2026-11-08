@@ -1,0 +1,10 @@
+\begin{tabular}{lrrrrrrr}
+\toprule
+Pipeline & \makecell[r]{Throughput (msg/s)\\{[95\% CI]}} & \makecell[r]{CPU\\($\mu$s/msg)} & \makecell[r]{Service\\p50 ($\mu$s)} & \makecell[r]{Service\\p99 ($\mu$s)} & \makecell[r]{Wire\\(B/msg)} & \makecell[r]{Stored\\(B/msg)} & \makecell[r]{Edge CPU\\($\mu$s/msg)}\\
+\midrule
+B1 & 11358 [11079, 11580] & 73 & 33 & 139 & 219 & 674 & 38\\
+B2 & 10707 [10410, 10946] & 78 & 38 & 158 & 220 & 674 & 36\\
+B3 & 3329 [3298, 3362] & 281 & 222 & 581 & 292 & 1066 & 118\\
+PBTI & 2067 [2039, 2093] & 466 & 402 & 1021 & 641 & 909 & 291\\
+\bottomrule
+\end{tabular}

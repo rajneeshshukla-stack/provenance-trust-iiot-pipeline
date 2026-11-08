@@ -1,0 +1,9 @@
+% Local build stub, NOT part of the submission. The official MDPI class (v6.5d) loads bbm, which Debian/Ubuntu ship only
+% in the 1.7 GB texlive-fonts-extra package. The manuscript does not use \mathbbm, so this stub is layout-neutral.
+% Install texlive-fonts-extra (or TeX Live's bbm-macros) to build with the real package instead.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{bbm}[2026/11/03 local stub for builds without bbm-macros]
+\RequirePackage{amssymb}
+\providecommand{\mathbbm}[1]{\mathbb{#1}}
+\providecommand{\mathbbmss}[1]{\mathbb{#1}}
+\providecommand{\mathbbmtt}[1]{\mathbb{#1}}

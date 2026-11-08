@@ -1,0 +1,17 @@
+# Amendments to the V3 pre-registration
+
+`PREREGISTRATION.md` is unchanged since its hash was recorded (`PREREGISTRATION.sha256`). Every change to the plan is
+listed here with its time and reason. None of the amendments changes a confirmatory test, an outcome definition, a
+threshold or a prediction. A1-A3 were in effect from the launch of the X1-X4 campaigns at 23:18
+(`logs/v3_*.log`, `results/raw/v3_*.manifest.json`), after the seed-1 smoke runs used to debug the B5,
+review and sweep code (listed in `research/V3/CHANGELOG_V2_TO_V3.md`) and before any campaign result was read.
+A4 was recorded after the independent audit of the mixed-workload runs failed; it fixes the B5 implementation and
+re-runs every B5 and B5s arm. The SKAB replay (X5) is exploratory and was not part of the preregistration; its full
+audits ran on seeds 1-2 of every stressed PBTI and B5 cell (`--audit-seeds 2`).
+
+| # | Recorded (UTC-6) | Amendment | Reason | Effect on confirmatory tests |
+|---|---|---|---|---|
+| A1 | 2026-11-03T23:26 | Added the exploratory pipeline PBTI-R (PBTI plus the same automated reviewer as B5, review period 10 s, minimum quarantine age 60 s) to X1 for scenario S12 only and to X2. | Priority P12 (quarantine release) needs an end-to-end measurement of the release workflow under the same conditions as B5. S12 (beyond-horizon backlog) is the only X1 scenario in which PBTI quarantines legitimate observations, so the other 14 scenarios would give PBTI-R = PBTI by construction. | None; PBTI-R results are reported as exploratory. |
+| A2 | 2026-11-03T23:26 | The full replay audit (A-RAW, A-REG, A-LIN, A-DET) runs on seeds 1-5 of every X1 cell instead of all 20 seeds; X3 and X4 rows are not audited. | Run time on the 2-vCPU host: a replay audit roughly doubles the cost of a run. The audit is a correctness check of the implementation, not an outcome. | None. |
+| A3 | 2026-11-03T23:26 | X3 and X4 use a 120 s production phase instead of the 300 s of the X1 scenarios; the O2 practical threshold for X3 and X4 is therefore 1 % of the legitimate observations of a 120 s run (29). | 3,780 sweep and factorial runs at 300 s were not feasible in the available time. | None (X3 and X4 are descriptive). |
+| A4 | 2026-11-04T01:06 | B5 implementation fix and re-run of every B5 and B5s arm (X1, X2; X3-X5 ran only with the fixed code): the independent audit (A-LIN) failed in 2 of 20 B5 runs of the mixed workload because a held observation that the reviewer had released, and that a later conflicting version contested while its feed was still forked, stayed in derived data (`B5FeedLevel._fork` returned early for a feed that was already forked). Fixed, with a regression test (`tests/test_v3_review_b5.py::test_b5_released_slot_contested_later_leaves_derived_data`). The superseded B5 rows are kept in `results/raw/superseded/`. | The defect was found by the audit, not by inspecting outcome comparisons. O1 and O2 are computed from the registry's authoritative set, which the defect did not affect; the re-run is compared with the superseded rows in `results/summary/v3_b5_fix_comparison.json`. B5s has no releases, so its outcomes cannot change, but its hold counter does (a contested slot is now also held), so B5s was re-run as well; PBTI-R uses the unchanged PBTI verifier and was not re-run. | None on tests, outcomes or predictions; X1 predictions are re-evaluated on the re-run rows. |

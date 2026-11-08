@@ -1,0 +1,44 @@
+{
+ "campaign": "mqtt_e2e",
+ "started": "2026-11-03T13:39:27-0600",
+ "args": {
+  "role": "orchestrator",
+  "rates": [
+   200,
+   500,
+   1000,
+   1500
+  ],
+  "reps": 5,
+  "warm": 3.0,
+  "measure": 12.0,
+  "drain": 4.0,
+  "batch": 200,
+  "out": null,
+  "pki": null,
+  "tmp": null,
+  "system": null,
+  "ready": null,
+  "stop": null,
+  "window": null,
+  "result": null,
+  "pubresult": null,
+  "rate": 0,
+  "rep": 0,
+  "seed": 1
+ },
+ "source_sha256": "1fc3ae032b246f2f5dfeda5481840af5c507a0b7907b3fe80e0453e9a604c8b8",
+ "python": "3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]",
+ "platform": "Linux-6.18.44-fc-v230-x86_64-with-glibc2.39",
+ "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+ "logical_cpus": 2,
+ "ram_gb": 7.84,
+ "versions": {
+  "cryptography": "50.0.1",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "pandas": "3.0.5"
+ },
+ "mosquitto": "mosquitto version 2.0.18",
+ "paho": "2.1.0"
+}

@@ -1,0 +1,55 @@
+{
+ "campaign": "mqtt_e2e",
+ "started": "2026-11-04T12:38:37+0000",
+ "args": {
+  "role": "orchestrator",
+  "rates": [
+   20
+  ],
+  "reps": 1,
+  "warm": 1.0,
+  "measure": 3.0,
+  "drain": 1.0,
+  "batch": 200,
+  "out": "/out/mqtt_e2e_smoke.jsonl",
+  "pki": null,
+  "tmp": null,
+  "system": null,
+  "ready": null,
+  "stop": null,
+  "window": null,
+  "result": null,
+  "pubresult": null,
+  "rate": 0,
+  "rep": 0,
+  "seed": 1,
+  "systems": [
+   "B1",
+   "B2",
+   "B3",
+   "PBTI"
+  ],
+  "payload": "synthetic",
+  "skab_dir": null,
+  "speeds": [
+   1,
+   5,
+   10
+  ],
+  "speed": 1.0
+ },
+ "source_sha256": "dd8dcd908d82679ed3e36f033e87819bf9b8fa5c3db32fe489db777bb6bf2039",
+ "python": "3.13.18 (main, Oct 28 2026, 02:02:09) [GCC 14.2.0]",
+ "platform": "Linux-6.18.44-fc-v233-x86_64-with-glibc2.41",
+ "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+ "logical_cpus": 2,
+ "ram_gb": 7.84,
+ "versions": {
+  "cryptography": "50.0.1",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "pandas": "3.0.5"
+ },
+ "mosquitto": "mosquitto version 2.0.21",
+ "paho": "2.1.0"
+}

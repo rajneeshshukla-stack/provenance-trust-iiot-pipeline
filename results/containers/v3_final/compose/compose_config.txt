@@ -1,0 +1,18 @@
+name: deploy
+services:
+  pbti:
+    networks:
+      default: null
+    volumes:
+      - type: bind
+        source: /home/claude/PBTI_v3/01_repo_v3/results_container
+        target: /opt/pbti/results
+        bind: {}
+    build:
+      context: /home/claude/PBTI_v3/01_repo_v3
+      dockerfile: deploy/Dockerfile.v3
+      additional_contexts:
+        pbti_deploy: /home/claude/PBTI_v3/01_repo_v3/deploy
+networks:
+  default:
+    name: deploy_default

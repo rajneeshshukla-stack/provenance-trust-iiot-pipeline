@@ -1,0 +1,319 @@
+{
+ "error_rows_excluded": {
+  "A0": 0,
+  "A1": 0,
+  "A3": 0,
+  "A3F": 0,
+  "A3S": 0
+ },
+ "bootstrap": {
+  "B": 10000,
+  "seed": 20261104,
+  "scheme": "numpy default_rng(seed) re-created per comparison; integers(0,n,(B,n)); np.percentile linear; 90% and 95% from the same resamples"
+ },
+ "tolerance": {
+  "means_margins": "rel 1e-9 / abs 1e-9",
+  "ci_bounds": "exact (1e-9) or within the Monte-Carlo band: sorted resample means at positions (B-1)q +/- 4.0*sqrt(2)*sqrt(Bq(1-q)) of my bootstrap distribution (z=4 for the difference of two independent B=10,000 estimates)",
+  "p_values": "rel 1e-7 / abs 1e-12"
+ },
+ "A1": {
+  "reported_rows": 312,
+  "matched_keys": 312,
+  "missing_in_mine": 0,
+  "n": 312,
+  "mean_d": 312,
+  "mean_arm": 312,
+  "mean_ref": 312,
+  "margin": 312,
+  "direction": 312,
+  "ci_exact": 207,
+  "ci_within_MC_band": 105,
+  "ci_outside_MC_band": 0,
+  "p_match_auto": 312,
+  "p_match_exact": 257,
+  "p_match_normal": 245,
+  "p_match_none": 0,
+  "p_holm_match": 312,
+  "m_family_match": 312,
+  "class_match": 312,
+  "label_match": 312,
+  "sig_match": 312,
+  "class_mismatch": 0,
+  "recomputed_rows": 312,
+  "recomputed_not_in_report": 0,
+  "status_OK": 312,
+  "status_MISMATCH": 0
+ },
+ "A3": {
+  "reported_rows": 630,
+  "matched_keys": 630,
+  "missing_in_mine": 0,
+  "n": 630,
+  "mean_d": 630,
+  "mean_arm": 630,
+  "mean_ref": 630,
+  "margin": 630,
+  "direction": 630,
+  "ci_exact": 344,
+  "ci_within_MC_band": 286,
+  "ci_outside_MC_band": 0,
+  "p_match_auto": 630,
+  "p_match_exact": 336,
+  "p_match_normal": 525,
+  "p_match_none": 0,
+  "p_holm_match": 630,
+  "m_family_match": 630,
+  "class_match": 628,
+  "label_match": 628,
+  "sig_match": 630,
+  "class_mismatch": 2,
+  "recomputed_rows": 630,
+  "recomputed_not_in_report": 0,
+  "status_OK": 628,
+  "status_MISMATCH": 2
+ },
+ "A3F": {
+  "reported_rows": 240,
+  "matched_keys": 240,
+  "missing_in_mine": 0,
+  "n": 240,
+  "mean_d": 240,
+  "mean_arm": 240,
+  "mean_ref": 240,
+  "margin": 240,
+  "direction": 240,
+  "ci_exact": 91,
+  "ci_within_MC_band": 149,
+  "ci_outside_MC_band": 0,
+  "p_match_auto": 240,
+  "p_match_exact": 108,
+  "p_match_normal": 192,
+  "p_match_none": 0,
+  "p_holm_match": 240,
+  "m_family_match": 240,
+  "class_match": 240,
+  "label_match": 240,
+  "sig_match": 240,
+  "class_mismatch": 0,
+  "recomputed_rows": 240,
+  "recomputed_not_in_report": 0,
+  "status_OK": 240,
+  "status_MISMATCH": 0
+ },
+ "recomputed_not_in_report": {
+  "A1": [],
+  "A3": [],
+  "A3F": []
+ },
+ "A3S": {
+  "fields_compared": 160,
+  "fields_match": 160,
+  "t30_means": {
+   "S05_stolen_key": {
+    "O1": 150.0,
+    "O2": 222.55,
+    "W": 8.74680326388889,
+    "AV5": 0.9688125,
+    "NLX": 38242.0714
+   },
+   "S08_seq_reuse_bug": {
+    "O1": 0.0,
+    "O2": 12.0,
+    "W": 0.6273054722222222,
+    "AV5": 0.9988888888888889,
+    "NLX": 0.0
+   },
+   "S14_revocation": {
+    "O1": 0.0,
+    "O2": 270.15,
+    "W": 11.413885097222224,
+    "AV5": 0.9735902777777777,
+    "NLX": 8042.16415
+   },
+   "S99_mixed": {
+    "O1": 5.15,
+    "O2": 335.0,
+    "W": 23.183022599027105,
+    "AV5": 0.8408756080611537,
+    "NLX": 3341.3159
+   }
+  }
+ },
+ "sensitivity": {
+  "A1": {
+   "_text": {
+    "n_rows_in_variant": 306,
+    "class_changes": [],
+    "significance_changes": []
+   },
+   "_exact": {
+    "n_rows_in_variant": 312,
+    "class_changes": [],
+    "significance_changes": [
+     "H1c|S99_mixed|B5-d0c1-PBTI-R-d0c1|O2: p_holm 0.06079 -> 0.01758",
+     "H1c|S99_mixed|B5-event-PBTI-R-event|O2: p_holm 0.06079 -> 0.01758"
+    ]
+   },
+   "_normal": {
+    "n_rows_in_variant": 312,
+    "class_changes": [],
+    "significance_changes": []
+   },
+   "_noident": {
+    "n_rows_in_variant": 312,
+    "class_changes": [],
+    "significance_changes": [
+     "H1c|S99_mixed|B5-d0c1-PBTI-R-d0c1|O2: p_holm 0.06079 -> 0.004626",
+     "H1c|S99_mixed|B5-event-PBTI-R-event|O2: p_holm 0.06079 -> 0.004626"
+    ]
+   },
+   "_mround": {
+    "n_rows_in_variant": 312,
+    "class_changes": [],
+    "significance_changes": []
+   },
+   "_nonstrict": {
+    "n_rows_in_variant": 312,
+    "class_changes": [],
+    "significance_changes": []
+   }
+  },
+  "A3": {
+   "_text": {
+    "n_rows_in_variant": 630,
+    "class_changes": [],
+    "significance_changes": []
+   },
+   "_exact": {
+    "n_rows_in_variant": 630,
+    "class_changes": [
+     "H3b|equivocation=0.05+missing=0.1|PBTI-SH-B5-hist|O1: inconclusive -> different",
+     "H3b|equivocation=0.05+missing=0.1|PBTI-SH-B5-hist|NLX: inconclusive -> better",
+     "H3b|equivocation=0.1+missing=0.05|PBTI-SH-B5-event|O1: inconclusive -> different",
+     "H3b|equivocation=0.1+missing=0.05|PBTI-SH-B5-event|NLX: inconclusive -> better",
+     "H3c|equivocation=0.1+missing=0.05|PBTI-SH-T30-PBTI-SH|NLX: inconclusive -> worse",
+     "H3a|equivocation=0.05+missing_long=0.05|PBTI-SH-PBTI|O1: inconclusive -> better",
+     "H3a|equivocation=0.05+missing_long=0.05|PBTI-SH-PBTI|NLX: inconclusive -> better",
+     "H3b|equivocation=0.05+missing_long=0.05|PBTI-SH-B5-event|NLX: inconclusive -> better",
+     "H3b|equivocation=0.05+missing_long=0.05|PBTI-SH-PBTI-R-hist|O1: inconclusive -> better",
+     "H3b|equivocation=0.05+missing_long=0.05|PBTI-SH-PBTI-R-hist|NLX: inconclusive -> better",
+     "H3c|equivocation=0.05+missing_long=0.05|PBTI-SH-T30-PBTI-SH|O1: inconclusive -> worse",
+     "H3c|equivocation=0.05+missing_long=0.05|PBTI-SH-T30-PBTI-SH|NLX: inconclusive -> worse"
+    ],
+    "significance_changes": [
+     "H3b|equivocation=0.05+missing=0.1|PBTI-SH-B5-hist|O1: p_holm 0.1159 -> 0.02783",
+     "H3b|equivocation=0.05+missing=0.1|PBTI-SH-B5-hist|NLX: p_holm 0.168 -> 0.02783",
+     "H3b|equivocation=0.1+missing=0.05|PBTI-SH-B5-event|O1: p_holm 0.07563 -> 0.01404",
+     "H3b|equivocation=0.1+missing=0.05|PBTI-SH-B5-event|NLX: p_holm 0.07532 -> 0.007019",
+     "H3c|equivocation=0.1+missing=0.05|PBTI-SH-T30-PBTI-SH|NLX: p_holm 0.05078 -> 0.00354",
+     "H3a|equivocation=0.05+missing_long=0.05|PBTI-SH-PBTI|O1: p_holm 0.1588 -> 0.02783",
+     "H3a|equivocation=0.05+missing_long=0.05|PBTI-SH-PBTI|NLX: p_holm 0.168 -> 0.02783",
+     "H3b|equivocation=0.05+missing_long=0.05|PBTI-SH-B5-event|NLX: p_holm 0.168 -> 0.02783",
+     "H3b|equivocation=0.05+missing_long=0.05|PBTI-SH-PBTI-R-hist|O1: p_holm 0.1588 -> 0.02783",
+     "H3b|equivocation=0.05+missing_long=0.05|PBTI-SH-PBTI-R-hist|NLX: p_holm 0.168 -> 0.02783",
+     "H3c|equivocation=0.05+missing_long=0.05|PBTI-SH-T30-PBTI-SH|O1: p_holm 0.1588 -> 0.02783",
+     "H3c|equivocation=0.05+missing_long=0.05|PBTI-SH-T30-PBTI-SH|NLX: p_holm 0.168 -> 0.02783"
+    ]
+   },
+   "_normal": {
+    "n_rows_in_variant": 630,
+    "class_changes": [],
+    "significance_changes": []
+   },
+   "_noident": {
+    "n_rows_in_variant": 630,
+    "class_changes": [
+     "H3b|equivocation=0.05+missing=0.1|PBTI-SH-B5-hist|O1: inconclusive -> different",
+     "H3b|equivocation=0.1+missing=0.05|PBTI-SH-B5-event|O1: inconclusive -> different",
+     "H3b|equivocation=0.1+missing=0.05|PBTI-SH-B5-event|NLX: inconclusive -> better",
+     "H3c|equivocation=0.1+missing=0.05|PBTI-SH-T30-PBTI-SH|NLX: inconclusive -> worse"
+    ],
+    "significance_changes": [
+     "H3b|equivocation=0.05+missing=0.1|PBTI-SH-B5-hist|O1: p_holm 0.1159 -> 0.04373",
+     "H3b|equivocation=0.1+missing=0.05|PBTI-SH-B5-event|O1: p_holm 0.07563 -> 0.02894",
+     "H3b|equivocation=0.1+missing=0.05|PBTI-SH-B5-event|NLX: p_holm 0.07532 -> 0.02882",
+     "H3c|equivocation=0.1+missing=0.05|PBTI-SH-T30-PBTI-SH|NLX: p_holm 0.05078 -> 0.0197"
+    ]
+   },
+   "_mround": {
+    "n_rows_in_variant": 630,
+    "class_changes": [],
+    "significance_changes": []
+   },
+   "_nonstrict": {
+    "n_rows_in_variant": 630,
+    "class_changes": [],
+    "significance_changes": []
+   }
+  },
+  "A3F": {
+   "_text": {
+    "n_rows_in_variant": 240,
+    "class_changes": [],
+    "significance_changes": []
+   },
+   "_exact": {
+    "n_rows_in_variant": 240,
+    "class_changes": [
+     "H3a|run15|PBTI-SH-PBTI|O1: inconclusive -> different",
+     "H3b|run15|PBTI-SH-B5-event|NLX: inconclusive -> different",
+     "H3b|run15|PBTI-SH-PBTI-R-hist|O1: inconclusive -> different",
+     "H3c|run15|PBTI-SH-T30-PBTI-SH|O1: inconclusive -> different",
+     "H3c|run15|PBTI-SH-T30-PBTI-SH|NLX: inconclusive -> worse"
+    ],
+    "significance_changes": [
+     "H3a|run15|PBTI-SH-PBTI|O1: p_holm 0.09196 -> 0.03613",
+     "H3b|run15|PBTI-SH-B5-event|NLX: p_holm 0.1127 -> 0.0332",
+     "H3b|run15|PBTI-SH-PBTI-R-hist|O1: p_holm 0.09196 -> 0.03613",
+     "H3c|run15|PBTI-SH-T30-PBTI-SH|O1: p_holm 0.09196 -> 0.03613",
+     "H3c|run15|PBTI-SH-T30-PBTI-SH|NLX: p_holm 0.1127 -> 0.0332"
+    ]
+   },
+   "_normal": {
+    "n_rows_in_variant": 240,
+    "class_changes": [],
+    "significance_changes": []
+   },
+   "_noident": {
+    "n_rows_in_variant": 240,
+    "class_changes": [
+     "H3b|run4|PBTI-SH-B5-hist|O1: inconclusive -> different",
+     "H3b|run4|PBTI-SH-B5-hist|NLX: inconclusive -> better",
+     "H3b|run8|PBTI-SH-B5-event|O1: inconclusive -> different",
+     "H3a|run15|PBTI-SH-PBTI|O1: inconclusive -> different",
+     "H3b|run15|PBTI-SH-B5-event|NLX: inconclusive -> different",
+     "H3b|run15|PBTI-SH-PBTI-R-hist|O1: inconclusive -> different",
+     "H3c|run15|PBTI-SH-T30-PBTI-SH|O1: inconclusive -> different",
+     "H3c|run15|PBTI-SH-T30-PBTI-SH|NLX: inconclusive -> worse"
+    ],
+    "significance_changes": [
+     "H3b|run3|PBTI-SH-B5-hist|O1: p_holm 0.3424 -> 0.04659",
+     "H3b|run4|PBTI-SH-B5-hist|O1: p_holm 0.1443 -> 0.03396",
+     "H3b|run4|PBTI-SH-B5-hist|NLX: p_holm 0.162 -> 0.03037",
+     "H3b|run4|PBTI-SH-B5S|O1: p_holm 0.2527 -> 0.04659",
+     "H3b|run8|PBTI-SH-B5-event|O1: p_holm 0.221 -> 0.04659",
+     "H3a|run15|PBTI-SH-PBTI|O1: p_holm 0.09196 -> 0.02734",
+     "H3b|run15|PBTI-SH-B5-event|O1: p_holm 0.2196 -> 0.04659",
+     "H3b|run15|PBTI-SH-B5-event|NLX: p_holm 0.1127 -> 0.02652",
+     "H3b|run15|PBTI-SH-PBTI-R-hist|O1: p_holm 0.09196 -> 0.02734",
+     "H3c|run15|PBTI-SH-T30-PBTI-SH|O1: p_holm 0.09196 -> 0.02734",
+     "H3c|run15|PBTI-SH-T30-PBTI-SH|NLX: p_holm 0.1127 -> 0.02652"
+    ]
+   },
+   "_mround": {
+    "n_rows_in_variant": 240,
+    "class_changes": [],
+    "significance_changes": []
+   },
+   "_nonstrict": {
+    "n_rows_in_variant": 240,
+    "class_changes": [
+     "H3a|run3|PBTI-SH-PBTI|O1: different -> better",
+     "H3b|run3|PBTI-SH-PBTI-R-hist|O1: different -> better",
+     "H3c|run3|PBTI-SH-T30-PBTI-SH|O1: different -> worse"
+    ],
+    "significance_changes": []
+   }
+  }
+ }
+}

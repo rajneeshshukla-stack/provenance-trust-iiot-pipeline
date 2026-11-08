@@ -1,0 +1,1138 @@
+[
+ {
+  "pipeline": "PBTI",
+  "case": "legit_buffered_witnessed",
+  "policy": "none",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASE_FAILED:QUARANTINE/REVOKED_BUFFERED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "legit_buffered_witnessed",
+  "policy": "discretionary",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "RELEASED",
+  "authoritative_end": true,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": true,
+  "genuine_withheld": false
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "legit_buffered_witnessed",
+  "policy": "witness",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "RELEASED",
+  "authoritative_end": true,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": true,
+  "genuine_withheld": false
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "backdated_forgery_witness_sees_late",
+  "policy": "none",
+  "width_s": 0,
+  "legitimate": false,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASE_FAILED:QUARANTINE/REVOKED_BUFFERED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": false
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "backdated_forgery_witness_sees_late",
+  "policy": "discretionary",
+  "width_s": 0,
+  "legitimate": false,
+  "case_state": "RELEASED",
+  "authoritative_end": true,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASED": 1
+  },
+  "malicious_authoritative": true,
+  "genuine_recovered": false,
+  "genuine_withheld": false
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "backdated_forgery_witness_sees_late",
+  "policy": "witness",
+  "width_s": 0,
+  "legitimate": false,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASE_FAILED:QUARANTINE/REVOKED_BUFFERED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": false
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "backdated_forgery_not_witnessed",
+  "policy": "none",
+  "width_s": 0,
+  "legitimate": false,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASE_FAILED:QUARANTINE/REVOKED_BUFFERED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": false
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "backdated_forgery_not_witnessed",
+  "policy": "discretionary",
+  "width_s": 0,
+  "legitimate": false,
+  "case_state": "RELEASED",
+  "authoritative_end": true,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASED": 1
+  },
+  "malicious_authoritative": true,
+  "genuine_recovered": false,
+  "genuine_withheld": false
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "backdated_forgery_not_witnessed",
+  "policy": "witness",
+  "width_s": 0,
+  "legitimate": false,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASE_FAILED:QUARANTINE/REVOKED_BUFFERED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": false
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "forgery_with_contradictory_successor",
+  "policy": "none",
+  "width_s": 0,
+  "legitimate": false,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "REJECTED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": false
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "forgery_with_contradictory_successor",
+  "policy": "discretionary",
+  "width_s": 0,
+  "legitimate": false,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "REJECTED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": false
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "forgery_with_contradictory_successor",
+  "policy": "witness",
+  "width_s": 0,
+  "legitimate": false,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "REJECTED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": false
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "legit_buffered_witness_outage",
+  "policy": "none",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASE_FAILED:QUARANTINE/REVOKED_BUFFERED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "legit_buffered_witness_outage",
+  "policy": "discretionary",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "RELEASED",
+  "authoritative_end": true,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": true,
+  "genuine_withheld": false
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "legit_buffered_witness_outage",
+  "policy": "witness",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASE_FAILED:QUARANTINE/REVOKED_BUFFERED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "stale_reviewer_snapshot",
+  "policy": "none",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "RELEASED",
+  "authoritative_end": true,
+  "tainted_end": false,
+  "review_outcomes": {
+   "STALE_REVIEW": 1,
+   "RELEASED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": true,
+  "genuine_withheld": false,
+  "first_decision": "STALE_REVIEW",
+  "state_after_first_decision": "QUARANTINED"
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "stale_reviewer_snapshot",
+  "policy": "discretionary",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "RELEASED",
+  "authoritative_end": true,
+  "tainted_end": false,
+  "review_outcomes": {
+   "STALE_REVIEW": 1,
+   "RELEASED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": true,
+  "genuine_withheld": false,
+  "first_decision": "STALE_REVIEW",
+  "state_after_first_decision": "QUARANTINED"
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "stale_reviewer_snapshot",
+  "policy": "witness",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "RELEASED",
+  "authoritative_end": true,
+  "tainted_end": false,
+  "review_outcomes": {
+   "STALE_REVIEW": 1,
+   "RELEASED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": true,
+  "genuine_withheld": false,
+  "first_decision": "STALE_REVIEW",
+  "state_after_first_decision": "QUARANTINED"
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "revoked_reviewer",
+  "policy": "none",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "QUARANTINED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "REVIEWER_REVOKED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "revoked_reviewer",
+  "policy": "discretionary",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "QUARANTINED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "REVIEWER_REVOKED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "revoked_reviewer",
+  "policy": "witness",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "QUARANTINED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "REVIEWER_REVOKED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "stale_ts_release_after_origin_revoked",
+  "policy": "none",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASE_FAILED:QUARANTINE/REVOKED_BUFFERED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "stale_ts_release_after_origin_revoked",
+  "policy": "discretionary",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASE_FAILED:QUARANTINE/REVOKED_BUFFERED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "stale_ts_release_after_origin_revoked",
+  "policy": "witness",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASE_FAILED:QUARANTINE/REVOKED_BUFFERED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "release_then_later_taint",
+  "policy": "none",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "RELEASED",
+  "authoritative_end": false,
+  "tainted_end": true,
+  "review_outcomes": {
+   "RELEASED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true,
+  "authoritative_after_release": true
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "release_then_later_taint",
+  "policy": "discretionary",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "RELEASED",
+  "authoritative_end": false,
+  "tainted_end": true,
+  "review_outcomes": {
+   "RELEASED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true,
+  "authoritative_after_release": true
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "release_then_later_taint",
+  "policy": "witness",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "RELEASED",
+  "authoritative_end": false,
+  "tainted_end": true,
+  "review_outcomes": {
+   "RELEASED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true,
+  "authoritative_after_release": true
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "full_sequence_revised_taint",
+  "policy": "none",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASE_FAILED:QUARANTINE/REVOKED_BUFFERED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true,
+  "authoritative_after_release": false,
+  "in_window_after_release": false,
+  "window_versions_added": 0,
+  "window_corrected": false
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "full_sequence_revised_taint",
+  "policy": "discretionary",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "RELEASED",
+  "authoritative_end": false,
+  "tainted_end": true,
+  "review_outcomes": {
+   "RELEASED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true,
+  "authoritative_after_release": true,
+  "in_window_after_release": true,
+  "window_versions_added": 1,
+  "window_corrected": true
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "full_sequence_revised_taint",
+  "policy": "witness",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "RELEASED",
+  "authoritative_end": false,
+  "tainted_end": true,
+  "review_outcomes": {
+   "RELEASED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true,
+  "authoritative_after_release": true,
+  "in_window_after_release": true,
+  "window_versions_added": 1,
+  "window_corrected": true
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "legit_buffered_witnessed_interval",
+  "policy": "witness",
+  "width_s": 0.0,
+  "legitimate": true,
+  "case_state": "RELEASED",
+  "authoritative_end": true,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": true,
+  "genuine_withheld": false
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "legit_buffered_witnessed_interval",
+  "policy": "witness",
+  "width_s": 5.0,
+  "legitimate": true,
+  "case_state": "RELEASED",
+  "authoritative_end": true,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": true,
+  "genuine_withheld": false
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "legit_buffered_witnessed_interval",
+  "policy": "witness",
+  "width_s": 30.0,
+  "legitimate": true,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASE_FAILED:QUARANTINE/REVOKED_BUFFERED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true
+ },
+ {
+  "pipeline": "PBTI",
+  "case": "legit_buffered_witnessed_interval",
+  "policy": "witness",
+  "width_s": 120.0,
+  "legitimate": true,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASE_FAILED:QUARANTINE/REVOKED_BUFFERED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true
+ },
+ {
+  "pipeline": "B5",
+  "case": "legit_buffered_witnessed",
+  "policy": "none",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASE_FAILED:QUARANTINE/REVOKED_BUFFERED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true
+ },
+ {
+  "pipeline": "B5",
+  "case": "legit_buffered_witnessed",
+  "policy": "discretionary",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "RELEASED",
+  "authoritative_end": true,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": true,
+  "genuine_withheld": false
+ },
+ {
+  "pipeline": "B5",
+  "case": "legit_buffered_witnessed",
+  "policy": "witness",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "RELEASED",
+  "authoritative_end": true,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": true,
+  "genuine_withheld": false
+ },
+ {
+  "pipeline": "B5",
+  "case": "backdated_forgery_witness_sees_late",
+  "policy": "none",
+  "width_s": 0,
+  "legitimate": false,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASE_FAILED:QUARANTINE/REVOKED_BUFFERED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": false
+ },
+ {
+  "pipeline": "B5",
+  "case": "backdated_forgery_witness_sees_late",
+  "policy": "discretionary",
+  "width_s": 0,
+  "legitimate": false,
+  "case_state": "RELEASED",
+  "authoritative_end": true,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASED": 1
+  },
+  "malicious_authoritative": true,
+  "genuine_recovered": false,
+  "genuine_withheld": false
+ },
+ {
+  "pipeline": "B5",
+  "case": "backdated_forgery_witness_sees_late",
+  "policy": "witness",
+  "width_s": 0,
+  "legitimate": false,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASE_FAILED:QUARANTINE/REVOKED_BUFFERED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": false
+ },
+ {
+  "pipeline": "B5",
+  "case": "backdated_forgery_not_witnessed",
+  "policy": "none",
+  "width_s": 0,
+  "legitimate": false,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASE_FAILED:QUARANTINE/REVOKED_BUFFERED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": false
+ },
+ {
+  "pipeline": "B5",
+  "case": "backdated_forgery_not_witnessed",
+  "policy": "discretionary",
+  "width_s": 0,
+  "legitimate": false,
+  "case_state": "RELEASED",
+  "authoritative_end": true,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASED": 1
+  },
+  "malicious_authoritative": true,
+  "genuine_recovered": false,
+  "genuine_withheld": false
+ },
+ {
+  "pipeline": "B5",
+  "case": "backdated_forgery_not_witnessed",
+  "policy": "witness",
+  "width_s": 0,
+  "legitimate": false,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASE_FAILED:QUARANTINE/REVOKED_BUFFERED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": false
+ },
+ {
+  "pipeline": "B5",
+  "case": "forgery_with_contradictory_successor",
+  "policy": "none",
+  "width_s": 0,
+  "legitimate": false,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "REJECTED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": false
+ },
+ {
+  "pipeline": "B5",
+  "case": "forgery_with_contradictory_successor",
+  "policy": "discretionary",
+  "width_s": 0,
+  "legitimate": false,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "REJECTED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": false
+ },
+ {
+  "pipeline": "B5",
+  "case": "forgery_with_contradictory_successor",
+  "policy": "witness",
+  "width_s": 0,
+  "legitimate": false,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "REJECTED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": false
+ },
+ {
+  "pipeline": "B5",
+  "case": "legit_buffered_witness_outage",
+  "policy": "none",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASE_FAILED:QUARANTINE/REVOKED_BUFFERED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true
+ },
+ {
+  "pipeline": "B5",
+  "case": "legit_buffered_witness_outage",
+  "policy": "discretionary",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "RELEASED",
+  "authoritative_end": true,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": true,
+  "genuine_withheld": false
+ },
+ {
+  "pipeline": "B5",
+  "case": "legit_buffered_witness_outage",
+  "policy": "witness",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASE_FAILED:QUARANTINE/REVOKED_BUFFERED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true
+ },
+ {
+  "pipeline": "B5",
+  "case": "stale_reviewer_snapshot",
+  "policy": "none",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "RELEASED",
+  "authoritative_end": true,
+  "tainted_end": false,
+  "review_outcomes": {
+   "STALE_REVIEW": 1,
+   "RELEASED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": true,
+  "genuine_withheld": false,
+  "first_decision": "STALE_REVIEW",
+  "state_after_first_decision": "QUARANTINED"
+ },
+ {
+  "pipeline": "B5",
+  "case": "stale_reviewer_snapshot",
+  "policy": "discretionary",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "RELEASED",
+  "authoritative_end": true,
+  "tainted_end": false,
+  "review_outcomes": {
+   "STALE_REVIEW": 1,
+   "RELEASED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": true,
+  "genuine_withheld": false,
+  "first_decision": "STALE_REVIEW",
+  "state_after_first_decision": "QUARANTINED"
+ },
+ {
+  "pipeline": "B5",
+  "case": "stale_reviewer_snapshot",
+  "policy": "witness",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "RELEASED",
+  "authoritative_end": true,
+  "tainted_end": false,
+  "review_outcomes": {
+   "STALE_REVIEW": 1,
+   "RELEASED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": true,
+  "genuine_withheld": false,
+  "first_decision": "STALE_REVIEW",
+  "state_after_first_decision": "QUARANTINED"
+ },
+ {
+  "pipeline": "B5",
+  "case": "revoked_reviewer",
+  "policy": "none",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "QUARANTINED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "REVIEWER_REVOKED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true
+ },
+ {
+  "pipeline": "B5",
+  "case": "revoked_reviewer",
+  "policy": "discretionary",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "QUARANTINED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "REVIEWER_REVOKED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true
+ },
+ {
+  "pipeline": "B5",
+  "case": "revoked_reviewer",
+  "policy": "witness",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "QUARANTINED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "REVIEWER_REVOKED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true
+ },
+ {
+  "pipeline": "B5",
+  "case": "stale_ts_release_after_origin_revoked",
+  "policy": "none",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASE_FAILED:QUARANTINE/REVOKED_BUFFERED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true
+ },
+ {
+  "pipeline": "B5",
+  "case": "stale_ts_release_after_origin_revoked",
+  "policy": "discretionary",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASE_FAILED:QUARANTINE/REVOKED_BUFFERED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true
+ },
+ {
+  "pipeline": "B5",
+  "case": "stale_ts_release_after_origin_revoked",
+  "policy": "witness",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASE_FAILED:QUARANTINE/REVOKED_BUFFERED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true
+ },
+ {
+  "pipeline": "B5",
+  "case": "release_then_later_taint",
+  "policy": "none",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "RELEASED",
+  "authoritative_end": false,
+  "tainted_end": true,
+  "review_outcomes": {
+   "RELEASED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true,
+  "authoritative_after_release": true
+ },
+ {
+  "pipeline": "B5",
+  "case": "release_then_later_taint",
+  "policy": "discretionary",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "RELEASED",
+  "authoritative_end": false,
+  "tainted_end": true,
+  "review_outcomes": {
+   "RELEASED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true,
+  "authoritative_after_release": true
+ },
+ {
+  "pipeline": "B5",
+  "case": "release_then_later_taint",
+  "policy": "witness",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "RELEASED",
+  "authoritative_end": false,
+  "tainted_end": true,
+  "review_outcomes": {
+   "RELEASED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true,
+  "authoritative_after_release": true
+ },
+ {
+  "pipeline": "B5",
+  "case": "full_sequence_revised_taint",
+  "policy": "none",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASE_FAILED:QUARANTINE/REVOKED_BUFFERED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true,
+  "authoritative_after_release": false,
+  "in_window_after_release": false,
+  "window_versions_added": 0,
+  "window_corrected": false
+ },
+ {
+  "pipeline": "B5",
+  "case": "full_sequence_revised_taint",
+  "policy": "discretionary",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "RELEASED",
+  "authoritative_end": false,
+  "tainted_end": true,
+  "review_outcomes": {
+   "RELEASED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true,
+  "authoritative_after_release": true,
+  "in_window_after_release": true,
+  "window_versions_added": 1,
+  "window_corrected": true
+ },
+ {
+  "pipeline": "B5",
+  "case": "full_sequence_revised_taint",
+  "policy": "witness",
+  "width_s": 0,
+  "legitimate": true,
+  "case_state": "RELEASED",
+  "authoritative_end": false,
+  "tainted_end": true,
+  "review_outcomes": {
+   "RELEASED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true,
+  "authoritative_after_release": true,
+  "in_window_after_release": true,
+  "window_versions_added": 1,
+  "window_corrected": true
+ },
+ {
+  "pipeline": "B5",
+  "case": "legit_buffered_witnessed_interval",
+  "policy": "witness",
+  "width_s": 0.0,
+  "legitimate": true,
+  "case_state": "RELEASED",
+  "authoritative_end": true,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": true,
+  "genuine_withheld": false
+ },
+ {
+  "pipeline": "B5",
+  "case": "legit_buffered_witnessed_interval",
+  "policy": "witness",
+  "width_s": 5.0,
+  "legitimate": true,
+  "case_state": "RELEASED",
+  "authoritative_end": true,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": true,
+  "genuine_withheld": false
+ },
+ {
+  "pipeline": "B5",
+  "case": "legit_buffered_witnessed_interval",
+  "policy": "witness",
+  "width_s": 30.0,
+  "legitimate": true,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASE_FAILED:QUARANTINE/REVOKED_BUFFERED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true
+ },
+ {
+  "pipeline": "B5",
+  "case": "legit_buffered_witnessed_interval",
+  "policy": "witness",
+  "width_s": 120.0,
+  "legitimate": true,
+  "case_state": "REJECTED",
+  "authoritative_end": false,
+  "tainted_end": false,
+  "review_outcomes": {
+   "RELEASE_FAILED:QUARANTINE/REVOKED_BUFFERED": 1
+  },
+  "malicious_authoritative": false,
+  "genuine_recovered": false,
+  "genuine_withheld": true
+ }
+]

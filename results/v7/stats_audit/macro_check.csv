@@ -1,0 +1,161 @@
+macro,lines,paper,recomputed,status
+WAoneEfiveBFivehistvsPBTIWdshort,44 366,6.4,6.4,MATCH
+WAzeroRuns,253 275,1320,1320,MATCH
+WAoneRuns,253 279,1760,1760,MATCH
+WAthreeRuns,253 326,2940,2940,MATCH
+WAthreeSRuns,253,400,400,MATCH
+WAthreeFRuns,253 328,1120,1120,MATCH
+WAzeroErrors,253,0,0,MATCH
+WAoneErrors,253 279,0,0,MATCH
+WAthreeErrors,253 326,0,0,MATCH
+WAthreeSErrors,253,0,0,MATCH
+WAthreeFErrors,253 328,0,0,MATCH
+WAzeroIdentical,275,1320,,NOT_RECOMPUTED
+WAzeroCompared,275,1320,,NOT_RECOMPUTED
+WAzeroFieldComparisons,275,"55{,}411",,NOT_RECOMPUTED
+WAzeroSameBfiveN,275,12,12,MATCH
+WAzeroScenN,275,16,16,MATCH
+WAzeroDiffBfiveScen,275,"E5, E8, E11b and the mixed workload","E5, E8, E11b and the mixed workload",MATCH
+WAzeroEfivePNLX,275,"38{,}266","38{,}266",MATCH
+WAzeroEfiveBfiveNLX,275,"38{,}242","38{,}242",MATCH
+WAzeroEfiveBfourNLX,275,"84{,}353","84{,}353",MATCH
+WAzeroEfiveBfiveW,275,15.02,15.02,MATCH
+WAzeroEfivePW,275 330,8.64,8.64,MATCH
+WAzeroEfiveBfiveAVfive,275,0.871,0.871,MATCH
+WAzeroEfivePAVfive,275,0.972,0.972,MATCH
+WAzeroEfiveBfiveKMninety,275,62.9,62.9,MATCH
+WAzeroEfivePKMninety,275,0.0,0.0,MATCH
+WAzeroEfiveBfiveALM,275,166.4,166.4,MATCH
+WAzeroEfivePALM,275,34.9,34.9,MATCH
+WAzeroEfivePWDR,275,23.5,23.5,MATCH
+WAzeroEfiveBfiveWDR,275,1.0,1.0,MATCH
+WAzeroEfourteenPNLX,275,"8{,}042","8{,}042",MATCH
+WAzeroEfourteenBfourNLX,275,"64{,}028","64{,}028",MATCH
+WAzeroMixedPNLX,275 330,"3{,}462","3{,}462",MATCH
+WAzeroMixedBfiveNLX,275,"1{,}829","1{,}829",MATCH
+WAzeroMixedPALF,275,77.2,77.2,MATCH
+WAzeroMixedBfiveALF,275,11.7,11.7,MATCH
+WAzeroMixedBfiveW,275,28.84,28.84,MATCH
+WAzeroMixedPW,275 330,22.95,22.95,MATCH
+WAzeroMixedBfiveALM,275,345.9,345.9,MATCH
+WAzeroMixedPALM,275,197.3,197.3,MATCH
+WAoneAuditsPass,279,176,176,MATCH
+WAoneEfiveBFivehistvsPBTIWd,279,6.391,6.391,MATCH
+WAoneEfiveBFivehistvsPBTIWlo,279,6.335,6.335,MATCH
+WAoneEfiveBFivehistvsPBTIWhi,279,6.446,6.445,CI_MC_DIFF
+WAoneEeightBFivehistvsPBTIWd,279,3.519,3.519,MATCH
+WAoneMixedBFivehistvsPBTIWd,279,5.880,5.880,MATCH
+WAoneEfiveBFivehistAVfive,279 366,0.871,0.871,MATCH
+WAoneEfivePBTIAVfive,279 366,0.972,0.972,MATCH
+WAoneEelevenbBFivehistOtwo,279,0.0,0.0,MATCH
+WAoneEelevenbPBTIOtwo,279,193.2,193.2,MATCH
+WAoneMixedBFivehistvsPBTINLXd,279,"\ensuremath{-}1{,}759","\ensuremath{-}1{,}759",MATCH
+WAoneEfiveBFiveeventvsPBTIWd,281,0.009,0.009,MATCH
+WAoneEeightBFiveeventvsPBTIWd,281,0.001,0.001,MATCH
+WAoneEelevenbBFiveeventvsPBTIWd,281,\ensuremath{-}7.223,\ensuremath{-}7.223,MATCH
+WAoneMixedBFiveeventvsPBTIWd,281,\ensuremath{-}2.348,\ensuremath{-}2.348,MATCH
+WAoneGOne,281 366,does not hold,does not hold,MATCH
+WAoneEfiveBFiveoneshotdZerocOneZeroOtwo,281,229.4,229.4,MATCH
+WAoneEfiveBFivedZerocOneZeroOtwo,281,222.8,222.8,MATCH
+WAoneMixedBFiveoneshotdZerocOneZeroOtwo,281,286.5,286.5,MATCH
+WAoneMixedBFivedZerocOneZeroOtwo,281,272.4,272.4,MATCH
+WAoneHcOOneN,283,40,40,MATCH
+WAoneHcOTwoN,283,40,40,MATCH
+WAoneHcWWorse,283,13,13,MATCH
+WAoneHcWN,283,40,40,MATCH
+WAoneHcAVFiveWorse,283,20,20,MATCH
+WAoneEfiveBFivedOnecOnevsPRdOnecOneWd,283,0.141,0.141,MATCH
+WAoneEfiveBFivedFivecOnevsPRdFivecOneWd,283,0.537,0.537,MATCH
+WAoneEfiveBFivedSixZerocOnevsPRdSixZerocOneWd,283,5.952,5.952,MATCH
+WAoneMixedBFivehistNLX,283,"1{,}658","1{,}658",MATCH
+WAoneMixedPRhistNLX,283,"3{,}417","3{,}417",MATCH
+WAoneMixedBFivehistALF,283,10.8,10.8,MATCH
+WAoneMixedPRhistALF,283,77.0,77.0,MATCH
+WAoneMixedBFivehistALM,283,348.6,348.6,MATCH
+WAoneMixedPRhistALM,283,204.9,204.9,MATCH
+WAoneHdNLXWorse,283,7,7,MATCH
+WAoneHdNLXN,283,36,36,MATCH
+WAoneMixedBFiveeventNLX,283,"3{,}374","3{,}374",MATCH
+WAoneHdOOneN,283,36,36,MATCH
+WAoneEfiveBFiveeventDec,283,139,139,MATCH
+WAoneEfiveBFivehistDec,283,779,779,MATCH
+WAfivePBTIBfiveSame,310,identical,,NOT_RECOMPUTED
+WAfiveMaxRecoveredWidth,310,5,,NOT_RECOMPUTED
+WAthreeAuditsPass,326,294,294,MATCH
+WAthreePosPoints,326 368,10,10,MATCH
+WAthreePoints,326,21,21,MATCH
+WAthreePmaxOone,326 368,2.95,2.95,MATCH
+WAthreeSHzeroPoints,326,8,8,MATCH
+WAthreeSHmaxOone,326,0.15,0.15,MATCH
+WAthreeGThree,326 368,does not hold,does not hold,MATCH
+WAthreeBetterPoints,326 368,3,3,MATCH
+WAthreeSmallPoints,326,5,5,MATCH
+WAthreeHolmPoints,326,2,2,MATCH
+WAthreeFamilySize,326,126,126,MATCH
+WAthreeGFour,326,does not hold,does not hold,MATCH
+WAthreeNoEqIdentical,326,4,4,MATCH
+WAthreeWcostMin,326,0.24,0.24,MATCH
+WAthreeWcostMax,326,0.95,0.95,MATCH
+WAthreeHaPBTIWWorse,326,4,4,MATCH
+WAthreeOtwoCostMin,326,2.8,2.8,MATCH
+WAthreeOtwoCostMax,326,11.2,11.2,MATCH
+WAthreeHbBFivehistWBetter,326,17,17,MATCH
+WAthreeHbBFiveSOTwoBetter,326,17,17,MATCH
+WAthreeHbBFiveeventWWorse,326,4,4,MATCH
+WAthreeHbBFiveeventOOneBetter,326,2,2,MATCH
+WAthreeSHTsameOonePoints,326,21,21,MATCH
+WAthreeDelayWcostMin,326,0.38,0.38,MATCH
+WAthreeDelayWcostMax,326,0.39,0.39,MATCH
+WAthreeFAuditsPass,328,112,112,MATCH
+WAthreeFPFGOone,328 366,1.60,1.60,MATCH
+WAthreeFBfiveFGOone,328 366,0.50,0.50,MATCH
+WAthreeFBfiveEvFGOone,328,0.98,0.98,MATCH
+WAthreeFPFGNLX,328,385,385,MATCH
+WAthreeFSHFGNLX,328,2,2,MATCH
+WAthreeFBfiveFGNLX,328,96,96,MATCH
+WAthreeFSHvsPBTIOOneFGNBetter,328,one of four,one of four,MATCH
+WAthreeFGThree,328 368,holds,holds,MATCH
+WAthreeFGFour,328 368,holds,holds,MATCH
+WAthreeFSHFGW,328,31.93,31.93,MATCH
+WAthreeFPFGW,328,29.69,29.69,MATCH
+WAthreeFSHvsPBTIWFGNWorse,328,all four,all four,MATCH
+WAthreeFSHFGAVfive,328,0.867,0.867,MATCH
+WAthreeFPFGAVfive,328,0.882,0.882,MATCH
+WAthreeFSHvsPBTIAVFiveFGNWorse,328,three of four,three of four,MATCH
+WAthreeFSHFGOtwo,328,374.9,374.9,MATCH
+WAthreeFPFGOtwo,328,349.0,349.0,MATCH
+WAthreeFSHvsPBTIOTwoFGNWorse,328,two of four,two of four,MATCH
+WAthreeFBfiveFGW,328,37.74,37.74,MATCH
+WAthreeFBfiveFGAVfive,328,0.759,0.759,MATCH
+WAthreeFBfiveFGOtwo,328,355.0,355.0,MATCH
+WAthreeFSHvsBFivehistOTwoFGNWorse,328,one of four,one of four,MATCH
+WAthreeFSHvsBFivehistOTwoFGNDiffWithin,328,one of four,one of four,MATCH
+WAthreeFBfiveEvFGW,328,30.00,30.00,MATCH
+WAthreeFBfiveEvFGNLX,328,240,240,MATCH
+WAthreeFSHvsBFiveeventWFGNWorse,328,all four,all four,MATCH
+WAthreeFSHvsBFiveeventNLXFGNBetter,328,three of four,three of four,MATCH
+WAthreeFSHTFGOone,328,1.60,1.60,MATCH
+WAthreeSSameN,330,13,13,MATCH
+WAthreeSN,330,16,16,MATCH
+WAthreeSDiffScen,330 368,"E5, E8 and the mixed workload","E5, E8 and the mixed workload",MATCH
+WAthreeSMoreOoneScen,330,none,none,MATCH
+WAthreeSEfiveSHOone,330,150.0,150.0,MATCH
+WAthreeSEfiveSHW,330,8.81,8.81,MATCH
+WAthreeSEfiveSHOtwo,330,225.6,225.6,MATCH
+WAzeroEfivePOtwo,330,222.6,222.6,MATCH
+WAthreeSEeightSHOtwo,330,14.0,14.0,MATCH
+WAzeroEeightPOtwo,330,12.0,12.0,MATCH
+WAthreeSMixedSHNLX,330,"3{,}284","3{,}284",MATCH
+WAzeroMixedPOone,330,5.2,5.2,MATCH
+WAthreeSMixedSHOone,330,5.0,5.0,MATCH
+WAthreeSMixedSHOtwo,330,361.6,361.6,MATCH
+WAzeroMixedPOtwo,330,335.0,335.0,MATCH
+WAthreeSMixedSHW,330,24.17,24.17,MATCH
+WAthreeSMixedSHTOtwo,330,335.0,335.0,MATCH
+WAthreeSMixedSHTOone,330,5.2,5.2,MATCH
+WAfourAllPass,372,all pass,,NOT_RECOMPUTED
+WAfourMcases,372,"579{,}584",,NOT_RECOMPUTED
+WAfourLexhaustive,372,"24{,}576",,NOT_RECOMPUTED
+WAfourLrandom,372,"4{,}000",,NOT_RECOMPUTED
+WAfourCexhaustive,372,"30{,}940",,NOT_RECOMPUTED
+WAfourCrandom,372,"20{,}000",,NOT_RECOMPUTED

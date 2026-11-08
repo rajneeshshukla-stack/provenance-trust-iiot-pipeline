@@ -1,0 +1,68 @@
+PBTI  legit_buffered_witnessed                   none          w=    0 state=REJECTED  auth=False taint=False legit=True  
+PBTI  legit_buffered_witnessed                   discretionary w=    0 state=RELEASED  auth=True  taint=False legit=True  
+PBTI  legit_buffered_witnessed                   witness       w=    0 state=RELEASED  auth=True  taint=False legit=True  
+PBTI  backdated_forgery_witness_sees_late        none          w=    0 state=REJECTED  auth=False taint=False legit=False 
+PBTI  backdated_forgery_witness_sees_late        discretionary w=    0 state=RELEASED  auth=True  taint=False legit=False 
+PBTI  backdated_forgery_witness_sees_late        witness       w=    0 state=REJECTED  auth=False taint=False legit=False 
+PBTI  backdated_forgery_not_witnessed            none          w=    0 state=REJECTED  auth=False taint=False legit=False 
+PBTI  backdated_forgery_not_witnessed            discretionary w=    0 state=RELEASED  auth=True  taint=False legit=False 
+PBTI  backdated_forgery_not_witnessed            witness       w=    0 state=REJECTED  auth=False taint=False legit=False 
+PBTI  forgery_with_contradictory_successor       none          w=    0 state=REJECTED  auth=False taint=False legit=False 
+PBTI  forgery_with_contradictory_successor       discretionary w=    0 state=REJECTED  auth=False taint=False legit=False 
+PBTI  forgery_with_contradictory_successor       witness       w=    0 state=REJECTED  auth=False taint=False legit=False 
+PBTI  legit_buffered_witness_outage              none          w=    0 state=REJECTED  auth=False taint=False legit=True  
+PBTI  legit_buffered_witness_outage              discretionary w=    0 state=RELEASED  auth=True  taint=False legit=True  
+PBTI  legit_buffered_witness_outage              witness       w=    0 state=REJECTED  auth=False taint=False legit=True  
+PBTI  stale_reviewer_snapshot                    none          w=    0 state=RELEASED  auth=True  taint=False legit=True  STALE_REVIEW
+PBTI  stale_reviewer_snapshot                    discretionary w=    0 state=RELEASED  auth=True  taint=False legit=True  STALE_REVIEW
+PBTI  stale_reviewer_snapshot                    witness       w=    0 state=RELEASED  auth=True  taint=False legit=True  STALE_REVIEW
+PBTI  revoked_reviewer                           none          w=    0 state=QUARANTINED auth=False taint=False legit=True  
+PBTI  revoked_reviewer                           discretionary w=    0 state=QUARANTINED auth=False taint=False legit=True  
+PBTI  revoked_reviewer                           witness       w=    0 state=QUARANTINED auth=False taint=False legit=True  
+PBTI  stale_ts_release_after_origin_revoked      none          w=    0 state=REJECTED  auth=False taint=False legit=True  
+PBTI  stale_ts_release_after_origin_revoked      discretionary w=    0 state=REJECTED  auth=False taint=False legit=True  
+PBTI  stale_ts_release_after_origin_revoked      witness       w=    0 state=REJECTED  auth=False taint=False legit=True  
+PBTI  release_then_later_taint                   none          w=    0 state=RELEASED  auth=False taint=True  legit=True  
+PBTI  release_then_later_taint                   discretionary w=    0 state=RELEASED  auth=False taint=True  legit=True  
+PBTI  release_then_later_taint                   witness       w=    0 state=RELEASED  auth=False taint=True  legit=True  
+PBTI  full_sequence_revised_taint                none          w=    0 state=REJECTED  auth=False taint=False legit=True  
+PBTI  full_sequence_revised_taint                discretionary w=    0 state=RELEASED  auth=False taint=True  legit=True  
+PBTI  full_sequence_revised_taint                witness       w=    0 state=RELEASED  auth=False taint=True  legit=True  
+PBTI  legit_buffered_witnessed_interval          witness       w=  0.0 state=RELEASED  auth=True  taint=False legit=True  
+PBTI  legit_buffered_witnessed_interval          witness       w=  5.0 state=RELEASED  auth=True  taint=False legit=True  
+PBTI  legit_buffered_witnessed_interval          witness       w= 30.0 state=REJECTED  auth=False taint=False legit=True  
+PBTI  legit_buffered_witnessed_interval          witness       w=120.0 state=REJECTED  auth=False taint=False legit=True  
+B5    legit_buffered_witnessed                   none          w=    0 state=REJECTED  auth=False taint=False legit=True  
+B5    legit_buffered_witnessed                   discretionary w=    0 state=RELEASED  auth=True  taint=False legit=True  
+B5    legit_buffered_witnessed                   witness       w=    0 state=RELEASED  auth=True  taint=False legit=True  
+B5    backdated_forgery_witness_sees_late        none          w=    0 state=REJECTED  auth=False taint=False legit=False 
+B5    backdated_forgery_witness_sees_late        discretionary w=    0 state=RELEASED  auth=True  taint=False legit=False 
+B5    backdated_forgery_witness_sees_late        witness       w=    0 state=REJECTED  auth=False taint=False legit=False 
+B5    backdated_forgery_not_witnessed            none          w=    0 state=REJECTED  auth=False taint=False legit=False 
+B5    backdated_forgery_not_witnessed            discretionary w=    0 state=RELEASED  auth=True  taint=False legit=False 
+B5    backdated_forgery_not_witnessed            witness       w=    0 state=REJECTED  auth=False taint=False legit=False 
+B5    forgery_with_contradictory_successor       none          w=    0 state=REJECTED  auth=False taint=False legit=False 
+B5    forgery_with_contradictory_successor       discretionary w=    0 state=REJECTED  auth=False taint=False legit=False 
+B5    forgery_with_contradictory_successor       witness       w=    0 state=REJECTED  auth=False taint=False legit=False 
+B5    legit_buffered_witness_outage              none          w=    0 state=REJECTED  auth=False taint=False legit=True  
+B5    legit_buffered_witness_outage              discretionary w=    0 state=RELEASED  auth=True  taint=False legit=True  
+B5    legit_buffered_witness_outage              witness       w=    0 state=REJECTED  auth=False taint=False legit=True  
+B5    stale_reviewer_snapshot                    none          w=    0 state=RELEASED  auth=True  taint=False legit=True  STALE_REVIEW
+B5    stale_reviewer_snapshot                    discretionary w=    0 state=RELEASED  auth=True  taint=False legit=True  STALE_REVIEW
+B5    stale_reviewer_snapshot                    witness       w=    0 state=RELEASED  auth=True  taint=False legit=True  STALE_REVIEW
+B5    revoked_reviewer                           none          w=    0 state=QUARANTINED auth=False taint=False legit=True  
+B5    revoked_reviewer                           discretionary w=    0 state=QUARANTINED auth=False taint=False legit=True  
+B5    revoked_reviewer                           witness       w=    0 state=QUARANTINED auth=False taint=False legit=True  
+B5    stale_ts_release_after_origin_revoked      none          w=    0 state=REJECTED  auth=False taint=False legit=True  
+B5    stale_ts_release_after_origin_revoked      discretionary w=    0 state=REJECTED  auth=False taint=False legit=True  
+B5    stale_ts_release_after_origin_revoked      witness       w=    0 state=REJECTED  auth=False taint=False legit=True  
+B5    release_then_later_taint                   none          w=    0 state=RELEASED  auth=False taint=True  legit=True  
+B5    release_then_later_taint                   discretionary w=    0 state=RELEASED  auth=False taint=True  legit=True  
+B5    release_then_later_taint                   witness       w=    0 state=RELEASED  auth=False taint=True  legit=True  
+B5    full_sequence_revised_taint                none          w=    0 state=REJECTED  auth=False taint=False legit=True  
+B5    full_sequence_revised_taint                discretionary w=    0 state=RELEASED  auth=False taint=True  legit=True  
+B5    full_sequence_revised_taint                witness       w=    0 state=RELEASED  auth=False taint=True  legit=True  
+B5    legit_buffered_witnessed_interval          witness       w=  0.0 state=RELEASED  auth=True  taint=False legit=True  
+B5    legit_buffered_witnessed_interval          witness       w=  5.0 state=RELEASED  auth=True  taint=False legit=True  
+B5    legit_buffered_witnessed_interval          witness       w= 30.0 state=REJECTED  auth=False taint=False legit=True  
+B5    legit_buffered_witnessed_interval          witness       w=120.0 state=REJECTED  auth=False taint=False legit=True  

@@ -1,0 +1,91 @@
+{
+ "campaign": "A3_selective",
+ "description": "A3: selective evidence-gated holds (PBTI-SH, no timeout; PBTI-SH-T30, 30 s timeout) versus PBTI, B5 (historical and event-driven review), B5s and PBTI-R on a joint equivocation x suppression grid {0, 1, 5, 10} % plus delayed successors (long delay 1, 5, 10 % with 5 % equivocation) and long suppression runs (20 messages, 1 and 5 % with 5 % equivocation); 120 s production, 180 s drain. Fresh confirmatory seeds 21-40 (the rule was designed after inspecting V3 factorial seeds 1-5).",
+ "seeds": {
+  "start": 21,
+  "n": 20
+ },
+ "audit_seeds": 2,
+ "design": [
+  {
+   "kind": "joint",
+   "factors": {
+    "equivocation": [
+     0,
+     0.01,
+     0.05,
+     0.1
+    ],
+    "missing": [
+     0,
+     0.01,
+     0.05,
+     0.1
+    ]
+   }
+  },
+  {
+   "kind": "joint",
+   "factors": {
+    "equivocation": [
+     0.05
+    ],
+    "delay": [
+     0.01,
+     0.05,
+     0.1
+    ]
+   }
+  },
+  {
+   "kind": "joint",
+   "factors": {
+    "equivocation": [
+     0.05
+    ],
+    "missing_long": [
+     0.01,
+     0.05
+    ]
+   }
+  }
+ ],
+ "arms": [
+  {
+   "arm": "PBTI",
+   "system": "PBTI"
+  },
+  {
+   "arm": "PBTI-SH",
+   "system": "PBTI-SH"
+  },
+  {
+   "arm": "PBTI-SH-T30",
+   "system": "PBTI-SH",
+   "cfg": {
+    "sh_timeout_ms": 30000
+   }
+  },
+  {
+   "arm": "B5-hist",
+   "system": "B5"
+  },
+  {
+   "arm": "B5-event",
+   "system": "B5",
+   "cfg": {
+    "review_mode": "event",
+    "review_delay_ms": 0,
+    "review_rule": "defer"
+   }
+  },
+  {
+   "arm": "B5S",
+   "system": "B5S"
+  },
+  {
+   "arm": "PBTI-R-hist",
+   "system": "PBTI-R"
+  }
+ ]
+}

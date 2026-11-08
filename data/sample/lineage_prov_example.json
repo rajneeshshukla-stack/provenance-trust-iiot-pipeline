@@ -1,0 +1,93 @@
+{
+ "prefix": {
+  "pbti": "urn:pbti:",
+  "prov": "http://www.w3.org/ns/prov#"
+ },
+ "entity": {
+  "pbti:derived/pa-c1-a06/0/v10": {
+   "pbti:inputs_root": "IYrGmZ562ientndB7oWsuA4kexRSIozUf_LCLJc3bhk",
+   "pbti:cause": "LATE_CORRECTION",
+   "pbti:count": 10
+  },
+  "pbti:raw/011743aacbd7c4d87fdbe594ce39b5e4b66ce8d956d663e67ae71ef19bb1d0dc": {
+   "prov:type": "pbti:RawObservation"
+  },
+  "pbti:raw/14c0fd080d7295ffd8dfcd33db851074e9b3dafbc25d507a16186f250d459854": {
+   "prov:type": "pbti:RawObservation"
+  },
+  "pbti:raw/6a98cd8d2c1f4ef3aee3bef682d1d11b6de8cf21dcf23b5e83da24730d03b018": {
+   "prov:type": "pbti:RawObservation"
+  },
+  "pbti:raw/6d5028acfc35921e3b06fb3b7fd6132f2e60b4ed0dde9d8091ac38edfcd409c7": {
+   "prov:type": "pbti:RawObservation"
+  },
+  "pbti:raw/a93b81241f9b7938a0dbd5c347382b9000a3749beab51aa5cb8ce492b5b9c2b9": {
+   "prov:type": "pbti:RawObservation"
+  },
+  "pbti:raw/b951c1748c2636b443b9c3a6393f052854aa8209380ce62b47c924c467f1b121": {
+   "prov:type": "pbti:RawObservation"
+  },
+  "pbti:raw/db35bd8242f2893f95508abbeb32dc0a55cff978bd9408339df774e13b6bc553": {
+   "prov:type": "pbti:RawObservation"
+  },
+  "pbti:raw/e688c14d952302eea966e8906c8ee7290414b27a6fd67fc3b08aa1e6acdcfc30": {
+   "prov:type": "pbti:RawObservation"
+  },
+  "pbti:raw/f2d94fa414e6706ee80caef6002d262916447b4efc607feccb28a84c82d239c2": {
+   "prov:type": "pbti:RawObservation"
+  },
+  "pbti:raw/f5b85f1e44c6d348cbfb99d8f85ee7ae3c9f8c3da8477c4a275ac76a69f092b0": {
+   "prov:type": "pbti:RawObservation"
+  }
+ },
+ "activity": {
+  "pbti:aggregate/pa-c1-a06/0": {
+   "prov:type": "pbti:windowAggregation"
+  }
+ },
+ "wasDerivedFrom": {
+  "_:d0": {
+   "prov:generatedEntity": "pbti:derived/pa-c1-a06/0/v10",
+   "prov:usedEntity": "pbti:raw/011743aacbd7c4d87fdbe594ce39b5e4b66ce8d956d663e67ae71ef19bb1d0dc"
+  },
+  "_:d1": {
+   "prov:generatedEntity": "pbti:derived/pa-c1-a06/0/v10",
+   "prov:usedEntity": "pbti:raw/14c0fd080d7295ffd8dfcd33db851074e9b3dafbc25d507a16186f250d459854"
+  },
+  "_:d2": {
+   "prov:generatedEntity": "pbti:derived/pa-c1-a06/0/v10",
+   "prov:usedEntity": "pbti:raw/6a98cd8d2c1f4ef3aee3bef682d1d11b6de8cf21dcf23b5e83da24730d03b018"
+  },
+  "_:d3": {
+   "prov:generatedEntity": "pbti:derived/pa-c1-a06/0/v10",
+   "prov:usedEntity": "pbti:raw/6d5028acfc35921e3b06fb3b7fd6132f2e60b4ed0dde9d8091ac38edfcd409c7"
+  },
+  "_:d4": {
+   "prov:generatedEntity": "pbti:derived/pa-c1-a06/0/v10",
+   "prov:usedEntity": "pbti:raw/a93b81241f9b7938a0dbd5c347382b9000a3749beab51aa5cb8ce492b5b9c2b9"
+  },
+  "_:d5": {
+   "prov:generatedEntity": "pbti:derived/pa-c1-a06/0/v10",
+   "prov:usedEntity": "pbti:raw/b951c1748c2636b443b9c3a6393f052854aa8209380ce62b47c924c467f1b121"
+  },
+  "_:d6": {
+   "prov:generatedEntity": "pbti:derived/pa-c1-a06/0/v10",
+   "prov:usedEntity": "pbti:raw/db35bd8242f2893f95508abbeb32dc0a55cff978bd9408339df774e13b6bc553"
+  },
+  "_:d7": {
+   "prov:generatedEntity": "pbti:derived/pa-c1-a06/0/v10",
+   "prov:usedEntity": "pbti:raw/e688c14d952302eea966e8906c8ee7290414b27a6fd67fc3b08aa1e6acdcfc30"
+  },
+  "_:d8": {
+   "prov:generatedEntity": "pbti:derived/pa-c1-a06/0/v10",
+   "prov:usedEntity": "pbti:raw/f2d94fa414e6706ee80caef6002d262916447b4efc607feccb28a84c82d239c2"
+  },
+  "_:d9": {
+   "prov:generatedEntity": "pbti:derived/pa-c1-a06/0/v10",
+   "prov:usedEntity": "pbti:raw/f5b85f1e44c6d348cbfb99d8f85ee7ae3c9f8c3da8477c4a275ac76a69f092b0"
+  }
+ },
+ "wasGeneratedBy": {},
+ "agent": {},
+ "wasAttributedTo": {}
+}

@@ -1,0 +1,1200 @@
+{
+ "primary": {
+  "G1": {
+   "holds": false,
+   "detail": {
+    "S05_stolen_key/W": "equivalent",
+    "S05_stolen_key/AV5": "equivalent",
+    "S99_mixed/W": "better",
+    "S99_mixed/AV5": "equivalent"
+   }
+  },
+  "G2": {
+   "n_ok": 40,
+   "n_exceptions": 0,
+   "exceptions": []
+  },
+  "G3": {
+   "holds": false,
+   "points_pbti_O1_gt0": [
+    "equivocation=0.01+missing=0.05",
+    "equivocation=0.01+missing=0.1",
+    "equivocation=0.05+missing=0.01",
+    "equivocation=0.05+missing=0.05",
+    "equivocation=0.05+missing=0.1",
+    "equivocation=0.1+missing=0.01",
+    "equivocation=0.1+missing=0.05",
+    "equivocation=0.1+missing=0.1",
+    "equivocation=0.05+missing_long=0.01",
+    "equivocation=0.05+missing_long=0.05"
+   ],
+   "pbti_mean_O1": {
+    "equivocation=0.01+missing=0.05": 0.25,
+    "equivocation=0.01+missing=0.1": 0.25,
+    "equivocation=0.05+missing=0.01": 0.05,
+    "equivocation=0.05+missing=0.05": 0.65,
+    "equivocation=0.05+missing=0.1": 2.0,
+    "equivocation=0.1+missing=0.01": 0.25,
+    "equivocation=0.1+missing=0.05": 1.2,
+    "equivocation=0.1+missing=0.1": 2.95,
+    "equivocation=0.05+missing_long=0.01": 0.2,
+    "equivocation=0.05+missing_long=0.05": 1.85
+   },
+   "points_O1_or_NLX_better": [
+    "equivocation=0.05+missing=0.1",
+    "equivocation=0.1+missing=0.05",
+    "equivocation=0.1+missing=0.1"
+   ],
+   "H3a_O1": {
+    "equivocation=0.01+missing=0.05": "equivalent",
+    "equivocation=0.01+missing=0.1": "equivalent",
+    "equivocation=0.05+missing=0.01": "equivalent",
+    "equivocation=0.05+missing=0.05": "equivalent",
+    "equivocation=0.05+missing=0.1": "better",
+    "equivocation=0.1+missing=0.01": "equivalent",
+    "equivocation=0.1+missing=0.05": "different",
+    "equivocation=0.1+missing=0.1": "better",
+    "equivocation=0.05+missing_long=0.01": "equivalent",
+    "equivocation=0.05+missing_long=0.05": "inconclusive"
+   },
+   "H3a_NLX": {
+    "equivocation=0.01+missing=0.05": "equivalent",
+    "equivocation=0.01+missing=0.1": "equivalent",
+    "equivocation=0.05+missing=0.01": "equivalent",
+    "equivocation=0.05+missing=0.05": "inconclusive",
+    "equivocation=0.05+missing=0.1": "better",
+    "equivocation=0.1+missing=0.01": "inconclusive",
+    "equivocation=0.1+missing=0.05": "better",
+    "equivocation=0.1+missing=0.1": "better",
+    "equivocation=0.05+missing_long=0.01": "inconclusive",
+    "equivocation=0.05+missing_long=0.05": "inconclusive"
+   }
+  },
+  "G4": {
+   "holds_at_points_with_O1_gt0": false,
+   "holds_at_points_counted_better": false,
+   "W_vs_B5hist_at_O1_gt0_points": {
+    "equivocation=0.01+missing=0.05": "better",
+    "equivocation=0.01+missing=0.1": "better",
+    "equivocation=0.05+missing=0.01": "better",
+    "equivocation=0.05+missing=0.05": "better",
+    "equivocation=0.05+missing=0.1": "better",
+    "equivocation=0.1+missing=0.01": "better",
+    "equivocation=0.1+missing=0.05": "better",
+    "equivocation=0.1+missing=0.1": "better",
+    "equivocation=0.05+missing_long=0.01": "better",
+    "equivocation=0.05+missing_long=0.05": "better"
+   }
+  },
+  "G3F": {
+   "holds": true,
+   "FG_cells_O1_or_NLX_better": [
+    "run3",
+    "run4",
+    "run8",
+    "run15"
+   ],
+   "H3a_O1": {
+    "run3": "different",
+    "run4": "better",
+    "run8": "different",
+    "run15": "inconclusive"
+   },
+   "H3a_NLX": {
+    "run3": "better",
+    "run4": "better",
+    "run8": "better",
+    "run15": "better"
+   },
+   "pbti_mean_O1": {
+    "run3": 1.4,
+    "run4": 2.5,
+    "run8": 1.65,
+    "run15": 0.85
+   }
+  },
+  "G4F": {
+   "holds_at_all_FG_cells": true,
+   "holds_at_cells_counted_better": true,
+   "W_vs_B5hist_FG": {
+    "run3": "better",
+    "run4": "better",
+    "run8": "better",
+    "run15": "better"
+   }
+  },
+  "H1a_classes": {
+   "S05_stolen_key": {
+    "O1": "identical",
+    "NLX": "equivalent",
+    "W": "worse",
+    "AV5": "worse"
+   },
+   "S08_seq_reuse_bug": {
+    "O1": "identical",
+    "NLX": "identical",
+    "W": "worse",
+    "AV5": "worse"
+   },
+   "S12_beyond_horizon": {
+    "O1": "identical",
+    "NLX": "identical",
+    "W": "better",
+    "AV5": "identical"
+   },
+   "S99_mixed": {
+    "O1": "identical",
+    "NLX": "better",
+    "W": "worse",
+    "AV5": "worse"
+   }
+  },
+  "H1a_holds": false,
+  "H1b_classes": {
+   "S05_stolen_key": {
+    "W": "equivalent",
+    "AV5": "equivalent"
+   },
+   "S08_seq_reuse_bug": {
+    "W": "equivalent",
+    "AV5": "identical"
+   },
+   "S12_beyond_horizon": {
+    "W": "better",
+    "AV5": "identical"
+   },
+   "S99_mixed": {
+    "W": "better",
+    "AV5": "equivalent"
+   }
+  },
+  "H1b_holds": false
+ },
+ "_text": {
+  "G1": {
+   "holds": false,
+   "detail": {
+    "S05_stolen_key/W": "equivalent",
+    "S05_stolen_key/AV5": "equivalent",
+    "S99_mixed/W": "better",
+    "S99_mixed/AV5": "equivalent"
+   }
+  },
+  "G2": {
+   "n_ok": 40,
+   "n_exceptions": 0,
+   "exceptions": []
+  },
+  "G3": {
+   "holds": false,
+   "points_pbti_O1_gt0": [
+    "equivocation=0.01+missing=0.05",
+    "equivocation=0.01+missing=0.1",
+    "equivocation=0.05+missing=0.01",
+    "equivocation=0.05+missing=0.05",
+    "equivocation=0.05+missing=0.1",
+    "equivocation=0.1+missing=0.01",
+    "equivocation=0.1+missing=0.05",
+    "equivocation=0.1+missing=0.1",
+    "equivocation=0.05+missing_long=0.01",
+    "equivocation=0.05+missing_long=0.05"
+   ],
+   "pbti_mean_O1": {
+    "equivocation=0.01+missing=0.05": 0.25,
+    "equivocation=0.01+missing=0.1": 0.25,
+    "equivocation=0.05+missing=0.01": 0.05,
+    "equivocation=0.05+missing=0.05": 0.65,
+    "equivocation=0.05+missing=0.1": 2.0,
+    "equivocation=0.1+missing=0.01": 0.25,
+    "equivocation=0.1+missing=0.05": 1.2,
+    "equivocation=0.1+missing=0.1": 2.95,
+    "equivocation=0.05+missing_long=0.01": 0.2,
+    "equivocation=0.05+missing_long=0.05": 1.85
+   },
+   "points_O1_or_NLX_better": [
+    "equivocation=0.05+missing=0.1",
+    "equivocation=0.1+missing=0.05",
+    "equivocation=0.1+missing=0.1"
+   ],
+   "H3a_O1": {
+    "equivocation=0.01+missing=0.05": "equivalent",
+    "equivocation=0.01+missing=0.1": "equivalent",
+    "equivocation=0.05+missing=0.01": "equivalent",
+    "equivocation=0.05+missing=0.05": "equivalent",
+    "equivocation=0.05+missing=0.1": "better",
+    "equivocation=0.1+missing=0.01": "equivalent",
+    "equivocation=0.1+missing=0.05": "different",
+    "equivocation=0.1+missing=0.1": "better",
+    "equivocation=0.05+missing_long=0.01": "equivalent",
+    "equivocation=0.05+missing_long=0.05": "inconclusive"
+   },
+   "H3a_NLX": {
+    "equivocation=0.01+missing=0.05": "equivalent",
+    "equivocation=0.01+missing=0.1": "equivalent",
+    "equivocation=0.05+missing=0.01": "equivalent",
+    "equivocation=0.05+missing=0.05": "inconclusive",
+    "equivocation=0.05+missing=0.1": "better",
+    "equivocation=0.1+missing=0.01": "inconclusive",
+    "equivocation=0.1+missing=0.05": "better",
+    "equivocation=0.1+missing=0.1": "better",
+    "equivocation=0.05+missing_long=0.01": "inconclusive",
+    "equivocation=0.05+missing_long=0.05": "inconclusive"
+   }
+  },
+  "G4": {
+   "holds_at_points_with_O1_gt0": false,
+   "holds_at_points_counted_better": false,
+   "W_vs_B5hist_at_O1_gt0_points": {
+    "equivocation=0.01+missing=0.05": "better",
+    "equivocation=0.01+missing=0.1": "better",
+    "equivocation=0.05+missing=0.01": "better",
+    "equivocation=0.05+missing=0.05": "better",
+    "equivocation=0.05+missing=0.1": "better",
+    "equivocation=0.1+missing=0.01": "better",
+    "equivocation=0.1+missing=0.05": "better",
+    "equivocation=0.1+missing=0.1": "better",
+    "equivocation=0.05+missing_long=0.01": "better",
+    "equivocation=0.05+missing_long=0.05": "better"
+   }
+  },
+  "G3F": {
+   "holds": true,
+   "FG_cells_O1_or_NLX_better": [
+    "run3",
+    "run4",
+    "run8",
+    "run15"
+   ],
+   "H3a_O1": {
+    "run3": "different",
+    "run4": "better",
+    "run8": "different",
+    "run15": "inconclusive"
+   },
+   "H3a_NLX": {
+    "run3": "better",
+    "run4": "better",
+    "run8": "better",
+    "run15": "better"
+   },
+   "pbti_mean_O1": {
+    "run3": 1.4,
+    "run4": 2.5,
+    "run8": 1.65,
+    "run15": 0.85
+   }
+  },
+  "G4F": {
+   "holds_at_all_FG_cells": true,
+   "holds_at_cells_counted_better": true,
+   "W_vs_B5hist_FG": {
+    "run3": "better",
+    "run4": "better",
+    "run8": "better",
+    "run15": "better"
+   }
+  },
+  "H1a_classes": {
+   "S05_stolen_key": {
+    "O1": "identical",
+    "NLX": "equivalent",
+    "W": "worse",
+    "AV5": "worse"
+   },
+   "S08_seq_reuse_bug": {
+    "O1": "identical",
+    "NLX": "identical",
+    "W": "worse",
+    "AV5": "worse"
+   },
+   "S12_beyond_horizon": {
+    "O1": "identical",
+    "NLX": "identical",
+    "W": "better",
+    "AV5": "identical"
+   },
+   "S99_mixed": {
+    "O1": "identical",
+    "NLX": "better",
+    "W": "worse",
+    "AV5": "worse"
+   }
+  },
+  "H1a_holds": false,
+  "H1b_classes": {
+   "S05_stolen_key": {
+    "W": "equivalent",
+    "AV5": "equivalent"
+   },
+   "S08_seq_reuse_bug": {
+    "W": "equivalent",
+    "AV5": "identical"
+   },
+   "S12_beyond_horizon": {
+    "W": "better",
+    "AV5": "identical"
+   },
+   "S99_mixed": {
+    "W": "better",
+    "AV5": "equivalent"
+   }
+  },
+  "H1b_holds": false
+ },
+ "_exact": {
+  "G1": {
+   "holds": false,
+   "detail": {
+    "S05_stolen_key/W": "equivalent",
+    "S05_stolen_key/AV5": "equivalent",
+    "S99_mixed/W": "better",
+    "S99_mixed/AV5": "equivalent"
+   }
+  },
+  "G2": {
+   "n_ok": 40,
+   "n_exceptions": 0,
+   "exceptions": []
+  },
+  "G3": {
+   "holds": false,
+   "points_pbti_O1_gt0": [
+    "equivocation=0.01+missing=0.05",
+    "equivocation=0.01+missing=0.1",
+    "equivocation=0.05+missing=0.01",
+    "equivocation=0.05+missing=0.05",
+    "equivocation=0.05+missing=0.1",
+    "equivocation=0.1+missing=0.01",
+    "equivocation=0.1+missing=0.05",
+    "equivocation=0.1+missing=0.1",
+    "equivocation=0.05+missing_long=0.01",
+    "equivocation=0.05+missing_long=0.05"
+   ],
+   "pbti_mean_O1": {
+    "equivocation=0.01+missing=0.05": 0.25,
+    "equivocation=0.01+missing=0.1": 0.25,
+    "equivocation=0.05+missing=0.01": 0.05,
+    "equivocation=0.05+missing=0.05": 0.65,
+    "equivocation=0.05+missing=0.1": 2.0,
+    "equivocation=0.1+missing=0.01": 0.25,
+    "equivocation=0.1+missing=0.05": 1.2,
+    "equivocation=0.1+missing=0.1": 2.95,
+    "equivocation=0.05+missing_long=0.01": 0.2,
+    "equivocation=0.05+missing_long=0.05": 1.85
+   },
+   "points_O1_or_NLX_better": [
+    "equivocation=0.05+missing=0.1",
+    "equivocation=0.1+missing=0.05",
+    "equivocation=0.1+missing=0.1",
+    "equivocation=0.05+missing_long=0.05"
+   ],
+   "H3a_O1": {
+    "equivocation=0.01+missing=0.05": "equivalent",
+    "equivocation=0.01+missing=0.1": "equivalent",
+    "equivocation=0.05+missing=0.01": "equivalent",
+    "equivocation=0.05+missing=0.05": "equivalent",
+    "equivocation=0.05+missing=0.1": "better",
+    "equivocation=0.1+missing=0.01": "equivalent",
+    "equivocation=0.1+missing=0.05": "different",
+    "equivocation=0.1+missing=0.1": "better",
+    "equivocation=0.05+missing_long=0.01": "equivalent",
+    "equivocation=0.05+missing_long=0.05": "better"
+   },
+   "H3a_NLX": {
+    "equivocation=0.01+missing=0.05": "equivalent",
+    "equivocation=0.01+missing=0.1": "equivalent",
+    "equivocation=0.05+missing=0.01": "equivalent",
+    "equivocation=0.05+missing=0.05": "inconclusive",
+    "equivocation=0.05+missing=0.1": "better",
+    "equivocation=0.1+missing=0.01": "inconclusive",
+    "equivocation=0.1+missing=0.05": "better",
+    "equivocation=0.1+missing=0.1": "better",
+    "equivocation=0.05+missing_long=0.01": "inconclusive",
+    "equivocation=0.05+missing_long=0.05": "better"
+   }
+  },
+  "G4": {
+   "holds_at_points_with_O1_gt0": false,
+   "holds_at_points_counted_better": false,
+   "W_vs_B5hist_at_O1_gt0_points": {
+    "equivocation=0.01+missing=0.05": "better",
+    "equivocation=0.01+missing=0.1": "better",
+    "equivocation=0.05+missing=0.01": "better",
+    "equivocation=0.05+missing=0.05": "better",
+    "equivocation=0.05+missing=0.1": "better",
+    "equivocation=0.1+missing=0.01": "better",
+    "equivocation=0.1+missing=0.05": "better",
+    "equivocation=0.1+missing=0.1": "better",
+    "equivocation=0.05+missing_long=0.01": "better",
+    "equivocation=0.05+missing_long=0.05": "better"
+   }
+  },
+  "G3F": {
+   "holds": true,
+   "FG_cells_O1_or_NLX_better": [
+    "run3",
+    "run4",
+    "run8",
+    "run15"
+   ],
+   "H3a_O1": {
+    "run3": "different",
+    "run4": "better",
+    "run8": "different",
+    "run15": "different"
+   },
+   "H3a_NLX": {
+    "run3": "better",
+    "run4": "better",
+    "run8": "better",
+    "run15": "better"
+   },
+   "pbti_mean_O1": {
+    "run3": 1.4,
+    "run4": 2.5,
+    "run8": 1.65,
+    "run15": 0.85
+   }
+  },
+  "G4F": {
+   "holds_at_all_FG_cells": true,
+   "holds_at_cells_counted_better": true,
+   "W_vs_B5hist_FG": {
+    "run3": "better",
+    "run4": "better",
+    "run8": "better",
+    "run15": "better"
+   }
+  },
+  "H1a_classes": {
+   "S05_stolen_key": {
+    "O1": "identical",
+    "NLX": "equivalent",
+    "W": "worse",
+    "AV5": "worse"
+   },
+   "S08_seq_reuse_bug": {
+    "O1": "identical",
+    "NLX": "identical",
+    "W": "worse",
+    "AV5": "worse"
+   },
+   "S12_beyond_horizon": {
+    "O1": "identical",
+    "NLX": "identical",
+    "W": "better",
+    "AV5": "identical"
+   },
+   "S99_mixed": {
+    "O1": "identical",
+    "NLX": "better",
+    "W": "worse",
+    "AV5": "worse"
+   }
+  },
+  "H1a_holds": false,
+  "H1b_classes": {
+   "S05_stolen_key": {
+    "W": "equivalent",
+    "AV5": "equivalent"
+   },
+   "S08_seq_reuse_bug": {
+    "W": "equivalent",
+    "AV5": "identical"
+   },
+   "S12_beyond_horizon": {
+    "W": "better",
+    "AV5": "identical"
+   },
+   "S99_mixed": {
+    "W": "better",
+    "AV5": "equivalent"
+   }
+  },
+  "H1b_holds": false
+ },
+ "_normal": {
+  "G1": {
+   "holds": false,
+   "detail": {
+    "S05_stolen_key/W": "equivalent",
+    "S05_stolen_key/AV5": "equivalent",
+    "S99_mixed/W": "better",
+    "S99_mixed/AV5": "equivalent"
+   }
+  },
+  "G2": {
+   "n_ok": 40,
+   "n_exceptions": 0,
+   "exceptions": []
+  },
+  "G3": {
+   "holds": false,
+   "points_pbti_O1_gt0": [
+    "equivocation=0.01+missing=0.05",
+    "equivocation=0.01+missing=0.1",
+    "equivocation=0.05+missing=0.01",
+    "equivocation=0.05+missing=0.05",
+    "equivocation=0.05+missing=0.1",
+    "equivocation=0.1+missing=0.01",
+    "equivocation=0.1+missing=0.05",
+    "equivocation=0.1+missing=0.1",
+    "equivocation=0.05+missing_long=0.01",
+    "equivocation=0.05+missing_long=0.05"
+   ],
+   "pbti_mean_O1": {
+    "equivocation=0.01+missing=0.05": 0.25,
+    "equivocation=0.01+missing=0.1": 0.25,
+    "equivocation=0.05+missing=0.01": 0.05,
+    "equivocation=0.05+missing=0.05": 0.65,
+    "equivocation=0.05+missing=0.1": 2.0,
+    "equivocation=0.1+missing=0.01": 0.25,
+    "equivocation=0.1+missing=0.05": 1.2,
+    "equivocation=0.1+missing=0.1": 2.95,
+    "equivocation=0.05+missing_long=0.01": 0.2,
+    "equivocation=0.05+missing_long=0.05": 1.85
+   },
+   "points_O1_or_NLX_better": [
+    "equivocation=0.05+missing=0.1",
+    "equivocation=0.1+missing=0.05",
+    "equivocation=0.1+missing=0.1"
+   ],
+   "H3a_O1": {
+    "equivocation=0.01+missing=0.05": "equivalent",
+    "equivocation=0.01+missing=0.1": "equivalent",
+    "equivocation=0.05+missing=0.01": "equivalent",
+    "equivocation=0.05+missing=0.05": "equivalent",
+    "equivocation=0.05+missing=0.1": "better",
+    "equivocation=0.1+missing=0.01": "equivalent",
+    "equivocation=0.1+missing=0.05": "different",
+    "equivocation=0.1+missing=0.1": "better",
+    "equivocation=0.05+missing_long=0.01": "equivalent",
+    "equivocation=0.05+missing_long=0.05": "inconclusive"
+   },
+   "H3a_NLX": {
+    "equivocation=0.01+missing=0.05": "equivalent",
+    "equivocation=0.01+missing=0.1": "equivalent",
+    "equivocation=0.05+missing=0.01": "equivalent",
+    "equivocation=0.05+missing=0.05": "inconclusive",
+    "equivocation=0.05+missing=0.1": "better",
+    "equivocation=0.1+missing=0.01": "inconclusive",
+    "equivocation=0.1+missing=0.05": "better",
+    "equivocation=0.1+missing=0.1": "better",
+    "equivocation=0.05+missing_long=0.01": "inconclusive",
+    "equivocation=0.05+missing_long=0.05": "inconclusive"
+   }
+  },
+  "G4": {
+   "holds_at_points_with_O1_gt0": false,
+   "holds_at_points_counted_better": false,
+   "W_vs_B5hist_at_O1_gt0_points": {
+    "equivocation=0.01+missing=0.05": "better",
+    "equivocation=0.01+missing=0.1": "better",
+    "equivocation=0.05+missing=0.01": "better",
+    "equivocation=0.05+missing=0.05": "better",
+    "equivocation=0.05+missing=0.1": "better",
+    "equivocation=0.1+missing=0.01": "better",
+    "equivocation=0.1+missing=0.05": "better",
+    "equivocation=0.1+missing=0.1": "better",
+    "equivocation=0.05+missing_long=0.01": "better",
+    "equivocation=0.05+missing_long=0.05": "better"
+   }
+  },
+  "G3F": {
+   "holds": true,
+   "FG_cells_O1_or_NLX_better": [
+    "run3",
+    "run4",
+    "run8",
+    "run15"
+   ],
+   "H3a_O1": {
+    "run3": "different",
+    "run4": "better",
+    "run8": "different",
+    "run15": "inconclusive"
+   },
+   "H3a_NLX": {
+    "run3": "better",
+    "run4": "better",
+    "run8": "better",
+    "run15": "better"
+   },
+   "pbti_mean_O1": {
+    "run3": 1.4,
+    "run4": 2.5,
+    "run8": 1.65,
+    "run15": 0.85
+   }
+  },
+  "G4F": {
+   "holds_at_all_FG_cells": true,
+   "holds_at_cells_counted_better": true,
+   "W_vs_B5hist_FG": {
+    "run3": "better",
+    "run4": "better",
+    "run8": "better",
+    "run15": "better"
+   }
+  },
+  "H1a_classes": {
+   "S05_stolen_key": {
+    "O1": "identical",
+    "NLX": "equivalent",
+    "W": "worse",
+    "AV5": "worse"
+   },
+   "S08_seq_reuse_bug": {
+    "O1": "identical",
+    "NLX": "identical",
+    "W": "worse",
+    "AV5": "worse"
+   },
+   "S12_beyond_horizon": {
+    "O1": "identical",
+    "NLX": "identical",
+    "W": "better",
+    "AV5": "identical"
+   },
+   "S99_mixed": {
+    "O1": "identical",
+    "NLX": "better",
+    "W": "worse",
+    "AV5": "worse"
+   }
+  },
+  "H1a_holds": false,
+  "H1b_classes": {
+   "S05_stolen_key": {
+    "W": "equivalent",
+    "AV5": "equivalent"
+   },
+   "S08_seq_reuse_bug": {
+    "W": "equivalent",
+    "AV5": "identical"
+   },
+   "S12_beyond_horizon": {
+    "W": "better",
+    "AV5": "identical"
+   },
+   "S99_mixed": {
+    "W": "better",
+    "AV5": "equivalent"
+   }
+  },
+  "H1b_holds": false
+ },
+ "_noident": {
+  "G1": {
+   "holds": false,
+   "detail": {
+    "S05_stolen_key/W": "equivalent",
+    "S05_stolen_key/AV5": "equivalent",
+    "S99_mixed/W": "better",
+    "S99_mixed/AV5": "equivalent"
+   }
+  },
+  "G2": {
+   "n_ok": 40,
+   "n_exceptions": 0,
+   "exceptions": []
+  },
+  "G3": {
+   "holds": false,
+   "points_pbti_O1_gt0": [
+    "equivocation=0.01+missing=0.05",
+    "equivocation=0.01+missing=0.1",
+    "equivocation=0.05+missing=0.01",
+    "equivocation=0.05+missing=0.05",
+    "equivocation=0.05+missing=0.1",
+    "equivocation=0.1+missing=0.01",
+    "equivocation=0.1+missing=0.05",
+    "equivocation=0.1+missing=0.1",
+    "equivocation=0.05+missing_long=0.01",
+    "equivocation=0.05+missing_long=0.05"
+   ],
+   "pbti_mean_O1": {
+    "equivocation=0.01+missing=0.05": 0.25,
+    "equivocation=0.01+missing=0.1": 0.25,
+    "equivocation=0.05+missing=0.01": 0.05,
+    "equivocation=0.05+missing=0.05": 0.65,
+    "equivocation=0.05+missing=0.1": 2.0,
+    "equivocation=0.1+missing=0.01": 0.25,
+    "equivocation=0.1+missing=0.05": 1.2,
+    "equivocation=0.1+missing=0.1": 2.95,
+    "equivocation=0.05+missing_long=0.01": 0.2,
+    "equivocation=0.05+missing_long=0.05": 1.85
+   },
+   "points_O1_or_NLX_better": [
+    "equivocation=0.05+missing=0.1",
+    "equivocation=0.1+missing=0.05",
+    "equivocation=0.1+missing=0.1"
+   ],
+   "H3a_O1": {
+    "equivocation=0.01+missing=0.05": "equivalent",
+    "equivocation=0.01+missing=0.1": "equivalent",
+    "equivocation=0.05+missing=0.01": "equivalent",
+    "equivocation=0.05+missing=0.05": "equivalent",
+    "equivocation=0.05+missing=0.1": "better",
+    "equivocation=0.1+missing=0.01": "equivalent",
+    "equivocation=0.1+missing=0.05": "different",
+    "equivocation=0.1+missing=0.1": "better",
+    "equivocation=0.05+missing_long=0.01": "equivalent",
+    "equivocation=0.05+missing_long=0.05": "inconclusive"
+   },
+   "H3a_NLX": {
+    "equivocation=0.01+missing=0.05": "equivalent",
+    "equivocation=0.01+missing=0.1": "equivalent",
+    "equivocation=0.05+missing=0.01": "equivalent",
+    "equivocation=0.05+missing=0.05": "inconclusive",
+    "equivocation=0.05+missing=0.1": "better",
+    "equivocation=0.1+missing=0.01": "inconclusive",
+    "equivocation=0.1+missing=0.05": "better",
+    "equivocation=0.1+missing=0.1": "better",
+    "equivocation=0.05+missing_long=0.01": "inconclusive",
+    "equivocation=0.05+missing_long=0.05": "inconclusive"
+   }
+  },
+  "G4": {
+   "holds_at_points_with_O1_gt0": false,
+   "holds_at_points_counted_better": false,
+   "W_vs_B5hist_at_O1_gt0_points": {
+    "equivocation=0.01+missing=0.05": "better",
+    "equivocation=0.01+missing=0.1": "better",
+    "equivocation=0.05+missing=0.01": "better",
+    "equivocation=0.05+missing=0.05": "better",
+    "equivocation=0.05+missing=0.1": "better",
+    "equivocation=0.1+missing=0.01": "better",
+    "equivocation=0.1+missing=0.05": "better",
+    "equivocation=0.1+missing=0.1": "better",
+    "equivocation=0.05+missing_long=0.01": "better",
+    "equivocation=0.05+missing_long=0.05": "better"
+   }
+  },
+  "G3F": {
+   "holds": true,
+   "FG_cells_O1_or_NLX_better": [
+    "run3",
+    "run4",
+    "run8",
+    "run15"
+   ],
+   "H3a_O1": {
+    "run3": "different",
+    "run4": "better",
+    "run8": "different",
+    "run15": "different"
+   },
+   "H3a_NLX": {
+    "run3": "better",
+    "run4": "better",
+    "run8": "better",
+    "run15": "better"
+   },
+   "pbti_mean_O1": {
+    "run3": 1.4,
+    "run4": 2.5,
+    "run8": 1.65,
+    "run15": 0.85
+   }
+  },
+  "G4F": {
+   "holds_at_all_FG_cells": true,
+   "holds_at_cells_counted_better": true,
+   "W_vs_B5hist_FG": {
+    "run3": "better",
+    "run4": "better",
+    "run8": "better",
+    "run15": "better"
+   }
+  },
+  "H1a_classes": {
+   "S05_stolen_key": {
+    "O1": "identical",
+    "NLX": "equivalent",
+    "W": "worse",
+    "AV5": "worse"
+   },
+   "S08_seq_reuse_bug": {
+    "O1": "identical",
+    "NLX": "identical",
+    "W": "worse",
+    "AV5": "worse"
+   },
+   "S12_beyond_horizon": {
+    "O1": "identical",
+    "NLX": "identical",
+    "W": "better",
+    "AV5": "identical"
+   },
+   "S99_mixed": {
+    "O1": "identical",
+    "NLX": "better",
+    "W": "worse",
+    "AV5": "worse"
+   }
+  },
+  "H1a_holds": false,
+  "H1b_classes": {
+   "S05_stolen_key": {
+    "W": "equivalent",
+    "AV5": "equivalent"
+   },
+   "S08_seq_reuse_bug": {
+    "W": "equivalent",
+    "AV5": "identical"
+   },
+   "S12_beyond_horizon": {
+    "W": "better",
+    "AV5": "identical"
+   },
+   "S99_mixed": {
+    "W": "better",
+    "AV5": "equivalent"
+   }
+  },
+  "H1b_holds": false
+ },
+ "_mround": {
+  "G1": {
+   "holds": false,
+   "detail": {
+    "S05_stolen_key/W": "equivalent",
+    "S05_stolen_key/AV5": "equivalent",
+    "S99_mixed/W": "better",
+    "S99_mixed/AV5": "equivalent"
+   }
+  },
+  "G2": {
+   "n_ok": 40,
+   "n_exceptions": 0,
+   "exceptions": []
+  },
+  "G3": {
+   "holds": false,
+   "points_pbti_O1_gt0": [
+    "equivocation=0.01+missing=0.05",
+    "equivocation=0.01+missing=0.1",
+    "equivocation=0.05+missing=0.01",
+    "equivocation=0.05+missing=0.05",
+    "equivocation=0.05+missing=0.1",
+    "equivocation=0.1+missing=0.01",
+    "equivocation=0.1+missing=0.05",
+    "equivocation=0.1+missing=0.1",
+    "equivocation=0.05+missing_long=0.01",
+    "equivocation=0.05+missing_long=0.05"
+   ],
+   "pbti_mean_O1": {
+    "equivocation=0.01+missing=0.05": 0.25,
+    "equivocation=0.01+missing=0.1": 0.25,
+    "equivocation=0.05+missing=0.01": 0.05,
+    "equivocation=0.05+missing=0.05": 0.65,
+    "equivocation=0.05+missing=0.1": 2.0,
+    "equivocation=0.1+missing=0.01": 0.25,
+    "equivocation=0.1+missing=0.05": 1.2,
+    "equivocation=0.1+missing=0.1": 2.95,
+    "equivocation=0.05+missing_long=0.01": 0.2,
+    "equivocation=0.05+missing_long=0.05": 1.85
+   },
+   "points_O1_or_NLX_better": [
+    "equivocation=0.05+missing=0.1",
+    "equivocation=0.1+missing=0.05",
+    "equivocation=0.1+missing=0.1"
+   ],
+   "H3a_O1": {
+    "equivocation=0.01+missing=0.05": "equivalent",
+    "equivocation=0.01+missing=0.1": "equivalent",
+    "equivocation=0.05+missing=0.01": "equivalent",
+    "equivocation=0.05+missing=0.05": "equivalent",
+    "equivocation=0.05+missing=0.1": "better",
+    "equivocation=0.1+missing=0.01": "equivalent",
+    "equivocation=0.1+missing=0.05": "different",
+    "equivocation=0.1+missing=0.1": "better",
+    "equivocation=0.05+missing_long=0.01": "equivalent",
+    "equivocation=0.05+missing_long=0.05": "inconclusive"
+   },
+   "H3a_NLX": {
+    "equivocation=0.01+missing=0.05": "equivalent",
+    "equivocation=0.01+missing=0.1": "equivalent",
+    "equivocation=0.05+missing=0.01": "equivalent",
+    "equivocation=0.05+missing=0.05": "inconclusive",
+    "equivocation=0.05+missing=0.1": "better",
+    "equivocation=0.1+missing=0.01": "inconclusive",
+    "equivocation=0.1+missing=0.05": "better",
+    "equivocation=0.1+missing=0.1": "better",
+    "equivocation=0.05+missing_long=0.01": "inconclusive",
+    "equivocation=0.05+missing_long=0.05": "inconclusive"
+   }
+  },
+  "G4": {
+   "holds_at_points_with_O1_gt0": false,
+   "holds_at_points_counted_better": false,
+   "W_vs_B5hist_at_O1_gt0_points": {
+    "equivocation=0.01+missing=0.05": "better",
+    "equivocation=0.01+missing=0.1": "better",
+    "equivocation=0.05+missing=0.01": "better",
+    "equivocation=0.05+missing=0.05": "better",
+    "equivocation=0.05+missing=0.1": "better",
+    "equivocation=0.1+missing=0.01": "better",
+    "equivocation=0.1+missing=0.05": "better",
+    "equivocation=0.1+missing=0.1": "better",
+    "equivocation=0.05+missing_long=0.01": "better",
+    "equivocation=0.05+missing_long=0.05": "better"
+   }
+  },
+  "G3F": {
+   "holds": true,
+   "FG_cells_O1_or_NLX_better": [
+    "run3",
+    "run4",
+    "run8",
+    "run15"
+   ],
+   "H3a_O1": {
+    "run3": "different",
+    "run4": "better",
+    "run8": "different",
+    "run15": "inconclusive"
+   },
+   "H3a_NLX": {
+    "run3": "better",
+    "run4": "better",
+    "run8": "better",
+    "run15": "better"
+   },
+   "pbti_mean_O1": {
+    "run3": 1.4,
+    "run4": 2.5,
+    "run8": 1.65,
+    "run15": 0.85
+   }
+  },
+  "G4F": {
+   "holds_at_all_FG_cells": true,
+   "holds_at_cells_counted_better": true,
+   "W_vs_B5hist_FG": {
+    "run3": "better",
+    "run4": "better",
+    "run8": "better",
+    "run15": "better"
+   }
+  },
+  "H1a_classes": {
+   "S05_stolen_key": {
+    "O1": "identical",
+    "NLX": "equivalent",
+    "W": "worse",
+    "AV5": "worse"
+   },
+   "S08_seq_reuse_bug": {
+    "O1": "identical",
+    "NLX": "identical",
+    "W": "worse",
+    "AV5": "worse"
+   },
+   "S12_beyond_horizon": {
+    "O1": "identical",
+    "NLX": "identical",
+    "W": "better",
+    "AV5": "identical"
+   },
+   "S99_mixed": {
+    "O1": "identical",
+    "NLX": "better",
+    "W": "worse",
+    "AV5": "worse"
+   }
+  },
+  "H1a_holds": false,
+  "H1b_classes": {
+   "S05_stolen_key": {
+    "W": "equivalent",
+    "AV5": "equivalent"
+   },
+   "S08_seq_reuse_bug": {
+    "W": "equivalent",
+    "AV5": "identical"
+   },
+   "S12_beyond_horizon": {
+    "W": "better",
+    "AV5": "identical"
+   },
+   "S99_mixed": {
+    "W": "better",
+    "AV5": "equivalent"
+   }
+  },
+  "H1b_holds": false
+ },
+ "_nonstrict": {
+  "G1": {
+   "holds": false,
+   "detail": {
+    "S05_stolen_key/W": "equivalent",
+    "S05_stolen_key/AV5": "equivalent",
+    "S99_mixed/W": "better",
+    "S99_mixed/AV5": "equivalent"
+   }
+  },
+  "G2": {
+   "n_ok": 40,
+   "n_exceptions": 0,
+   "exceptions": []
+  },
+  "G3": {
+   "holds": false,
+   "points_pbti_O1_gt0": [
+    "equivocation=0.01+missing=0.05",
+    "equivocation=0.01+missing=0.1",
+    "equivocation=0.05+missing=0.01",
+    "equivocation=0.05+missing=0.05",
+    "equivocation=0.05+missing=0.1",
+    "equivocation=0.1+missing=0.01",
+    "equivocation=0.1+missing=0.05",
+    "equivocation=0.1+missing=0.1",
+    "equivocation=0.05+missing_long=0.01",
+    "equivocation=0.05+missing_long=0.05"
+   ],
+   "pbti_mean_O1": {
+    "equivocation=0.01+missing=0.05": 0.25,
+    "equivocation=0.01+missing=0.1": 0.25,
+    "equivocation=0.05+missing=0.01": 0.05,
+    "equivocation=0.05+missing=0.05": 0.65,
+    "equivocation=0.05+missing=0.1": 2.0,
+    "equivocation=0.1+missing=0.01": 0.25,
+    "equivocation=0.1+missing=0.05": 1.2,
+    "equivocation=0.1+missing=0.1": 2.95,
+    "equivocation=0.05+missing_long=0.01": 0.2,
+    "equivocation=0.05+missing_long=0.05": 1.85
+   },
+   "points_O1_or_NLX_better": [
+    "equivocation=0.05+missing=0.1",
+    "equivocation=0.1+missing=0.05",
+    "equivocation=0.1+missing=0.1"
+   ],
+   "H3a_O1": {
+    "equivocation=0.01+missing=0.05": "equivalent",
+    "equivocation=0.01+missing=0.1": "equivalent",
+    "equivocation=0.05+missing=0.01": "equivalent",
+    "equivocation=0.05+missing=0.05": "equivalent",
+    "equivocation=0.05+missing=0.1": "better",
+    "equivocation=0.1+missing=0.01": "equivalent",
+    "equivocation=0.1+missing=0.05": "different",
+    "equivocation=0.1+missing=0.1": "better",
+    "equivocation=0.05+missing_long=0.01": "equivalent",
+    "equivocation=0.05+missing_long=0.05": "inconclusive"
+   },
+   "H3a_NLX": {
+    "equivocation=0.01+missing=0.05": "equivalent",
+    "equivocation=0.01+missing=0.1": "equivalent",
+    "equivocation=0.05+missing=0.01": "equivalent",
+    "equivocation=0.05+missing=0.05": "inconclusive",
+    "equivocation=0.05+missing=0.1": "better",
+    "equivocation=0.1+missing=0.01": "inconclusive",
+    "equivocation=0.1+missing=0.05": "better",
+    "equivocation=0.1+missing=0.1": "better",
+    "equivocation=0.05+missing_long=0.01": "inconclusive",
+    "equivocation=0.05+missing_long=0.05": "inconclusive"
+   }
+  },
+  "G4": {
+   "holds_at_points_with_O1_gt0": false,
+   "holds_at_points_counted_better": false,
+   "W_vs_B5hist_at_O1_gt0_points": {
+    "equivocation=0.01+missing=0.05": "better",
+    "equivocation=0.01+missing=0.1": "better",
+    "equivocation=0.05+missing=0.01": "better",
+    "equivocation=0.05+missing=0.05": "better",
+    "equivocation=0.05+missing=0.1": "better",
+    "equivocation=0.1+missing=0.01": "better",
+    "equivocation=0.1+missing=0.05": "better",
+    "equivocation=0.1+missing=0.1": "better",
+    "equivocation=0.05+missing_long=0.01": "better",
+    "equivocation=0.05+missing_long=0.05": "better"
+   }
+  },
+  "G3F": {
+   "holds": true,
+   "FG_cells_O1_or_NLX_better": [
+    "run3",
+    "run4",
+    "run8",
+    "run15"
+   ],
+   "H3a_O1": {
+    "run3": "better",
+    "run4": "better",
+    "run8": "different",
+    "run15": "inconclusive"
+   },
+   "H3a_NLX": {
+    "run3": "better",
+    "run4": "better",
+    "run8": "better",
+    "run15": "better"
+   },
+   "pbti_mean_O1": {
+    "run3": 1.4,
+    "run4": 2.5,
+    "run8": 1.65,
+    "run15": 0.85
+   }
+  },
+  "G4F": {
+   "holds_at_all_FG_cells": true,
+   "holds_at_cells_counted_better": true,
+   "W_vs_B5hist_FG": {
+    "run3": "better",
+    "run4": "better",
+    "run8": "better",
+    "run15": "better"
+   }
+  },
+  "H1a_classes": {
+   "S05_stolen_key": {
+    "O1": "identical",
+    "NLX": "equivalent",
+    "W": "worse",
+    "AV5": "worse"
+   },
+   "S08_seq_reuse_bug": {
+    "O1": "identical",
+    "NLX": "identical",
+    "W": "worse",
+    "AV5": "worse"
+   },
+   "S12_beyond_horizon": {
+    "O1": "identical",
+    "NLX": "identical",
+    "W": "better",
+    "AV5": "identical"
+   },
+   "S99_mixed": {
+    "O1": "identical",
+    "NLX": "better",
+    "W": "worse",
+    "AV5": "worse"
+   }
+  },
+  "H1a_holds": false,
+  "H1b_classes": {
+   "S05_stolen_key": {
+    "W": "equivalent",
+    "AV5": "equivalent"
+   },
+   "S08_seq_reuse_bug": {
+    "W": "equivalent",
+    "AV5": "identical"
+   },
+   "S12_beyond_horizon": {
+    "W": "better",
+    "AV5": "identical"
+   },
+   "S99_mixed": {
+    "W": "better",
+    "AV5": "equivalent"
+   }
+  },
+  "H1b_holds": false
+ }
+}

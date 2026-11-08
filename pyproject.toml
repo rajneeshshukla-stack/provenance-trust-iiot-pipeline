@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pbti-iiot"
+version = "0.1.0"
+description = "Provenance-Bound Trust-Aware Ingestion (PBTI) for Industrial IoT edge-to-cloud data pipelines: reference implementation, baselines and evaluation testbed"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "Apache-2.0"}
+dependencies = ["cryptography>=42", "numpy>=1.26", "scipy>=1.11", "pandas>=2.1", "matplotlib>=3.8", "pyyaml>=6", "psutil>=5.9", "paho-mqtt>=2.0"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

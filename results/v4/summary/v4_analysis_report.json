@@ -1,0 +1,752 @@
+{
+ "warnings": [],
+ "exclusions": [],
+ "deviations": [
+  {
+   "id": "DV1",
+   "deviation": "A0_core was interrupted by a host restart after 318 of 1,320 rows and resumed with scripts/run_v4_resume.py, which imports the frozen experiments/run_v4.py (expand, job) unchanged, keeps complete rows and runs only the missing specifications.",
+   "reason": "host restart (uptime reset 2026-11-05 04:34 CST)",
+   "record": "research/V4/DECISION_LOG.md D08; results/v4/raw/A0_core.resume1.manifest.json",
+   "effect_on_results": "none expected: every run is deterministic for its specification and independent of the others; the A0 replication check compares all 1,320 rows with the archive"
+  },
+  {
+   "id": "DV2",
+   "deviation": "Execution order A1_review, A3_factorial (amendment 1), A0_core (resumed), A3_selective, A3_scenarios instead of A0, A1, A3_selective, A3_scenarios followed by A3_factorial, as amendment 1 had stated.",
+   "reason": "robustness against further interruptions after DV1",
+   "record": "research/V4/DECISION_LOG.md D08; logs/v4/chain_progress.txt",
+   "effect_on_results": "none expected: all campaigns used the frozen source and configurations (scripts/verify_prereg_hashes.py: unchanged)"
+  },
+  {
+   "id": "DV3",
+   "deviation": "Descriptive summaries of the A3 joint grid (number of points at which PBTI-SH retained no forgery, ranges of the W and O2 differences, points whose mean reduction exceeded the margin without being classified better) were added to the analysis after the results were known.",
+   "reason": "to explain the gate outcome in the text",
+   "record": "analysis/analyze_v4.py (a3: descriptive summaries); v4_analysis_report.json A3_gates",
+   "effect_on_results": "none: no additional test, no change of classes, families, margins or gates"
+  },
+  {
+   "id": "DV4",
+   "deviation": "The preregistration (Section 1) describes the A1 and A3 pilots on seed 101 as error checks only; the A3 pilot rows were also inspected for retained forgeries, which led to amendment 1.",
+   "reason": "the pilot showed that the joint grid produced retained forgeries at only one point",
+   "record": "research/V4/PREREGISTRATION_V4_AMENDMENT_1.md (Reason: disclosed data dependence); research/V4/DECISION_LOG.md",
+   "effect_on_results": "none on the preregistered campaigns; the amendment's cells were chosen with knowledge of the V3 factorial and of this pilot (seed 101 is disjoint from the confirmatory seeds 21-40)"
+  },
+  {
+   "id": "DV5",
+   "deviation": "The preregistration (Section 8) lists the wall-clock fields excluded from the A0 field-by-field comparison; scripts/compare_a0.py, final before the freeze, also excludes the audit outcome fields (audit_pass, audit_findings), whose results are reported separately (all audited runs passed), and two runner labels whose values differ between the V3 and V4 runners (ablation_name, kind).",
+   "reason": "audits ran on seeds 1-5 only and are reported as pass counts; the runner labels name the runner, not an outcome",
+   "record": "results/v4/summary/A0_comparison.json (skipped_fields, excluded, metadata_values)",
+   "effect_on_results": "none on deterministic outcomes; 1,320 of 1,320 rows identical on all compared fields"
+  }
+ ],
+ "A0_comparison": {
+  "compared": 1320,
+  "identical": 1320,
+  "missing_historical": [],
+  "errors_new": 0,
+  "n_field_comparisons_total": 55411,
+  "skipped_fields": [
+   "ablation_name",
+   "audit_findings",
+   "audit_pass",
+   "audit_replay_s",
+   "audit_static_s",
+   "devsign_us_mean",
+   "ingest_us_mean",
+   "ingest_us_p50",
+   "ingest_us_p95",
+   "ingest_us_p99",
+   "kind",
+   "wall_s",
+   "wrap_us_mean"
+  ],
+  "n_differences": 0
+ },
+ "A0_cells": 66,
+ "A1_family_sizes": {
+  "O1": 84,
+  "O2": 48,
+  "NLX": 84,
+  "W": 48,
+  "AV5": 48
+ },
+ "A1_class_counts": {
+  "H1a|O1": {
+   "identical": 4
+  },
+  "H1b|O1": {
+   "identical": 4
+  },
+  "H1c|O1": {
+   "identical": 40
+  },
+  "H1d|O1": {
+   "identical": 36
+  },
+  "H1a|O2": {
+   "identical": 2,
+   "better beyond margin": 1,
+   "equivalent within margin": 1
+  },
+  "H1b|O2": {
+   "identical": 2,
+   "better beyond margin": 1,
+   "equivalent within margin": 1
+  },
+  "H1c|O2": {
+   "identical": 30,
+   "equivalent within margin": 10
+  },
+  "H1a|NLX": {
+   "equivalent within margin": 1,
+   "identical": 2,
+   "better beyond margin": 1
+  },
+  "H1b|NLX": {
+   "equivalent within margin": 2,
+   "identical": 2
+  },
+  "H1c|NLX": {
+   "equivalent within margin": 11,
+   "identical": 20,
+   "better beyond margin": 8,
+   "different, within margin": 1
+  },
+  "H1d|NLX": {
+   "equivalent within margin": 6,
+   "identical": 23,
+   "worse beyond margin": 7
+  },
+  "H1a|W": {
+   "worse beyond margin": 3,
+   "better beyond margin": 1
+  },
+  "H1b|W": {
+   "equivalent within margin": 2,
+   "better beyond margin": 2
+  },
+  "H1c|W": {
+   "worse beyond margin": 13,
+   "equivalent within margin": 17,
+   "identical": 10
+  },
+  "H1a|AV5": {
+   "worse beyond margin": 3,
+   "identical": 1
+  },
+  "H1b|AV5": {
+   "equivalent within margin": 2,
+   "identical": 2
+  },
+  "H1c|AV5": {
+   "worse beyond margin": 20,
+   "equivalent within margin": 8,
+   "identical": 12
+  }
+ },
+ "A1_gates": {
+  "G1": {
+   "holds": false,
+   "classes": {
+    "S05_stolen_key": {
+     "W": "equivalent within margin (significant difference)",
+     "AV5": "equivalent within margin (significant difference)"
+    },
+    "S99_mixed": {
+     "W": "better beyond margin",
+     "AV5": "equivalent within margin (significant difference)"
+    }
+   }
+  },
+  "G2": {
+   "equal": [
+    {
+     "scenario": "S05_stolen_key",
+     "setting": "hist",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S05_stolen_key",
+     "setting": "d0c1",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S05_stolen_key",
+     "setting": "d0c10",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S05_stolen_key",
+     "setting": "d1c1",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S05_stolen_key",
+     "setting": "d1c10",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S05_stolen_key",
+     "setting": "d5c1",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S05_stolen_key",
+     "setting": "d5c10",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S05_stolen_key",
+     "setting": "d60c1",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S05_stolen_key",
+     "setting": "d60c10",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S05_stolen_key",
+     "setting": "event",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S08_seq_reuse_bug",
+     "setting": "hist",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S08_seq_reuse_bug",
+     "setting": "d0c1",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S08_seq_reuse_bug",
+     "setting": "d0c10",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S08_seq_reuse_bug",
+     "setting": "d1c1",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S08_seq_reuse_bug",
+     "setting": "d1c10",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S08_seq_reuse_bug",
+     "setting": "d5c1",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S08_seq_reuse_bug",
+     "setting": "d5c10",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S08_seq_reuse_bug",
+     "setting": "d60c1",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S08_seq_reuse_bug",
+     "setting": "d60c10",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S08_seq_reuse_bug",
+     "setting": "event",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S12_beyond_horizon",
+     "setting": "hist",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S12_beyond_horizon",
+     "setting": "d0c1",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S12_beyond_horizon",
+     "setting": "d0c10",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S12_beyond_horizon",
+     "setting": "d1c1",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S12_beyond_horizon",
+     "setting": "d1c10",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S12_beyond_horizon",
+     "setting": "d5c1",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S12_beyond_horizon",
+     "setting": "d5c10",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S12_beyond_horizon",
+     "setting": "d60c1",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S12_beyond_horizon",
+     "setting": "d60c10",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S12_beyond_horizon",
+     "setting": "event",
+     "O1": "identical",
+     "O2": "identical"
+    },
+    {
+     "scenario": "S99_mixed",
+     "setting": "hist",
+     "O1": "identical",
+     "O2": "equivalent within margin (significant difference)"
+    },
+    {
+     "scenario": "S99_mixed",
+     "setting": "d0c1",
+     "O1": "identical",
+     "O2": "equivalent within margin"
+    },
+    {
+     "scenario": "S99_mixed",
+     "setting": "d0c10",
+     "O1": "identical",
+     "O2": "equivalent within margin (significant difference)"
+    },
+    {
+     "scenario": "S99_mixed",
+     "setting": "d1c1",
+     "O1": "identical",
+     "O2": "equivalent within margin (significant difference)"
+    },
+    {
+     "scenario": "S99_mixed",
+     "setting": "d1c10",
+     "O1": "identical",
+     "O2": "equivalent within margin (significant difference)"
+    },
+    {
+     "scenario": "S99_mixed",
+     "setting": "d5c1",
+     "O1": "identical",
+     "O2": "equivalent within margin (significant difference)"
+    },
+    {
+     "scenario": "S99_mixed",
+     "setting": "d5c10",
+     "O1": "identical",
+     "O2": "equivalent within margin (significant difference)"
+    },
+    {
+     "scenario": "S99_mixed",
+     "setting": "d60c1",
+     "O1": "identical",
+     "O2": "equivalent within margin (significant difference)"
+    },
+    {
+     "scenario": "S99_mixed",
+     "setting": "d60c10",
+     "O1": "identical",
+     "O2": "equivalent within margin (significant difference)"
+    },
+    {
+     "scenario": "S99_mixed",
+     "setting": "event",
+     "O1": "identical",
+     "O2": "equivalent within margin"
+    }
+   ],
+   "exceptions": []
+  }
+ },
+ "A3_class_counts": {
+  "H3a|PBTI|O1": {
+   "identical": 11,
+   "equivalent within margin": 6,
+   "better beyond margin": 2,
+   "inconclusive": 1,
+   "different, within margin": 1
+  },
+  "H3b|B5-hist|O1": {
+   "identical": 13,
+   "equivalent within margin": 5,
+   "inconclusive": 3
+  },
+  "H3b|B5-event|O1": {
+   "identical": 11,
+   "equivalent within margin": 6,
+   "better beyond margin": 2,
+   "inconclusive": 2
+  },
+  "H3b|B5S|O1": {
+   "identical": 14,
+   "equivalent within margin": 6,
+   "inconclusive": 1
+  },
+  "H3b|PBTI-R-hist|O1": {
+   "identical": 11,
+   "equivalent within margin": 5,
+   "inconclusive": 2,
+   "better beyond margin": 2,
+   "different, within margin": 1
+  },
+  "H3c|PBTI-SH|O1": {
+   "identical": 11,
+   "equivalent within margin": 5,
+   "inconclusive": 2,
+   "worse beyond margin": 2,
+   "different, within margin": 1
+  },
+  "H3a|PBTI|O2": {
+   "equivalent within margin": 17,
+   "identical": 4
+  },
+  "H3b|B5-hist|O2": {
+   "equivalent within margin": 17,
+   "identical": 4
+  },
+  "H3b|B5-event|O2": {
+   "equivalent within margin": 17,
+   "identical": 4
+  },
+  "H3b|B5S|O2": {
+   "better beyond margin": 17,
+   "identical": 4
+  },
+  "H3b|PBTI-R-hist|O2": {
+   "equivalent within margin": 17,
+   "identical": 4
+  },
+  "H3c|PBTI-SH|O2": {
+   "equivalent within margin": 17,
+   "identical": 4
+  },
+  "H3a|PBTI|NLX": {
+   "identical": 11,
+   "equivalent within margin": 3,
+   "inconclusive": 4,
+   "better beyond margin": 3
+  },
+  "H3b|B5-hist|NLX": {
+   "identical": 13,
+   "equivalent within margin": 3,
+   "inconclusive": 5
+  },
+  "H3b|B5-event|NLX": {
+   "identical": 11,
+   "equivalent within margin": 3,
+   "inconclusive": 5,
+   "better beyond margin": 2
+  },
+  "H3b|B5S|NLX": {
+   "identical": 14,
+   "equivalent within margin": 2,
+   "inconclusive": 5
+  },
+  "H3b|PBTI-R-hist|NLX": {
+   "identical": 11,
+   "equivalent within margin": 3,
+   "inconclusive": 4,
+   "better beyond margin": 3
+  },
+  "H3c|PBTI-SH|NLX": {
+   "identical": 11,
+   "equivalent within margin": 3,
+   "inconclusive": 5,
+   "worse beyond margin": 2
+  },
+  "H3a|PBTI|W": {
+   "equivalent within margin": 12,
+   "identical": 4,
+   "different, within margin": 1,
+   "worse beyond margin": 4
+  },
+  "H3b|B5-hist|W": {
+   "better beyond margin": 17,
+   "identical": 4
+  },
+  "H3b|B5-event|W": {
+   "equivalent within margin": 12,
+   "identical": 4,
+   "different, within margin": 1,
+   "worse beyond margin": 4
+  },
+  "H3b|B5S|W": {
+   "better beyond margin": 17,
+   "identical": 4
+  },
+  "H3b|PBTI-R-hist|W": {
+   "equivalent within margin": 12,
+   "identical": 4,
+   "different, within margin": 1,
+   "worse beyond margin": 4
+  },
+  "H3c|PBTI-SH|W": {
+   "equivalent within margin": 15,
+   "identical": 4,
+   "better beyond margin": 2
+  },
+  "H3a|PBTI|AV5": {
+   "equivalent within margin": 17,
+   "identical": 4
+  },
+  "H3b|B5-hist|AV5": {
+   "better beyond margin": 17,
+   "identical": 4
+  },
+  "H3b|B5-event|AV5": {
+   "equivalent within margin": 17,
+   "identical": 4
+  },
+  "H3b|B5S|AV5": {
+   "better beyond margin": 17,
+   "identical": 4
+  },
+  "H3b|PBTI-R-hist|AV5": {
+   "equivalent within margin": 17,
+   "identical": 4
+  },
+  "H3c|PBTI-SH|AV5": {
+   "identical": 21
+  }
+ },
+ "A3_gates": {
+  "G3": {
+   "holds": false,
+   "points_with_pbti_O1_positive": [
+    "equivocation=0.01+missing=0.05",
+    "equivocation=0.01+missing=0.1",
+    "equivocation=0.05+missing=0.01",
+    "equivocation=0.05+missing=0.05",
+    "equivocation=0.05+missing=0.1",
+    "equivocation=0.05+missing_long=0.01",
+    "equivocation=0.05+missing_long=0.05",
+    "equivocation=0.1+missing=0.01",
+    "equivocation=0.1+missing=0.05",
+    "equivocation=0.1+missing=0.1"
+   ],
+   "points_better": [
+    "equivocation=0.05+missing=0.1",
+    "equivocation=0.1+missing=0.05",
+    "equivocation=0.1+missing=0.1"
+   ],
+   "points_reduction_beyond_margin_not_better": [
+    "equivocation=0.05+missing=0.05",
+    "equivocation=0.05+missing_long=0.05"
+   ]
+  },
+  "G4": {
+   "holds": false,
+   "points_not_worse_W_than_B5hist": [
+    "equivocation=0.05+missing=0.1",
+    "equivocation=0.1+missing=0.05",
+    "equivocation=0.1+missing=0.1"
+   ]
+  }
+ },
+ "A3S_more_O1_than_PBTI": [],
+ "A3F_class_counts": {
+  "H3a|PBTI|O1": {
+   "identical": 4,
+   "different, within margin": 2,
+   "better beyond margin": 1,
+   "inconclusive": 1
+  },
+  "H3b|B5-hist|O1": {
+   "identical": 4,
+   "equivalent within margin": 3,
+   "inconclusive": 1
+  },
+  "H3b|B5-event|O1": {
+   "identical": 4,
+   "different, within margin": 2,
+   "inconclusive": 1,
+   "equivalent within margin": 1
+  },
+  "H3b|B5S|O1": {
+   "identical": 6,
+   "equivalent within margin": 2
+  },
+  "H3b|PBTI-R-hist|O1": {
+   "identical": 4,
+   "different, within margin": 2,
+   "better beyond margin": 1,
+   "inconclusive": 1
+  },
+  "H3c|PBTI-SH|O1": {
+   "identical": 4,
+   "different, within margin": 2,
+   "worse beyond margin": 1,
+   "inconclusive": 1
+  },
+  "H3a|PBTI|O2": {
+   "worse beyond margin": 4,
+   "equivalent within margin": 4
+  },
+  "H3b|B5-hist|O2": {
+   "worse beyond margin": 2,
+   "equivalent within margin": 5,
+   "different, within margin": 1
+  },
+  "H3b|B5-event|O2": {
+   "worse beyond margin": 3,
+   "equivalent within margin": 4,
+   "different, within margin": 1
+  },
+  "H3b|B5S|O2": {
+   "better beyond margin": 8
+  },
+  "H3b|PBTI-R-hist|O2": {
+   "worse beyond margin": 4,
+   "equivalent within margin": 4
+  },
+  "H3c|PBTI-SH|O2": {
+   "better beyond margin": 4,
+   "equivalent within margin": 4
+  },
+  "H3a|PBTI|NLX": {
+   "identical": 4,
+   "better beyond margin": 4
+  },
+  "H3b|B5-hist|NLX": {
+   "identical": 4,
+   "inconclusive": 4
+  },
+  "H3b|B5-event|NLX": {
+   "identical": 4,
+   "better beyond margin": 3,
+   "inconclusive": 1
+  },
+  "H3b|B5S|NLX": {
+   "identical": 6,
+   "inconclusive": 2
+  },
+  "H3b|PBTI-R-hist|NLX": {
+   "identical": 4,
+   "better beyond margin": 4
+  },
+  "H3c|PBTI-SH|NLX": {
+   "identical": 4,
+   "worse beyond margin": 3,
+   "inconclusive": 1
+  },
+  "H3a|PBTI|W": {
+   "worse beyond margin": 6,
+   "equivalent within margin": 2
+  },
+  "H3b|B5-hist|W": {
+   "better beyond margin": 8
+  },
+  "H3b|B5-event|W": {
+   "worse beyond margin": 6,
+   "equivalent within margin": 2
+  },
+  "H3b|B5S|W": {
+   "better beyond margin": 8
+  },
+  "H3b|PBTI-R-hist|W": {
+   "worse beyond margin": 6,
+   "equivalent within margin": 2
+  },
+  "H3c|PBTI-SH|W": {
+   "better beyond margin": 6,
+   "equivalent within margin": 2
+  },
+  "H3a|PBTI|AV5": {
+   "worse beyond margin": 5,
+   "equivalent within margin": 2,
+   "different, within margin": 1
+  },
+  "H3b|B5-hist|AV5": {
+   "better beyond margin": 8
+  },
+  "H3b|B5-event|AV5": {
+   "worse beyond margin": 4,
+   "different, within margin": 1,
+   "equivalent within margin": 3
+  },
+  "H3b|B5S|AV5": {
+   "better beyond margin": 8
+  },
+  "H3b|PBTI-R-hist|AV5": {
+   "worse beyond margin": 5,
+   "equivalent within margin": 2,
+   "different, within margin": 1
+  },
+  "H3c|PBTI-SH|AV5": {
+   "identical": 8
+  }
+ },
+ "A3F_gates": {
+  "G3F": {
+   "holds": true,
+   "fg_cells_better": [
+    "run3",
+    "run4",
+    "run8",
+    "run15"
+   ]
+  },
+  "G4F": {
+   "holds": true,
+   "not_worse_W": [
+    "run3",
+    "run4",
+    "run8",
+    "run15"
+   ]
+  }
+ },
+ "A5": {
+  "rows": 68,
+  "pbti_b5_identical": true
+ },
+ "A4": {
+  "all_pass": true,
+  "source_unchanged": true
+ }
+}

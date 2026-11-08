@@ -1,0 +1,194 @@
+(* ==========================================================================================
+   PBTI symbolic model -- VARIANT M-B: attacker-controlled device->workload (OT) link (ProVerif 2.05)
+   Identical to pbti.pv (M-A) except for the OT link: the edge workload W reads (obs, osig) from the
+   attacker-controlled channel c instead of the private per-cell channel, i.e. the attacker can inject
+   statements into W's input (e.g. an unauthenticated fieldbus / OT network). To make the negative result
+   robust, W here is STRICTER than the implementation: before countersigning it checks that osig verifies
+   under a device certificate whose subject is obs.did (src/pbti/sim.py _wrap performs no such check).
+   Expected: Q1, Q2 still hold (V verifies both signatures), but Q3 / Q3-relay FAIL: a holder of the
+   device key alone gets a forged observation accepted, because W countersigns it.
+   ========================================================================================== *)
+
+free c: channel.                     (* broker / messaging layer: controlled by the attacker *)
+
+type skey.
+type pkey.
+type id.                             (* did and wid *)
+type keyid.                          (* kid / wkid *)
+type kind.
+type origin.
+
+const kDevice, kWorkload: kind.
+const reqDevice, reqGateway: origin.
+
+fun pk(skey): pkey.
+fun sign(bitstring, skey): bitstring.
+reduc forall m: bitstring, k: skey; verify(sign(m, k), pk(k), m) = true.
+reduc forall m: bitstring, k: skey; getmess(sign(m, k)) = m.      (* signatures do not hide the message *)
+
+fun dobs(bitstring): bitstring [data].                            (* observation signing domain *)
+fun drel(bitstring): bitstring [data].                            (* relay signing domain *)
+fun obsT(id, bitstring, keyid): bitstring [data].                 (* observation statement *)
+fun relT(id, keyid, bitstring, bitstring): bitstring [data].      (* relay statement *)
+fun h(bitstring, bitstring): bitstring.                           (* odig = H(JCS(obs) || osig) *)
+
+table certs(keyid, kind, id, pkey).  (* identity plane: kid -> (kind, certified subject, public key) *)
+table policy(id, id, origin).        (* path policy: did may be relayed by wid; origin kind required for did *)
+
+event DeviceSigned(id, bitstring).                       (* did, obs *)
+event RelayCountersigned(id, bitstring).                 (* wid, odig *)
+event RelaySigned(id, bitstring).                        (* wid, full relay statement rel (incl. rts, mode) *)
+event GatewayAttested(id, bitstring).                    (* wid, obs signed by W as origin (legacy device) *)
+event VerifierAccepted(id, id, bitstring).               (* did, wid, obs : device-origin acceptance *)
+event VerifierAcceptedSig(id, id, bitstring, bitstring). (* did, wid, obs, osig : same, with the signature *)
+event VerifierAcceptedGw(id, id, bitstring).             (* did, wid, obs : gateway-origin acceptance *)
+event VerifierAcceptedAny(id, id, bitstring).            (* did, wid, obs : either branch *)
+event VerifierAcceptedRel(id, bitstring).                (* wid, rel : relay statement of an accepted message *)
+event DevKeyLeaked(id).
+event RelayKeyLeaked(id).
+event SigningDevice(id, id).                             (* did registered as signing device of cell wid *)
+event RelayAuthorized(id, id).                           (* additional relay wid authorized for did *)
+event LegacyDevice(id, id).                              (* did registered as legacy device attested by wid *)
+
+(* ---------------------------------------------------------------- non-vacuity (expected: reachable) *)
+query did: id, wid: id, o: bitstring; event(VerifierAccepted(did, wid, o)).
+query did: id, wid: id, o: bitstring; event(VerifierAcceptedGw(did, wid, o)).
+
+(* ---------------------------------------------------------------- Q1 origin authentication *)
+query did: id, wid: id, o: bitstring;
+  event(VerifierAccepted(did, wid, o)) ==> event(DeviceSigned(did, o)) || event(DevKeyLeaked(did)).
+(* Q1-any: also covers the gateway branch, so a signing device cannot be accepted as gateway-attested *)
+query did: id, wid: id, o: bitstring;
+  event(VerifierAcceptedAny(did, wid, o)) ==>
+    event(DeviceSigned(did, o)) || event(DevKeyLeaked(did)) || event(LegacyDevice(did, wid)).
+
+(* ---------------------------------------------------------------- Q2 relay authentication and binding *)
+query did: id, wid: id, o: bitstring, s: bitstring;
+  event(VerifierAccepted(did, wid, o)) ==> event(RelayCountersigned(wid, h(o, s))) || event(RelayKeyLeaked(wid)).
+(* Q2-exact: the relay countersigned exactly the accepted (obs, osig) pair (no re-binding) *)
+query did: id, wid: id, o: bitstring, s: bitstring;
+  event(VerifierAcceptedSig(did, wid, o, s)) ==> event(RelayCountersigned(wid, h(o, s))) || event(RelayKeyLeaked(wid)).
+(* Q2-rel: agreement on the whole relay statement, including rts and mode (a broker cannot set 'buffered') *)
+query wid: id, r: bitstring;
+  event(VerifierAcceptedRel(wid, r)) ==> event(RelaySigned(wid, r)) || event(RelayKeyLeaked(wid)).
+
+(* ---------------------------------------------------------------- Q3 forgery needs both keys *)
+query did: id, wid: id, o: bitstring;
+  event(VerifierAccepted(did, wid, o)) ==>
+    event(DeviceSigned(did, o)) || (event(DevKeyLeaked(did)) && event(RelayKeyLeaked(wid))).
+query did: id, wid: id, o: bitstring;
+  event(VerifierAcceptedAny(did, wid, o)) ==>
+    event(DeviceSigned(did, o)) || (event(DevKeyLeaked(did)) && event(RelayKeyLeaked(wid))) || event(LegacyDevice(did, wid)).
+
+(* Q3-relay (corollary of Q3): without the relay key, even a holder of the device key cannot get a forgery accepted *)
+query did: id, wid: id, o: bitstring;
+  event(VerifierAccepted(did, wid, o)) ==> event(DeviceSigned(did, o)) || event(RelayKeyLeaked(wid)).
+
+(* ---------------------------------------------------------------- Q4 expected attack (both keys leaked) *)
+query did: id, wid: id, o: bitstring;
+  event(VerifierAccepted(did, wid, o)) ==> event(DeviceSigned(did, o)).
+
+(* ---------------------------------------------------------------- Q5 injective agreement (expected to fail) *)
+query did: id, wid: id, o: bitstring;
+  inj-event(VerifierAccepted(did, wid, o)) ==> inj-event(DeviceSigned(did, o)).
+(* Q5-replay: even with both relevant keys uncompromised, one signing can be accepted twice (replay) *)
+query did: id, wid: id, o: bitstring;
+  inj-event(VerifierAccepted(did, wid, o)) ==>
+    inj-event(DeviceSigned(did, o)) || event(DevKeyLeaked(did)) || event(RelayKeyLeaked(wid)).
+
+(* ---------------------------------------------------------------- Q6 legacy (gateway-attested) path *)
+query did: id, wid: id, o: bitstring;
+  event(VerifierAcceptedGw(did, wid, o)) ==> event(GatewayAttested(wid, o)) || event(RelayKeyLeaked(wid)).
+query did: id, wid: id, o: bitstring;
+  event(VerifierAcceptedGw(did, wid, o)) ==> event(LegacyDevice(did, wid)).
+(* Q6-attack (expected to fail): for a legacy device the relay key alone suffices to forge *)
+query did: id, wid: id, o: bitstring;
+  event(VerifierAcceptedGw(did, wid, o)) ==> event(GatewayAttested(wid, o)).
+
+(* ---------------------------------------------------------------- Q7 path authorization *)
+query did: id, wid: id, o: bitstring;
+  event(VerifierAccepted(did, wid, o)) ==> event(SigningDevice(did, wid)) || event(RelayAuthorized(did, wid)).
+
+(* ---------------------------------------------------------------- processes *)
+let Device(did: id, kidD: keyid, skD: skey, cOT: channel) =
+  ! in(c, body: bitstring);
+    let o = obsT(did, body, kidD) in
+    let osig = sign(dobs(o), skD) in
+    event DeviceSigned(did, o);
+    out(c, (o, osig)).                (* M-B: the device writes to the attacker-controlled link *)
+
+let Relay(wid: id, wkid: keyid, skW: skey, cOT: channel) =
+  ! in(c, (o: bitstring, osig: bitstring));             (* M-B: input from the attacker-controlled link *)
+    let obsT(did: id, body: bitstring, kid: keyid) = o in
+    get certs(=kid, =kDevice, =did, pkD: pkey) in        (* M-B: stricter relay, checks the device signature *)
+    if verify(osig, pkD, dobs(o)) = true then
+    in(c, extra: bitstring);          (* rts, mode: chosen by the environment *)
+    let odig = h(o, osig) in
+    let r = relT(wid, wkid, odig, extra) in
+    event RelayCountersigned(wid, odig);
+    event RelaySigned(wid, r);
+    out(c, (o, osig, r, sign(drel(r), skW))).
+
+let LegacyGateway(wid: id, wkid: keyid, skW: skey, didL: id) =
+  ! in(c, body: bitstring);           (* a legacy device cannot sign: its readings are unauthenticated *)
+    let o = obsT(didL, body, wkid) in
+    let osig = sign(dobs(o), skW) in
+    event GatewayAttested(wid, o);
+    in(c, extra: bitstring);
+    let odig = h(o, osig) in
+    let r = relT(wid, wkid, odig, extra) in
+    event RelayCountersigned(wid, odig);
+    event RelaySigned(wid, r);
+    out(c, (o, osig, r, sign(drel(r), skW))).
+
+let Verifier =
+  ! in(c, (o: bitstring, osig: bitstring, r: bitstring, rsig: bitstring));
+    let obsT(did: id, body: bitstring, kid: keyid) = o in
+    let relT(wid: id, wkid: keyid, odig: bitstring, extra: bitstring) = r in
+    get certs(=wkid, kW: kind, subW: id, pkW: pkey) in            (* UNKNOWN_KEY otherwise *)
+    if kW = kWorkload then if subW = wid then                     (* KEY_SUBJECT_MISMATCH otherwise *)
+    if verify(rsig, pkW, drel(r)) = true then                     (* INTEGRITY_RELAY otherwise *)
+    if odig = h(o, osig) then                                     (* BINDING_MISMATCH otherwise *)
+    get certs(=kid, kO: kind, subO: id, pkO: pkey) in
+    if verify(osig, pkO, dobs(o)) = true then                     (* INTEGRITY_OBS otherwise *)
+    if kO = kDevice then (
+      if subO = did then
+      get policy(=did, =wid, req: origin) in                      (* device origin meets both requirements *)
+      event VerifierAcceptedSig(did, wid, o, osig);
+      event VerifierAcceptedRel(wid, r);
+      event VerifierAcceptedAny(did, wid, o);
+      event VerifierAccepted(did, wid, o)
+    ) else if kO = kWorkload then (
+      if subO = wid then
+      get policy(=did, =wid, =reqGateway) in                      (* ORIGIN_SIGNER_TOO_WEAK otherwise *)
+      event VerifierAcceptedRel(wid, r);
+      event VerifierAcceptedAny(did, wid, o);
+      event VerifierAcceptedGw(did, wid, o)
+    ).
+
+let LeakDevice(did: id, skD: skey) = event DevKeyLeaked(did); out(c, skD).
+let LeakRelay(wid: id, skW: skey) = event RelayKeyLeaked(wid); out(c, skW).
+
+process
+  Verifier
+  | ! ( (* one cell: an edge workload, its signing devices and its legacy devices *)
+        new wid: id; new wkid: keyid; new skW: skey; new cOT: channel;
+        insert certs(wkid, kWorkload, wid, pk(skW));
+        out(c, (wid, wkid, pk(skW)));
+        ( Relay(wid, wkid, skW, cOT)
+        | LeakRelay(wid, skW)
+        | ! ( new did: id; new kidD: keyid; new skD: skey;
+              insert certs(kidD, kDevice, did, pk(skD));
+              insert policy(did, wid, reqDevice);
+              event SigningDevice(did, wid);
+              out(c, (did, kidD, pk(skD)));
+              ( Device(did, kidD, skD, cOT)
+              | LeakDevice(did, skD)
+              | ! ( in(c, w2: id);                               (* arbitrary extra relay authorizations *)
+                    event RelayAuthorized(did, w2);
+                    insert policy(did, w2, reqDevice) ) ) )
+        | ! ( new didL: id;
+              insert policy(didL, wid, reqGateway);
+              event LegacyDevice(didL, wid);
+              out(c, didL);
+              LegacyGateway(wid, wkid, skW, didL) ) ) )

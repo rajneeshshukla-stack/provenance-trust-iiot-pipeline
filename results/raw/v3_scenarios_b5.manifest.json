@@ -1,0 +1,96 @@
+{
+ "campaign": "v3_scenarios_b5",
+ "note": "merged by scripts/merge_b5_fix.py (amendment A4): B5 and B5S rows come from the re-runs under the fixed B5 code listed in 'sources'; other rows (PBTI-R in the mixed file) are unchanged from the original run; superseded rows: superseded/v3_scenarios_b5_before_B5_fix.jsonl",
+ "sources": {
+  "v3_scenarios_b5_fixedB5": {
+   "campaign": "scenarios",
+   "started": "2026-11-04T01:00:05-0600",
+   "args": {
+    "campaign": "scenarios",
+    "seeds": 20,
+    "workers": 2,
+    "out": "results/raw/v3_scenarios_b5_fixedB5.jsonl",
+    "only_errors_of": null,
+    "systems": [
+     "B5"
+    ],
+    "seed_start": 1,
+    "audit_seeds": 5,
+    "scenarios": null,
+    "skab_dir": null
+   },
+   "source_sha256": "c6305c988647779b924ce15e16a8bc6173fef8cd7ace720d34f6418f87f4cc7e",
+   "python": "3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]",
+   "platform": "Linux-6.18.44-fc-v233-x86_64-with-glibc2.39",
+   "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+   "logical_cpus": 2,
+   "ram_gb": 7.84,
+   "versions": {
+    "cryptography": "50.0.1",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "pandas": "3.0.5"
+   }
+  },
+  "v3_scenarios_b5s_fixed": {
+   "campaign": "scenarios",
+   "started": "2026-11-04T02:58:40-0600",
+   "args": {
+    "campaign": "scenarios",
+    "seeds": 20,
+    "workers": 2,
+    "out": "results/raw/v3_scenarios_b5s_fixed.jsonl",
+    "only_errors_of": null,
+    "systems": [
+     "B5S"
+    ],
+    "seed_start": 1,
+    "audit_seeds": 5,
+    "scenarios": null,
+    "skab_dir": null
+   },
+   "source_sha256": "c6305c988647779b924ce15e16a8bc6173fef8cd7ace720d34f6418f87f4cc7e",
+   "python": "3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]",
+   "platform": "Linux-6.18.44-fc-v233-x86_64-with-glibc2.39",
+   "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+   "logical_cpus": 2,
+   "ram_gb": 7.84,
+   "versions": {
+    "cryptography": "50.0.1",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "pandas": "3.0.5"
+   }
+  }
+ },
+ "original_run_manifest": {
+  "campaign": "scenarios",
+  "started": "2026-11-03T23:19:14-0600",
+  "args": {
+   "campaign": "scenarios",
+   "seeds": 20,
+   "workers": 2,
+   "out": "results/raw/v3_scenarios_b5.jsonl",
+   "only_errors_of": null,
+   "systems": [
+    "B5",
+    "B5S"
+   ],
+   "seed_start": 1,
+   "audit_seeds": 5,
+   "scenarios": null
+  },
+  "source_sha256": "4d2387d2199b5fbcae6487a80389e293d2c0f35e32c2fdc0bd8d89aeda42ff8e",
+  "python": "3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]",
+  "platform": "Linux-6.18.44-fc-v233-x86_64-with-glibc2.39",
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "logical_cpus": 2,
+  "ram_gb": 7.84,
+  "versions": {
+   "cryptography": "50.0.1",
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "pandas": "3.0.5"
+  }
+ }
+}

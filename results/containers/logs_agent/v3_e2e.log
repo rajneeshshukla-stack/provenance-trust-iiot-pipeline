@@ -1,0 +1,11 @@
+# image: pbti:v3
+# check: e2e (timeout 600s, --cpus=1.0)
+# cmd: docker run --rm --cpus=1.0  -v /home/claude/PBTI_v3/02_work/policy_container/container_out/v3:/out pbti:v3 python3 experiments/run_mqtt_e2e.py --rates 20 --reps 1 --warm 1 --measure 3 --drain 1 --out /out/mqtt_e2e_smoke.jsonl
+# start: 2026-11-04T05:20:47Z
+rep 1 rate 20 B3: p50 2.30 ms p99 7.59 ms thr 20/s
+rep 1 rate 20 B2: p50 1.35 ms p99 11.59 ms thr 20/s
+rep 1 rate 20 PBTI: p50 1.87 ms p99 6.56 ms thr 20/s
+rep 1 rate 20 B1: p50 1.54 ms p99 6.97 ms thr 20/s
+# exit_code: 0
+# end: 2026-11-04T05:21:32Z
+# wall_s: 45.504138711

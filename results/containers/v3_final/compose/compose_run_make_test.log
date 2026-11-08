@@ -1,0 +1,11 @@
+ Container deploy-pbti-run-703db5123311 Creating 
+ Container deploy-pbti-run-703db5123311 Created 
+python3 -m pytest -q --junitxml=results/summary/pytest_v3.xml
+........................................................................ [ 63%]
+...................s......................                               [100%]
+113 passed, 1 skipped in 192.28s (0:03:12)
+
+real	3m14.109s
+user	0m0.115s
+sys	0m0.087s
+exit=0

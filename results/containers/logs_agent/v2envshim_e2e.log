@@ -1,0 +1,29 @@
+# image: pbti:v2-envshim
+# check: e2e (timeout 600s, --cpus=1.0)
+# cmd: docker run --rm --cpus=1.0  -v /home/claude/PBTI_v3/02_work/policy_container/container_out/v2envshim:/out pbti:v2-envshim python3 experiments/run_mqtt_e2e.py --rates 20 --reps 1 --warm 1 --measure 3 --drain 1 --out /out/mqtt_e2e_smoke.jsonl
+# start: 2026-11-04T05:07:24Z
+rep 1 rate 20 B3: p50 2.50 ms p99 107.07 ms thr 20/s
+rep 1 rate 20 B2: p50 1.52 ms p99 2.62 ms thr 20/s
+Traceback (most recent call last):
+  File "/opt/pbti/experiments/run_mqtt_e2e.py", line 328, in <module>
+    main()
+    ~~~~^^
+  File "/opt/pbti/experiments/run_mqtt_e2e.py", line 320, in main
+    role_verifier(a)
+    ~~~~~~~~~~~~~^^^
+  File "/opt/pbti/experiments/run_mqtt_e2e.py", line 145, in role_verifier
+    w = json.loads(winfile.read_text())
+  File "/usr/local/lib/python3.13/json/__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/local/lib/python3.13/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/json/decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+rep 1 rate 20 PBTI: p50 nan ms p99 nan ms thr nan/s
+rep 1 rate 20 B1: p50 1.37 ms p99 2.88 ms thr 20/s
+# exit_code: 0
+# end: 2026-11-04T05:08:02Z
+# wall_s: 37.711357506

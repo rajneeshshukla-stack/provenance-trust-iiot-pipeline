@@ -1,0 +1,40 @@
+{
+ "S05_stolen_key|PBTI": {
+  "seeds": 20,
+  "per_run_mean_by_label": {
+   "impersonation": 150.0
+  }
+ },
+ "S05_stolen_key|B3": {
+  "seeds": 20,
+  "per_run_mean_by_label": {
+   "equivocation-back": 23.5,
+   "gapfill": 25.35,
+   "impersonation": 150.0,
+   "stolenkey-broker": 100.0
+  }
+ },
+ "S15_edge_compromise|PBTI": {
+  "seeds": 20,
+  "per_run_mean_by_label": {
+   "gwforge-legacy": 15.85
+  }
+ },
+ "S15_edge_compromise|B3": {
+  "seeds": 20,
+  "per_run_mean_by_label": {
+   "gwforge-legacy": 15.85
+  }
+ },
+ "S14_revocation|PBTI": {
+  "seeds": 20,
+  "per_run_mean_by_label": {}
+ },
+ "S14_revocation|B3": {
+  "seeds": 20,
+  "per_run_mean_by_label": {
+   "gwforge-legacy": 40.0,
+   "impersonation": 159.95
+  }
+ }
+}

@@ -1,0 +1,98 @@
+[
+    {
+        "Id": "sha256:93d2ed9f2ce4f190b1ac83080d110f3776d84073a2dcb6fc25c0759cacbf110d",
+        "RepoTags": [
+            "pbti:v3"
+        ],
+        "RepoDigests": [
+            "pbti@sha256:93d2ed9f2ce4f190b1ac83080d110f3776d84073a2dcb6fc25c0759cacbf110d"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-11-03T23:17:31.304159571-06:00",
+        "Config": {
+            "User": "10001:10001",
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.13.18",
+                "PYTHON_SHA256=abb0102e6d4ae027509bcb82327d9dd85515b44a3ba8ad538cfc5e9847029f68",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "PYTHONUNBUFFERED=1",
+                "PIP_NO_CACHE_DIR=1",
+                "PIP_DISABLE_PIP_VERSION_CHECK=1",
+                "PYTEST_ADDOPTS=-p no:cacheprovider"
+            ],
+            "Entrypoint": [
+                "/usr/bin/tini",
+                "-g",
+                "--"
+            ],
+            "Cmd": [
+                "make",
+                "test",
+                "campaign",
+                "perf",
+                "e2e",
+                "analysis"
+            ],
+            "WorkingDir": "/opt/pbti",
+            "Labels": {
+                "org.opencontainers.image.base.digest": "sha256:ae14d4ce8771606477a81446e7ef429edd6762305fc50c84507c1041fa8285d1",
+                "org.opencontainers.image.base.name": "docker.io/library/python:3.13.18-slim-trixie",
+                "org.opencontainers.image.description": "PBTI-IIoT reference implementation, baselines and evaluation testbed (hardened validation image)",
+                "org.opencontainers.image.licenses": "Apache-2.0",
+                "org.opencontainers.image.title": "pbti-iiot"
+            },
+            "StopSignal": "SIGTERM",
+            "ArgsEscaped": true,
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "python3",
+                    "-c",
+                    "import shutil, sys; sys.path.insert(0, '/opt/pbti/src'); import pbti.verifier, pbti.policy, paho.mqtt.client, cryptography; sys.exit(0 if shutil.which('mosquitto') else 1)"
+                ],
+                "Interval": 60000000000,
+                "Timeout": 10000000000,
+                "StartPeriod": 20000000000,
+                "Retries": 3
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 768668378,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:a5d6d345f6afa08d7c31272055746d60a838b290bfcc82c0a23e8e984d61a933",
+                "sha256:b9baa14e993c683240d519adebb39657df4d2b973dc2f3fee23cd51367806e2b",
+                "sha256:1217eb836a36d0c4be6a310113a777ecb9d7e9c24197a407665c8884cc5369a4",
+                "sha256:3929d22d8aa43d69f436bbc47ef472db875440b850dbc4e80dd272a3adf673d2",
+                "sha256:6042dab0be8fe92f703755a562bd9f355c2cf53a757ffe8921df5becb406cf53",
+                "sha256:5ff7c470a0b85d30bbdbf9c6cae219ab295679f3b77f8178f6a72c9dc60fdc27",
+                "sha256:8e1148a2f9d6f53d9896dede11cc5bbd0a96f9c45ad9883a3c4ef92400a91fd2",
+                "sha256:9b8654b051b9d432439f97741ee9d5d9ff956d9fbaaf9bcbb64c7614e0a5e72a",
+                "sha256:61df4987515af149e6229f991d4093b468e6739ca93682d2d19355f58a96baed",
+                "sha256:e70f428a74e8a288ca5661c110976bb4c22b9e13076690f14b5497d9f536246c",
+                "sha256:206f625bbb11af00331a1c240637dd8717b738afa4f0cd2b4d638683f2490266"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-11-04T05:17:52.729589302Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:93d2ed9f2ce4f190b1ac83080d110f3776d84073a2dcb6fc25c0759cacbf110d",
+            "size": 856
+        },
+        "Identity": {
+            "Build": [
+                {
+                    "Ref": "n9vzc4sdcqyc8ee340efv9hfc",
+                    "CreatedAt": "2026-11-03T23:17:57.685616754-06:00"
+                }
+            ]
+        }
+    }
+]

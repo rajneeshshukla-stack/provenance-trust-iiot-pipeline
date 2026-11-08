@@ -1,0 +1,4 @@
+{"where": "S05_stolen_key", "system": "B5", "seed": 21, "cfg": {}, "checks": 342, "mismatch_checks": 0, "max_diff": 0}
+{"where": "S99_mixed", "system": "B5", "seed": 22, "cfg": {"review_mode": "event", "review_delay_ms": 0, "review_rule": "defer"}, "checks": 358, "mismatch_checks": 0, "max_diff": 0}
+{"where": "run15", "system": "PBTI-SH", "seed": 21, "cfg": {"sh_timeout_ms": 30000}, "checks": 138, "mismatch_checks": 0, "max_diff": 0}
+{"where": "S99_mixed", "system": "PBTI-R", "seed": 21, "cfg": {}, "checks": 409, "mismatch_checks": 0, "max_diff": 0}

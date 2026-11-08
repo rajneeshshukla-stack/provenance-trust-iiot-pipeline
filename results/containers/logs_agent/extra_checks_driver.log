@@ -1,0 +1,10 @@
+repeat 1: 4 system lines, 0 nan, 0 tracebacks
+repeat 2: 4 system lines, 0 nan, 0 tracebacks
+# docker stop -t 20 took: .234532983 s
+# state: ExitCode=2 OOMKilled=false Error=
+# docker stop -t 20 took: .255807976 s
+# state: ExitCode=143 OOMKilled=false Error=
+# t+20s status: no-healthcheck
+# t+20s status: healthy
+smoke exit=0
+e2e exit=0

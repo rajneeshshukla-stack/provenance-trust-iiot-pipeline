@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the article below (citation details to be completed on publication)."
+title: "PBTI-IIoT: Provenance-Bound Trust-Aware Ingestion for Industrial IoT edge-to-cloud data pipelines (reference implementation and testbed)"
+version: "0.9.0 (V9 research package, unreleased)"
+# [AUTHOR INPUT REQUIRED: add date-released and the archive DOI (identifiers:) when the repository is published]
+license: Apache-2.0
+authors:
+  - family-names: Shukla
+    given-names: Rajneesh
+    affiliation: "Independent Researcher, Houston, TX, USA"
+    email: rajneeshshukla@ieee.org
+    orcid: "https://orcid.org/0009-0008-3618-192X"
+  - family-names: Gupta
+    given-names: Punit
+    affiliation: "Independent Researcher, Mountain View, CA, USA"
+    email: punitgupta@ieee.org
+    orcid: "https://orcid.org/0009-0005-8312-7844"
+preferred-citation:
+  type: article
+  title: "Provenance-Bound Trust-Aware Ingestion for Industrial IoT Edge-to-Cloud Data Pipelines: Per-Identity Conflict Containment and Its Security-Availability Trade-offs"
+  authors:
+    - family-names: Shukla
+      given-names: Rajneesh
+      orcid: "https://orcid.org/0009-0008-3618-192X"
+    - family-names: Gupta
+      given-names: Punit
+      orcid: "https://orcid.org/0009-0005-8312-7844"
+  journal: "Future Internet (in preparation)"
+  year: 2026

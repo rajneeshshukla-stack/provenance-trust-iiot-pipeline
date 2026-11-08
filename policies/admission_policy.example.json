@@ -1,0 +1,300 @@
+{
+  "devices": {
+    "pa-c1-d01": {
+      "active": true,
+      "assets": [
+        "pa-c1-a01"
+      ],
+      "origin": "gateway",
+      "schemas": [
+        "telemetry.v1"
+      ]
+    },
+    "pa-c1-d02": {
+      "active": true,
+      "assets": [
+        "pa-c1-a02"
+      ],
+      "origin": "device",
+      "schemas": [
+        "telemetry.v1"
+      ]
+    },
+    "pa-c1-d03": {
+      "active": true,
+      "assets": [
+        "pa-c1-a03"
+      ],
+      "origin": "device",
+      "schemas": [
+        "telemetry.v1"
+      ]
+    },
+    "pa-c1-d04": {
+      "active": true,
+      "assets": [
+        "pa-c1-a04"
+      ],
+      "origin": "device",
+      "schemas": [
+        "telemetry.v1"
+      ]
+    },
+    "pa-c1-d05": {
+      "active": true,
+      "assets": [
+        "pa-c1-a05"
+      ],
+      "origin": "device",
+      "schemas": [
+        "telemetry.v1"
+      ]
+    },
+    "pa-c1-d06": {
+      "active": true,
+      "assets": [
+        "pa-c1-a06"
+      ],
+      "origin": "device",
+      "schemas": [
+        "telemetry.v1"
+      ]
+    },
+    "pa-c2-d01": {
+      "active": true,
+      "assets": [
+        "pa-c2-a01"
+      ],
+      "origin": "gateway",
+      "schemas": [
+        "telemetry.v1"
+      ]
+    },
+    "pa-c2-d02": {
+      "active": true,
+      "assets": [
+        "pa-c2-a02"
+      ],
+      "origin": "device",
+      "schemas": [
+        "telemetry.v1"
+      ]
+    },
+    "pa-c2-d03": {
+      "active": true,
+      "assets": [
+        "pa-c2-a03"
+      ],
+      "origin": "device",
+      "schemas": [
+        "telemetry.v1"
+      ]
+    },
+    "pa-c2-d04": {
+      "active": true,
+      "assets": [
+        "pa-c2-a04"
+      ],
+      "origin": "device",
+      "schemas": [
+        "telemetry.v1"
+      ]
+    },
+    "pa-c2-d05": {
+      "active": true,
+      "assets": [
+        "pa-c2-a05"
+      ],
+      "origin": "device",
+      "schemas": [
+        "telemetry.v1"
+      ]
+    },
+    "pa-c2-d06": {
+      "active": true,
+      "assets": [
+        "pa-c2-a06"
+      ],
+      "origin": "device",
+      "schemas": [
+        "telemetry.v1"
+      ]
+    },
+    "pa-c3-d01": {
+      "active": true,
+      "assets": [
+        "pa-c3-a01"
+      ],
+      "origin": "gateway",
+      "schemas": [
+        "telemetry.v1"
+      ]
+    },
+    "pa-c3-d02": {
+      "active": true,
+      "assets": [
+        "pa-c3-a02"
+      ],
+      "origin": "device",
+      "schemas": [
+        "telemetry.v1"
+      ]
+    },
+    "pa-c3-d03": {
+      "active": true,
+      "assets": [
+        "pa-c3-a03"
+      ],
+      "origin": "device",
+      "schemas": [
+        "telemetry.v1"
+      ]
+    },
+    "pa-c3-d04": {
+      "active": true,
+      "assets": [
+        "pa-c3-a04"
+      ],
+      "origin": "device",
+      "schemas": [
+        "telemetry.v1"
+      ]
+    },
+    "pa-c3-d05": {
+      "active": true,
+      "assets": [
+        "pa-c3-a05"
+      ],
+      "origin": "device",
+      "schemas": [
+        "telemetry.v1"
+      ]
+    },
+    "pa-c3-d06": {
+      "active": true,
+      "assets": [
+        "pa-c3-a06"
+      ],
+      "origin": "device",
+      "schemas": [
+        "telemetry.v1"
+      ]
+    },
+    "pa-c4-d01": {
+      "active": true,
+      "assets": [
+        "pa-c4-a01"
+      ],
+      "origin": "gateway",
+      "schemas": [
+        "telemetry.v1"
+      ]
+    },
+    "pa-c4-d02": {
+      "active": true,
+      "assets": [
+        "pa-c4-a02"
+      ],
+      "origin": "device",
+      "schemas": [
+        "telemetry.v1"
+      ]
+    },
+    "pa-c4-d03": {
+      "active": true,
+      "assets": [
+        "pa-c4-a03"
+      ],
+      "origin": "device",
+      "schemas": [
+        "telemetry.v1"
+      ]
+    },
+    "pa-c4-d04": {
+      "active": true,
+      "assets": [
+        "pa-c4-a04"
+      ],
+      "origin": "device",
+      "schemas": [
+        "telemetry.v1"
+      ]
+    },
+    "pa-c4-d05": {
+      "active": true,
+      "assets": [
+        "pa-c4-a05"
+      ],
+      "origin": "device",
+      "schemas": [
+        "telemetry.v1"
+      ]
+    },
+    "pa-c4-d06": {
+      "active": true,
+      "assets": [
+        "pa-c4-a06"
+      ],
+      "origin": "device",
+      "schemas": [
+        "telemetry.v1"
+      ]
+    }
+  },
+  "params": {
+    "epoch_drain_ms": 3600000,
+    "gap_close_ms": 3600000,
+    "h_max_ms": 3600000,
+    "max_seq_jump": 100000,
+    "on_revoked_buffered": "quarantine",
+    "retry_window_ms": 30000,
+    "rotation_grace_ms": 3600000,
+    "skew_max_ms": 5000
+  },
+  "workloads": {
+    "spiffe://plant-a.example/cell1/gw1/collector": {
+      "active": true,
+      "relay": [
+        "pa-c1-d01",
+        "pa-c1-d02",
+        "pa-c1-d03",
+        "pa-c1-d04",
+        "pa-c1-d05",
+        "pa-c1-d06"
+      ]
+    },
+    "spiffe://plant-a.example/cell2/gw2/collector": {
+      "active": true,
+      "relay": [
+        "pa-c2-d01",
+        "pa-c2-d02",
+        "pa-c2-d03",
+        "pa-c2-d04",
+        "pa-c2-d05",
+        "pa-c2-d06"
+      ]
+    },
+    "spiffe://plant-a.example/cell3/gw3/collector": {
+      "active": true,
+      "relay": [
+        "pa-c3-d01",
+        "pa-c3-d02",
+        "pa-c3-d03",
+        "pa-c3-d04",
+        "pa-c3-d05",
+        "pa-c3-d06"
+      ]
+    },
+    "spiffe://plant-a.example/cell4/gw4/collector": {
+      "active": true,
+      "relay": [
+        "pa-c4-d01",
+        "pa-c4-d02",
+        "pa-c4-d03",
+        "pa-c4-d04",
+        "pa-c4-d05",
+        "pa-c4-d06"
+      ]
+    }
+  }
+}

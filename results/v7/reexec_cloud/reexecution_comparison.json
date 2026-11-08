@@ -1,0 +1,506 @@
+{
+ "campaigns": {
+  "A0_core_subset.jsonl": {
+   "stored_file": "A0_core.jsonl",
+   "new_file": "A0_core_subset.jsonl",
+   "compared": 132,
+   "identical": 132,
+   "different": 0,
+   "missing_in_stored": [],
+   "errors_in_new": 0,
+   "n_field_comparisons": 12367,
+   "timing_fields_excluded": [
+    "audit_replay_s",
+    "audit_static_s",
+    "devsign_us_mean",
+    "ingest_us_mean",
+    "ingest_us_p50",
+    "ingest_us_p95",
+    "ingest_us_p99",
+    "wall_s",
+    "wrap_us_mean"
+   ],
+   "differences": [],
+   "by_arm": {
+    "B4": {
+     "compared": 32,
+     "identical": 32
+    },
+    "B5-hist": {
+     "compared": 32,
+     "identical": 32
+    },
+    "B5S": {
+     "compared": 32,
+     "identical": 32
+    },
+    "PBTI": {
+     "compared": 32,
+     "identical": 32
+    },
+    "PBTI-R-hist": {
+     "compared": 4,
+     "identical": 4
+    }
+   },
+   "seeds": [
+    1,
+    2
+   ],
+   "stored_rows_same_seeds_not_reexecuted": []
+  },
+  "A1_review_subset.jsonl": {
+   "stored_file": "A1_review.jsonl",
+   "new_file": "A1_review_subset.jsonl",
+   "compared": 176,
+   "identical": 176,
+   "different": 0,
+   "missing_in_stored": [],
+   "errors_in_new": 0,
+   "n_field_comparisons": 19550,
+   "timing_fields_excluded": [
+    "audit_replay_s",
+    "audit_static_s",
+    "devsign_us_mean",
+    "ingest_us_mean",
+    "ingest_us_p50",
+    "ingest_us_p95",
+    "ingest_us_p99",
+    "wall_s",
+    "wrap_us_mean"
+   ],
+   "differences": [],
+   "by_arm": {
+    "B5-d0c1": {
+     "compared": 8,
+     "identical": 8
+    },
+    "B5-d0c10": {
+     "compared": 8,
+     "identical": 8
+    },
+    "B5-d1c1": {
+     "compared": 8,
+     "identical": 8
+    },
+    "B5-d1c10": {
+     "compared": 8,
+     "identical": 8
+    },
+    "B5-d5c1": {
+     "compared": 8,
+     "identical": 8
+    },
+    "B5-d5c10": {
+     "compared": 8,
+     "identical": 8
+    },
+    "B5-d60c1": {
+     "compared": 8,
+     "identical": 8
+    },
+    "B5-d60c10": {
+     "compared": 8,
+     "identical": 8
+    },
+    "B5-event": {
+     "compared": 8,
+     "identical": 8
+    },
+    "B5-hist": {
+     "compared": 8,
+     "identical": 8
+    },
+    "B5-oneshot-d0c10": {
+     "compared": 8,
+     "identical": 8
+    },
+    "PBTI": {
+     "compared": 8,
+     "identical": 8
+    },
+    "PBTI-R-d0c1": {
+     "compared": 8,
+     "identical": 8
+    },
+    "PBTI-R-d0c10": {
+     "compared": 8,
+     "identical": 8
+    },
+    "PBTI-R-d1c1": {
+     "compared": 8,
+     "identical": 8
+    },
+    "PBTI-R-d1c10": {
+     "compared": 8,
+     "identical": 8
+    },
+    "PBTI-R-d5c1": {
+     "compared": 8,
+     "identical": 8
+    },
+    "PBTI-R-d5c10": {
+     "compared": 8,
+     "identical": 8
+    },
+    "PBTI-R-d60c1": {
+     "compared": 8,
+     "identical": 8
+    },
+    "PBTI-R-d60c10": {
+     "compared": 8,
+     "identical": 8
+    },
+    "PBTI-R-event": {
+     "compared": 8,
+     "identical": 8
+    },
+    "PBTI-R-hist": {
+     "compared": 8,
+     "identical": 8
+    }
+   },
+   "seeds": [
+    21,
+    22
+   ],
+   "stored_rows_same_seeds_not_reexecuted": []
+  },
+  "A3_selective_subset.jsonl": {
+   "stored_file": "A3_selective.jsonl",
+   "new_file": "A3_selective_subset.jsonl",
+   "compared": 294,
+   "identical": 294,
+   "different": 0,
+   "missing_in_stored": [],
+   "errors_in_new": 0,
+   "n_field_comparisons": 29687,
+   "timing_fields_excluded": [
+    "audit_replay_s",
+    "audit_static_s",
+    "devsign_us_mean",
+    "ingest_us_mean",
+    "ingest_us_p50",
+    "ingest_us_p95",
+    "ingest_us_p99",
+    "wall_s",
+    "wrap_us_mean"
+   ],
+   "differences": [],
+   "by_arm": {
+    "B5-event": {
+     "compared": 42,
+     "identical": 42
+    },
+    "B5-hist": {
+     "compared": 42,
+     "identical": 42
+    },
+    "B5S": {
+     "compared": 42,
+     "identical": 42
+    },
+    "PBTI": {
+     "compared": 42,
+     "identical": 42
+    },
+    "PBTI-R-hist": {
+     "compared": 42,
+     "identical": 42
+    },
+    "PBTI-SH": {
+     "compared": 42,
+     "identical": 42
+    },
+    "PBTI-SH-T30": {
+     "compared": 42,
+     "identical": 42
+    }
+   },
+   "seeds": [
+    21,
+    22
+   ],
+   "stored_rows_same_seeds_not_reexecuted": []
+  },
+  "A3_scenarios_subset.jsonl": {
+   "stored_file": "A3_scenarios.jsonl",
+   "new_file": "A3_scenarios_subset.jsonl",
+   "compared": 40,
+   "identical": 40,
+   "different": 0,
+   "missing_in_stored": [],
+   "errors_in_new": 0,
+   "n_field_comparisons": 3995,
+   "timing_fields_excluded": [
+    "audit_replay_s",
+    "audit_static_s",
+    "devsign_us_mean",
+    "ingest_us_mean",
+    "ingest_us_p50",
+    "ingest_us_p95",
+    "ingest_us_p99",
+    "wall_s",
+    "wrap_us_mean"
+   ],
+   "differences": [],
+   "by_arm": {
+    "PBTI-SH": {
+     "compared": 32,
+     "identical": 32
+    },
+    "PBTI-SH-T30": {
+     "compared": 8,
+     "identical": 8
+    }
+   },
+   "seeds": [
+    1,
+    2
+   ],
+   "stored_rows_same_seeds_not_reexecuted": []
+  },
+  "A3_factorial_subset.jsonl": {
+   "stored_file": "A3_factorial.jsonl",
+   "new_file": "A3_factorial_subset.jsonl",
+   "compared": 112,
+   "identical": 112,
+   "different": 0,
+   "missing_in_stored": [],
+   "errors_in_new": 0,
+   "n_field_comparisons": 12282,
+   "timing_fields_excluded": [
+    "audit_replay_s",
+    "audit_static_s",
+    "devsign_us_mean",
+    "ingest_us_mean",
+    "ingest_us_p50",
+    "ingest_us_p95",
+    "ingest_us_p99",
+    "wall_s",
+    "wrap_us_mean"
+   ],
+   "differences": [],
+   "by_arm": {
+    "B5-event": {
+     "compared": 16,
+     "identical": 16
+    },
+    "B5-hist": {
+     "compared": 16,
+     "identical": 16
+    },
+    "B5S": {
+     "compared": 16,
+     "identical": 16
+    },
+    "PBTI": {
+     "compared": 16,
+     "identical": 16
+    },
+    "PBTI-R-hist": {
+     "compared": 16,
+     "identical": 16
+    },
+    "PBTI-SH": {
+     "compared": 16,
+     "identical": 16
+    },
+    "PBTI-SH-T30": {
+     "compared": 16,
+     "identical": 16
+    }
+   },
+   "seeds": [
+    21,
+    22
+   ],
+   "stored_rows_same_seeds_not_reexecuted": []
+  }
+ },
+ "a5_lifecycle_matrix": {
+  "stored_rows": 68,
+  "new_rows": 68,
+  "identical_rows": 68,
+  "different_or_missing": []
+ },
+ "formal_check": {
+  "all_pass_stored": true,
+  "all_pass_new": true,
+  "identical_excluding_timing": true,
+  "differing_paths": []
+ },
+ "pytest": {
+  "summary_line": "187 passed, 1 skipped in 108.70s (0:01:48)",
+  "counts": {
+   "passed": 187,
+   "skipped": 1
+  }
+ },
+ "steps": [
+  {
+   "step": "pytest",
+   "exit_code": 0,
+   "start_utc": "2026-11-05T23:31:02Z",
+   "end_utc": "2026-11-05T23:32:52Z",
+   "command": "python3 -m pytest -q tests/"
+  },
+  {
+   "step": "A0_core",
+   "exit_code": 0,
+   "start_utc": "2026-11-05T23:32:52Z",
+   "end_utc": "2026-11-05T23:43:26Z",
+   "command": "python3 experiments/run_v4.py experiments/v4_configs/A0_core.json --seeds 1 2 --workers 2 --out /home/claude/PBTI_v7/results/reexec_cloud/A0_core_subset.jsonl"
+  },
+  {
+   "step": "A1_review",
+   "exit_code": 0,
+   "start_utc": "2026-11-05T23:43:26Z",
+   "end_utc": "2026-11-06T00:09:52Z",
+   "command": "python3 experiments/run_v4.py experiments/v4_configs/A1_review.json --seeds 21 22 --workers 2 --out /home/claude/PBTI_v7/results/reexec_cloud/A1_review_subset.jsonl"
+  },
+  {
+   "step": "A3_selective",
+   "exit_code": 0,
+   "start_utc": "2026-11-06T00:09:52Z",
+   "end_utc": "2026-11-06T00:34:38Z",
+   "command": "python3 experiments/run_v4.py experiments/v4_configs/A3_selective.json --seeds 21 22 --workers 2 --out /home/claude/PBTI_v7/results/reexec_cloud/A3_selective_subset.jsonl"
+  },
+  {
+   "step": "A3_scenarios",
+   "exit_code": 0,
+   "start_utc": "2026-11-06T00:34:38Z",
+   "end_utc": "2026-11-06T00:41:55Z",
+   "command": "python3 experiments/run_v4.py experiments/v4_configs/A3_scenarios.json --seeds 1 2 --workers 2 --out /home/claude/PBTI_v7/results/reexec_cloud/A3_scenarios_subset.jsonl"
+  },
+  {
+   "step": "A3_factorial",
+   "exit_code": 0,
+   "start_utc": "2026-11-06T00:41:55Z",
+   "end_utc": "2026-11-06T00:50:01Z",
+   "command": "python3 experiments/run_v4.py experiments/v4_configs/amendment1/A3_factorial.json --seeds 21 22 --workers 2 --out /home/claude/PBTI_v7/results/reexec_cloud/A3_factorial_subset.jsonl"
+  },
+  {
+   "step": "A5_matrix",
+   "exit_code": 0,
+   "start_utc": "2026-11-06T00:50:01Z",
+   "end_utc": "2026-11-06T00:50:01Z",
+   "command": "python3 scripts/a5_lifecycle_matrix.py"
+  },
+  {
+   "step": "formal_check",
+   "exit_code": 0,
+   "start_utc": "2026-11-06T00:50:01Z",
+   "end_utc": "2026-11-06T00:52:09Z",
+   "command": "python3 formal/v4_locality_lifecycle_check.py --out /home/claude/PBTI_v7/results/reexec_cloud/v4_locality_lifecycle_check.json"
+  }
+ ],
+ "environment": {
+  "label": "automated re-execution in the cloud workspace (Claude Opus 5.5 session; not an author-controlled machine)",
+  "time_utc": "2026-11-05T23:31:02+00:00",
+  "time_local": "2026-11-05T17:31:02-06:00",
+  "cpu_model": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "logical_cpus": 2,
+  "memory_gib": 7.83,
+  "os": "Ubuntu 24.04.5 LTS",
+  "kernel": "6.18.44-fc-v242",
+  "machine": "x86_64",
+  "python": "3.13.18",
+  "python_implementation": "CPython",
+  "packages": {
+   "cryptography": "50.0.1",
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "pandas": "3.0.5",
+   "matplotlib": "3.11.2",
+   "PyYAML": "6.0.3",
+   "psutil": "7.2.2",
+   "paho-mqtt": "2.1.0",
+   "pytest": "9.1.1"
+  },
+  "git_commit": null,
+  "source_sha256_src_pbti_aggregate": "1e52921a372bd21215ae2b53e98ecb86499ead7332359ddeda44d71e436e630d",
+  "code_sha256_aggregate": "4eef8d473a6917ab5c9053f4cdcad3801246631766fdcfbba79546bd9555a53e",
+  "config_sha256": {
+   "experiments/v4_configs/A0_core.json": "230d4d21606a23b1dea95d7d8ac013f99331cfb11af17d2cba50252a0793f39b",
+   "experiments/v4_configs/A1_review.json": "7bb565bc8248ba66037ff7aa6a45f23545de2283dbe6835bbbdc7a7ac440feb8",
+   "experiments/v4_configs/A3_scenarios.json": "ca81520954b0b0966a359a290b9abccc39b645929cf2847437058f4b1190e015",
+   "experiments/v4_configs/A3_selective.json": "4a9bf4bbcf75880448596ead1b65ab4248cab00244ca8572909c020f4ec46494",
+   "experiments/v4_configs/amendment1/A3_factorial.json": "0ce7c110265349dcc299f9a7e37e818b641401b3fb74ca7170e1aee117b406ac",
+   "config/README.md": "d7ed3d151d843461901753db810f20f11609d0c9f26dfbcde6a8b973235fa316"
+  },
+  "note": "host name, user name and absolute paths are intentionally not recorded"
+ },
+ "digests": {
+  "A0_core_subset.jsonl": {
+   "source_sha256": {
+    "stored": "8dfae6decd80e5019e269df1e017d19ed479c402c34348d12bac9ff2b0a2aef1",
+    "new": "8dfae6decd80e5019e269df1e017d19ed479c402c34348d12bac9ff2b0a2aef1",
+    "equal": true
+   },
+   "config_sha256": {
+    "stored": "230d4d21606a23b1dea95d7d8ac013f99331cfb11af17d2cba50252a0793f39b",
+    "new": "230d4d21606a23b1dea95d7d8ac013f99331cfb11af17d2cba50252a0793f39b",
+    "equal": true
+   }
+  },
+  "A1_review_subset.jsonl": {
+   "source_sha256": {
+    "stored": "8dfae6decd80e5019e269df1e017d19ed479c402c34348d12bac9ff2b0a2aef1",
+    "new": "8dfae6decd80e5019e269df1e017d19ed479c402c34348d12bac9ff2b0a2aef1",
+    "equal": true
+   },
+   "config_sha256": {
+    "stored": "7bb565bc8248ba66037ff7aa6a45f23545de2283dbe6835bbbdc7a7ac440feb8",
+    "new": "7bb565bc8248ba66037ff7aa6a45f23545de2283dbe6835bbbdc7a7ac440feb8",
+    "equal": true
+   }
+  },
+  "A3_selective_subset.jsonl": {
+   "source_sha256": {
+    "stored": "8dfae6decd80e5019e269df1e017d19ed479c402c34348d12bac9ff2b0a2aef1",
+    "new": "8dfae6decd80e5019e269df1e017d19ed479c402c34348d12bac9ff2b0a2aef1",
+    "equal": true
+   },
+   "config_sha256": {
+    "stored": "4a9bf4bbcf75880448596ead1b65ab4248cab00244ca8572909c020f4ec46494",
+    "new": "4a9bf4bbcf75880448596ead1b65ab4248cab00244ca8572909c020f4ec46494",
+    "equal": true
+   }
+  },
+  "A3_scenarios_subset.jsonl": {
+   "source_sha256": {
+    "stored": "8dfae6decd80e5019e269df1e017d19ed479c402c34348d12bac9ff2b0a2aef1",
+    "new": "8dfae6decd80e5019e269df1e017d19ed479c402c34348d12bac9ff2b0a2aef1",
+    "equal": true
+   },
+   "config_sha256": {
+    "stored": "ca81520954b0b0966a359a290b9abccc39b645929cf2847437058f4b1190e015",
+    "new": "ca81520954b0b0966a359a290b9abccc39b645929cf2847437058f4b1190e015",
+    "equal": true
+   }
+  },
+  "A3_factorial_subset.jsonl": {
+   "source_sha256": {
+    "stored": "8dfae6decd80e5019e269df1e017d19ed479c402c34348d12bac9ff2b0a2aef1",
+    "new": "8dfae6decd80e5019e269df1e017d19ed479c402c34348d12bac9ff2b0a2aef1",
+    "equal": true
+   },
+   "config_sha256": {
+    "stored": "0ce7c110265349dcc299f9a7e37e818b641401b3fb74ca7170e1aee117b406ac",
+    "new": "0ce7c110265349dcc299f9a7e37e818b641401b3fb74ca7170e1aee117b406ac",
+    "equal": true
+   }
+  }
+ },
+ "totals": {
+  "compared": 754,
+  "identical": 754,
+  "different": 0,
+  "errors_in_new": 0,
+  "n_field_comparisons": 77881,
+  "missing_in_stored": 0,
+  "not_reexecuted": 0
+ },
+ "verdict": "ALL RE-EXECUTED OUTPUTS IDENTICAL TO STORED OUTPUTS (timing excluded)"
+}

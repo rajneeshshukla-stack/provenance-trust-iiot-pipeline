@@ -1,0 +1,16 @@
+{
+ "found_by": "formal/v4_locality_lifecycle_check.py part C (random sample, seed 2, smoke run)",
+ "minimal_schedule": [
+  "dG0 (deliver G(0,0) under dk:d1:1 at t=2 s)",
+  "REV_LATE (revoke dk:d1:1 at t=3 s with t_comp=3 s; processed at 4 s)",
+  "REV_EARLY (revoke dk:d1:1 again at t=5 s with revised t_comp=0)"
+ ],
+ "invariant": "C4 taint exactness: after (kid, t_comp=0) is processed, the COMMITTED slot (d1,0,0) with commit time 2 s >= 0 must be TAINTED",
+ "observed": "slot (d1,0,0) remains COMMITTED, untainted and authoritative",
+ "cause": "TrustView.status reported a revocation only the first time a key id appeared (k not in self._status); a revised record for an already revoked key (earlier compromise time) never reached the taint selector. TrustRegistry.revoke also overwrote the record, so a revision could move t_comp later and loosen the REVOKED_BUFFERED release condition.",
+ "affected_source_sha256": {
+  "src/pbti/identity.py": "29c69fea14876d5a8ac3a1385b80763de5542766902910fa207f57d06fea2581"
+ },
+ "historical_impact": "none expected: no V2/V3 scenario, sweep or replay revokes the same key twice (src/pbti/scenarios.py, sweep.py, dataset.py, sim.py); confirmed by the A0 field-by-field replication",
+ "fix": "V4 decision D05: a key stays revoked from its first revocation; revisions merge conservatively (earliest t_rev, earliest known t_comp); TrustView reports any changed record, so the taint selector re-runs with the revised t_comp (taint stays monotone)"
+}

@@ -1,0 +1,240 @@
+# ProVerif installation transcript (all commands run as root on Ubuntu 24.04, 2026-11-04)
+# Route: apt (opam, ocaml) -> opam init (system compiler) -> opam install proverif.
+# opam fetched every source archive from its cache mirror https://opam.ocaml.org/cache and verified it against
+# the checksum in the opam package file; no binary or source was fetched by any other route.
+# The first 'opam install' stopped because the depext libgtk2.0-dev (needed by lablgtk, a dependency of the
+# proverif opam package) was missing; it was installed with apt and 'opam install' was re-run.
+# Note: the proxy status page listed an earlier rejected CONNECT to bproverif.inria.fr:443 (502, policy/upstream),
+# made before this work started; the INRIA host was not needed because opam's cache mirror served the archive.
+
+=================================================================== 1. DEBIAN_FRONTEND=noninteractive apt-get update -y && apt-get install -y opam ocaml
+Get:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Get:2 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1552 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2172 kB]
+Get:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1741 kB]
+Fetched 5718 kB in 2s (3044 kB/s)
+0 upgraded, 20 newly installed, 0 to remove and 7 not upgraded.
+Get:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libpopt0 amd64 1.19+dfsg-1build1 [28.6 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 rsync amd64 3.2.7-1ubuntu1.5 [443 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libcbor0.10 amd64 0.10.2-1.2ubuntu2 [25.8 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libfido2-1 amd64 1.14.0-1build3 [83.5 kB]
+Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.20 [909 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 bubblewrap amd64 0.9.0-1ubuntu0.3 [50.4 kB]
+Get:7 http://archive.ubuntu.com/ubuntu noble/universe amd64 libstdlib-ocaml amd64 4.14.1-1ubuntu1 [378 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 ocaml-base amd64 4.14.1-1ubuntu1 [256 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble/universe amd64 ledit amd64 2.04-7build5 [60.4 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble/universe amd64 libamd3 amd64 1:7.6.1+dfsg-1build1 [27.2 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble/universe amd64 libstdlib-ocaml-dev amd64 4.14.1-1ubuntu1 [8453 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 libcompiler-libs-ocaml-dev amd64 4.14.1-1ubuntu1 [38.4 MB]
+Get:13 http://archive.ubuntu.com/ubuntu noble/universe amd64 libglpk40 amd64 5.0-1build2 [369 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 mercurial-common all 6.7.2-1ubuntu2.2 [2955 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 mercurial amd64 6.7.2-1ubuntu2.2 [328 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble/universe amd64 ocaml-interp amd64 4.14.1-1ubuntu1 [7825 kB]
+Get:17 http://archive.ubuntu.com/ubuntu noble/universe amd64 ocaml amd64 4.14.1-1ubuntu1 [81.4 MB]
+Get:18 http://archive.ubuntu.com/ubuntu noble/universe amd64 ocaml-man all 4.14.1-1ubuntu1 [555 kB]
+Get:19 http://archive.ubuntu.com/ubuntu noble/universe amd64 opam-installer amd64 2.1.5-1 [1256 kB]
+Get:20 http://archive.ubuntu.com/ubuntu noble/universe amd64 opam amd64 2.1.5-1 [2584 kB]
+Fetched 146 MB in 6s (23.8 MB/s)
+Setting up ocaml-base (4.14.1-1ubuntu1) ...
+Setting up opam-installer (2.1.5-1) ...
+Setting up ocaml-man (4.14.1-1ubuntu1) ...
+Setting up opam (2.1.5-1) ...
+Setting up ocaml-interp (4.14.1-1ubuntu1) ...
+Setting up ocaml (4.14.1-1ubuntu1) ...
+EXIT=0
+   [apt package-by-package progress lines omitted]
+
+=================================================================== 2. opam init -y --disable-sandboxing -c ocaml-system
+[WARNING] Running as root is not recommended
+No configuration file found, using built-in defaults.
+Checking for available remotes: rsync and local, git, mercurial.
+  - you won't be able to use darcs repositories unless you install the darcs command on your system.
+
+
+<><> Fetching repository information ><><><><><><><><><><><><><><><><><><><><><>
+[default] Initialised
+default (at https://opam.ocaml.org): 
+    [INFO] opam is out-of-date. Please consider updating (https://opam.ocaml.org/doc/Install.html)
+
+default (at https://opam.ocaml.org): 
+    [INFO] please ensure to have GNU patch installed as `patch`. Otherwise update may fail silently (since it can't remove files).
+
+default (at https://opam.ocaml.org): 
+    [WARNING] opam >= 2.5.2 includes important security fixes; please consider upgrading (https://opam.ocaml.org/doc/Install.html)
+
+
+<><> Required setup - please read <><><><><><><><><><><><><><><><><><><><><><><>
+
+  In normal operation, opam only alters files within ~/.opam.
+
+  However, to best integrate with your system, some environment variables
+  should be set. If you allow it to, this initialisation step will update
+  your bash configuration by adding the following line to ~/.profile:
+
+    test -r /root/.opam/opam-init/init.sh && . /root/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+
+  Otherwise, every time you want to access your opam installation, you will
+  need to run:
+
+    eval $(opam env)
+
+  You can always re-run this setup with 'opam init' later.
+
+[WARNING] Shell not updated in non-interactive mode: use --shell-setup
+
+<><> Creating initial switch 'ocaml-system' (invariant ["ocaml-system"]) ><><><>
+
+<><> Installing new switch packages <><><><><><><><><><><><><><><><><><><><><><>
+Switch invariant: ["ocaml-system"]
+
+<><> Processing actions <><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+-> installed base-bigarray.base
+-> installed base-threads.base
+-> installed base-unix.base
+-> retrieved ocaml-system.4.14.1  (https://opam.ocaml.org/cache)
+-> installed ocaml-system.4.14.1
+-> retrieved ocaml-config.2  (2 extra sources)
+-> installed ocaml-config.2
+-> installed ocaml.4.14.1
+Done.
+# Run eval $(opam env --switch=ocaml-system) to update the current shell environment
+
+=================================================================== 3. opam install -y proverif   (stopped at the depext prompt)
+[WARNING] Running as root is not recommended
+The following actions will be performed:
+  - install conf-pkg-config 5       [required by conf-gtk2]
+  - install ocamlfind       1.9.8   [required by proverif]
+  - install dune            3.24.2  [required by camlp-streams]
+  - install conf-gtk2       1       [required by lablgtk]
+  - install camlp-streams   5.0.1   [required by lablgtk]
+  - install lablgtk         2.18.14 [required by proverif]
+  - install proverif        2.05
+===== 7 to install =====
+
+The following system packages will first need to be installed:
+    libgtk2.0-dev
+
+<><> Handling external dependencies <><><><><><><><><><><><><><><><><><><><><><>
+Let opam run your package manager to install the required system packages?
+(answer 'n' for other options) [Y/n] n
+[NOTE] Use 'opam option depext-run-installs=false' if you don't want to be prompted again.
+This command should get the requirements installed:
+
+    apt-get install libgtk2.0-dev
+
+You can retry with '--assume-depexts' to skip this check, or run 'opam option depext=false' to permanently disable handling of system packages altogether.
+EXIT=10
+
+=================================================================== 4. DEBIAN_FRONTEND=noninteractive apt-get install -y libgtk2.0-dev
+0 upgraded, 74 newly installed, 0 to remove and 7 not upgraded.
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 bsdextrautils amd64 2.39.3-9ubuntu6.6 [73.7 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble/main amd64 gettext-base amd64 0.21-14ubuntu2 [38.4 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libuchardet0 amd64 0.0.8-1build1 [75.3 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble/main amd64 groff-base amd64 1.23.0-3build2 [1020 kB]
+Get:5 http://archive.ubuntu.com/ubuntu noble/main amd64 libpipeline1 amd64 1.5.7-2 [23.6 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble/main amd64 man-db amd64 2.12.0-4build2 [1237 kB]
+Get:7 http://archive.ubuntu.com/ubuntu noble/main amd64 autopoint all 0.21-14ubuntu2 [422 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble/main amd64 libdebhelper-perl all 13.14.1ubuntu5 [89.8 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble/main amd64 dh-autoreconf all 20 [16.1 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble/main amd64 libarchive-zip-perl all 1.68-1 [90.2 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble/main amd64 libsub-override-perl all 0.10-1 [10.0 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble/main amd64 libfile-stripnondeterminism-perl all 1.13.1-1 [18.1 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble/main amd64 dh-strip-nondeterminism all 1.13.1-1 [5362 B]
+Get:14 http://archive.ubuntu.com/ubuntu noble/main amd64 debugedit amd64 1:5.0-5build2 [46.1 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble/main amd64 dwz amd64 0.15-1build6 [115 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble/main amd64 gettext amd64 0.21-14ubuntu2 [864 kB]
+Get:17 http://archive.ubuntu.com/ubuntu noble/main amd64 intltool-debian all 0.35.0+20060710.6 [23.2 kB]
+Get:18 http://archive.ubuntu.com/ubuntu noble/main amd64 po-debconf all 1.0.21+nmu1 [233 kB]
+Get:19 http://archive.ubuntu.com/ubuntu noble/main amd64 debhelper all 13.14.1ubuntu5 [869 kB]
+Get:20 http://archive.ubuntu.com/ubuntu noble/main amd64 gir1.2-atk-1.0 amd64 2.52.0-1build1 [23.1 kB]
+Get:21 http://archive.ubuntu.com/ubuntu noble/main amd64 gir1.2-freedesktop amd64 1.80.1-1 [49.7 kB]
+Get:22 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gir1.2-glib-2.0-dev amd64 2.80.0-6ubuntu3.10 [848 kB]
+Get:23 http://archive.ubuntu.com/ubuntu noble/main amd64 gir1.2-freedesktop-dev amd64 1.80.1-1 [28.8 kB]
+Get:24 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gir1.2-gdkpixbuf-2.0 amd64 2.42.10+dfsg-3ubuntu3.3 [9482 B]
+Get:25 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgtk2.0-common all 2.24.33-4ubuntu1.1 [127 kB]
+Get:26 http://archive.ubuntu.com/ubuntu noble/main amd64 libharfbuzz-gobject0 amd64 8.3.0-2build2 [34.3 kB]
+Get:27 http://archive.ubuntu.com/ubuntu noble/main amd64 gir1.2-harfbuzz-0.0 amd64 8.3.0-2build2 [44.5 kB]
+Get:28 http://archive.ubuntu.com/ubuntu noble/main amd64 libxft2 amd64 2.3.6-1build1 [45.3 kB]
+Get:29 http://archive.ubuntu.com/ubuntu noble/main amd64 libpangoxft-1.0-0 amd64 1.52.1+ds-1build1 [20.3 kB]
+Get:30 http://archive.ubuntu.com/ubuntu noble/main amd64 gir1.2-pango-1.0 amd64 1.52.1+ds-1build1 [34.8 kB]
+Get:31 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgtk2.0-0t64 amd64 2.24.33-4ubuntu1.1 [2006 kB]
+Get:32 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 gir1.2-gtk-2.0 amd64 2.24.33-4ubuntu1.1 [209 kB]
+Get:33 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 icu-devtools amd64 74.2-1ubuntu3.1 [212 kB]
+Get:34 http://archive.ubuntu.com/ubuntu noble/main amd64 libarchive-cpio-perl all 0.10-3 [10.3 kB]
+Get:35 http://archive.ubuntu.com/ubuntu noble/main amd64 libatk1.0-dev amd64 2.52.0-1build1 [100 kB]
+Get:36 http://archive.ubuntu.com/ubuntu noble/main amd64 libdatrie-dev amd64 0.2.13-3build1 [19.4 kB]
+Get:37 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdeflate-dev amd64 1.19-1build1.1 [50.9 kB]
+Get:38 http://archive.ubuntu.com/ubuntu noble/main amd64 libfribidi-dev amd64 1.0.13-3build1 [64.8 kB]
+Get:39 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgail18t64 amd64 2.24.33-4ubuntu1.1 [15.9 kB]
+Get:40 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgail-common amd64 2.24.33-4ubuntu1.1 [126 kB]
+Get:41 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgdk-pixbuf2.0-bin amd64 2.42.10+dfsg-3ubuntu3.3 [13.9 kB]
+Get:42 http://archive.ubuntu.com/ubuntu noble/main amd64 libjpeg-turbo8-dev amd64 2.1.5-2ubuntu2 [295 kB]
+Get:43 http://archive.ubuntu.com/ubuntu noble/main amd64 libjpeg8-dev amd64 8c-2ubuntu11 [1484 B]
+Get:44 http://archive.ubuntu.com/ubuntu noble/main amd64 libjpeg-dev amd64 8c-2ubuntu11 [1482 B]
+Get:45 http://archive.ubuntu.com/ubuntu noble/main amd64 libjbig-dev amd64 2.1-6.1ubuntu2 [27.9 kB]
+Get:46 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libzstd-dev amd64 1.5.5+dfsg2-2build1.1 [364 kB]
+Get:47 http://archive.ubuntu.com/ubuntu noble/main amd64 libwebpdecoder3 amd64 1.3.2-0.4build3 [114 kB]
+Get:48 http://archive.ubuntu.com/ubuntu noble/main amd64 libsharpyuv-dev amd64 1.3.2-0.4build3 [16.0 kB]
+Get:49 http://archive.ubuntu.com/ubuntu noble/main amd64 libwebp-dev amd64 1.3.2-0.4build3 [367 kB]
+Get:50 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libtiffxx6 amd64 4.5.1+git230720-4ubuntu2.5 [5642 B]
+Get:51 http://archive.ubuntu.com/ubuntu noble/main amd64 liblerc-dev amd64 4.0.0+ds-4ubuntu2 [182 kB]
+Get:52 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libtiff-dev amd64 4.5.1+git230720-4ubuntu2.5 [338 kB]
+Get:53 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgdk-pixbuf-2.0-dev amd64 2.42.10+dfsg-3ubuntu3.3 [47.9 kB]
+Get:54 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgraphite2-dev amd64 1.3.14-2ubuntu0.24.04.1 [14.7 kB]
+Get:55 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgtk2.0-bin amd64 2.24.33-4ubuntu1.1 [7954 B]
+Get:56 http://archive.ubuntu.com/ubuntu noble/main amd64 libharfbuzz-subset0 amd64 8.3.0-2build2 [448 kB]
+Get:57 http://archive.ubuntu.com/ubuntu noble/main amd64 libharfbuzz-cairo0 amd64 8.3.0-2build2 [26.2 kB]
+Get:58 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libicu-dev amd64 74.2-1ubuntu3.1 [11.9 MB]
+Get:59 http://archive.ubuntu.com/ubuntu noble/main amd64 libharfbuzz-dev amd64 8.3.0-2build2 [142 kB]
+Get:60 http://archive.ubuntu.com/ubuntu noble/main amd64 libthai-dev amd64 0.1.29-2build1 [26.6 kB]
+Get:61 http://archive.ubuntu.com/ubuntu noble/main amd64 libxft-dev amd64 2.3.6-1build1 [64.3 kB]
+Get:62 http://archive.ubuntu.com/ubuntu noble/main amd64 pango1.0-tools amd64 1.52.1+ds-1build1 [36.7 kB]
+Get:63 http://archive.ubuntu.com/ubuntu noble/main amd64 libpango1.0-dev amd64 1.52.1+ds-1build1 [147 kB]
+Get:64 http://archive.ubuntu.com/ubuntu noble/main amd64 libxinerama-dev amd64 2:1.1.4-3build1 [7988 B]
+Get:65 http://archive.ubuntu.com/ubuntu noble/main amd64 libxfixes-dev amd64 1:6.0.0-2build1 [12.1 kB]
+Get:66 http://archive.ubuntu.com/ubuntu noble/main amd64 libxi-dev amd64 2:1.8.1-1build1 [194 kB]
+Get:67 http://archive.ubuntu.com/ubuntu noble/main amd64 libxrandr-dev amd64 2:1.5.2-2build1 [26.4 kB]
+Get:68 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcursor-dev amd64 1:1.2.1-1build1 [31.8 kB]
+Get:69 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcomposite-dev amd64 1:0.4.5-1build3 [9374 B]
+Get:70 http://archive.ubuntu.com/ubuntu noble/main amd64 libxdamage-dev amd64 1:1.1.6-1build1 [5270 B]
+Get:71 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 libgtk2.0-dev amd64 2.24.33-4ubuntu1.1 [779 kB]
+Get:72 http://archive.ubuntu.com/ubuntu noble/main amd64 libsys-hostname-long-perl all 1.5-3 [10.6 kB]
+Get:73 http://archive.ubuntu.com/ubuntu noble/main amd64 libmail-sendmail-perl all 0.80-3 [21.7 kB]
+Get:74 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 librsvg2-common amd64 2.58.0+dfsg-1ubuntu0.1 [11.8 kB]
+Fetched 25.0 MB in 12s (2009 kB/s)
+Setting up libgtk2.0-dev:amd64 (2.24.33-4ubuntu1.1) ...
+EXIT=0
+   [apt package-by-package progress lines omitted]
+
+=================================================================== 5. opam install -y proverif   (success)
+[WARNING] Running as root is not recommended
+The following actions will be performed:
+  - install conf-pkg-config 5       [required by conf-gtk2]
+  - install ocamlfind       1.9.8   [required by proverif]
+  - install dune            3.24.2  [required by camlp-streams]
+  - install conf-gtk2       1       [required by lablgtk]
+  - install camlp-streams   5.0.1   [required by lablgtk]
+  - install lablgtk         2.18.14 [required by proverif]
+  - install proverif        2.05
+===== 7 to install =====
+
+<><> Processing actions <><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+-> retrieved camlp-streams.5.0.1  (https://opam.ocaml.org/cache)
+-> retrieved conf-pkg-config.5  (2 extra sources)
+-> installed conf-pkg-config.5
+-> retrieved ocamlfind.1.9.8  (https://opam.ocaml.org/cache)
+-> retrieved dune.3.24.2  (https://opam.ocaml.org/cache)
+-> installed conf-gtk2.1
+-> retrieved proverif.2.05  (https://opam.ocaml.org/cache)
+-> retrieved lablgtk.2.18.14  (https://opam.ocaml.org/cache)
+-> installed dune.3.24.2
+-> installed ocamlfind.1.9.8
+-> installed camlp-streams.5.0.1
+-> installed lablgtk.2.18.14
+-> installed proverif.2.05
+Done.
+EXIT=0
+
+=================================================================== result
+/root/.opam/ocaml-system/bin/proverif: Proverif 2.05. Cryptographic protocol verifier, by Bruno Blanchet, Vincent Cheval, and Marc Sylvestre

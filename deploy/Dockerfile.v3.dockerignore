@@ -1,0 +1,22 @@
+# Dockerfile-specific ignore file (BuildKit uses <Dockerfile>.dockerignore next to the Dockerfile).
+# Mirrors .gitignore (local caches/build outputs) and keeps common secret-bearing files out of the context.
+# None of these patterns matches a file of the released repository.
+.git
+**/__pycache__
+**/*.pyc
+**/.pytest_cache
+**/*.db
+**/*.db-wal
+**/*.db-shm
+logs/
+build/
+dist/
+**/.env
+**/*.env
+**/.netrc
+**/*.key
+**/*.pem
+**/*.p12
+**/*.pfx
+**/id_rsa*
+**/id_ed25519*

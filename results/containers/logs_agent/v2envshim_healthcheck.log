@@ -1,0 +1,8 @@
+# image: pbti:v2-envshim
+# configured: null
+# cmd: docker run -d --cpus=0.5 --health-interval=5s --health-start-period=0s --health-retries=1 pbti:v2-envshim sleep 60
+# t+5s status: no-healthcheck
+# t+10s status: no-healthcheck
+# t+15s status: no-healthcheck
+# t+20s status: no-healthcheck
+# last probe: 

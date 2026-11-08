@@ -1,0 +1,62 @@
+# image: pbti:v3
+# check: env (timeout 120s, --cpus=1.0)
+# cmd: docker run --rm --cpus=1.0  pbti:v3 sh -c id; cat /etc/os-release | head -2; python3 --version; pip --version; pip freeze; mosquitto -h | head -1; make --version | head -1; pwd; ls -la
+# start: 2026-11-04T05:18:04Z
+uid=10001(pbti) gid=10001(pbti) groups=10001(pbti)
+PRETTY_NAME="Debian GNU/Linux 13 (trixie)"
+NAME="Debian GNU/Linux"
+Python 3.13.18
+pip 26.2.2 from /usr/local/lib/python3.13/site-packages/pip (python 3.13)
+cffi==2.1.1
+contourpy==1.4.0
+cryptography==50.0.1
+cycler==0.12.1
+fonttools==4.68.0
+iniconfig==2.3.1
+kiwisolver==1.5.1
+matplotlib==3.11.2
+numpy==2.5.3
+packaging==26.3
+paho-mqtt==2.1.0
+pandas==3.0.5
+pillow==13.0.0
+pluggy==1.7.0
+psutil==7.2.2
+pycparser==3.12
+Pygments==2.21.0
+pyparsing==3.3.3
+pytest==9.1.1
+python-dateutil==4.0.0
+PyYAML==6.0.3
+scipy==1.18.1
+tzdata==2026.6
+mosquitto version 2.0.21
+GNU Make 4.4.1
+/opt/pbti
+total 96
+drwxr-xr-x 1 root root 4096 Nov  4 05:00 .
+drwxr-xr-x 1 root root 4096 Nov  4 05:15 ..
+-rw-r--r-- 1 root root  215 Nov  3 23:50 .gitignore
+-rw-r--r-- 1 root root  867 Nov  4 00:22 CITATION.cff
+-rw-r--r-- 1 root root  731 Nov  3 23:50 LICENSE
+-rw-r--r-- 1 root root 3922 Nov  4 04:07 Makefile
+-rw-r--r-- 1 root root 6682 Nov  4 04:07 README.md
+drwxr-xr-x 2 root root 4096 Nov  4 04:45 analysis
+drwxr-xr-x 2 root root 4096 Nov  4 04:45 config
+drwxr-xr-x 3 root root 4096 Nov  4 04:45 data
+drwxr-xr-x 3 root root 4096 Nov  4 04:45 deploy
+drwxr-xr-x 2 root root 4096 Nov  4 04:45 docs
+drwxr-xr-x 2 root root 4096 Nov  4 04:45 experiments
+drwxr-xr-x 1 root root 4096 Nov  4 04:45 paper
+drwxr-xr-x 2 root root 4096 Nov  4 04:45 policies
+-rw-r--r-- 1 root root  702 Nov  3 23:50 pyproject.toml
+-rw-r--r-- 1 root root  219 Nov  3 23:50 requirements.txt
+drwxr-xr-x 3 root root 4096 Nov  4 04:45 research
+drwxr-xr-x 1 pbti pbti 4096 Nov  4 04:45 results
+drwxr-xr-x 2 root root 4096 Nov  4 04:45 scripts
+drwxr-xr-x 3 root root 4096 Nov  4 04:45 src
+drwxr-xr-x 2 root root 4096 Nov  4 04:45 tests
+drwxr-xr-x 3 root root 4096 Nov  4 04:45 tools
+# exit_code: 0
+# end: 2026-11-04T05:18:08Z
+# wall_s: 3.880051860

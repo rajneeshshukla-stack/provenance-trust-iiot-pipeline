@@ -1,0 +1,54 @@
+{
+ "gates": {
+  "G1": {
+   "original": false,
+   "corrected": false,
+   "detail_equal": true
+  },
+  "G2": {
+   "original": null,
+   "corrected": null,
+   "detail_equal": true
+  },
+  "G3": {
+   "original": false,
+   "corrected": false,
+   "detail_equal": true
+  },
+  "G4": {
+   "original": false,
+   "corrected": false,
+   "detail_equal": true
+  },
+  "G3F": {
+   "original": true,
+   "corrected": true,
+   "detail_equal": true
+  },
+  "G4F": {
+   "original": true,
+   "corrected": true,
+   "detail_equal": true
+  }
+ },
+ "predictions": {
+  "P1": {
+   "original": true,
+   "corrected": true
+  },
+  "P2": {
+   "original": true,
+   "corrected": true
+  },
+  "P3": {
+   "original": false,
+   "corrected": false
+  },
+  "P4": {
+   "original": true,
+   "corrected": true
+  }
+ },
+ "gate_changes": [],
+ "prediction_changes": []
+}

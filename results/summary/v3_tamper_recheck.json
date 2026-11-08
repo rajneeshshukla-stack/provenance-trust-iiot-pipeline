@@ -1,0 +1,84 @@
+{
+ "note": "V3 re-check of insider-tampering detection after the A-LIN aggregate-tolerance change (seed 1, PBTI)",
+ "results": [
+  {
+   "tamper": "T1_raw_modify",
+   "tampered": 50,
+   "audit_pass": false,
+   "findings": {
+    "A-RAW:digest": 50,
+    "A-LIN:aggregate-mismatch": 50,
+    "A-DET:disposition-mismatch": 50,
+    "A-DET:registry-mismatch": 50
+   },
+   "error": null
+  },
+  {
+   "tamper": "T2_raw_delete",
+   "tampered": 50,
+   "audit_pass": false,
+   "findings": {
+    "A-RAW:missing": 50,
+    "A-LIN:aggregate-mismatch": 50,
+    "A-DET:missing-input": 50,
+    "A-DET:disposition-mismatch": 330,
+    "A-DET:registry-mismatch": 50
+   },
+   "error": null
+  },
+  {
+   "tamper": "T3_evidence_modify",
+   "tampered": 50,
+   "audit_pass": false,
+   "findings": {
+    "A-EVID:root-mismatch": 35,
+    "A-REG:slot-without-evidence": 48,
+    "A-DET:disposition-mismatch": 50
+   },
+   "error": null
+  },
+  {
+   "tamper": "T4_checkpoint_delete",
+   "tampered": 1,
+   "audit_pass": false,
+   "findings": {
+    "A-EVID:checkpoint-gap": 1,
+    "A-EVID:checkpoint-chain": 1,
+    "A-EVID:witness-mismatch": 24,
+    "A-EVID:witness-count": 1
+   },
+   "error": null
+  },
+  {
+   "tamper": "T5_rewrite_with_key",
+   "tampered": 50,
+   "audit_pass": false,
+   "findings": {
+    "A-EVID:witness-mismatch": 59,
+    "A-REG:slot-without-evidence": 48,
+    "A-DET:disposition-mismatch": 50
+   },
+   "error": null
+  },
+  {
+   "tamper": "T6_derived_modify",
+   "tampered": 50,
+   "audit_pass": false,
+   "findings": {
+    "A-LIN:aggregate-mismatch": 50
+   },
+   "error": null
+  },
+  {
+   "tamper": "T7_registry_modify",
+   "tampered": 50,
+   "audit_pass": false,
+   "findings": {
+    "A-LIN:non-authoritative-input": 50,
+    "A-LIN:incomplete": 50,
+    "A-DET:registry-mismatch": 50
+   },
+   "error": null
+  }
+ ]
+}

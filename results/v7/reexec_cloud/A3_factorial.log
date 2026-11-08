@@ -1,0 +1,6 @@
+[A3_factorial] 25/112 runs, 0 errors, 110s
+[A3_factorial] 50/112 runs, 0 errors, 207s
+[A3_factorial] 75/112 runs, 0 errors, 318s
+[A3_factorial] 100/112 runs, 0 errors, 429s
+[A3_factorial] 112/112 runs, 0 errors, 485s
+written /home/claude/PBTI_v7/results/reexec_cloud/A3_factorial_subset.jsonl errors 0

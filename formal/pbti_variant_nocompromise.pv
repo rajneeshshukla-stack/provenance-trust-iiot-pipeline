@@ -1,0 +1,147 @@
+(* ==========================================================================================
+   PBTI symbolic model -- VARIANT M-C: no key compromise (ProVerif 2.05)
+   Identical to pbti.pv (M-A) except: (1) the processes LeakDevice / LeakRelay are removed, so no key
+   is ever leaked; (2) to help ProVerif's injective trace reconstruction, the relay fields (rts, mode)
+   are fixed to one constant ext0 instead of being chosen by the environment.
+   Trace inclusion: every trace of M-C is a trace of M-A (in M-A the attacker may supply ext0 as the
+   environment input and never trigger a leak), so (a) every attack trace found here is also an attack
+   trace of M-A in which no leak event occurs, and (b) the non-injective results proven here are
+   implied by M-A's results (they are re-proven here as a cross-check only).
+   Purpose: show that injective agreement fails WITHOUT any compromise (pure replay to V).
+   ========================================================================================== *)
+
+free c: channel.                     (* broker / messaging layer: controlled by the attacker *)
+
+type skey.
+type pkey.
+type id.                             (* did and wid *)
+type keyid.                          (* kid / wkid *)
+type kind.
+type origin.
+
+const kDevice, kWorkload: kind.
+const reqDevice, reqGateway: origin.
+const ext0: bitstring.                 (* fixed (rts, mode) used by the relay in this variant *)
+
+fun pk(skey): pkey.
+fun sign(bitstring, skey): bitstring.
+reduc forall m: bitstring, k: skey; verify(sign(m, k), pk(k), m) = true.
+reduc forall m: bitstring, k: skey; getmess(sign(m, k)) = m.      (* signatures do not hide the message *)
+
+fun dobs(bitstring): bitstring [data].                            (* observation signing domain *)
+fun drel(bitstring): bitstring [data].                            (* relay signing domain *)
+fun obsT(id, bitstring, keyid): bitstring [data].                 (* observation statement *)
+fun relT(id, keyid, bitstring, bitstring): bitstring [data].      (* relay statement *)
+fun h(bitstring, bitstring): bitstring.                           (* odig = H(JCS(obs) || osig) *)
+
+table certs(keyid, kind, id, pkey).  (* identity plane: kid -> (kind, certified subject, public key) *)
+table policy(id, id, origin).        (* path policy: did may be relayed by wid; origin kind required for did *)
+
+event DeviceSigned(id, bitstring).                       (* did, obs *)
+event RelayCountersigned(id, bitstring).                 (* wid, odig *)
+event RelaySigned(id, bitstring).                        (* wid, full relay statement rel (incl. rts, mode) *)
+event GatewayAttested(id, bitstring).                    (* wid, obs signed by W as origin (legacy device) *)
+event VerifierAccepted(id, id, bitstring).               (* did, wid, obs : device-origin acceptance *)
+event VerifierAcceptedSig(id, id, bitstring, bitstring). (* did, wid, obs, osig : same, with the signature *)
+event VerifierAcceptedGw(id, id, bitstring).             (* did, wid, obs : gateway-origin acceptance *)
+event VerifierAcceptedAny(id, id, bitstring).            (* did, wid, obs : either branch *)
+event VerifierAcceptedRel(id, bitstring).                (* wid, rel : relay statement of an accepted message *)
+event DevKeyLeaked(id).
+event RelayKeyLeaked(id).
+event SigningDevice(id, id).                             (* did registered as signing device of cell wid *)
+event RelayAuthorized(id, id).                           (* additional relay wid authorized for did *)
+event LegacyDevice(id, id).                              (* did registered as legacy device attested by wid *)
+
+(* ---------------------------------------------------------------- non-vacuity (expected: reachable) *)
+query did: id, wid: id, o: bitstring; event(VerifierAccepted(did, wid, o)).
+
+(* ---------------------------------------------------------------- C1/C2 non-injective agreement without compromise *)
+query did: id, wid: id, o: bitstring;
+  event(VerifierAccepted(did, wid, o)) ==> event(DeviceSigned(did, o)).
+query did: id, wid: id, o: bitstring, s: bitstring;
+  event(VerifierAcceptedSig(did, wid, o, s)) ==> event(RelayCountersigned(wid, h(o, s))).
+query did: id, wid: id, o: bitstring;
+  event(VerifierAcceptedAny(did, wid, o)) ==> event(DeviceSigned(did, o)) || event(LegacyDevice(did, wid)).
+
+(* ---------------------------------------------------------------- C5 injective agreement (expected to fail: replay) *)
+query did: id, wid: id, o: bitstring;
+  inj-event(VerifierAccepted(did, wid, o)) ==> inj-event(DeviceSigned(did, o)).
+
+(* ---------------------------------------------------------------- processes *)
+let Device(did: id, kidD: keyid, skD: skey, cOT: channel) =
+  ! in(c, body: bitstring);
+    let o = obsT(did, body, kidD) in
+    let osig = sign(dobs(o), skD) in
+    event DeviceSigned(did, o);
+    out(c, (o, osig));                (* the OT side is readable by the attacker *)
+    out(cOT, (o, osig)).              (* ... but only the device can write to its workload's input *)
+
+let Relay(wid: id, wkid: keyid, skW: skey, cOT: channel) =
+  ! in(cOT, (o: bitstring, osig: bitstring));
+    let extra = ext0 in               (* M-C: fixed (rts, mode) *)
+    let odig = h(o, osig) in
+    let r = relT(wid, wkid, odig, extra) in
+    event RelayCountersigned(wid, odig);
+    event RelaySigned(wid, r);
+    out(c, (o, osig, r, sign(drel(r), skW))).
+
+let LegacyGateway(wid: id, wkid: keyid, skW: skey, didL: id) =
+  ! in(c, body: bitstring);           (* a legacy device cannot sign: its readings are unauthenticated *)
+    let o = obsT(didL, body, wkid) in
+    let osig = sign(dobs(o), skW) in
+    event GatewayAttested(wid, o);
+    let extra = ext0 in
+    let odig = h(o, osig) in
+    let r = relT(wid, wkid, odig, extra) in
+    event RelayCountersigned(wid, odig);
+    event RelaySigned(wid, r);
+    out(c, (o, osig, r, sign(drel(r), skW))).
+
+let Verifier =
+  ! in(c, (o: bitstring, osig: bitstring, r: bitstring, rsig: bitstring));
+    let obsT(did: id, body: bitstring, kid: keyid) = o in
+    let relT(wid: id, wkid: keyid, odig: bitstring, extra: bitstring) = r in
+    get certs(=wkid, kW: kind, subW: id, pkW: pkey) in            (* UNKNOWN_KEY otherwise *)
+    if kW = kWorkload then if subW = wid then                     (* KEY_SUBJECT_MISMATCH otherwise *)
+    if verify(rsig, pkW, drel(r)) = true then                     (* INTEGRITY_RELAY otherwise *)
+    if odig = h(o, osig) then                                     (* BINDING_MISMATCH otherwise *)
+    get certs(=kid, kO: kind, subO: id, pkO: pkey) in
+    if verify(osig, pkO, dobs(o)) = true then                     (* INTEGRITY_OBS otherwise *)
+    if kO = kDevice then (
+      if subO = did then
+      get policy(=did, =wid, req: origin) in                      (* device origin meets both requirements *)
+      event VerifierAcceptedSig(did, wid, o, osig);
+      event VerifierAcceptedRel(wid, r);
+      event VerifierAcceptedAny(did, wid, o);
+      event VerifierAccepted(did, wid, o)
+    ) else if kO = kWorkload then (
+      if subO = wid then
+      get policy(=did, =wid, =reqGateway) in                      (* ORIGIN_SIGNER_TOO_WEAK otherwise *)
+      event VerifierAcceptedRel(wid, r);
+      event VerifierAcceptedAny(did, wid, o);
+      event VerifierAcceptedGw(did, wid, o)
+    ).
+
+(* M-C: no LeakDevice / LeakRelay processes *)
+
+process
+  Verifier
+  | ! ( (* one cell: an edge workload, its signing devices and its legacy devices *)
+        new wid: id; new wkid: keyid; new skW: skey; new cOT: channel;
+        insert certs(wkid, kWorkload, wid, pk(skW));
+        out(c, (wid, wkid, pk(skW)));
+        ( Relay(wid, wkid, skW, cOT)
+        | ! ( new did: id; new kidD: keyid; new skD: skey;
+              insert certs(kidD, kDevice, did, pk(skD));
+              insert policy(did, wid, reqDevice);
+              event SigningDevice(did, wid);
+              out(c, (did, kidD, pk(skD)));
+              ( Device(did, kidD, skD, cOT)
+              | ! ( in(c, w2: id);                               (* arbitrary extra relay authorizations *)
+                    event RelayAuthorized(did, w2);
+                    insert policy(did, w2, reqDevice) ) ) )
+        | ! ( new didL: id;
+              insert policy(didL, wid, reqGateway);
+              event LegacyDevice(didL, wid);
+              out(c, didL);
+              LegacyGateway(wid, wkid, skW, didL) ) ) )

@@ -1,0 +1,73 @@
+url	access_date	method	result
+https://www.mdpi.com/journal/futureinternet/instructions	2026-11-05	WebFetch (4 passes, offsets 0 and 100000)	OK (page 125,098 chars)
+https://www.mdpi.com/journal/futureinternet/instructions	2026-11-05	curl	NOT OPENED (curl attempt refused by session policy; WebFetch used instead)
+https://www.mdpi.com/ethics	2026-11-05	WebFetch	OK
+https://www.mdpi.com/journal/futureinternet/about	2026-11-05	WebFetch	OK
+https://www.mdpi.com/journal/futureinternet/apc	2026-11-05	WebFetch	OK
+https://www.mdpi.com/authors/layout	2026-11-05	WebFetch (4 passes)	OK
+https://www.mdpi.com/authors/latex	2026-11-05	WebFetch	OK
+https://api.crossref.org/works/{DOI} for 53 DOIs (see results/lit_journal/reference_verification.csv)	2026-11-05	curl	53 x HTTP 200
+https://doi.org/{DOI} for 53 DOIs	2026-11-05	curl (no redirect follow)	53 x HTTP 302
+https://api.datacite.org/dois/10.48550/arXiv.2307.08381	2026-11-05	curl	200
+https://api.datacite.org/dois/10.34740/KAGGLE/DSV/1693952	2026-11-05	curl	200
+https://export.arxiv.org/api/query?id_list=2307.08381	2026-11-05	curl	200
+https://www.rfc-editor.org/rfc/rfc{9846,9943,9942,9338,9162,5280,8785,8032}.json	2026-11-05	curl	8 x 200
+https://www.iiconsortium.org/wp-content/uploads/sites/2/2022/11/IIRA-v1.10.pdf	2026-11-05	curl -> redirect to media.digitaltwinconsortium.org 403; WebFetch OK	OK via WebFetch
+https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html	2026-11-05	curl	200
+https://reference.opcfoundation.org/specs/OPC-10000-2/v1.05.06	2026-11-05	curl	200
+https://www.usenix.org/conference/osdi10/intrusion-recovery-using-selective-re-execution	2026-11-05	curl	200
+https://raw.githubusercontent.com/spiffe/spiffe/main/standards/SPIFFE.md	2026-11-05	curl	200
+https://spiffe.io/	2026-11-05	curl	200
+https://media.defense.gov/2024/Apr/09/2003434442/-1/-1/0/CSI_DATA_PILLAR_ZT.PDF	2026-11-05	curl 403; WebFetch OK	OK via WebFetch
+https://datatracker.ietf.org/api/v1/doc/document/draft-ietf-ace-coap-pubsub-profile/?format=json	2026-11-05	curl	200
+https://datatracker.ietf.org/api/v1/doc/state/{1,150,43}/?format=json	2026-11-05	curl	200
+https://datatracker.ietf.org/doc/draft-ietf-ace-coap-pubsub-profile/history/	2026-11-05	curl	200
+https://www.ietf.org/archive/id/draft-ietf-ace-coap-pubsub-profile-05.txt	2026-11-05	curl	200
+https://www.iso.org/standard/86204.html	2026-11-05	curl 403; WebFetch client_error	NOT OPENED
+https://www.dinmedia.de/en/standard/iso-iec-20237/374306329	2026-11-05	WebFetch	OK
+https://www.dinmedia.de/en/technical-rule/din-spec-91345/250940128	2026-11-05	WebFetch	OK
+https://sparkplug.eclipse.org/specification/version/3.0/documents/sparkplug-specification-3.0.0.pdf	2026-11-05	curl	200
+https://www.usenix.org/conference/usenixsecurity09/technical-sessions/presentation/efficient-data-structures-tamper-evident	2026-11-05	curl	200
+https://www.usenix.org/legacy/events/sec09/tech/	2026-11-05	curl	200
+https://www.usenix.org/legacy/events/sec09/tech/full_papers/crosby.pdf	2026-11-05	curl	200
+https://www.usenix.org/conference/osdi-04/secure-untrusted-data-repository-sundr	2026-11-05	curl	200
+https://www.usenix.org/legacy/events/osdi04/tech/	2026-11-05	curl	200
+https://www.usenix.org/legacy/events/osdi04/tech/full_papers/li_j/li_j.pdf	2026-11-05	curl	200
+https://www.usenix.org/legacy/events/osdi10/tech/	2026-11-05	curl	200
+https://www.usenix.org/legacy/events/osdi10/tech/full_papers/Kim.pdf	2026-11-05	curl	200
+https://ssbc.github.io/scuttlebutt-protocol-guide/	2026-11-05	curl	200
+https://spec.c2pa.org/specifications/specifications/2.3/specs/C2PA_Specification.html	2026-11-05	curl	200
+https://www.w3.org/TR/2013/REC-prov-dm-20130430/	2026-11-05	curl	200
+https://nifi.apache.org/nifi-docs/user-guide.html	2026-11-05	curl	200
+https://nifi.apache.org/documentation/	2026-11-05	curl	200
+https://cwiki.apache.org/confluence/display/KAFKA/KIP-98+-+Exactly+Once+Delivery+and+Transactional+Messaging	2026-11-05	curl (redirect to /spaces/KAFKA/pages/66854913/...)	200
+https://kafka.apache.org/44/configuration/producer-configs/	2026-11-05	curl	200
+https://raw.githubusercontent.com/cloudevents/spec/v1.0.2/cloudevents/spec.md	2026-11-05	curl	200
+https://github.com/cloudevents/spec/releases/tag/v1.0.2	2026-11-05	WebFetch	OK (tag date without year)
+https://api.github.com/repos/cloudevents/spec/releases/tags/v1.0.2	2026-11-05	curl 403; gh api not enabled	NOT OPENED
+https://www.openpolicyagent.org/	2026-11-05	curl	200
+https://www.openpolicyagent.org/docs	2026-11-05	curl	200
+https://github.com/open-policy-agent/opa/releases/latest	2026-11-05	WebFetch	OK (shows v1.21.4)
+https://github.com/open-policy-agent/opa/releases	2026-11-05	WebFetch	OK (shows v1.20.1 as Latest; snapshot inconsistent)
+https://github.com/open-policy-agent/opa/tags	2026-11-05	WebFetch	NOT OPENED (robots_disallowed)
+https://webstore.iec.ch/en/publication/7033	2026-11-05	curl	200
+https://webstore.iec.ch/en/publication/34421	2026-11-05	curl	200
+https://dblp.org/search/publ/api (3 queries)	2026-11-05	curl	NOT USABLE (HTTP 500/202)
+https://api.openalex.org/works (3 title searches)	2026-11-05	curl	NOT USABLE (HTTP 429)
+https://res.mdpi.com/data/MDPI_template_ACS.zip (template.tex, Definitions/mdpi.cls, journalnames.tex read)	2026-11-05	curl	200
+https://www.mdpi.com/1999-5903/16/7/246 (example Future Internet Article, section headings)	2026-11-05	WebFetch	OK
+https://api.crossref.org/works?query.bibliographic=... (18 Crossref searches, from-pub-date 2023-01-01; queries listed in report)	2026-11-05	curl	200
+https://api.crossref.org/works/{DOI} for 15 screened candidates (OSCORE-IoT, Foidl, Margaria, Yuan, APEX, ZIRCON, Chien, LPStream, Zingirian, Tong, Pirateship, Shih, Chen-Array, CTng; plus RAT Ring, Ma, Yu, Stodt via OpenAlex)	2026-11-05	curl	200
+https://api.openalex.org/works/doi:{DOI} for 17 screened candidates (abstracts)	2026-11-05	curl	200 (earlier title searches 429)
+https://export.arxiv.org/api/query?id_list=2407.03466,2403.02225	2026-11-05	curl	200
+https://export.arxiv.org/api/query?id_list=2305.00266	2026-11-05	curl	200
+https://export.arxiv.org/api/query?search_query=ti:"data trustworthiness" AND au:Foidl	2026-11-05	curl	200 (no hit)
+https://export.arxiv.org/api/query?id_list=2608.21418	2026-11-05	curl	200
+https://technology.a-sit.at/?p=5157	2026-11-05	WebFetch	OK (news post, not a paper)
+https://www.ndss-symposium.org/ndss-paper/ctng-secure-certificate-and-revocation-transparency/	2026-11-05	curl	200
+https://www.ndss-symposium.org/wp-content/uploads/2026-s213-paper.pdf	2026-11-05	curl	200 (front matter read)
+https://doi.org/10.3390/electronics15143118 -> https://www.mdpi.com/2079-9292/15/14/3118	2026-11-05	WebFetch	OK
+https://ieeexplore.ieee.org/document/11636005/ (OSCORE-IoT landing via doi.org)	2026-11-05	WebFetch	NO CONTENT (JS page)
+https://ieeexplore.ieee.org/document/11132026	2026-11-05	WebFetch	NO CONTENT (URL guessed in error; not used)
+https://www.sciencedirect.com/science/article/pii/S1383762126003401	2026-11-05	WebFetch	NOT OPENED (client_error)
+https://doi.org/{6 candidate DOIs}	2026-11-05	curl	6 x 302

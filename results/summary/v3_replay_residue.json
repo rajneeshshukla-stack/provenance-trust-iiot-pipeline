@@ -1,0 +1,476 @@
+{
+ "all_match_campaign": true,
+ "note": "Labels are the injector labels of src/pbti/scenarios.py and src/pbti/dataset.py; a content key delivered under several labels is reported with the labels joined by '+'.",
+ "residue_by_label_and_cell_total": {
+  "B4@10x": {
+   "equivocation-front@pa-c3": 77,
+   "equivocation-front@pa-c4": 70,
+   "gwforge-legacy@pa-c2": 25,
+   "gwforge-legacy@pa-c4": 6,
+   "impersonation@pa-c4": 336
+  },
+  "B4@1x": {
+   "equivocation-front@pa-c3": 73,
+   "equivocation-front@pa-c4": 67,
+   "gwforge-legacy@pa-c2": 27,
+   "gwforge-legacy@pa-c4": 60,
+   "impersonation@pa-c4": 332
+  },
+  "B5@10x": {
+   "gwforge-legacy@pa-c2": 25
+  },
+  "B5@1x": {
+   "gwforge-legacy@pa-c2": 27
+  },
+  "PBTI@10x": {
+   "equivocation-front@pa-c4": 1,
+   "gwforge-legacy@pa-c2": 25
+  },
+  "PBTI@1x": {
+   "gwforge-legacy@pa-c2": 27
+  }
+ },
+ "residue_by_label_total": {
+  "B4@10x": {
+   "equivocation-front": 147,
+   "gwforge-legacy": 31,
+   "impersonation": 336
+  },
+  "B4@1x": {
+   "equivocation-front": 140,
+   "gwforge-legacy": 87,
+   "impersonation": 332
+  },
+  "B5@10x": {
+   "gwforge-legacy": 25
+  },
+  "B5@1x": {
+   "gwforge-legacy": 27
+  },
+  "PBTI@10x": {
+   "equivocation-front": 1,
+   "gwforge-legacy": 25
+  },
+  "PBTI@1x": {
+   "gwforge-legacy": 27
+  }
+ },
+ "runs": [
+  {
+   "legit_missing": 296,
+   "legit_rx_not_committed": {
+    "CONFLICT/EQUIVOCATION": 46,
+    "DUPLICATE/RETRY": 253,
+    "DUPLICATE/SUSPECTED_REPLAY": 1,
+    "REJECT/REVOKED": 31
+   },
+   "matches_campaign_row": true,
+   "nonlegit_auth": 9,
+   "residue_by_label": {
+    "gwforge-legacy": 9
+   },
+   "residue_by_label_and_cell": {
+    "gwforge-legacy@pa-c2": 9
+   },
+   "seed": 1,
+   "speed": 1.0,
+   "system": "PBTI"
+  },
+  {
+   "legit_missing": 288,
+   "legit_rx_not_committed": {
+    "CONFLICT/EQUIVOCATION": 47,
+    "DUPLICATE/RETRY": 260,
+    "REJECT/REVOKED": 32
+   },
+   "matches_campaign_row": true,
+   "nonlegit_auth": 11,
+   "residue_by_label": {
+    "gwforge-legacy": 11
+   },
+   "residue_by_label_and_cell": {
+    "gwforge-legacy@pa-c2": 11
+   },
+   "seed": 2,
+   "speed": 1.0,
+   "system": "PBTI"
+  },
+  {
+   "legit_missing": 301,
+   "legit_rx_not_committed": {
+    "CONFLICT/EQUIVOCATION": 43,
+    "DUPLICATE/RETRY": 280,
+    "DUPLICATE/SUSPECTED_REPLAY": 2,
+    "REJECT/REVOKED": 31
+   },
+   "matches_campaign_row": true,
+   "nonlegit_auth": 7,
+   "residue_by_label": {
+    "gwforge-legacy": 7
+   },
+   "residue_by_label_and_cell": {
+    "gwforge-legacy@pa-c2": 7
+   },
+   "seed": 3,
+   "speed": 1.0,
+   "system": "PBTI"
+  },
+  {
+   "legit_missing": 556,
+   "legit_rx_not_committed": {
+    "CONFLICT/EQUIVOCATION": 44,
+    "DUPLICATE/RETRY": 273,
+    "DUPLICATE/SUSPECTED_REPLAY": 3,
+    "REJECT/REVOKED": 296
+   },
+   "matches_campaign_row": true,
+   "nonlegit_auth": 7,
+   "residue_by_label": {
+    "gwforge-legacy": 7
+   },
+   "residue_by_label_and_cell": {
+    "gwforge-legacy@pa-c2": 7
+   },
+   "seed": 1,
+   "speed": 10.0,
+   "system": "PBTI"
+  },
+  {
+   "legit_missing": 573,
+   "legit_rx_not_committed": {
+    "CONFLICT/EQUIVOCATION": 48,
+    "DUPLICATE/RETRY": 260,
+    "DUPLICATE/SUSPECTED_REPLAY": 1,
+    "REJECT/REVOKED": 300
+   },
+   "matches_campaign_row": true,
+   "nonlegit_auth": 12,
+   "residue_by_label": {
+    "gwforge-legacy": 12
+   },
+   "residue_by_label_and_cell": {
+    "gwforge-legacy@pa-c2": 12
+   },
+   "seed": 2,
+   "speed": 10.0,
+   "system": "PBTI"
+  },
+  {
+   "legit_missing": 564,
+   "legit_rx_not_committed": {
+    "CONFLICT/EQUIVOCATION": 48,
+    "DUPLICATE/RETRY": 249,
+    "DUPLICATE/SUSPECTED_REPLAY": 4,
+    "REJECT/REVOKED": 305
+   },
+   "matches_campaign_row": true,
+   "nonlegit_auth": 7,
+   "residue_by_label": {
+    "equivocation-front": 1,
+    "gwforge-legacy": 6
+   },
+   "residue_by_label_and_cell": {
+    "equivocation-front@pa-c4": 1,
+    "gwforge-legacy@pa-c2": 6
+   },
+   "seed": 3,
+   "speed": 10.0,
+   "system": "PBTI"
+  },
+  {
+   "legit_missing": 296,
+   "legit_rx_not_committed": {
+    "CONFLICT/EQUIVOCATION": 46,
+    "DUPLICATE/RETRY": 253,
+    "DUPLICATE/SUSPECTED_REPLAY": 1,
+    "QUARANTINE/FEED_FORK_HOLD": 2465,
+    "REJECT/REVOKED": 31
+   },
+   "matches_campaign_row": true,
+   "nonlegit_auth": 9,
+   "residue_by_label": {
+    "gwforge-legacy": 9
+   },
+   "residue_by_label_and_cell": {
+    "gwforge-legacy@pa-c2": 9
+   },
+   "seed": 1,
+   "speed": 1.0,
+   "system": "B5"
+  },
+  {
+   "legit_missing": 288,
+   "legit_rx_not_committed": {
+    "CONFLICT/EQUIVOCATION": 47,
+    "DUPLICATE/RETRY": 260,
+    "QUARANTINE/FEED_FORK_HOLD": 2438,
+    "REJECT/REVOKED": 32
+   },
+   "matches_campaign_row": true,
+   "nonlegit_auth": 11,
+   "residue_by_label": {
+    "gwforge-legacy": 11
+   },
+   "residue_by_label_and_cell": {
+    "gwforge-legacy@pa-c2": 11
+   },
+   "seed": 2,
+   "speed": 1.0,
+   "system": "B5"
+  },
+  {
+   "legit_missing": 301,
+   "legit_rx_not_committed": {
+    "CONFLICT/EQUIVOCATION": 43,
+    "DUPLICATE/RETRY": 280,
+    "DUPLICATE/SUSPECTED_REPLAY": 2,
+    "QUARANTINE/FEED_FORK_HOLD": 2474,
+    "REJECT/REVOKED": 31
+   },
+   "matches_campaign_row": true,
+   "nonlegit_auth": 7,
+   "residue_by_label": {
+    "gwforge-legacy": 7
+   },
+   "residue_by_label_and_cell": {
+    "gwforge-legacy@pa-c2": 7
+   },
+   "seed": 3,
+   "speed": 1.0,
+   "system": "B5"
+  },
+  {
+   "legit_missing": 556,
+   "legit_rx_not_committed": {
+    "CONFLICT/EQUIVOCATION": 44,
+    "DUPLICATE/RETRY": 273,
+    "DUPLICATE/SUSPECTED_REPLAY": 3,
+    "QUARANTINE/FEED_FORK_HOLD": 2429,
+    "REJECT/REVOKED": 296
+   },
+   "matches_campaign_row": true,
+   "nonlegit_auth": 7,
+   "residue_by_label": {
+    "gwforge-legacy": 7
+   },
+   "residue_by_label_and_cell": {
+    "gwforge-legacy@pa-c2": 7
+   },
+   "seed": 1,
+   "speed": 10.0,
+   "system": "B5"
+  },
+  {
+   "legit_missing": 573,
+   "legit_rx_not_committed": {
+    "CONFLICT/EQUIVOCATION": 48,
+    "DUPLICATE/RETRY": 260,
+    "DUPLICATE/SUSPECTED_REPLAY": 1,
+    "QUARANTINE/FEED_FORK_HOLD": 2429,
+    "REJECT/REVOKED": 300
+   },
+   "matches_campaign_row": true,
+   "nonlegit_auth": 12,
+   "residue_by_label": {
+    "gwforge-legacy": 12
+   },
+   "residue_by_label_and_cell": {
+    "gwforge-legacy@pa-c2": 12
+   },
+   "seed": 2,
+   "speed": 10.0,
+   "system": "B5"
+  },
+  {
+   "legit_missing": 564,
+   "legit_rx_not_committed": {
+    "CONFLICT/EQUIVOCATION": 48,
+    "DUPLICATE/RETRY": 249,
+    "DUPLICATE/SUSPECTED_REPLAY": 4,
+    "QUARANTINE/FEED_FORK_HOLD": 2328,
+    "REJECT/REVOKED": 305
+   },
+   "matches_campaign_row": true,
+   "nonlegit_auth": 6,
+   "residue_by_label": {
+    "gwforge-legacy": 6
+   },
+   "residue_by_label_and_cell": {
+    "gwforge-legacy@pa-c2": 6
+   },
+   "seed": 3,
+   "speed": 10.0,
+   "system": "B5"
+  },
+  {
+   "legit_missing": 189,
+   "legit_rx_not_committed": {
+    "ACCEPT/INSERT": 14211,
+    "DUPLICATE/SEQ_SEEN": 253,
+    "REJECT/CONFLICTING_VERSION": 47,
+    "REJECT/REVOKED": 31
+   },
+   "matches_campaign_row": true,
+   "nonlegit_auth": 187,
+   "residue_by_label": {
+    "equivocation-front": 48,
+    "gwforge-legacy": 29,
+    "impersonation": 110
+   },
+   "residue_by_label_and_cell": {
+    "equivocation-front@pa-c3": 23,
+    "equivocation-front@pa-c4": 25,
+    "gwforge-legacy@pa-c2": 9,
+    "gwforge-legacy@pa-c4": 20,
+    "impersonation@pa-c4": 110
+   },
+   "seed": 1,
+   "speed": 1.0,
+   "system": "B4"
+  },
+  {
+   "legit_missing": 190,
+   "legit_rx_not_committed": {
+    "ACCEPT/INSERT": 14210,
+    "DUPLICATE/SEQ_SEEN": 260,
+    "REJECT/CONFLICTING_VERSION": 47,
+    "REJECT/REVOKED": 32
+   },
+   "matches_campaign_row": true,
+   "nonlegit_auth": 190,
+   "residue_by_label": {
+    "equivocation-front": 48,
+    "gwforge-legacy": 31,
+    "impersonation": 111
+   },
+   "residue_by_label_and_cell": {
+    "equivocation-front@pa-c3": 28,
+    "equivocation-front@pa-c4": 20,
+    "gwforge-legacy@pa-c2": 11,
+    "gwforge-legacy@pa-c4": 20,
+    "impersonation@pa-c4": 111
+   },
+   "seed": 2,
+   "speed": 1.0,
+   "system": "B4"
+  },
+  {
+   "legit_missing": 185,
+   "legit_rx_not_committed": {
+    "ACCEPT/INSERT": 14215,
+    "DUPLICATE/SEQ_SEEN": 282,
+    "REJECT/CONFLICTING_VERSION": 43,
+    "REJECT/REVOKED": 31
+   },
+   "matches_campaign_row": true,
+   "nonlegit_auth": 182,
+   "residue_by_label": {
+    "equivocation-front": 44,
+    "gwforge-legacy": 27,
+    "impersonation": 111
+   },
+   "residue_by_label_and_cell": {
+    "equivocation-front@pa-c3": 22,
+    "equivocation-front@pa-c4": 22,
+    "gwforge-legacy@pa-c2": 7,
+    "gwforge-legacy@pa-c4": 20,
+    "impersonation@pa-c4": 111
+   },
+   "seed": 3,
+   "speed": 1.0,
+   "system": "B4"
+  },
+  {
+   "legit_missing": 446,
+   "legit_rx_not_committed": {
+    "ACCEPT/INSERT": 13954,
+    "DUPLICATE/SEQ_SEEN": 276,
+    "REJECT/CONFLICTING_VERSION": 44,
+    "REJECT/REVOKED": 294
+   },
+   "matches_campaign_row": true,
+   "nonlegit_auth": 167,
+   "residue_by_label": {
+    "equivocation-front": 46,
+    "gwforge-legacy": 9,
+    "impersonation": 112
+   },
+   "residue_by_label_and_cell": {
+    "equivocation-front@pa-c3": 17,
+    "equivocation-front@pa-c4": 29,
+    "gwforge-legacy@pa-c2": 7,
+    "gwforge-legacy@pa-c4": 2,
+    "impersonation@pa-c4": 112
+   },
+   "seed": 1,
+   "speed": 10.0,
+   "system": "B4"
+  },
+  {
+   "legit_missing": 453,
+   "legit_rx_not_committed": {
+    "ACCEPT/INSERT": 13947,
+    "DUPLICATE/SEQ_SEEN": 261,
+    "REJECT/CONFLICTING_VERSION": 48,
+    "REJECT/REVOKED": 297
+   },
+   "matches_campaign_row": true,
+   "nonlegit_auth": 177,
+   "residue_by_label": {
+    "equivocation-front": 51,
+    "gwforge-legacy": 14,
+    "impersonation": 112
+   },
+   "residue_by_label_and_cell": {
+    "equivocation-front@pa-c3": 30,
+    "equivocation-front@pa-c4": 21,
+    "gwforge-legacy@pa-c2": 12,
+    "gwforge-legacy@pa-c4": 2,
+    "impersonation@pa-c4": 112
+   },
+   "seed": 2,
+   "speed": 10.0,
+   "system": "B4"
+  },
+  {
+   "legit_missing": 451,
+   "legit_rx_not_committed": {
+    "ACCEPT/INSERT": 13949,
+    "DUPLICATE/SEQ_SEEN": 253,
+    "REJECT/CONFLICTING_VERSION": 48,
+    "REJECT/REVOKED": 302
+   },
+   "matches_campaign_row": true,
+   "nonlegit_auth": 170,
+   "residue_by_label": {
+    "equivocation-front": 50,
+    "gwforge-legacy": 8,
+    "impersonation": 112
+   },
+   "residue_by_label_and_cell": {
+    "equivocation-front@pa-c3": 30,
+    "equivocation-front@pa-c4": 20,
+    "gwforge-legacy@pa-c2": 6,
+    "gwforge-legacy@pa-c4": 2,
+    "impersonation@pa-c4": 112
+   },
+   "seed": 3,
+   "speed": 10.0,
+   "system": "B4"
+  }
+ ],
+ "seeds": [
+  1,
+  2,
+  3
+ ],
+ "speeds": [
+  1.0,
+  10.0
+ ],
+ "systems": [
+  "PBTI",
+  "B5",
+  "B4"
+ ]
+}

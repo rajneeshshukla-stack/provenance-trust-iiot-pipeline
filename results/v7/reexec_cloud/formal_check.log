@@ -1,0 +1,7 @@
+[M] U1_one_epoch_seq0-2_prev_null: 487424 cases, 173700 with a class change, bound 2|S| attained in 640, violations 0
+[M] U2_two_epochs_seq0-1: 92160 cases, 67952 with a class change, bound 2|S| attained in 1680, violations 0
+[L] exhaustive U2 single statements: 24576 cases, 13824 with a change, 0 not admitted, violations 0
+[L] random batches of 2-3 (seed 1): 4000 cases, 2638 with a change, bound attained 1, violations 0
+[C] exhaustive sequences of length <= 4: 30940 sequences, violations 0
+[C] random sequences of length 5..8 (seed 2): 20000; total violations 0
+all_pass=True -> /home/claude/PBTI_v7/results/reexec_cloud/v4_locality_lifecycle_check.json

@@ -1,0 +1,14 @@
+Unable to find image 'python:3.13.18-slim-trixie@sha256:ae14d4ce8771606477a81446e7ef429edd6762305fc50c84507c1041fa8285d1' locally
+docker.io/library/python@sha256:ae14d4ce8771606477a81446e7ef429edd6762305fc50c84507c1041fa8285d1: Pulling from library/python
+Digest: sha256:ae14d4ce8771606477a81446e7ef429edd6762305fc50c84507c1041fa8285d1
+Status: Downloaded newer image for python@sha256:ae14d4ce8771606477a81446e7ef429edd6762305fc50c84507c1041fa8285d1
+tini:
+  Candidate: 0.19.0-3+b8
+mosquitto:
+  Candidate: 2.0.21-1
+make:
+  Candidate: 4.4.1-2
+ca-certificates=20250419+deb13u1
+openssl=3.5.7-1~deb13u3
+pip 26.2.2 from /usr/local/lib/python3.13/site-packages/pip (python 3.13)
+uid=0(root) gid=0(root) groups=0(root)

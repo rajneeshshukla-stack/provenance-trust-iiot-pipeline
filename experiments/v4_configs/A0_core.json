@@ -1,0 +1,58 @@
+{
+ "campaign": "A0_core",
+ "description": "A0: full reproduction of the V3 core scenario campaign (E1-E15 and the mixed workload) under the V4 source for PBTI, B4, B5 (historical reviewer: one-shot, minimum age 60 s, cadence 10 s) and B5s, plus PBTI-R on E11b and the mixed workload, with temporal tracing. Deterministic fields are compared with the archived V2/V3 rows (scripts/compare_a0.py).",
+ "seeds": {
+  "start": 1,
+  "n": 20
+ },
+ "audit_seeds": 5,
+ "design": [
+  {
+   "kind": "scenario",
+   "scenarios": [
+    "S01_normal",
+    "S02_payload_tamper",
+    "S03_metadata_tamper",
+    "S04_unauthorized",
+    "S05_stolen_key",
+    "S06_replay",
+    "S07_duplicates",
+    "S08_seq_reuse_bug",
+    "S09_reorder",
+    "S10_delay_clock",
+    "S11_disconnect_recover",
+    "S12_beyond_horizon",
+    "S13_rotation",
+    "S14_revocation",
+    "S15_edge_compromise",
+    "S99_mixed"
+   ]
+  }
+ ],
+ "arms": [
+  {
+   "arm": "PBTI",
+   "system": "PBTI"
+  },
+  {
+   "arm": "B4",
+   "system": "B4"
+  },
+  {
+   "arm": "B5-hist",
+   "system": "B5"
+  },
+  {
+   "arm": "B5S",
+   "system": "B5S"
+  },
+  {
+   "arm": "PBTI-R-hist",
+   "system": "PBTI-R",
+   "scenarios": [
+    "S12_beyond_horizon",
+    "S99_mixed"
+   ]
+  }
+ ]
+}

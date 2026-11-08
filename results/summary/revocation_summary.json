@@ -1,0 +1,98 @@
+{
+ "0|B1": {
+  "post": 40.0,
+  "nonlegit": 239.95,
+  "missing": 159.95,
+  "taint": 0.0
+ },
+ "0|B2": {
+  "post": 0.0,
+  "nonlegit": 199.95,
+  "missing": 190.15,
+  "taint": 0.0
+ },
+ "0|B3": {
+  "post": 0.0,
+  "nonlegit": 199.95,
+  "missing": 175.15,
+  "taint": 0.0
+ },
+ "0|PBTI": {
+  "post": 0.0,
+  "nonlegit": 0.0,
+  "missing": 270.15,
+  "taint": 279.95
+ },
+ "1000|B1": {
+  "post": 40.0,
+  "nonlegit": 239.95,
+  "missing": 159.95,
+  "taint": 0.0
+ },
+ "1000|B2": {
+  "post": 0.0,
+  "nonlegit": 199.95,
+  "missing": 187.3,
+  "taint": 0.0
+ },
+ "1000|B3": {
+  "post": 0.0,
+  "nonlegit": 199.95,
+  "missing": 173.8,
+  "taint": 0.0
+ },
+ "1000|PBTI": {
+  "post": 0.0,
+  "nonlegit": 0.0,
+  "missing": 270.15,
+  "taint": 279.95
+ },
+ "5000|B1": {
+  "post": 40.0,
+  "nonlegit": 239.95,
+  "missing": 159.95,
+  "taint": 0.0
+ },
+ "5000|B2": {
+  "post": 0.0,
+  "nonlegit": 199.95,
+  "missing": 184.05,
+  "taint": 0.0
+ },
+ "5000|B3": {
+  "post": 0.0,
+  "nonlegit": 199.95,
+  "missing": 172.1,
+  "taint": 0.0
+ },
+ "5000|PBTI": {
+  "post": 0.0,
+  "nonlegit": 0.0,
+  "missing": 270.15,
+  "taint": 279.95
+ },
+ "30000|B1": {
+  "post": 40.0,
+  "nonlegit": 239.95,
+  "missing": 159.95,
+  "taint": 0.0
+ },
+ "30000|B2": {
+  "post": 3.0,
+  "nonlegit": 202.95,
+  "missing": 159.95,
+  "taint": 0.0
+ },
+ "30000|B3": {
+  "post": 3.0,
+  "nonlegit": 202.95,
+  "missing": 159.95,
+  "taint": 0.0
+ },
+ "30000|PBTI": {
+  "post": 3.0,
+  "nonlegit": 0.0,
+  "missing": 258.15,
+  "taint": 296.1
+ }
+}

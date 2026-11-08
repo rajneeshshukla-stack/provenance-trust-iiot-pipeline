@@ -1,0 +1,13 @@
+[A3_selective] 25/294 runs, 0 errors, 116s
+[A3_selective] 50/294 runs, 0 errors, 163s
+[A3_selective] 75/294 runs, 0 errors, 249s
+[A3_selective] 100/294 runs, 0 errors, 397s
+[A3_selective] 125/294 runs, 0 errors, 558s
+[A3_selective] 150/294 runs, 0 errors, 705s
+[A3_selective] 175/294 runs, 0 errors, 857s
+[A3_selective] 200/294 runs, 0 errors, 1031s
+[A3_selective] 225/294 runs, 0 errors, 1179s
+[A3_selective] 250/294 runs, 0 errors, 1290s
+[A3_selective] 275/294 runs, 0 errors, 1408s
+[A3_selective] 294/294 runs, 0 errors, 1485s
+written /home/claude/PBTI_v7/results/reexec_cloud/A3_selective_subset.jsonl errors 0

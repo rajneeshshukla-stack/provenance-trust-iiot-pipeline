@@ -1,0 +1,9 @@
+{
+ "S99_mixed|PBTI": {
+  "seeds": 20,
+  "per_run_mean_by_label": {
+   "gapfill": 0.15,
+   "gwforge-legacy": 5.0
+  }
+ }
+}

@@ -1,0 +1,8 @@
+# image: pbti:v3
+# check: smoke (timeout 600s, --cpus=1.0)
+# cmd: docker run --rm --cpus=1.0  pbti:v3 python3 -c import sys; sys.path.insert(0,'src'); from pbti.scenarios import build; from pbti.oracle import evaluate; w=build('S01_normal','PBTI',1); w.run(); print(evaluate(w)['nonlegit_auth'], evaluate(w)['legit_missing'])
+# start: 2026-11-04T05:20:31Z
+0 0
+# exit_code: 0
+# end: 2026-11-04T05:20:47Z
+# wall_s: 16.043021702

@@ -1,0 +1,20 @@
+{
+ "A1": {
+  "rows": 312,
+  "ci_bounds_identical": 312,
+  "max_abs_diff": 0.0,
+  "class_match_with_crc32_seeding": 312
+ },
+ "A3": {
+  "rows": 630,
+  "ci_bounds_identical": 630,
+  "max_abs_diff": 0.0,
+  "class_match_with_crc32_seeding": 630
+ },
+ "A3F": {
+  "rows": 240,
+  "ci_bounds_identical": 240,
+  "max_abs_diff": 0.0,
+  "class_match_with_crc32_seeding": 240
+ }
+}

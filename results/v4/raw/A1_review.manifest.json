@@ -1,0 +1,236 @@
+{
+ "campaign": "A1_review",
+ "started": "2026-11-05T04:36:00-0600",
+ "args": {
+  "config": "experiments/v4_configs/A1_review.json",
+  "out": "results/v4/raw/A1_review.jsonl",
+  "workers": 2
+ },
+ "source_sha256": "8dfae6decd80e5019e269df1e017d19ed479c402c34348d12bac9ff2b0a2aef1",
+ "python": "3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]",
+ "platform": "Linux-6.18.44-fc-v236-x86_64-with-glibc2.39",
+ "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+ "logical_cpus": 2,
+ "ram_gb": 7.83,
+ "versions": {
+  "cryptography": "50.0.1",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "pandas": "3.0.5"
+ },
+ "config_file": "experiments/v4_configs/A1_review.json",
+ "config_sha256": "7bb565bc8248ba66037ff7aa6a45f23545de2283dbe6835bbbdc7a7ac440feb8",
+ "config": {
+  "campaign": "A1_review",
+  "description": "A1: matched recovery and review-delay sensitivity. B5 and PBTI-R with the same automated reviewer: historical one-shot rule (60 s / 10 s), deferring rule with minimum case age R in {0, 1, 5, 60} s and periodic cadence C in {1, 10} s, and event-driven immediate review; PBTI control; one exploratory one-shot arm at R = 0 (cadence 10 s). Fresh confirmatory seeds 21-40. (B5s is in A0 and not repeated here.)",
+  "seeds": {
+   "start": 21,
+   "n": 20
+  },
+  "audit_seeds": 2,
+  "design": [
+   {
+    "kind": "scenario",
+    "scenarios": [
+     "S05_stolen_key",
+     "S08_seq_reuse_bug",
+     "S12_beyond_horizon",
+     "S99_mixed"
+    ]
+   }
+  ],
+  "arms": [
+   {
+    "arm": "B5-hist",
+    "system": "B5",
+    "cfg": {}
+   },
+   {
+    "arm": "B5-d0c1",
+    "system": "B5",
+    "cfg": {
+     "review_delay_ms": 0,
+     "review_every_ms": 1000,
+     "review_rule": "defer"
+    }
+   },
+   {
+    "arm": "B5-d0c10",
+    "system": "B5",
+    "cfg": {
+     "review_delay_ms": 0,
+     "review_every_ms": 10000,
+     "review_rule": "defer"
+    }
+   },
+   {
+    "arm": "B5-d1c1",
+    "system": "B5",
+    "cfg": {
+     "review_delay_ms": 1000,
+     "review_every_ms": 1000,
+     "review_rule": "defer"
+    }
+   },
+   {
+    "arm": "B5-d1c10",
+    "system": "B5",
+    "cfg": {
+     "review_delay_ms": 1000,
+     "review_every_ms": 10000,
+     "review_rule": "defer"
+    }
+   },
+   {
+    "arm": "B5-d5c1",
+    "system": "B5",
+    "cfg": {
+     "review_delay_ms": 5000,
+     "review_every_ms": 1000,
+     "review_rule": "defer"
+    }
+   },
+   {
+    "arm": "B5-d5c10",
+    "system": "B5",
+    "cfg": {
+     "review_delay_ms": 5000,
+     "review_every_ms": 10000,
+     "review_rule": "defer"
+    }
+   },
+   {
+    "arm": "B5-d60c1",
+    "system": "B5",
+    "cfg": {
+     "review_delay_ms": 60000,
+     "review_every_ms": 1000,
+     "review_rule": "defer"
+    }
+   },
+   {
+    "arm": "B5-d60c10",
+    "system": "B5",
+    "cfg": {
+     "review_delay_ms": 60000,
+     "review_every_ms": 10000,
+     "review_rule": "defer"
+    }
+   },
+   {
+    "arm": "B5-event",
+    "system": "B5",
+    "cfg": {
+     "review_mode": "event",
+     "review_delay_ms": 0,
+     "review_rule": "defer"
+    }
+   },
+   {
+    "arm": "PBTI-R-hist",
+    "system": "PBTI-R",
+    "cfg": {}
+   },
+   {
+    "arm": "PBTI-R-d0c1",
+    "system": "PBTI-R",
+    "cfg": {
+     "review_delay_ms": 0,
+     "review_every_ms": 1000,
+     "review_rule": "defer"
+    }
+   },
+   {
+    "arm": "PBTI-R-d0c10",
+    "system": "PBTI-R",
+    "cfg": {
+     "review_delay_ms": 0,
+     "review_every_ms": 10000,
+     "review_rule": "defer"
+    }
+   },
+   {
+    "arm": "PBTI-R-d1c1",
+    "system": "PBTI-R",
+    "cfg": {
+     "review_delay_ms": 1000,
+     "review_every_ms": 1000,
+     "review_rule": "defer"
+    }
+   },
+   {
+    "arm": "PBTI-R-d1c10",
+    "system": "PBTI-R",
+    "cfg": {
+     "review_delay_ms": 1000,
+     "review_every_ms": 10000,
+     "review_rule": "defer"
+    }
+   },
+   {
+    "arm": "PBTI-R-d5c1",
+    "system": "PBTI-R",
+    "cfg": {
+     "review_delay_ms": 5000,
+     "review_every_ms": 1000,
+     "review_rule": "defer"
+    }
+   },
+   {
+    "arm": "PBTI-R-d5c10",
+    "system": "PBTI-R",
+    "cfg": {
+     "review_delay_ms": 5000,
+     "review_every_ms": 10000,
+     "review_rule": "defer"
+    }
+   },
+   {
+    "arm": "PBTI-R-d60c1",
+    "system": "PBTI-R",
+    "cfg": {
+     "review_delay_ms": 60000,
+     "review_every_ms": 1000,
+     "review_rule": "defer"
+    }
+   },
+   {
+    "arm": "PBTI-R-d60c10",
+    "system": "PBTI-R",
+    "cfg": {
+     "review_delay_ms": 60000,
+     "review_every_ms": 10000,
+     "review_rule": "defer"
+    }
+   },
+   {
+    "arm": "PBTI-R-event",
+    "system": "PBTI-R",
+    "cfg": {
+     "review_mode": "event",
+     "review_delay_ms": 0,
+     "review_rule": "defer"
+    }
+   },
+   {
+    "arm": "B5-oneshot-d0c10",
+    "system": "B5",
+    "cfg": {
+     "review_delay_ms": 0,
+     "review_every_ms": 10000,
+     "review_rule": "oneshot"
+    }
+   },
+   {
+    "arm": "PBTI",
+    "system": "PBTI"
+   }
+  ]
+ },
+ "n_specs": 1760,
+ "rows_kept": 0,
+ "truncated_lines_dropped": 0,
+ "rows_to_run": 1760,
+ "runner": "scripts/run_v4_resume.py (frozen experiments/run_v4.py job/expand)",
+ "runner_sha256": "85d5ac6495c18ffa82579a93eb096c75287f218c63eacf2c7b35104669c9442c"
+}

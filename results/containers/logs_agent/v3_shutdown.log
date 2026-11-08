@@ -1,0 +1,13 @@
+# image: pbti:v3  default ENTRYPOINT/CMD, detached, --cpus=1.0
+# start: 2026-11-04T05:23:09Z
+# processes before stop:
+PID                 PPID                USER                COMMAND
+14184               14161               10001               /usr/bin/tini -g -- make test campaign perf e2e analysis
+14200               14184               10001               make test campaign perf e2e analysis
+14201               14200               10001               python3 -m pytest -q
+# docker stop -t 20 took: .255807976 s
+# state: ExitCode=143 OOMKilled=false Error=
+# container log tail:
+python3 -m pytest -q
+make: *** [Makefile:25: test] Terminated
+# end: 2026-11-04T05:23:18Z

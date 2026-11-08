@@ -1,0 +1,2 @@
+F2 repro: seq2 held = True | audit pass = True {}
+F1 repro: released seq 3-5 re-held = True | audit pass = True {}

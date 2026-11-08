@@ -1,0 +1,2542 @@
+{
+ "python": "3.13.18",
+ "numpy": "2.5.3",
+ "script": "/home/claude/PBTI_v7/tools/proof_audit/model_check.py",
+ "started_utc": "2026-11-05T23:50:05Z",
+ "cross_validation": [
+  {
+   "universe": "1dev_1ep_q0-3",
+   "pairs": 20000,
+   "mismatches": 0
+  },
+  {
+   "universe": "2dev_2ep_q0-3",
+   "pairs": 20000,
+   "mismatches": 0
+  }
+ ],
+ "exhaustive": [
+  {
+   "universe": "1dev_1ep_q0-3",
+   "bounds": {
+    "devices": 1,
+    "epochs": 1,
+    "q": [
+     0,
+     3
+    ],
+    "digests_per_identity": 2
+   },
+   "identities": 4,
+   "states": 65536,
+   "statements": 24,
+   "kmax": 3,
+   "exhaustive": true,
+   "by_k": {
+    "1": {
+     "cases": 1572864,
+     "sequences": 24,
+     "hist_A": {
+      "1": 786432,
+      "2": 786432
+     },
+     "hist_evidence": [
+      589824,
+      786432,
+      196608,
+      0,
+      0
+     ],
+     "hist_class": [
+      921600,
+      614400,
+      36864,
+      0,
+      0
+     ],
+     "hist_authority": [
+      1105920,
+      442368,
+      24576,
+      0,
+      0
+     ],
+     "hist_class_or_authority": [
+      921600,
+      614400,
+      36864,
+      0,
+      0
+     ],
+     "attained_class_2k": 36864,
+     "attained_authority_2k": 24576,
+     "attained_evidence_2k": 196608,
+     "A_eq_2k_cases": 786432,
+     "A_eq_2k_but_class_lt_2k": 749568,
+     "A_eq_2k_but_evidence_lt_2k": 589824,
+     "max_class": 2,
+     "max_evidence": 2,
+     "max_authority": 2
+    },
+    "2": {
+     "cases": 37748736,
+     "sequences": 576,
+     "hist_A": {
+      "1": 3145728,
+      "2": 17825792,
+      "3": 14680064,
+      "4": 2097152
+     },
+     "hist_evidence": [
+      6144000,
+      16547840,
+      12304384,
+      2621440,
+      131072
+     ],
+     "hist_class": [
+      14557696,
+      17446912,
+      5389312,
+      350208,
+      4608
+     ],
+     "hist_authority": [
+      20957184,
+      13885440,
+      2748416,
+      155648,
+      2048
+     ],
+     "hist_class_or_authority": [
+      14557696,
+      17446912,
+      5389312,
+      350208,
+      4608
+     ],
+     "attained_class_2k": 4608,
+     "attained_authority_2k": 2048,
+     "attained_evidence_2k": 131072,
+     "A_eq_2k_cases": 2097152,
+     "A_eq_2k_but_class_lt_2k": 2092544,
+     "A_eq_2k_but_evidence_lt_2k": 1966080,
+     "max_class": 4,
+     "max_evidence": 4,
+     "max_authority": 4
+    },
+    "3": {
+     "cases": 905969664,
+     "sequences": 13824,
+     "hist_A": {
+      "1": 15728640,
+      "2": 204472320,
+      "3": 465567744,
+      "4": 220200960
+     },
+     "hist_evidence": [
+      70926336,
+      291569664,
+      365150208,
+      158171136,
+      20152320
+     ],
+     "hist_class": [
+      249607680,
+      410216448,
+      209236992,
+      35457024,
+      1451520
+     ],
+     "hist_authority": [
+      426590208,
+      362201088,
+      105037824,
+      11747328,
+      393216
+     ],
+     "hist_class_or_authority": [
+      249607680,
+      410216448,
+      209236992,
+      35457024,
+      1451520
+     ],
+     "attained_class_2k": 0,
+     "attained_authority_2k": 0,
+     "attained_evidence_2k": 0,
+     "A_eq_2k_cases": 0,
+     "A_eq_2k_but_class_lt_2k": 0,
+     "A_eq_2k_but_evidence_lt_2k": 0,
+     "max_class": 4,
+     "max_evidence": 4,
+     "max_authority": 4
+    }
+   },
+   "violations": [],
+   "n_violations": 0,
+   "examples": {
+    "A2k_class_lt_2k_k1": {
+     "E": {},
+     "S": [
+      {
+       "e": "(0, 0, 1)",
+       "cd": 0,
+       "prev": 0
+      }
+     ],
+     "class_before": {
+      "(0, 0, 0)": "ABSENT",
+      "(0, 0, 1)": "ABSENT",
+      "(0, 0, 2)": "ABSENT",
+      "(0, 0, 3)": "ABSENT"
+     },
+     "class_after": {
+      "(0, 0, 0)": "ABSENT",
+      "(0, 0, 1)": "COMMITTED",
+      "(0, 0, 2)": "ABSENT",
+      "(0, 0, 3)": "ABSENT"
+     }
+    },
+    "attained_k1": {
+     "E": {
+      "(0, 0, 0)": {
+       "V": [
+        1
+       ],
+       "I": []
+      }
+     },
+     "S": [
+      {
+       "e": "(0, 0, 1)",
+       "cd": 0,
+       "prev": 0
+      }
+     ],
+     "class_before": {
+      "(0, 0, 0)": "COMMITTED",
+      "(0, 0, 1)": "ABSENT",
+      "(0, 0, 2)": "ABSENT",
+      "(0, 0, 3)": "ABSENT"
+     },
+     "class_after": {
+      "(0, 0, 0)": "CONTESTED",
+      "(0, 0, 1)": "COMMITTED",
+      "(0, 0, 2)": "ABSENT",
+      "(0, 0, 3)": "ABSENT"
+     }
+    },
+    "A2k_class_lt_2k_k2": {
+     "E": {},
+     "S": [
+      {
+       "e": "(0, 0, 1)",
+       "cd": 0,
+       "prev": 0
+      },
+      {
+       "e": "(0, 0, 3)",
+       "cd": 0,
+       "prev": 0
+      }
+     ],
+     "class_before": {
+      "(0, 0, 0)": "ABSENT",
+      "(0, 0, 1)": "ABSENT",
+      "(0, 0, 2)": "ABSENT",
+      "(0, 0, 3)": "ABSENT"
+     },
+     "class_after": {
+      "(0, 0, 0)": "ABSENT",
+      "(0, 0, 1)": "COMMITTED",
+      "(0, 0, 2)": "ABSENT",
+      "(0, 0, 3)": "COMMITTED"
+     }
+    },
+    "attained_k2": {
+     "E": {
+      "(0, 0, 0)": {
+       "V": [
+        1
+       ],
+       "I": []
+      },
+      "(0, 0, 2)": {
+       "V": [
+        1
+       ],
+       "I": []
+      }
+     },
+     "S": [
+      {
+       "e": "(0, 0, 1)",
+       "cd": 0,
+       "prev": 0
+      },
+      {
+       "e": "(0, 0, 3)",
+       "cd": 0,
+       "prev": 0
+      }
+     ],
+     "class_before": {
+      "(0, 0, 0)": "COMMITTED",
+      "(0, 0, 1)": "ABSENT",
+      "(0, 0, 2)": "COMMITTED",
+      "(0, 0, 3)": "ABSENT"
+     },
+     "class_after": {
+      "(0, 0, 0)": "CONTESTED",
+      "(0, 0, 1)": "COMMITTED",
+      "(0, 0, 2)": "CONTESTED",
+      "(0, 0, 3)": "COMMITTED"
+     }
+    }
+   },
+   "states_where_literal_class_definition_is_ambiguous": 36975,
+   "seconds": 27.1
+  },
+  {
+   "universe": "1dev_2ep_q0-1",
+   "bounds": {
+    "devices": 1,
+    "epochs": 2,
+    "q": [
+     0,
+     1
+    ],
+    "digests_per_identity": 2
+   },
+   "identities": 4,
+   "states": 65536,
+   "statements": 24,
+   "kmax": 3,
+   "exhaustive": true,
+   "by_k": {
+    "1": {
+     "cases": 1572864,
+     "sequences": 24,
+     "hist_A": {
+      "1": 1048576,
+      "2": 524288
+     },
+     "hist_evidence": [
+      655360,
+      786432,
+      131072,
+      0,
+      0
+     ],
+     "hist_class": [
+      942080,
+      606208,
+      24576,
+      0,
+      0
+     ],
+     "hist_authority": [
+      1130496,
+      425984,
+      16384,
+      0,
+      0
+     ],
+     "hist_class_or_authority": [
+      942080,
+      606208,
+      24576,
+      0,
+      0
+     ],
+     "attained_class_2k": 24576,
+     "attained_authority_2k": 16384,
+     "attained_evidence_2k": 131072,
+     "A_eq_2k_cases": 524288,
+     "A_eq_2k_but_class_lt_2k": 499712,
+     "A_eq_2k_but_evidence_lt_2k": 393216,
+     "max_class": 2,
+     "max_evidence": 2,
+     "max_authority": 2
+    },
+    "2": {
+     "cases": 37748736,
+     "sequences": 576,
+     "hist_A": {
+      "1": 5242880,
+      "2": 22020096,
+      "3": 8388608,
+      "4": 2097152
+     },
+     "hist_evidence": [
+      7503872,
+      17891328,
+      10649600,
+      1572864,
+      131072
+     ],
+     "hist_class": [
+      15151616,
+      17446912,
+      4918272,
+      227328,
+      4608
+     ],
+     "hist_authority": [
+      21645312,
+      13574144,
+      2420736,
+      106496,
+      2048
+     ],
+     "hist_class_or_authority": [
+      15151616,
+      17446912,
+      4918272,
+      227328,
+      4608
+     ],
+     "attained_class_2k": 4608,
+     "attained_authority_2k": 2048,
+     "attained_evidence_2k": 131072,
+     "A_eq_2k_cases": 2097152,
+     "A_eq_2k_but_class_lt_2k": 2092544,
+     "A_eq_2k_but_evidence_lt_2k": 1966080,
+     "max_class": 4,
+     "max_evidence": 4,
+     "max_authority": 4
+    },
+    "3": {
+     "cases": 905969664,
+     "sequences": 13824,
+     "hist_A": {
+      "1": 29360128,
+      "2": 322961408,
+      "3": 390070272,
+      "4": 163577856
+     },
+     "hist_evidence": [
+      94437376,
+      338755584,
+      345669632,
+      113246208,
+      13860864
+     ],
+     "hist_class": [
+      263433728,
+      414889984,
+      197305344,
+      29349888,
+      990720
+     ],
+     "hist_authority": [
+      442060800,
+      357416960,
+      96526336,
+      9682944,
+      282624
+     ],
+     "hist_class_or_authority": [
+      263433728,
+      414889984,
+      197305344,
+      29349888,
+      990720
+     ],
+     "attained_class_2k": 0,
+     "attained_authority_2k": 0,
+     "attained_evidence_2k": 0,
+     "A_eq_2k_cases": 0,
+     "A_eq_2k_but_class_lt_2k": 0,
+     "A_eq_2k_but_evidence_lt_2k": 0,
+     "max_class": 4,
+     "max_evidence": 4,
+     "max_authority": 4
+    }
+   },
+   "violations": [],
+   "n_violations": 0,
+   "examples": {
+    "A2k_class_lt_2k_k1": {
+     "E": {},
+     "S": [
+      {
+       "e": "(0, 0, 1)",
+       "cd": 0,
+       "prev": 0
+      }
+     ],
+     "class_before": {
+      "(0, 0, 0)": "ABSENT",
+      "(0, 0, 1)": "ABSENT",
+      "(0, 1, 0)": "ABSENT",
+      "(0, 1, 1)": "ABSENT"
+     },
+     "class_after": {
+      "(0, 0, 0)": "ABSENT",
+      "(0, 0, 1)": "COMMITTED",
+      "(0, 1, 0)": "ABSENT",
+      "(0, 1, 1)": "ABSENT"
+     }
+    },
+    "attained_k1": {
+     "E": {
+      "(0, 0, 0)": {
+       "V": [
+        1
+       ],
+       "I": []
+      }
+     },
+     "S": [
+      {
+       "e": "(0, 0, 1)",
+       "cd": 0,
+       "prev": 0
+      }
+     ],
+     "class_before": {
+      "(0, 0, 0)": "COMMITTED",
+      "(0, 0, 1)": "ABSENT",
+      "(0, 1, 0)": "ABSENT",
+      "(0, 1, 1)": "ABSENT"
+     },
+     "class_after": {
+      "(0, 0, 0)": "CONTESTED",
+      "(0, 0, 1)": "COMMITTED",
+      "(0, 1, 0)": "ABSENT",
+      "(0, 1, 1)": "ABSENT"
+     }
+    },
+    "A2k_class_lt_2k_k2": {
+     "E": {},
+     "S": [
+      {
+       "e": "(0, 0, 1)",
+       "cd": 0,
+       "prev": 0
+      },
+      {
+       "e": "(0, 1, 1)",
+       "cd": 0,
+       "prev": 0
+      }
+     ],
+     "class_before": {
+      "(0, 0, 0)": "ABSENT",
+      "(0, 0, 1)": "ABSENT",
+      "(0, 1, 0)": "ABSENT",
+      "(0, 1, 1)": "ABSENT"
+     },
+     "class_after": {
+      "(0, 0, 0)": "ABSENT",
+      "(0, 0, 1)": "COMMITTED",
+      "(0, 1, 0)": "ABSENT",
+      "(0, 1, 1)": "COMMITTED"
+     }
+    },
+    "attained_k2": {
+     "E": {
+      "(0, 0, 0)": {
+       "V": [
+        1
+       ],
+       "I": []
+      },
+      "(0, 1, 0)": {
+       "V": [
+        1
+       ],
+       "I": []
+      }
+     },
+     "S": [
+      {
+       "e": "(0, 0, 1)",
+       "cd": 0,
+       "prev": 0
+      },
+      {
+       "e": "(0, 1, 1)",
+       "cd": 0,
+       "prev": 0
+      }
+     ],
+     "class_before": {
+      "(0, 0, 0)": "COMMITTED",
+      "(0, 0, 1)": "ABSENT",
+      "(0, 1, 0)": "COMMITTED",
+      "(0, 1, 1)": "ABSENT"
+     },
+     "class_after": {
+      "(0, 0, 0)": "CONTESTED",
+      "(0, 0, 1)": "COMMITTED",
+      "(0, 1, 0)": "CONTESTED",
+      "(0, 1, 1)": "COMMITTED"
+     }
+    }
+   },
+   "states_where_literal_class_definition_is_ambiguous": 36975,
+   "seconds": 26.4
+  },
+  {
+   "universe": "2dev_1ep_q0-1",
+   "bounds": {
+    "devices": 2,
+    "epochs": 1,
+    "q": [
+     0,
+     1
+    ],
+    "digests_per_identity": 2
+   },
+   "identities": 4,
+   "states": 65536,
+   "statements": 24,
+   "kmax": 3,
+   "exhaustive": true,
+   "by_k": {
+    "1": {
+     "cases": 1572864,
+     "sequences": 24,
+     "hist_A": {
+      "1": 1048576,
+      "2": 524288
+     },
+     "hist_evidence": [
+      655360,
+      786432,
+      131072,
+      0,
+      0
+     ],
+     "hist_class": [
+      942080,
+      606208,
+      24576,
+      0,
+      0
+     ],
+     "hist_authority": [
+      1130496,
+      425984,
+      16384,
+      0,
+      0
+     ],
+     "hist_class_or_authority": [
+      942080,
+      606208,
+      24576,
+      0,
+      0
+     ],
+     "attained_class_2k": 24576,
+     "attained_authority_2k": 16384,
+     "attained_evidence_2k": 131072,
+     "A_eq_2k_cases": 524288,
+     "A_eq_2k_but_class_lt_2k": 499712,
+     "A_eq_2k_but_evidence_lt_2k": 393216,
+     "max_class": 2,
+     "max_evidence": 2,
+     "max_authority": 2
+    },
+    "2": {
+     "cases": 37748736,
+     "sequences": 576,
+     "hist_A": {
+      "1": 5242880,
+      "2": 22020096,
+      "3": 8388608,
+      "4": 2097152
+     },
+     "hist_evidence": [
+      7503872,
+      17891328,
+      10649600,
+      1572864,
+      131072
+     ],
+     "hist_class": [
+      15151616,
+      17446912,
+      4918272,
+      227328,
+      4608
+     ],
+     "hist_authority": [
+      21645312,
+      13574144,
+      2420736,
+      106496,
+      2048
+     ],
+     "hist_class_or_authority": [
+      15151616,
+      17446912,
+      4918272,
+      227328,
+      4608
+     ],
+     "attained_class_2k": 4608,
+     "attained_authority_2k": 2048,
+     "attained_evidence_2k": 131072,
+     "A_eq_2k_cases": 2097152,
+     "A_eq_2k_but_class_lt_2k": 2092544,
+     "A_eq_2k_but_evidence_lt_2k": 1966080,
+     "max_class": 4,
+     "max_evidence": 4,
+     "max_authority": 4
+    },
+    "3": {
+     "cases": 905969664,
+     "sequences": 13824,
+     "hist_A": {
+      "1": 29360128,
+      "2": 322961408,
+      "3": 390070272,
+      "4": 163577856
+     },
+     "hist_evidence": [
+      94437376,
+      338755584,
+      345669632,
+      113246208,
+      13860864
+     ],
+     "hist_class": [
+      263433728,
+      414889984,
+      197305344,
+      29349888,
+      990720
+     ],
+     "hist_authority": [
+      442060800,
+      357416960,
+      96526336,
+      9682944,
+      282624
+     ],
+     "hist_class_or_authority": [
+      263433728,
+      414889984,
+      197305344,
+      29349888,
+      990720
+     ],
+     "attained_class_2k": 0,
+     "attained_authority_2k": 0,
+     "attained_evidence_2k": 0,
+     "A_eq_2k_cases": 0,
+     "A_eq_2k_but_class_lt_2k": 0,
+     "A_eq_2k_but_evidence_lt_2k": 0,
+     "max_class": 4,
+     "max_evidence": 4,
+     "max_authority": 4
+    }
+   },
+   "violations": [],
+   "n_violations": 0,
+   "examples": {
+    "A2k_class_lt_2k_k1": {
+     "E": {},
+     "S": [
+      {
+       "e": "(0, 0, 1)",
+       "cd": 0,
+       "prev": 0
+      }
+     ],
+     "class_before": {
+      "(0, 0, 0)": "ABSENT",
+      "(0, 0, 1)": "ABSENT",
+      "(1, 0, 0)": "ABSENT",
+      "(1, 0, 1)": "ABSENT"
+     },
+     "class_after": {
+      "(0, 0, 0)": "ABSENT",
+      "(0, 0, 1)": "COMMITTED",
+      "(1, 0, 0)": "ABSENT",
+      "(1, 0, 1)": "ABSENT"
+     }
+    },
+    "attained_k1": {
+     "E": {
+      "(0, 0, 0)": {
+       "V": [
+        1
+       ],
+       "I": []
+      }
+     },
+     "S": [
+      {
+       "e": "(0, 0, 1)",
+       "cd": 0,
+       "prev": 0
+      }
+     ],
+     "class_before": {
+      "(0, 0, 0)": "COMMITTED",
+      "(0, 0, 1)": "ABSENT",
+      "(1, 0, 0)": "ABSENT",
+      "(1, 0, 1)": "ABSENT"
+     },
+     "class_after": {
+      "(0, 0, 0)": "CONTESTED",
+      "(0, 0, 1)": "COMMITTED",
+      "(1, 0, 0)": "ABSENT",
+      "(1, 0, 1)": "ABSENT"
+     }
+    },
+    "A2k_class_lt_2k_k2": {
+     "E": {},
+     "S": [
+      {
+       "e": "(0, 0, 1)",
+       "cd": 0,
+       "prev": 0
+      },
+      {
+       "e": "(1, 0, 1)",
+       "cd": 0,
+       "prev": 0
+      }
+     ],
+     "class_before": {
+      "(0, 0, 0)": "ABSENT",
+      "(0, 0, 1)": "ABSENT",
+      "(1, 0, 0)": "ABSENT",
+      "(1, 0, 1)": "ABSENT"
+     },
+     "class_after": {
+      "(0, 0, 0)": "ABSENT",
+      "(0, 0, 1)": "COMMITTED",
+      "(1, 0, 0)": "ABSENT",
+      "(1, 0, 1)": "COMMITTED"
+     }
+    },
+    "attained_k2": {
+     "E": {
+      "(0, 0, 0)": {
+       "V": [
+        1
+       ],
+       "I": []
+      },
+      "(1, 0, 0)": {
+       "V": [
+        1
+       ],
+       "I": []
+      }
+     },
+     "S": [
+      {
+       "e": "(0, 0, 1)",
+       "cd": 0,
+       "prev": 0
+      },
+      {
+       "e": "(1, 0, 1)",
+       "cd": 0,
+       "prev": 0
+      }
+     ],
+     "class_before": {
+      "(0, 0, 0)": "COMMITTED",
+      "(0, 0, 1)": "ABSENT",
+      "(1, 0, 0)": "COMMITTED",
+      "(1, 0, 1)": "ABSENT"
+     },
+     "class_after": {
+      "(0, 0, 0)": "CONTESTED",
+      "(0, 0, 1)": "COMMITTED",
+      "(1, 0, 0)": "CONTESTED",
+      "(1, 0, 1)": "COMMITTED"
+     }
+    }
+   },
+   "states_where_literal_class_definition_is_ambiguous": 36975,
+   "seconds": 31.3
+  }
+ ],
+ "sampled": [
+  {
+   "universe": "2dev_2ep_q0-3",
+   "bounds": {
+    "devices": 2,
+    "epochs": 2,
+    "q": [
+     0,
+     3
+    ],
+    "digests_per_identity": 2
+   },
+   "identities": 16,
+   "state_pool": 4096,
+   "statements": 96,
+   "exhaustive": false,
+   "seed": 7,
+   "by_k": {
+    "1": {
+     "cases": 393216,
+     "sequences": 96,
+     "hist_A": {
+      "1": 196608,
+      "2": 196608
+     },
+     "hist_evidence": [
+      96974,
+      210244,
+      85998,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hist_class": [
+      151219,
+      223136,
+      18861,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hist_authority": [
+      181459,
+      195551,
+      16206,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hist_class_or_authority": [
+      151219,
+      223136,
+      18861,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "attained_class_2k": 18861,
+     "attained_authority_2k": 16206,
+     "attained_evidence_2k": 85998,
+     "A_eq_2k_cases": 196608,
+     "A_eq_2k_but_class_lt_2k": 177747,
+     "A_eq_2k_but_evidence_lt_2k": 110610,
+     "max_class": 2,
+     "max_evidence": 2,
+     "max_authority": 2
+    },
+    "2": {
+     "cases": 37748736,
+     "sequences": 9216,
+     "hist_A": {
+      "1": 786432,
+      "2": 11534336,
+      "3": 17825792,
+      "4": 7602176
+     },
+     "hist_evidence": [
+      2844772,
+      10553704,
+      14612816,
+      8100680,
+      1636764,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hist_class": [
+      6686457,
+      15530770,
+      13588039,
+      1829780,
+      113690,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hist_authority": [
+      10002363,
+      15330299,
+      10905772,
+      1421654,
+      88648,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hist_class_or_authority": [
+      6686457,
+      15530770,
+      13588039,
+      1829780,
+      113690,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "attained_class_2k": 113690,
+     "attained_authority_2k": 88648,
+     "attained_evidence_2k": 1636764,
+     "A_eq_2k_cases": 7602176,
+     "A_eq_2k_but_class_lt_2k": 7488486,
+     "A_eq_2k_but_evidence_lt_2k": 5965412,
+     "max_class": 4,
+     "max_evidence": 4,
+     "max_authority": 4
+    },
+    "3": {
+     "cases": 121005056,
+     "sequences": 118169,
+     "hist_A": {
+      "1": 135168,
+      "2": 4155392,
+      "3": 27340800,
+      "4": 48774144,
+      "5": 32722944,
+      "6": 7876608
+     },
+     "hist_evidence": [
+      6955518,
+      28359027,
+      42691406,
+      30298365,
+      10710534,
+      1859694,
+      130512,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hist_class": [
+      26816864,
+      50340309,
+      33482820,
+      9295926,
+      1021761,
+      46566,
+      810,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hist_authority": [
+      46559498,
+      49973932,
+      20276063,
+      3834108,
+      346761,
+      14466,
+      228,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hist_class_or_authority": [
+      26816864,
+      50340309,
+      33482820,
+      9295926,
+      1021761,
+      46566,
+      810,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "attained_class_2k": 810,
+     "attained_authority_2k": 228,
+     "attained_evidence_2k": 130512,
+     "A_eq_2k_cases": 7876608,
+     "A_eq_2k_but_class_lt_2k": 7875798,
+     "A_eq_2k_but_evidence_lt_2k": 7746096,
+     "max_class": 6,
+     "max_evidence": 6,
+     "max_authority": 6
+    }
+   },
+   "violations": [],
+   "n_violations": 0,
+   "examples": {
+    "A2k_class_lt_2k_k1": {
+     "E": {
+      "(0, 0, 0)": {
+       "V": [],
+       "I": [
+        1
+       ]
+      },
+      "(0, 0, 1)": {
+       "V": [],
+       "I": [
+        0
+       ]
+      },
+      "(0, 0, 2)": {
+       "V": [
+        1
+       ],
+       "I": [
+        0,
+        1
+       ]
+      },
+      "(0, 0, 3)": {
+       "V": [
+        0,
+        1
+       ],
+       "I": [
+        0,
+        1
+       ]
+      },
+      "(0, 1, 0)": {
+       "V": [
+        1
+       ],
+       "I": [
+        1
+       ]
+      },
+      "(0, 1, 1)": {
+       "V": [],
+       "I": [
+        0
+       ]
+      },
+      "(0, 1, 3)": {
+       "V": [
+        1
+       ],
+       "I": [
+        1
+       ]
+      },
+      "(1, 0, 0)": {
+       "V": [
+        0
+       ],
+       "I": [
+        1
+       ]
+      },
+      "(1, 0, 1)": {
+       "V": [
+        1
+       ],
+       "I": [
+        0
+       ]
+      },
+      "(1, 0, 2)": {
+       "V": [
+        1
+       ],
+       "I": []
+      },
+      "(1, 0, 3)": {
+       "V": [
+        1
+       ],
+       "I": [
+        1
+       ]
+      },
+      "(1, 1, 0)": {
+       "V": [
+        0,
+        1
+       ],
+       "I": [
+        1
+       ]
+      },
+      "(1, 1, 1)": {
+       "V": [],
+       "I": [
+        0,
+        1
+       ]
+      },
+      "(1, 1, 2)": {
+       "V": [
+        1
+       ],
+       "I": [
+        1
+       ]
+      },
+      "(1, 1, 3)": {
+       "V": [
+        1
+       ],
+       "I": [
+        0,
+        1
+       ]
+      }
+     },
+     "S": [
+      {
+       "e": "(0, 0, 1)",
+       "cd": 0,
+       "prev": 0
+      }
+     ],
+     "class_before": {
+      "(0, 0, 0)": "ABSENT",
+      "(0, 0, 1)": "ABSENT",
+      "(0, 0, 2)": "CONTESTED",
+      "(0, 0, 3)": "CONTESTED",
+      "(0, 1, 0)": "COMMITTED",
+      "(0, 1, 1)": "ABSENT",
+      "(0, 1, 2)": "ABSENT",
+      "(0, 1, 3)": "COMMITTED",
+      "(1, 0, 0)": "CONTESTED",
+      "(1, 0, 1)": "CONTESTED",
+      "(1, 0, 2)": "COMMITTED",
+      "(1, 0, 3)": "COMMITTED",
+      "(1, 1, 0)": "CONTESTED",
+      "(1, 1, 1)": "ABSENT",
+      "(1, 1, 2)": "COMMITTED",
+      "(1, 1, 3)": "CONTESTED"
+     },
+     "class_after": {
+      "(0, 0, 0)": "ABSENT",
+      "(0, 0, 1)": "COMMITTED",
+      "(0, 0, 2)": "CONTESTED",
+      "(0, 0, 3)": "CONTESTED",
+      "(0, 1, 0)": "COMMITTED",
+      "(0, 1, 1)": "ABSENT",
+      "(0, 1, 2)": "ABSENT",
+      "(0, 1, 3)": "COMMITTED",
+      "(1, 0, 0)": "CONTESTED",
+      "(1, 0, 1)": "CONTESTED",
+      "(1, 0, 2)": "COMMITTED",
+      "(1, 0, 3)": "COMMITTED",
+      "(1, 1, 0)": "CONTESTED",
+      "(1, 1, 1)": "ABSENT",
+      "(1, 1, 2)": "COMMITTED",
+      "(1, 1, 3)": "CONTESTED"
+     }
+    },
+    "attained_k1": {
+     "E": {
+      "(0, 0, 0)": {
+       "V": [
+        1
+       ],
+       "I": []
+      },
+      "(0, 0, 1)": {
+       "V": [],
+       "I": [
+        0,
+        1
+       ]
+      },
+      "(0, 0, 2)": {
+       "V": [],
+       "I": [
+        0
+       ]
+      },
+      "(0, 0, 3)": {
+       "V": [
+        0
+       ],
+       "I": [
+        1
+       ]
+      },
+      "(0, 1, 0)": {
+       "V": [
+        1
+       ],
+       "I": [
+        0,
+        1
+       ]
+      },
+      "(0, 1, 1)": {
+       "V": [
+        1
+       ],
+       "I": []
+      },
+      "(0, 1, 2)": {
+       "V": [
+        0,
+        1
+       ],
+       "I": [
+        1
+       ]
+      },
+      "(0, 1, 3)": {
+       "V": [
+        0,
+        1
+       ],
+       "I": [
+        0
+       ]
+      },
+      "(1, 0, 0)": {
+       "V": [
+        1
+       ],
+       "I": []
+      },
+      "(1, 0, 1)": {
+       "V": [
+        0
+       ],
+       "I": [
+        1
+       ]
+      },
+      "(1, 0, 2)": {
+       "V": [
+        1
+       ],
+       "I": [
+        0,
+        1
+       ]
+      },
+      "(1, 0, 3)": {
+       "V": [],
+       "I": [
+        0,
+        1
+       ]
+      },
+      "(1, 1, 1)": {
+       "V": [
+        0
+       ],
+       "I": [
+        0,
+        1
+       ]
+      },
+      "(1, 1, 2)": {
+       "V": [
+        0,
+        1
+       ],
+       "I": []
+      },
+      "(1, 1, 3)": {
+       "V": [],
+       "I": [
+        1
+       ]
+      }
+     },
+     "S": [
+      {
+       "e": "(0, 0, 1)",
+       "cd": 0,
+       "prev": 0
+      }
+     ],
+     "class_before": {
+      "(0, 0, 0)": "COMMITTED",
+      "(0, 0, 1)": "ABSENT",
+      "(0, 0, 2)": "ABSENT",
+      "(0, 0, 3)": "CONTESTED",
+      "(0, 1, 0)": "CONTESTED",
+      "(0, 1, 1)": "COMMITTED",
+      "(0, 1, 2)": "CONTESTED",
+      "(0, 1, 3)": "CONTESTED",
+      "(1, 0, 0)": "COMMITTED",
+      "(1, 0, 1)": "CONTESTED",
+      "(1, 0, 2)": "CONTESTED",
+      "(1, 0, 3)": "ABSENT",
+      "(1, 1, 0)": "ABSENT",
+      "(1, 1, 1)": "CONTESTED",
+      "(1, 1, 2)": "CONTESTED",
+      "(1, 1, 3)": "ABSENT"
+     },
+     "class_after": {
+      "(0, 0, 0)": "CONTESTED",
+      "(0, 0, 1)": "CONTESTED",
+      "(0, 0, 2)": "ABSENT",
+      "(0, 0, 3)": "CONTESTED",
+      "(0, 1, 0)": "CONTESTED",
+      "(0, 1, 1)": "COMMITTED",
+      "(0, 1, 2)": "CONTESTED",
+      "(0, 1, 3)": "CONTESTED",
+      "(1, 0, 0)": "COMMITTED",
+      "(1, 0, 1)": "CONTESTED",
+      "(1, 0, 2)": "CONTESTED",
+      "(1, 0, 3)": "ABSENT",
+      "(1, 1, 0)": "ABSENT",
+      "(1, 1, 1)": "CONTESTED",
+      "(1, 1, 2)": "CONTESTED",
+      "(1, 1, 3)": "ABSENT"
+     }
+    },
+    "A2k_class_lt_2k_k2": {
+     "E": {
+      "(0, 0, 0)": {
+       "V": [],
+       "I": [
+        1
+       ]
+      },
+      "(0, 0, 1)": {
+       "V": [],
+       "I": [
+        0
+       ]
+      },
+      "(0, 0, 2)": {
+       "V": [
+        1
+       ],
+       "I": [
+        0,
+        1
+       ]
+      },
+      "(0, 0, 3)": {
+       "V": [
+        0,
+        1
+       ],
+       "I": [
+        0,
+        1
+       ]
+      },
+      "(0, 1, 0)": {
+       "V": [
+        1
+       ],
+       "I": [
+        1
+       ]
+      },
+      "(0, 1, 1)": {
+       "V": [],
+       "I": [
+        0
+       ]
+      },
+      "(0, 1, 3)": {
+       "V": [
+        1
+       ],
+       "I": [
+        1
+       ]
+      },
+      "(1, 0, 0)": {
+       "V": [
+        0
+       ],
+       "I": [
+        1
+       ]
+      },
+      "(1, 0, 1)": {
+       "V": [
+        1
+       ],
+       "I": [
+        0
+       ]
+      },
+      "(1, 0, 2)": {
+       "V": [
+        1
+       ],
+       "I": []
+      },
+      "(1, 0, 3)": {
+       "V": [
+        1
+       ],
+       "I": [
+        1
+       ]
+      },
+      "(1, 1, 0)": {
+       "V": [
+        0,
+        1
+       ],
+       "I": [
+        1
+       ]
+      },
+      "(1, 1, 1)": {
+       "V": [],
+       "I": [
+        0,
+        1
+       ]
+      },
+      "(1, 1, 2)": {
+       "V": [
+        1
+       ],
+       "I": [
+        1
+       ]
+      },
+      "(1, 1, 3)": {
+       "V": [
+        1
+       ],
+       "I": [
+        0,
+        1
+       ]
+      }
+     },
+     "S": [
+      {
+       "e": "(0, 0, 1)",
+       "cd": 0,
+       "prev": 0
+      },
+      {
+       "e": "(0, 0, 3)",
+       "cd": 0,
+       "prev": 0
+      }
+     ],
+     "class_before": {
+      "(0, 0, 0)": "ABSENT",
+      "(0, 0, 1)": "ABSENT",
+      "(0, 0, 2)": "CONTESTED",
+      "(0, 0, 3)": "CONTESTED",
+      "(0, 1, 0)": "COMMITTED",
+      "(0, 1, 1)": "ABSENT",
+      "(0, 1, 2)": "ABSENT",
+      "(0, 1, 3)": "COMMITTED",
+      "(1, 0, 0)": "CONTESTED",
+      "(1, 0, 1)": "CONTESTED",
+      "(1, 0, 2)": "COMMITTED",
+      "(1, 0, 3)": "COMMITTED",
+      "(1, 1, 0)": "CONTESTED",
+      "(1, 1, 1)": "ABSENT",
+      "(1, 1, 2)": "COMMITTED",
+      "(1, 1, 3)": "CONTESTED"
+     },
+     "class_after": {
+      "(0, 0, 0)": "ABSENT",
+      "(0, 0, 1)": "COMMITTED",
+      "(0, 0, 2)": "CONTESTED",
+      "(0, 0, 3)": "CONTESTED",
+      "(0, 1, 0)": "COMMITTED",
+      "(0, 1, 1)": "ABSENT",
+      "(0, 1, 2)": "ABSENT",
+      "(0, 1, 3)": "COMMITTED",
+      "(1, 0, 0)": "CONTESTED",
+      "(1, 0, 1)": "CONTESTED",
+      "(1, 0, 2)": "COMMITTED",
+      "(1, 0, 3)": "COMMITTED",
+      "(1, 1, 0)": "CONTESTED",
+      "(1, 1, 1)": "ABSENT",
+      "(1, 1, 2)": "COMMITTED",
+      "(1, 1, 3)": "CONTESTED"
+     }
+    },
+    "attained_k2": {
+     "E": {
+      "(0, 0, 0)": {
+       "V": [
+        1
+       ],
+       "I": []
+      },
+      "(0, 0, 1)": {
+       "V": [
+        1
+       ],
+       "I": [
+        1
+       ]
+      },
+      "(0, 0, 2)": {
+       "V": [
+        1
+       ],
+       "I": []
+      },
+      "(0, 1, 0)": {
+       "V": [],
+       "I": [
+        0
+       ]
+      },
+      "(0, 1, 1)": {
+       "V": [
+        1
+       ],
+       "I": []
+      },
+      "(0, 1, 3)": {
+       "V": [],
+       "I": [
+        0
+       ]
+      },
+      "(1, 0, 0)": {
+       "V": [
+        0
+       ],
+       "I": [
+        0
+       ]
+      },
+      "(1, 0, 1)": {
+       "V": [
+        0
+       ],
+       "I": []
+      },
+      "(1, 0, 2)": {
+       "V": [
+        1
+       ],
+       "I": [
+        0
+       ]
+      },
+      "(1, 0, 3)": {
+       "V": [],
+       "I": [
+        0,
+        1
+       ]
+      },
+      "(1, 1, 0)": {
+       "V": [
+        0,
+        1
+       ],
+       "I": []
+      },
+      "(1, 1, 1)": {
+       "V": [
+        1
+       ],
+       "I": [
+        0
+       ]
+      },
+      "(1, 1, 2)": {
+       "V": [
+        0
+       ],
+       "I": [
+        0,
+        1
+       ]
+      },
+      "(1, 1, 3)": {
+       "V": [],
+       "I": [
+        0,
+        1
+       ]
+      }
+     },
+     "S": [
+      {
+       "e": "(0, 0, 1)",
+       "cd": 0,
+       "prev": 0
+      },
+      {
+       "e": "(0, 0, 3)",
+       "cd": 0,
+       "prev": 0
+      }
+     ],
+     "class_before": {
+      "(0, 0, 0)": "COMMITTED",
+      "(0, 0, 1)": "COMMITTED",
+      "(0, 0, 2)": "COMMITTED",
+      "(0, 0, 3)": "ABSENT",
+      "(0, 1, 0)": "ABSENT",
+      "(0, 1, 1)": "COMMITTED",
+      "(0, 1, 2)": "ABSENT",
+      "(0, 1, 3)": "ABSENT",
+      "(1, 0, 0)": "COMMITTED",
+      "(1, 0, 1)": "COMMITTED",
+      "(1, 0, 2)": "CONTESTED",
+      "(1, 0, 3)": "ABSENT",
+      "(1, 1, 0)": "CONTESTED",
+      "(1, 1, 1)": "CONTESTED",
+      "(1, 1, 2)": "CONTESTED",
+      "(1, 1, 3)": "ABSENT"
+     },
+     "class_after": {
+      "(0, 0, 0)": "CONTESTED",
+      "(0, 0, 1)": "CONTESTED",
+      "(0, 0, 2)": "CONTESTED",
+      "(0, 0, 3)": "COMMITTED",
+      "(0, 1, 0)": "ABSENT",
+      "(0, 1, 1)": "COMMITTED",
+      "(0, 1, 2)": "ABSENT",
+      "(0, 1, 3)": "ABSENT",
+      "(1, 0, 0)": "COMMITTED",
+      "(1, 0, 1)": "COMMITTED",
+      "(1, 0, 2)": "CONTESTED",
+      "(1, 0, 3)": "ABSENT",
+      "(1, 1, 0)": "CONTESTED",
+      "(1, 1, 1)": "CONTESTED",
+      "(1, 1, 2)": "CONTESTED",
+      "(1, 1, 3)": "ABSENT"
+     }
+    },
+    "A2k_class_lt_2k_k3": {
+     "E": {
+      "(0, 0, 0)": {
+       "V": [],
+       "I": [
+        1
+       ]
+      },
+      "(0, 0, 1)": {
+       "V": [],
+       "I": [
+        0
+       ]
+      },
+      "(0, 0, 2)": {
+       "V": [
+        1
+       ],
+       "I": [
+        0,
+        1
+       ]
+      },
+      "(0, 0, 3)": {
+       "V": [
+        0,
+        1
+       ],
+       "I": [
+        0,
+        1
+       ]
+      },
+      "(0, 1, 0)": {
+       "V": [
+        1
+       ],
+       "I": [
+        1
+       ]
+      },
+      "(0, 1, 1)": {
+       "V": [],
+       "I": [
+        0
+       ]
+      },
+      "(0, 1, 3)": {
+       "V": [
+        1
+       ],
+       "I": [
+        1
+       ]
+      },
+      "(1, 0, 0)": {
+       "V": [
+        0
+       ],
+       "I": [
+        1
+       ]
+      },
+      "(1, 0, 1)": {
+       "V": [
+        1
+       ],
+       "I": [
+        0
+       ]
+      },
+      "(1, 0, 2)": {
+       "V": [
+        1
+       ],
+       "I": []
+      },
+      "(1, 0, 3)": {
+       "V": [
+        1
+       ],
+       "I": [
+        1
+       ]
+      },
+      "(1, 1, 0)": {
+       "V": [
+        0,
+        1
+       ],
+       "I": [
+        1
+       ]
+      },
+      "(1, 1, 1)": {
+       "V": [],
+       "I": [
+        0,
+        1
+       ]
+      },
+      "(1, 1, 2)": {
+       "V": [
+        1
+       ],
+       "I": [
+        1
+       ]
+      },
+      "(1, 1, 3)": {
+       "V": [
+        1
+       ],
+       "I": [
+        0,
+        1
+       ]
+      }
+     },
+     "S": [
+      {
+       "e": "(1, 0, 3)",
+       "cd": 1,
+       "prev": 1
+      },
+      {
+       "e": "(0, 0, 2)",
+       "cd": 1,
+       "prev": 1
+      },
+      {
+       "e": "(0, 1, 2)",
+       "cd": 0,
+       "prev": 0
+      }
+     ],
+     "class_before": {
+      "(0, 0, 0)": "ABSENT",
+      "(0, 0, 1)": "ABSENT",
+      "(0, 0, 2)": "CONTESTED",
+      "(0, 0, 3)": "CONTESTED",
+      "(0, 1, 0)": "COMMITTED",
+      "(0, 1, 1)": "ABSENT",
+      "(0, 1, 2)": "ABSENT",
+      "(0, 1, 3)": "COMMITTED",
+      "(1, 0, 0)": "CONTESTED",
+      "(1, 0, 1)": "CONTESTED",
+      "(1, 0, 2)": "COMMITTED",
+      "(1, 0, 3)": "COMMITTED",
+      "(1, 1, 0)": "CONTESTED",
+      "(1, 1, 1)": "ABSENT",
+      "(1, 1, 2)": "COMMITTED",
+      "(1, 1, 3)": "CONTESTED"
+     },
+     "class_after": {
+      "(0, 0, 0)": "ABSENT",
+      "(0, 0, 1)": "ABSENT",
+      "(0, 0, 2)": "CONTESTED",
+      "(0, 0, 3)": "CONTESTED",
+      "(0, 1, 0)": "COMMITTED",
+      "(0, 1, 1)": "ABSENT",
+      "(0, 1, 2)": "COMMITTED",
+      "(0, 1, 3)": "COMMITTED",
+      "(1, 0, 0)": "CONTESTED",
+      "(1, 0, 1)": "CONTESTED",
+      "(1, 0, 2)": "COMMITTED",
+      "(1, 0, 3)": "COMMITTED",
+      "(1, 1, 0)": "CONTESTED",
+      "(1, 1, 1)": "ABSENT",
+      "(1, 1, 2)": "COMMITTED",
+      "(1, 1, 3)": "CONTESTED"
+     }
+    },
+    "attained_k3": {
+     "E": {
+      "(0, 0, 0)": {
+       "V": [
+        0,
+        1
+       ],
+       "I": [
+        1
+       ]
+      },
+      "(0, 0, 1)": {
+       "V": [
+        1
+       ],
+       "I": []
+      },
+      "(0, 0, 2)": {
+       "V": [],
+       "I": [
+        1
+       ]
+      },
+      "(0, 0, 3)": {
+       "V": [
+        0,
+        1
+       ],
+       "I": [
+        0
+       ]
+      },
+      "(0, 1, 0)": {
+       "V": [
+        1
+       ],
+       "I": []
+      },
+      "(0, 1, 1)": {
+       "V": [
+        1
+       ],
+       "I": []
+      },
+      "(0, 1, 2)": {
+       "V": [],
+       "I": [
+        1
+       ]
+      },
+      "(0, 1, 3)": {
+       "V": [
+        0,
+        1
+       ],
+       "I": []
+      },
+      "(1, 0, 1)": {
+       "V": [
+        0
+       ],
+       "I": []
+      },
+      "(1, 0, 2)": {
+       "V": [
+        0
+       ],
+       "I": [
+        0,
+        1
+       ]
+      },
+      "(1, 0, 3)": {
+       "V": [
+        0,
+        1
+       ],
+       "I": [
+        0
+       ]
+      },
+      "(1, 1, 0)": {
+       "V": [
+        1
+       ],
+       "I": [
+        0
+       ]
+      },
+      "(1, 1, 1)": {
+       "V": [
+        0,
+        1
+       ],
+       "I": []
+      },
+      "(1, 1, 2)": {
+       "V": [
+        1
+       ],
+       "I": [
+        1
+       ]
+      },
+      "(1, 1, 3)": {
+       "V": [
+        0
+       ],
+       "I": [
+        0
+       ]
+      }
+     },
+     "S": [
+      {
+       "e": "(0, 0, 2)",
+       "cd": 1,
+       "prev": 0
+      },
+      {
+       "e": "(1, 1, 3)",
+       "cd": 1,
+       "prev": 0
+      },
+      {
+       "e": "(0, 1, 1)",
+       "cd": 0,
+       "prev": 0
+      }
+     ],
+     "class_before": {
+      "(0, 0, 0)": "CONTESTED",
+      "(0, 0, 1)": "COMMITTED",
+      "(0, 0, 2)": "ABSENT",
+      "(0, 0, 3)": "CONTESTED",
+      "(0, 1, 0)": "COMMITTED",
+      "(0, 1, 1)": "COMMITTED",
+      "(0, 1, 2)": "ABSENT",
+      "(0, 1, 3)": "CONTESTED",
+      "(1, 0, 0)": "ABSENT",
+      "(1, 0, 1)": "COMMITTED",
+      "(1, 0, 2)": "CONTESTED",
+      "(1, 0, 3)": "CONTESTED",
+      "(1, 1, 0)": "CONTESTED",
+      "(1, 1, 1)": "CONTESTED",
+      "(1, 1, 2)": "COMMITTED",
+      "(1, 1, 3)": "COMMITTED"
+     },
+     "class_after": {
+      "(0, 0, 0)": "CONTESTED",
+      "(0, 0, 1)": "CONTESTED",
+      "(0, 0, 2)": "COMMITTED",
+      "(0, 0, 3)": "CONTESTED",
+      "(0, 1, 0)": "CONTESTED",
+      "(0, 1, 1)": "CONTESTED",
+      "(0, 1, 2)": "ABSENT",
+      "(0, 1, 3)": "CONTESTED",
+      "(1, 0, 0)": "ABSENT",
+      "(1, 0, 1)": "COMMITTED",
+      "(1, 0, 2)": "CONTESTED",
+      "(1, 0, 3)": "CONTESTED",
+      "(1, 1, 0)": "CONTESTED",
+      "(1, 1, 1)": "CONTESTED",
+      "(1, 1, 2)": "CONTESTED",
+      "(1, 1, 3)": "CONTESTED"
+     }
+    }
+   },
+   "seconds": 15.0
+  }
+ ],
+ "six_identity_attainment": {
+  "universe": "1dev_1ep_q0-5",
+  "bounds": {
+   "devices": 1,
+   "epochs": 1,
+   "q": [
+    0,
+    5
+   ],
+   "digests_per_identity": 2
+  },
+  "states": 16777216,
+  "batches": 64,
+  "by_k": {
+   "3": {
+    "cases": 1073741824,
+    "sequences": 1024,
+    "hist_A": {
+     "6": 1073741824
+    },
+    "hist_evidence": [
+     16777216,
+     100663296,
+     251658240,
+     335544320,
+     251658240,
+     100663296,
+     16777216
+    ],
+    "hist_class": [
+     175616000,
+     391372800,
+     335892480,
+     139083776,
+     28790784,
+     2875392,
+     110592
+    ],
+    "hist_authority": [
+     303464448,
+     433520640,
+     249790464,
+     74055680,
+     11894784,
+     983040,
+     32768
+    ],
+    "hist_class_or_authority": [
+     175616000,
+     391372800,
+     335892480,
+     139083776,
+     28790784,
+     2875392,
+     110592
+    ],
+    "attained_class_2k": 110592,
+    "attained_authority_2k": 32768,
+    "attained_evidence_2k": 16777216,
+    "A_eq_2k_cases": 1073741824,
+    "A_eq_2k_but_class_lt_2k": 1073631232,
+    "A_eq_2k_but_evidence_lt_2k": 1056964608,
+    "max_class": 6,
+    "max_evidence": 6,
+    "max_authority": 6
+   }
+  },
+  "violations": [],
+  "n_violations": 0,
+  "examples": {
+   "A2k_class_lt_2k_k3": {
+    "E": {},
+    "S": [
+     {
+      "e": "(0, 0, 1)",
+      "cd": 0,
+      "prev": 0
+     },
+     {
+      "e": "(0, 0, 3)",
+      "cd": 0,
+      "prev": 0
+     },
+     {
+      "e": "(0, 0, 5)",
+      "cd": 0,
+      "prev": 0
+     }
+    ],
+    "class_before": {
+     "(0, 0, 0)": "ABSENT",
+     "(0, 0, 1)": "ABSENT",
+     "(0, 0, 2)": "ABSENT",
+     "(0, 0, 3)": "ABSENT",
+     "(0, 0, 4)": "ABSENT",
+     "(0, 0, 5)": "ABSENT"
+    },
+    "class_after": {
+     "(0, 0, 0)": "ABSENT",
+     "(0, 0, 1)": "COMMITTED",
+     "(0, 0, 2)": "ABSENT",
+     "(0, 0, 3)": "COMMITTED",
+     "(0, 0, 4)": "ABSENT",
+     "(0, 0, 5)": "COMMITTED"
+    }
+   },
+   "attained_k3": {
+    "E": {
+     "(0, 0, 0)": {
+      "V": [
+       1
+      ],
+      "I": []
+     },
+     "(0, 0, 2)": {
+      "V": [
+       1
+      ],
+      "I": []
+     },
+     "(0, 0, 4)": {
+      "V": [
+       1
+      ],
+      "I": []
+     }
+    },
+    "S": [
+     {
+      "e": "(0, 0, 1)",
+      "cd": 0,
+      "prev": 0
+     },
+     {
+      "e": "(0, 0, 3)",
+      "cd": 0,
+      "prev": 0
+     },
+     {
+      "e": "(0, 0, 5)",
+      "cd": 0,
+      "prev": 0
+     }
+    ],
+    "class_before": {
+     "(0, 0, 0)": "COMMITTED",
+     "(0, 0, 1)": "ABSENT",
+     "(0, 0, 2)": "COMMITTED",
+     "(0, 0, 3)": "ABSENT",
+     "(0, 0, 4)": "COMMITTED",
+     "(0, 0, 5)": "ABSENT"
+    },
+    "class_after": {
+     "(0, 0, 0)": "CONTESTED",
+     "(0, 0, 1)": "COMMITTED",
+     "(0, 0, 2)": "CONTESTED",
+     "(0, 0, 3)": "COMMITTED",
+     "(0, 0, 4)": "CONTESTED",
+     "(0, 0, 5)": "COMMITTED"
+    }
+   }
+  },
+  "seconds": 203.1
+ },
+ "tightness_construction": {
+  "equivocation": [
+   {
+    "k": 1,
+    "A": 2,
+    "class_changes": 2,
+    "newly_contested": 2,
+    "authority_lost": 2,
+    "authority_gained": 0
+   },
+   {
+    "k": 2,
+    "A": 4,
+    "class_changes": 4,
+    "newly_contested": 4,
+    "authority_lost": 4,
+    "authority_gained": 0
+   },
+   {
+    "k": 3,
+    "A": 6,
+    "class_changes": 6,
+    "newly_contested": 6,
+    "authority_lost": 6,
+    "authority_gained": 0
+   },
+   {
+    "k": 4,
+    "A": 8,
+    "class_changes": 8,
+    "newly_contested": 8,
+    "authority_lost": 8,
+    "authority_gained": 0
+   },
+   {
+    "k": 5,
+    "A": 10,
+    "class_changes": 10,
+    "newly_contested": 10,
+    "authority_lost": 10,
+    "authority_gained": 0
+   },
+   {
+    "k": 6,
+    "A": 12,
+    "class_changes": 12,
+    "newly_contested": 12,
+    "authority_lost": 12,
+    "authority_gained": 0
+   },
+   {
+    "k": 7,
+    "A": 14,
+    "class_changes": 14,
+    "newly_contested": 14,
+    "authority_lost": 14,
+    "authority_gained": 0
+   },
+   {
+    "k": 8,
+    "A": 16,
+    "class_changes": 16,
+    "newly_contested": 16,
+    "authority_lost": 16,
+    "authority_gained": 0
+   }
+  ],
+  "gap_fill_no_successor": [
+   {
+    "k": 1,
+    "A": 2,
+    "class_changes": 2,
+    "newly_contested": 1,
+    "authority_lost": 1,
+    "authority_gained": 1
+   },
+   {
+    "k": 2,
+    "A": 4,
+    "class_changes": 4,
+    "newly_contested": 2,
+    "authority_lost": 2,
+    "authority_gained": 2
+   },
+   {
+    "k": 3,
+    "A": 6,
+    "class_changes": 6,
+    "newly_contested": 3,
+    "authority_lost": 3,
+    "authority_gained": 3
+   },
+   {
+    "k": 4,
+    "A": 8,
+    "class_changes": 8,
+    "newly_contested": 4,
+    "authority_lost": 4,
+    "authority_gained": 4
+   },
+   {
+    "k": 5,
+    "A": 10,
+    "class_changes": 10,
+    "newly_contested": 5,
+    "authority_lost": 5,
+    "authority_gained": 5
+   },
+   {
+    "k": 6,
+    "A": 12,
+    "class_changes": 12,
+    "newly_contested": 6,
+    "authority_lost": 6,
+    "authority_gained": 6
+   },
+   {
+    "k": 7,
+    "A": 14,
+    "class_changes": 14,
+    "newly_contested": 7,
+    "authority_lost": 7,
+    "authority_gained": 7
+   },
+   {
+    "k": 8,
+    "A": 16,
+    "class_changes": 16,
+    "newly_contested": 8,
+    "authority_lost": 8,
+    "authority_gained": 8
+   }
+  ],
+  "gap_fill_with_successor_link": [
+   {
+    "k": 1,
+    "A": 2,
+    "class_changes": 2,
+    "newly_contested": 2,
+    "authority_lost": 1,
+    "authority_gained": 0
+   },
+   {
+    "k": 2,
+    "A": 4,
+    "class_changes": 4,
+    "newly_contested": 3,
+    "authority_lost": 2,
+    "authority_gained": 1
+   },
+   {
+    "k": 3,
+    "A": 6,
+    "class_changes": 6,
+    "newly_contested": 5,
+    "authority_lost": 3,
+    "authority_gained": 1
+   },
+   {
+    "k": 4,
+    "A": 8,
+    "class_changes": 8,
+    "newly_contested": 6,
+    "authority_lost": 4,
+    "authority_gained": 2
+   },
+   {
+    "k": 5,
+    "A": 10,
+    "class_changes": 10,
+    "newly_contested": 8,
+    "authority_lost": 5,
+    "authority_gained": 2
+   },
+   {
+    "k": 6,
+    "A": 12,
+    "class_changes": 12,
+    "newly_contested": 9,
+    "authority_lost": 6,
+    "authority_gained": 3
+   },
+   {
+    "k": 7,
+    "A": 14,
+    "class_changes": 14,
+    "newly_contested": 11,
+    "authority_lost": 7,
+    "authority_gained": 3
+   },
+   {
+    "k": 8,
+    "A": 16,
+    "class_changes": 16,
+    "newly_contested": 12,
+    "authority_lost": 8,
+    "authority_gained": 4
+   }
+  ]
+ },
+ "total_violations": 0,
+ "seconds_total": 304.6,
+ "log": [
+  "[X] cross-validation scalar vs vectorised: [{'universe': '1dev_1ep_q0-3', 'pairs': 20000, 'mismatches': 0}, {'universe': '2dev_2ep_q0-3', 'pairs': 20000, 'mismatches': 0}]",
+  "[A:1dev_1ep_q0-3] k=1: 24 sequences x 65536 states = 1572864 cases, max class changes 2, 2k attained 36864, violations so far 0 (0.2s)",
+  "[A:1dev_1ep_q0-3] k=2: 576 sequences x 65536 states = 37748736 cases, max class changes 4, 2k attained 4608, violations so far 0 (1.9s)",
+  "[A:1dev_1ep_q0-3] k=3: 13824 sequences x 65536 states = 905969664 cases, max class changes 4, 2k attained 0, violations so far 0 (25.0s)",
+  "[A:1dev_2ep_q0-1] k=1: 24 sequences x 65536 states = 1572864 cases, max class changes 2, 2k attained 24576, violations so far 0 (0.2s)",
+  "[A:1dev_2ep_q0-1] k=2: 576 sequences x 65536 states = 37748736 cases, max class changes 4, 2k attained 4608, violations so far 0 (2.3s)",
+  "[A:1dev_2ep_q0-1] k=3: 13824 sequences x 65536 states = 905969664 cases, max class changes 4, 2k attained 0, violations so far 0 (23.9s)",
+  "[A:2dev_1ep_q0-1] k=1: 24 sequences x 65536 states = 1572864 cases, max class changes 2, 2k attained 24576, violations so far 0 (0.2s)",
+  "[A:2dev_1ep_q0-1] k=2: 576 sequences x 65536 states = 37748736 cases, max class changes 4, 2k attained 4608, violations so far 0 (3.0s)",
+  "[A:2dev_1ep_q0-1] k=3: 13824 sequences x 65536 states = 905969664 cases, max class changes 4, 2k attained 0, violations so far 0 (28.0s)",
+  "[B:2dev_2ep_q0-3] k=1 (all sequences, 4096 random states): 393216 cases, max class changes 2, violations so far 0",
+  "[B:2dev_2ep_q0-3] k=2 (all sequences, 4096 random states): 37748736 cases, max class changes 4, violations so far 0",
+  "[B:2dev_2ep_q0-3] k=3 (20000 random sequences incl. all their permutations, 1024 states): 121005056 cases, max class changes 6, violations so far 0",
+  "[C:1dev_1ep_q0-5] k=3, 64 batches with |A(S)|=6 x 16777216 states = 1073741824 cases: 6 classes changed in 110592, fewer in 1073631232, violations 0 (203.1s)",
+  "[T] equivocation: k=1: A=2 cls=2 contested=2, k=2: A=4 cls=4 contested=4, k=3: A=6 cls=6 contested=6, k=4: A=8 cls=8 contested=8, k=5: A=10 cls=10 contested=10, k=6: A=12 cls=12 contested=12, k=7: A=14 cls=14 contested=14, k=8: A=16 cls=16 contested=16",
+  "[T] gap_fill_no_successor: k=1: A=2 cls=2 contested=1, k=2: A=4 cls=4 contested=2, k=3: A=6 cls=6 contested=3, k=4: A=8 cls=8 contested=4, k=5: A=10 cls=10 contested=5, k=6: A=12 cls=12 contested=6, k=7: A=14 cls=14 contested=7, k=8: A=16 cls=16 contested=8",
+  "[T] gap_fill_with_successor_link: k=1: A=2 cls=2 contested=2, k=2: A=4 cls=4 contested=3, k=3: A=6 cls=6 contested=5, k=4: A=8 cls=8 contested=6, k=5: A=10 cls=10 contested=8, k=6: A=12 cls=12 contested=9, k=7: A=14 cls=14 contested=11, k=8: A=16 cls=16 contested=12"
+ ]
+}

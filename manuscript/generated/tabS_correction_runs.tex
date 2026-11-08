@@ -1,0 +1,20 @@
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X lrrrrrrr@{}}
+\toprule
+Stage & Pipeline & Runs & Changed & $\Delta$O1 & $\Delta$O2 & $\Delta$NLX & $\Delta W$ (s) & $\Delta$AV5\\
+\midrule
+Main evaluation (15 scenarios, seeds 1--20) & B5 & 300 & 0 & 0 & 0 & -- & -- & --\\
+Main evaluation (15 scenarios, seeds 1--20) & B5s & 300 & 0 & 0 & 0 & -- & -- & --\\
+Mixed workload (seeds 1--20) & B5 & 20 & 0 & 0 & 0 & -- & -- & --\\
+Mixed workload (seeds 1--20) & B5s & 20 & 0 & 0 & 0 & -- & -- & --\\
+Stressor sweep & B5 & 940 & 0 & 0 & 0 & -- & -- & --\\
+Sensitivity factorial & B5 & 320 & 31 & 0 & $-$4 to 0 & -- & -- & --\\
+SKAB replay & B5 & 69 & 0 & 0 & 0 & -- & -- & --\\
+Re-execution with the tracer & B5 & 320 & 0 & 0 & 0 & 0 & 0 & 0\\
+Re-execution with the tracer & B5s & 320 & 0 & 0 & 0 & 0 & 0 & 0\\
+Review-schedule evaluation (seeds 21--40) & B5 & 880 & 202 & 0 & $-$1 to 0 & 0.0 to 29.2 & $-$0.057 to 0.000 & 0.0000 to 0.0032\\
+Selective-hold grid & B5 & 840 & 171 & 0 to 1 & $-$1 to 0 & 0.0 to 192.0 & $-$0.101 to 0.000 & 0.0000 to 0.0003\\
+Selective-hold grid & B5s & 420 & 0 & 0 & 0 & 0 & 0 & 0\\
+Selective-hold factorial cells & B5 & 320 & 184 & 0 to 1 & $-$5 to 0 & 0.0 to 154.8 & $-$0.289 to 0.000 & 0.0000 to 0.0014\\
+Selective-hold factorial cells & B5s & 160 & 0 & 0 & 0 & 0 & 0 & 0\\
+\bottomrule
+\end{tabularx}

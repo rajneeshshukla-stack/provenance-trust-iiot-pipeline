@@ -1,0 +1,63 @@
+# Hardened, reproducible image for PBTI-IIoT (V3). Built and checked in the study environment: results/containers/.
+#
+# Build from the repository root (build context = repository; this directory supplies the lock file):
+#   docker build -f <this dir>/Dockerfile.v3 --build-context pbti_deploy=<this dir> -t pbti:v3 <repo root>
+# Behind a TLS-intercepting proxy add:  --secret id=pipca,src=<CA bundle>   (mounted for the pip step only,
+# never written to a layer). Dockerfile-specific ignore rules: Dockerfile.v3.dockerignore (same directory).
+#
+# Differences from deploy/Dockerfile (released):
+#   * base image pinned by digest (tag kept for readability; the digest is what is pulled)
+#   * Debian packages pinned to exact versions (+ tini as PID 1 for signal forwarding / zombie reaping)
+#   * complete Python dependency set pinned with SHA-256 hashes (requirements.lock.txt), binary wheels only,
+#     no dependency resolution at build time, `pip check` after install
+#   * code owned by root and read-only for the runtime user; only output directories are writable
+#   * non-root runtime user (uid/gid 10001), HEALTHCHECK, explicit ENTRYPOINT/STOPSIGNAL, OCI labels
+#   * no secrets: nothing secret is needed at build or run time (the e2e harness generates a throw-away
+#     test PKI under /tmp at run time)
+FROM python:3.13.18-slim-trixie@sha256:ae14d4ce8771606477a81446e7ef429edd6762305fc50c84507c1041fa8285d1
+
+ARG MOSQUITTO_VERSION=2.0.21-1
+ARG MAKE_VERSION=4.4.1-2
+ARG TINI_VERSION=0.19.0-3+b8
+
+LABEL org.opencontainers.image.title="pbti-iiot" \
+      org.opencontainers.image.description="PBTI-IIoT reference implementation, baselines and evaluation testbed (hardened validation image)" \
+      org.opencontainers.image.licenses="Apache-2.0" \
+      org.opencontainers.image.base.name="docker.io/library/python:3.13.18-slim-trixie" \
+      org.opencontainers.image.base.digest="sha256:ae14d4ce8771606477a81446e7ef429edd6762305fc50c84507c1041fa8285d1"
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PYTEST_ADDOPTS="-p no:cacheprovider"
+
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends \
+        "mosquitto=${MOSQUITTO_VERSION}" "make=${MAKE_VERSION}" "tini=${TINI_VERSION}" \
+ && rm -rf /var/lib/apt/lists/*
+
+RUN groupadd --system --gid 10001 pbti \
+ && useradd --system --uid 10001 --gid 10001 --home-dir /home/pbti --create-home --shell /usr/sbin/nologin pbti
+
+WORKDIR /opt/pbti
+
+COPY --from=pbti_deploy requirements.lock.txt /tmp/requirements.lock.txt
+RUN --mount=type=secret,id=pipca,required=false \
+    if [ -s /run/secrets/pipca ]; then export PIP_CERT=/run/secrets/pipca; fi; \
+    pip install --require-hashes --no-deps --only-binary=:all: -r /tmp/requirements.lock.txt \
+ && pip check \
+ && rm -f /tmp/requirements.lock.txt
+
+COPY --chown=root:root . .
+RUN mkdir -p results/raw results/summary paper/generated paper/figures \
+ && chown -R 10001:10001 results paper/generated paper/figures
+
+USER 10001:10001
+
+HEALTHCHECK --interval=60s --timeout=10s --start-period=20s --retries=3 \
+    CMD ["python3", "-c", "import shutil, sys; sys.path.insert(0, '/opt/pbti/src'); import pbti.verifier, pbti.policy, paho.mqtt.client, cryptography; sys.exit(0 if shutil.which('mosquitto') else 1)"]
+
+STOPSIGNAL SIGTERM
+ENTRYPOINT ["/usr/bin/tini", "-g", "--"]
+CMD ["make", "test", "campaign", "perf", "e2e", "analysis"]

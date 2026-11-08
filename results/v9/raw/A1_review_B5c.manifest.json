@@ -1,0 +1,56 @@
+{
+ "campaign": "v9_A1_review",
+ "started": "2026-11-06T12:37:07-0600",
+ "args": {
+  "config": "experiments/v4_configs/A1_review.json",
+  "systems": [
+   "B5"
+  ],
+  "arms": null,
+  "out": "results/v9/raw/A1_review_B5c.jsonl",
+  "workers": 2
+ },
+ "command": "python3 experiments/v9/run_v4_b5c.py experiments/v4_configs/A1_review.json --systems B5 --out results/v9/raw/A1_review_B5c.jsonl --workers 2",
+ "python": "3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]",
+ "platform": "Linux-6.18.44-fc-v242-x86_64-with-glibc2.39",
+ "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+ "logical_cpus": 2,
+ "ram_gb": 7.83,
+ "versions": {
+  "cryptography": "50.0.1",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "pandas": "3.0.5"
+ },
+ "frozen_files_check": {
+  "research/V4/PREREGISTRATION_V4.sha256": {
+   "files": 30,
+   "changed": []
+  },
+  "research/V4/PREREGISTRATION_V4_AMENDMENT_1.sha256": {
+   "files": 2,
+   "changed": []
+  }
+ },
+ "b5_impl": "b5_corrected_v9",
+ "b5_corrected_sha256": "53cf2167a1dc2a323799384f61580cf8558d5cc64a633b85f2029669a82c20d1",
+ "b5_historical_sha256": "19dc116609e87f561ebd28ff2cb7e94a1307395d829bbba9d304804a0566816a",
+ "source_sha256": "714b9b49180be678e030355c4e24361110af0fb83f04be85d66e967c45d2eee4",
+ "frozen_runner": "experiments/run_v4.py",
+ "config_file": "experiments/v4_configs/A1_review.json",
+ "config_sha256": "7bb565bc8248ba66037ff7aa6a45f23545de2283dbe6835bbbdc7a7ac440feb8",
+ "n_specs": 880,
+ "arms": [
+  "B5-d0c1",
+  "B5-d0c10",
+  "B5-d1c1",
+  "B5-d1c10",
+  "B5-d5c1",
+  "B5-d5c10",
+  "B5-d60c1",
+  "B5-d60c10",
+  "B5-event",
+  "B5-hist",
+  "B5-oneshot-d0c10"
+ ]
+}

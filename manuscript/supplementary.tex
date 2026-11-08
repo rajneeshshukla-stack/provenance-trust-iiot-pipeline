@@ -1,0 +1,584 @@
+% Supplementary Materials (Document S1) for the Future Internet manuscript. Compile: latexmk -pdf supplementary.tex
+% Numbers come from generated/*.tex. Article items are referenced as \Mref{label} (generated/main_xref.tex, written
+% from main.aux by tools/manuscript/xref_maps.py); build both documents with tools/manuscript/build_all.sh.
+\documentclass[10pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo}
+\usepackage[margin=1.8cm]{geometry}
+\usepackage{booktabs,tabularx,longtable,graphicx,xcolor,caption,array,makecell,float}
+\usepackage[section]{placeins}% floats stay inside their section
+\usepackage[hidelinks]{hyperref}
+\captionsetup{font=small,labelfont=bf}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\thesection}{S\arabic{section}}
+\input{generated/macros_R.tex}
+\input{generated/macros_V.tex}
+\input{generated/macros_W.tex}
+\input{generated/macros_X.tex}
+\input{generated/macros_Y.tex}
+\input{generated/main_xref.tex}
+\makeatletter
+\newcommand{\Mref}[1]{\@ifundefined{mainref@#1}{\textbf{??}\PackageWarning{mainxref}{Undefined article label #1}}{\@nameuse{mainref@#1}}}
+\makeatother
+\newcommand{\sys}{PBTI}
+\newcommand{\Bhist}{B5\textsubscript{60/10}}
+\newcommand{\Bev}{B5\textsubscript{ev}}
+\newcommand{\Rhist}{PBTI-R\textsubscript{60/10}}
+\newcommand{\Rev}{PBTI-R\textsubscript{ev}}
+\setlength{\parskip}{3pt}
+% float placement: fill pages with tables instead of leaving them half empty
+\renewcommand{\topfraction}{0.9}\renewcommand{\bottomfraction}{0.8}\renewcommand{\textfraction}{0.07}\renewcommand{\floatpagefraction}{0.8}
+\makeatletter\setlength{\@fptop}{0pt}\makeatother% float pages start at the top
+\begin{document}
+\begin{center}
+{\Large\bfseries Supplementary Materials}\\[4pt]
+{\large Provenance-Bound Trust-Aware Ingestion for Industrial IoT Edge-to-Cloud Data Pipelines: Per-Identity Conflict Containment and Its Security--Availability Trade-offs}\\[4pt]
+{\small Rajneesh Shukla and Punit Gupta --- Document S1}
+\end{center}
+\noindent This document supports the article; works are cited by author, venue and year and appear in the article's reference list. Every number is generated from the per-run raw results of the research package (to be published by the authors) by its analysis scripts; Data~S1 contains the per-cell summaries and all confirmatory comparisons as CSV files. The article names its evaluation stages by their purpose (main evaluation, re-execution, review-schedule evaluation, selective-hold grid, factorial cells and controls, sensitivity analyses, public-telemetry replay, lifecycle analysis). Repository file and directory names keep the internal identifiers under which the stages were run (for example \texttt{A1\_\allowbreak{}review}, \texttt{research/\allowbreak{}V4}), because the recorded hashes refer to them; Table~\ref{tab:S-stages} maps each stage to its identifiers. Pipeline subscripts: B5\textsubscript{60/10}, one-shot review rule with minimum case age $R=60$~s and cadence $C=10$~s; B5\textsubscript{D$R$/$C$}, deferring rule with $R$ and $C$ in seconds; B5\textsubscript{0/10}, one-shot rule at $R=0$~s, $C=10$~s; B5\textsubscript{ev}, event-driven review; likewise for PBTI-R.
+
+\section{Positioning}\label{sec:S-positioning}
+\begin{table}[!htbp]
+\caption{Coverage of mechanism components by the 15 works examined first in the closest-prior-work search, most of them IoT-specific (Y: in the design; Y$^{*}$: designed and evaluated for that property; P: partial; D: discussed only; --: not reported in the examined text; n/e: abstract only). C1 per-event device signature; C2 gateway signing for legacy devices; C3 workload identity / countersigned relay statement; C4 path-bound admission policy; C5 credential status; C6 replay versus retry; C7 duplicate/equivocation detection; C8 ordering/late data; C9 disconnection/backlog recovery; C10 chained or Merkle evidence; C11 content-addressed raw storage; C12 lineage and taint; C13 industrial evaluation; C14 per-item trust scoring. For \sys, C6 is P because the replay/retry label is assigned from context and does not affect authority (Section~\Mref{sec:rulel} of the article). The table records which components each work reports; it is not a gap analysis. The closest analogues of the conflict response (Secure Scuttlebutt, PeerReview, the Global Data Plane, SUNDR, SCITT, the ACE profile, C2PA, Taser and Warp, Kafka and CloudEvents) are compared in Table~\Mref{tab:related} and Section~\Mref{sec:related} of the article. $^{a}$: only the abstract was available to the reference check (Section~\ref{sec:S-env}), so ``--'' in this row means ``not stated in the abstract'', not an established absence. $^{\dagger}$: the full text could not be opened in the reference check, so this row could not be re-verified. $^{\ddagger}$: its reputation scores rate the oracle nodes that supply data, combined with truth inference over the data (full text checked).\label{tab:S-coverage}}
+\footnotesize\centering\setlength{\tabcolsep}{2.6pt}
+\begin{tabular}{lcccccccccccccc}
+\toprule
+Work & C1 & C2 & C3 & C4 & C5 & C6 & C7 & C8 & C9 & C10 & C11 & C12 & C13 & C14\\
+\midrule
+Buccafurri et al., MQTT-I (TDSC 2024) & P & -- & -- & -- & -- & -- & P & Y & -- & Y & -- & -- & -- & --\\
+Nawab, WedgeChain (ICDE 2021) & Y & -- & P & -- & -- & D & Y & P & -- & Y & P & -- & -- & --\\
+Saito (R10-HTC 2025) & Y & -- & -- & -- & -- & -- & -- & -- & P$^{*}$ & Y & -- & -- & -- & --\\
+Tsai et al. (Sensors 2026) & Y & -- & -- & Y & Y & -- & -- & P & -- & Y & Y & P & P & --\\
+Dahlmanns et al., ENTRUST (SaT-CPS 2021) & P & -- & -- & Y & P & P & Y & P & -- & -- & -- & -- & P & --\\
+Lazzaro \& Buccafurri (Future Internet 2024) & -- & -- & -- & P & -- & -- & P & P & -- & Y & P & -- & -- & --\\
+Hasan et al. (ACM TOS 2009) & P & -- & P & -- & -- & -- & P & P & -- & Y & P & P & -- & --\\
+Aman et al. (IoTPTS 2017; IEEE IoT-J 2019)$^{a}$ & P & P & -- & P & P & P & -- & -- & -- & -- & -- & -- & -- & --\\
+Javaid et al., BlockPro (BlockSys 2018)$^{a}$ & P & -- & -- & P & P & P & -- & -- & -- & Y & P & -- & -- & --\\
+Lim et al. (DMSN 2010)$^{a}$ & -- & -- & -- & -- & -- & -- & -- & -- & -- & -- & -- & -- & -- & Y$^{*}$\\
+Rizzardi et al., AUPS (Inf.\ Syst.\ 2016)$^{\dagger}$ & -- & -- & -- & Y & P & D & -- & -- & -- & -- & -- & -- & -- & P\\
+Gigli et al., ZONIA (IEEE IoT-J 2025)$^{\ddagger}$ & -- & -- & -- & P & -- & -- & -- & -- & -- & P & -- & -- & -- & Y$^{*}$\\
+James et al., MQTT-ZT (CSR 2025) & n/e & n/e & n/e & Y & n/e & n/e & n/e & n/e & n/e & n/e & n/e & n/e & n/e & n/e\\
+Sukumaran et al. (Information 2026) & -- & -- & -- & -- & -- & -- & -- & -- & -- & Y & P & P & -- & --\\
+Matias \& Mac\^{e}do (WTF 2026) & -- & -- & -- & -- & -- & -- & -- & P & Y$^{*}$ & -- & -- & -- & Y & --\\
+\midrule
+PBTI (this work) & Y$^{*}$ & Y$^{*}$ & Y$^{*}$ & Y$^{*}$ & Y$^{*}$ & P & Y$^{*}$ & Y$^{*}$ & Y$^{*}$ & Y$^{*}$ & Y$^{*}$ & Y$^{*}$ & P & --\\
+\bottomrule
+\end{tabular}
+\end{table}
+\noindent\textbf{Search coverage and what was examined.} The first search used Crossref, arXiv and web search; dblp, OpenAlex and Semantic Scholar were unavailable then and IEEE Xplore and ACM Digital Library full texts could not be fetched, and a later check additionally used OpenAlex and DataCite. The table records the first search only; works on fork handling added afterwards (SUNDR, Byzantine-fault-tolerant CRDTs, the 2P-BFT-Log preprint) and recent works from a final search are discussed in the article but not scored. The reference check of Section~\ref{sec:S-env}, performed by an instance of the AI model, examined the full or standard texts of the works on which the comparisons of the article's Section~\Mref{sec:related} and Table~\Mref{tab:related} rest (Secure Scuttlebutt and its protocol guide, PeerReview, the Global Data Plane, SUNDR, the Byzantine-fault-tolerant CRDTs, the 2P-BFT-Log preprint, SCITT, Certificate Transparency, RFC~9338, the ACE publish/subscribe draft, WedgeChain, Kafka's idempotent producer and CloudEvents) for their fork evidence, post-fork response, recovery, authoritative-data semantics and trust assumptions. It had only the abstracts of Aman et al., Javaid et al., Lim et al., MQTT-ZT, SMQTT, OSCORE-IoT, GeneaLog and ProVerif, which the article cites only for what their abstracts state, only catalogue records of AUPS and of the standards of Table~\ref{tab:S-standards}, and no text of Holm's procedure, which is cited for its standard attribution. Metadata records establish that a work exists, not the technical claim it is cited for. The absence statements describe the works and mechanisms examined and are not an exhaustive priority claim; B5 is a comparator built for this study from published fork responses, not an implementation of Secure Scuttlebutt, PeerReview or the Global Data Plane; and the 2P-BFT-Log work is a preprint (arXiv version~2; no publication record found). The supplied materials record no reading of the sources by the authors.
+
+\section{Protocol, State Machine and Formal Properties}\label{sec:S-protocol}
+\begin{table}[!htbp]
+\caption{Fields of the observation statement (signed by the origin signer) and the relay statement (signed by the relaying edge workload). All fields are protected by the respective signature; \textsf{odig} additionally binds the observation signature.\label{tab:S-fields}}
+\footnotesize
+\begin{tabularx}{\linewidth}{llXXl}
+\toprule
+Field & Type & Security property & Correctness property & Threat addressed\\
+\midrule
+\textsf{v}, \textsf{typ} & int, string & version and statement-type domain separation & parser selection & downgrade, cross-protocol reuse\\
+\textsf{did} & string & binds key subject to producer & partitions event identity & impersonation by key substitution\\
+\textsf{aid} & string & device$\rightarrow$asset authorization scope & attribution of data & mis-attribution, metadata tampering\\
+\textsf{ep} & integer & bounds stale-epoch injection (drain window) & distinguishes sequence resets after reboot & false conflicts, epoch replay\\
+\textsf{seq} & integer & gap and replay evidence & deterministic identity $(did,ep,seq)$ & duplicates, suppression, gap-fill\\
+\textsf{ts} & integer (ms) & freshness bounds (skew, horizon) & event-time windowing & back/future dating (bounded)\\
+\textsf{sch} & string & schema restriction per asset & decoding & schema confusion\\
+\textsf{pl} & object & integrity & measurements & tampering\\
+\textsf{prev} & digest or null & fork and gap-fill evidence & offline completeness audit & history rewriting\\
+\textsf{kid} & string & key binding & rotation & key confusion\\
+\midrule
+\textsf{wid} & SPIFFE ID & relay path identity reaching the verifier & path attribution & lateral movement, path spoofing\\
+\textsf{wkid} & string & relay key binding & rotation & key confusion\\
+\textsf{odig} & digest & binds one signed observation (content and signature) & -- & re-binding of relay statements\\
+\textsf{rts} & integer (ms) & evidence only & buffering statistics & --\\
+\textsf{mode} & live/buffered & selects quarantine instead of rejection for a revoked key (Algorithm~\Mref{alg:admit}, step~5); otherwise evidence only & RECOVERED annotation & --\\
+\bottomrule
+\end{tabularx}
+\end{table}
+\noindent Canonical form: RFC 8785 JCS (ASCII keys, IEEE-754 numbers serialized per ECMAScript, integers within $\pm2^{53}$); signatures: Ed25519 over a domain-separation prefix and the canonical bytes; content digest $\mathit{cd}=$ SHA-256 of the canonical observation statement. Default parameters: skew 5~s; horizon $h_\mathrm{max}$ 1~h (120~s in E11b and the mixed workload); retry window 30~s; rotation grace 1~h; maximum sequence jump 100{,}000; epoch drain and gap closure 1~h; checkpoints every 512 records or 5~s.
+
+\noindent Figure~\ref{fig:S-state} shows how one data object is bound to its evidence and the event-identity slot machine whose transitions Table~\ref{tab:S-transitions} lists; the article defines the Rule L classes in Section~\Mref{sec:rulel}.
+\begin{figure}[!htbp]
+\centering
+\includegraphics{figures/fig_chain_state.pdf}
+\caption{(\textbf{a}) Trust chain of one data object and what each link lets an auditor verify: observation statement and relay statement (bound through \textsf{odig}), admission record, write-once raw object, signed and witnessed Merkle checkpoint, and derived version with its inputs and cause. (\textbf{b}) Event-identity slot transitions under Rule L: the state of a slot is a function of the admitted evidence set (ABSENT, COMMITTED, CONTESTED, LOST, and COMMITTED+TAINTED after revocation with a compromise time). Ordinary arrival at a LOST slot remains quarantined (STALE\_SLOT); an authorized reviewed release (dashed, R) may re-run admission with STALE\_SLOT as the only waived reason and reach COMMITTED or CONTESTED under Rule L, and a failed release creates no authoritative observation. The taint transition is subject to the reviewed-release conditions of Section~\Mref{sec:lifecycle} of the article (a slot released under the revoked key is exempt while its release condition holds under the current revocation record). Receipts that do not change slot state are listed below; Table~\ref{tab:S-transitions} specifies the complete transitions.\label{fig:S-state}}
+\end{figure}
+
+\begin{table}[!htbp]
+\caption{Transitions of the event-identity slot machine (Current state + Evidence + Policy condition $\rightarrow$ Next state). Ordinary arrival transitions are distinguished from authorized review-release transitions (marked R). The default one-hour gap-closure horizon was not reached in the scenario campaigns; a regression test with a five-second horizon exercises LOST, STALE\_SLOT quarantine and reviewed release, and the bounded lifecycle check (Table~\ref{tab:S-bounded}) combines gap closure, release, revocation and rotation.\label{tab:S-transitions}}
+\footnotesize
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{1.95cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\toprule
+Current & Evidence & Condition & Next (cause)\\
+\midrule
+ABSENT & first version $cd$; no implied digest or implied $=cd$ & admission checks passed & COMMITTED (ACCEPT)\\
+ABSENT & first version $cd$; implied digest $\neq cd$ & admission checks passed & CONTESTED (LINK\_MISMATCH)\\
+ABSENT & implied digest only (successor received) & -- & ABSENT, expected digest known\\
+COMMITTED & second version $cd'\neq cd$ & admission checks passed & CONTESTED (EQUIVOCATION)\\
+COMMITTED & successor with $\textsf{prev}\neq cd$ & successor admitted & CONTESTED (LINK\_MISMATCH)\\
+COMMITTED & origin key revoked with $t_\mathrm{comp}\le t_\mathrm{commit}$ (also after a revised record with an earlier $t_\mathrm{comp}$) & revocation observed by verifier; for a slot released under the revoked key: its release condition fails under the current record & COMMITTED+TAINTED (REVOCATION)\\
+ABSENT in open gap & gap age $>$ gap-closure horizon & periodic tick & LOST (GAP\_CLOSED)\\
+CONTESTED & any further version & -- & CONTESTED (absorbing; evidence kept)\\
+LOST & arriving version without an authorized waiver & ordinary admission & LOST (receipt QUARANTINE STALE\_SLOT)\\
+LOST (R) & version re-evaluated through an authorized release & STALE\_SLOT is the only waived reason; all other admission checks pass & COMMITTED or CONTESTED under Rule L; on failure no authoritative observation (RELEASE\_FAILED)\\
+ABSENT (R) & quarantined version (STALE\_TS, STALE\_EPOCH, REVOKED\_BUFFERED, \ldots) re-evaluated through an authorized release & only the case's reason waived; REVOKED\_BUFFERED also requires the release-evidence condition (discretionary: $ts<t_\mathrm{comp}$; witness: token for the exact digest before $t_\mathrm{low}$) & COMMITTED or CONTESTED under Rule L; a conflict records the version as evidence, nothing becomes authoritative\\
+any & identical $cd$ already admitted & -- & unchanged (DUPLICATE RETRY or SUSPECTED\_REPLAY)\\
+any & reject or quarantine condition (Algorithm 1) & -- & unchanged (REJECT / QUARANTINE)\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Invariants, their oracles and the scenarios that exercise them.\label{tab:S-invariants}}
+\footnotesize
+\begin{tabularx}{\linewidth}{lXX}
+\toprule
+\textbf{Invariant} & \textbf{Statement} & \textbf{Oracle (scenarios)}\\
+\midrule
+I1 Integrity & modifying any protected field without the key yields REJECT and no state change & unit test over all 18 protected fields; non-legitimate admissions (E2, E3, E6)\\
+I2 Authorization & every committed slot has an ACCEPT record with PERMIT under the policy in force & registry audit; unauthorized-path admissions (E4, E15)\\
+I3 Idempotency & at most one authoritative observation per identity & duplicate authoritative count (E7, E11)\\
+I4 Non-overwrite & two validly signed contents for one identity are never authoritative & equivocation/gap-fill admissions (E5, E8)\\
+I5 Provenance & latest derived versions reference only authoritative inputs; roots and aggregates recompute & lineage audit (all runs)\\
+I6 Immutability & committed raw bytes and checkpointed evidence cannot change undetected & raw-store and evidence audits (E16)\\
+I7 Credential enforcement and taint & ordinary admission after an observed revocation is refused or quarantined; an explicitly authorized release exception is audited separately; the selector taints origin-key commits at or after $t_\mathrm{comp}$ (commit time, not proof of creation time; re-run on revised records) & E14 ordinary-admission and taint counts; release-then-taint regressions and the lifecycle analysis (Table~\ref{tab:S-a5})\\
+I8 Recovery & buffered observations within horizon committed exactly once (a suspected-replay label may occur but is non-authoritative) & missing and duplicate counts (E11)\\
+I9 Convergence & for a fixed admitted evidence set, final state independent of delivery order & permutation unit test; exact windows (E9, E10)\\
+I10 Determinism & replaying the receipt log reproduces every disposition and the registry & decision-replay audit (all runs)\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\noindent\textbf{Locality of Rule L: statement, proof, exclusions and liveness.} The model has identities $e=(d,p,q)$ with predecessor $\mathrm{pred}(e)=(d,p,q-1)$ for $q>0$ and none for $q=0$; an admitted statement $s$ has identity $e(s)$, content digest $cd(s)$ and link $\mathrm{prev}(s)$, a digest or $\bot$. The evidence state is $E=(V,I)$, and admission updates $V(e(s))\leftarrow V(e(s))\cup\{cd(s)\}$ and, if $q(e(s))>0$ and $\mathrm{prev}(s)\neq\bot$, $I(\mathrm{pred}(e(s)))\leftarrow I(\mathrm{pred}(e(s)))\cup\{\mathrm{prev}(s)\}$; in the implementation these are the only writes to $V$ and $I$ (\texttt{PBTIVerifier.\_\allowbreak{}history} and the \texttt{\_\allowbreak{}history} methods of the historical and the corrected B5 subclass, which perform the same two writes). An \emph{admission} is a receipt that reaches the write to $V$: for \sys\ these are the ACCEPT and CONFLICT receipts and the re-run admission of a reviewed release; for B5 they also include the FEED\_FORK\_HOLD receipts, which write $V$ and $I$ before the hold. Classes: ABSENT if $V(e)=\emptyset$; otherwise COMMITTED if $|V(e)\cup I(e)|=1$ and CONTESTED if $|V(e)\cup I(e)|\ge 2$; LOST if the gap-closure flag $\lambda(e)$ is set; authority requires COMMITTED and no taint flag $\tau(e)$, and for B5 additionally that $e$ is not held. \emph{Lemma}: for any $E$ and any sequence $S$ of $k$ admitted statements with no lifecycle transition in between, $E'$ differs from $E$ only on $A(S)=\{e(s_i)\}\cup\{\mathrm{pred}(e(s_i)): q(e(s_i))>0,\ \mathrm{prev}(s_i)\neq\bot\}$, and $|A(S)|\le 2k$, with equality only when the $2k$ identities are pairwise distinct. \emph{Proof sketch}: by induction on $k$, since each update writes $V$ at one identity and $I$ at most at one other; the class of $e\notin A(S)$ is a function of $V(e)$, $I(e)$ and $\lambda(e)$ and its authority in addition of $\tau(e)$, and $\lambda$ and $\tau$ are written only by gap closure and revocation processing, which are excluded. The number of identities whose class changes can reach $2k$ but is not implied by pairwise distinct identities alone. \emph{Exclusions}: (E1) admission decisions that earlier admissions or time change (epochs, gaps, sequence jumps, horizons, key validity, revocation, policy versions); (E2) lifecycle transitions (gap closure marks a range LOST; revocation taints every qualifying commit of a key); (E3) downstream dependency fan-out; (E4) undetected contamination (a forged version for which no contradiction is admitted stays COMMITTED); (E5) the selective-hold extension, whose authority depends on feed-level suspicion; (E6) replicated verifiers. \emph{Liveness, separate from this safety property}: (L1) a gap-fill or equivocating version is contested only if a contradictory version or successor link is admitted within the freshness, gap and epoch horizons; (L2) a quarantined or held observation is released only if a reviewer runs and the release evidence its policy requires is available; (L3) retroactive containment requires a published and processed revocation with $t_\mathrm{comp}$, and its precision depends on how accurately $t_\mathrm{comp}$ is known. The proof is a pen-and-paper argument (repository \texttt{formal/\allowbreak{}LOCALITY\_\allowbreak{}PROOF.md}); it has not been machine-checked, and a checklist for its review is in the repository (\texttt{formal/\allowbreak{}PROOF\_\allowbreak{}REVIEW\_\allowbreak{}CHECKLIST.md}). An AI-performed audit of the argument found it correct but imprecise in the points corrected above, and an exhaustive checker that the same AI system wrote from the statement alone, without the verifier code, found no violation in $4.07\times10^{9}$ (state, batch) cases of the pure model and in 1{,}000 random histories (10{,}803 signed receipts) on the real verifier.
+
+\begin{table}[!htbp]
+\caption{Bounded checks of Rule L and of the lifecycle (repository \texttt{results/\allowbreak{}v4/\allowbreak{}formal/\allowbreak{}v4\_\allowbreak{}locality\_\allowbreak{}lifecycle\_\allowbreak{}check.json}; \WAfourAllPass). These are bounded results, not proofs. An earlier bounded check examined Rule L \VFormalSummary.\label{tab:S-bounded}}
+\footnotesize
+\begin{tabularx}{\linewidth}{lXr}
+\toprule
+\textbf{Part} & \textbf{Scope and properties} & \textbf{Cases}\\
+\midrule
+M (model) & implementation-independent model of $(V,I)$; every base set of two universes (one epoch, sequence 0--2, two contents, prev $\in\{G,F,\bot\}$: 14 statements; two epochs, sequence 0--1: 12 statements) and every batch of one or two further statements: changed classes $\subseteq A(S)$, $|A(S)|\le 2|S|$, both orders equal, contest absorbing & \WAfourMcases\\
+L (implementation) & unmodified verifier, real Ed25519 signatures: every base set of the two-epoch universe with every single further statement & \WAfourLexhaustive\\
+L (sample) & seeded random batches of two or three statements over both universes & \WAfourLrandom\\
+C (lifecycle) & every operation sequence of length $\le 4$ over 13 operations (deliveries over two epochs including a forged alternative and a rotated-key statement; gap closure; revocation with early or late $t_\mathrm{comp}$; release with fresh or stale snapshot; rejection): evidence conformance, absorbing contest, authority and derived data, taint exactness, no ordinary admission under a revoked key, release safety, stale-snapshot refusal, per-delivery locality, rotation grace & \WAfourCexhaustive\\
+C (sample) & seeded random sequences of length 5--8 & \WAfourCrandom\\
+C (both rows) & operations exercised over all lifecycle sequences: \WAfourCops; releases \WAfourCreleased; stale-snapshot refusals \WAfourCstale & \\
+\bottomrule
+\end{tabularx}
+\end{table}
+\noindent The lifecycle check found one defect before the confirmatory runs: after a revocation record was revised with an earlier compromise time, the verifier did not re-run the taint selector, so an observation committed after the revised compromise time stayed authoritative (minimal schedule: commit at 2~s; revoke with $t_\mathrm{comp}=3$~s; revise to $t_\mathrm{comp}=0$). The fix keeps a key revoked from its first revocation, lets a revision only move $t_\mathrm{comp}$ earlier and re-runs the selector; a record released under a revoked key stays exempt only while its release condition holds. The counterexample is kept in the repository. No scenario revokes a key twice, and the re-executed main evaluation was identical on the corrected source. The symbolic model (ProVerif 2.05; Dolev--Yao attacker, unbounded sessions, adaptive key compromise) establishes the signature-binding correspondences stated in the article; its variant with an attacker-writable device-to-gateway link shows that the device key alone then suffices. Rego parity: \VParityWellFormedExact\ of \VParityWellFormedN\ well-formed and \VParityMalformedReqExact\ of \VParityMalformedReqN\ malformed requests gave the same decision and reason in the Python decision point and in the Rego policy evaluated by rego-cpp; OPA itself was not run.
+
+\section{Environment, Evaluation Stages, Evidence Levels and Reproduction}\label{sec:S-env}
+\begin{table}[!htbp]
+\caption{Execution environment recorded in the result manifests. Source digest: SHA-256 over the files in \texttt{src/\allowbreak{}} as recorded by each campaign; repository file names of the runs are given in \texttt{typewriter}. The Rego parity harness used regopy 1.5.2 (rego-cpp 1.5.2); the SQLite library version of the wall-clock runs was not recorded in their manifests. ``Final'' refers to the main-evaluation and performance campaigns; the review-schedule, selective-hold and re-execution campaigns recorded source digest \texttt{8dfae6decd80\ldots} in their manifests (platform kernel 6.18.44, Python 3.13.18; Tables~\ref{tab:S-stages} and~\ref{tab:S-reexec}).\label{tab:S-env}}
+\footnotesize\centering
+\input{generated/tabS_env.tex}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Evaluation stages of the article, their design, registration and evidence levels (summarized in Section~\Mref{sec:design} of the article). Levels: A, confirmatory and registered in advance (self-recorded); B, exploratory or descriptive; C, amendment-informed; D, formal or deterministic verification; E, performance on one host (no device or multi-host measurement). Repository identifiers, configurations and seeds: Table~\ref{tab:S-stages}.\label{tab:S-levels}}
+\footnotesize
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{2.9cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{4.6cm}>{\raggedright\arraybackslash}p{3.1cm}>{\raggedright\arraybackslash}p{1.3cm}}
+\toprule
+\textbf{Stage} & \textbf{Question} & \textbf{Design} & \textbf{Registration} & \textbf{Level}\\
+\midrule
+Main evaluation & Which pipelines admit forged or lose legitimate data? & E1--E15, eight pipelines, seeds 1--20 (\RScenarioRuns\ + \VXOneRuns\ runs) & P1--P3 for B5 and B5s; P4 (B4) describes stored runs; B1--B4 comparisons not registered & A (P1--P3), B\\
+Mixed workload & All classes at once & 16th workload, seeds 1--20 (\VMixRuns\ runs) & exploratory & B\\
+Re-execution with time-dependent outcomes & Are stored results reproducible; what do final counts conceal? & main evaluation and mixed workload re-run with the tracer (\XRunsReexec\ runs) & replication gate of the second registration & B\\
+Review-schedule evaluation & Does the availability difference survive faster or matched review? & E5, E8, E11b, mixed; \sys\ and 21 B5/PBTI-R schedule arms; seeds 21--40 (\XRunsReview\ runs) & H1a--H1d; gates G1, G2 & A\\
+Selective-hold grid & Do targeted holds reduce retained forgeries? & equivocation $\times$ suppression grid, delayed successors, suppression runs; 7 arms; seeds 21--40 (\XRunsGrid\ runs) & H3a--H3c; gates G3, G4 & A\\
+Selective-hold factorial cells & Same, where feed-level review retained fewer forgeries & eight factorial cells, 7 arms, seeds 21--40 (\XRunsCells\ runs) & amendment; gates G3F, G4F & C\\
+Selective-hold controls & Side effects in every workload & 16 workloads, seeds 1--20 (\XRunsControls\ runs) & descriptive & B\\
+Sensitivity analyses & Dependence on stressor rates & 11-factor sweep at 0--20\%, $2^{7-3}_\mathrm{IV}$ factorial; seeds 1--20 (\VSweepRuns\ + \VFactRuns\ runs) & registered as descriptive & B\\
+Public-telemetry replay & Real sensor dynamics & SKAB at 1, 5, 10$\times$, seeds 1--20 (\VRpRuns\ runs) & exploratory & B\\
+Corrected-comparator reruns & Do the results depend on the known B5 defects? & every B5 and B5s specification of all stages above, original seeds (\YRunsRerun\ runs) & registered outcomes, families, margins and gates applied unchanged; correction decided after the results (DV8) & that of the rerun stage\\
+Attacker-model robustness & How much do the results depend on the attack generator? & mixed workload with a consistent impersonator; \sys, PBTI-R, B5 (one-shot and event-driven); seeds 21--40 (\YEfourRunsN\ runs) & not registered (DV9) & B\\
+Control traces & Which failure modes are common to all rules? & six deterministic traces, four pipelines & not registered & D\\
+Lifecycle analysis & Which evidence justifies release under a revoked key? & \WAfiveRows\ deterministic timelines (11 cases, 3 policies, 2 pipelines) & not registered & D\\
+Formal properties & Locality and signature bindings & proof, symbolic model, bounded enumeration & --- & D\\
+Performance & Processing, size and latency costs & in-process, batching, MQTT/TLS on one host & descriptive & E\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Evaluation stages of the article and their repository identifiers, configurations, seeds and run counts. All paths are relative to the repository root.\label{tab:S-stages}}
+\footnotesize
+\begin{tabularx}{\linewidth}{p{3.0cm}p{4.4cm}Xp{1.5cm}}
+\toprule
+\textbf{Stage (article)} & \textbf{Raw results} & \textbf{Configuration or command; registration} & \textbf{Seeds; runs}\\
+\midrule
+Main evaluation, B1--B4 and \sys & \texttt{results/\allowbreak{}raw/\allowbreak{}scenarios*.jsonl}, \texttt{ablations*.jsonl}, \texttt{revocation*.jsonl}, \texttt{audit.jsonl} & \texttt{experiments/\allowbreak{}run\_\allowbreak{}campaign.py} (\texttt{make campaign}); not registered & 1--20; \RScenarioRuns\ scenario runs\\
+Main evaluation, B5, B5s, PBTI-R & \texttt{results/\allowbreak{}raw/\allowbreak{}v3\_\allowbreak{}scenarios\_\allowbreak{}b5*.jsonl}, \texttt{v3\_\allowbreak{}scenarios\_\allowbreak{}pbtir.jsonl} & \texttt{make campaign-v3}; first registration \texttt{research/\allowbreak{}V3/\allowbreak{}PREREGISTRATION.md} & 1--20; \VXOneRuns\\
+Mixed workload & \texttt{results/\allowbreak{}raw/\allowbreak{}v3\_\allowbreak{}mixed\_\allowbreak{}b5*.jsonl} & as above; exploratory & 1--20; \VMixRuns\\
+Re-execution with time-dependent outcomes & \texttt{results/\allowbreak{}v4/\allowbreak{}raw/\allowbreak{}A0\_\allowbreak{}core.jsonl}; \texttt{results/\allowbreak{}v4/\allowbreak{}summary/\allowbreak{}A0\_\allowbreak{}comparison.json} & \texttt{experiments/\allowbreak{}v4\_\allowbreak{}configs/\allowbreak{}A0\_\allowbreak{}core.json}; replication gate of the second registration & 1--20; \XRunsReexec\\
+Review-schedule evaluation & \texttt{results/\allowbreak{}v4/\allowbreak{}raw/\allowbreak{}A1\_\allowbreak{}review.jsonl} & \texttt{experiments/\allowbreak{}v4\_\allowbreak{}configs/\allowbreak{}A1\_\allowbreak{}review.json}; second registration \texttt{research/\allowbreak{}V4/\allowbreak{}PREREGISTRATION\_\allowbreak{}V4.md} & 21--40; \XRunsReview\\
+Selective-hold grid & \texttt{results/\allowbreak{}v4/\allowbreak{}raw/\allowbreak{}A3\_\allowbreak{}selective.jsonl} & \texttt{experiments/\allowbreak{}v4\_\allowbreak{}configs/\allowbreak{}A3\_\allowbreak{}selective.json}; second registration & 21--40; \XRunsGrid\\
+Selective-hold factorial cells & \texttt{results/\allowbreak{}v4/\allowbreak{}raw/\allowbreak{}A3\_\allowbreak{}factorial.jsonl} & \texttt{experiments/\allowbreak{}v4\_\allowbreak{}configs/\allowbreak{}amendment1/\allowbreak{}A3\_\allowbreak{}factorial.json}; amendment \texttt{research/\allowbreak{}V4/\allowbreak{}PREREGISTRATION\_\allowbreak{}V4\_\allowbreak{}AMENDMENT\_\allowbreak{}1.md} & 21--40; \XRunsCells\\
+Selective-hold controls & \texttt{results/\allowbreak{}v4/\allowbreak{}raw/\allowbreak{}A3\_\allowbreak{}scenarios.jsonl} & \texttt{experiments/\allowbreak{}v4\_\allowbreak{}configs/\allowbreak{}A3\_\allowbreak{}scenarios.json}; descriptive & 1--20; \XRunsControls\\
+Sensitivity analyses & \texttt{results/\allowbreak{}raw/\allowbreak{}v3\_\allowbreak{}sweep.jsonl}, \texttt{v3\_\allowbreak{}factorial.jsonl} & \texttt{make campaign-v3}; registered as descriptive & 1--20; \VSweepRuns, \VFactRuns\\
+Public-telemetry replay & \texttt{results/\allowbreak{}raw/\allowbreak{}v3\_\allowbreak{}replay\_\allowbreak{}skab.jsonl} & \texttt{make campaign-v3} with \texttt{SKAB\_\allowbreak{}DIR}; exploratory & 1--20; \VRpRuns\\
+Lifecycle analysis & \texttt{results/\allowbreak{}v4/\allowbreak{}summary/\allowbreak{}A5\_\allowbreak{}lifecycle\_\allowbreak{}matrix.json} & \texttt{scripts/\allowbreak{}a5\_\allowbreak{}lifecycle\_\allowbreak{}matrix.py}; not registered & --; \WAfiveRows\ rows\\
+Bounded checks & \texttt{results/\allowbreak{}v4/\allowbreak{}formal/\allowbreak{}}, \texttt{results/\allowbreak{}formal/\allowbreak{}} & \texttt{formal/\allowbreak{}v4\_\allowbreak{}locality\_\allowbreak{}lifecycle\_\allowbreak{}check.py}, \texttt{formal/\allowbreak{}rule\_\allowbreak{}l\_\allowbreak{}bounded\_\allowbreak{}check.py}, \texttt{formal/\allowbreak{}*.pv} & --\\
+Performance & \texttt{results/\allowbreak{}raw/\allowbreak{}throughput*.jsonl}, \texttt{mqtt\_\allowbreak{}e2e.jsonl}, \texttt{v3\_\allowbreak{}batching.jsonl}, \texttt{v3\_\allowbreak{}mqtt\_\allowbreak{}e2e*.jsonl} & \texttt{make perf}, \texttt{make perf-v3}, \texttt{make e2e}, \texttt{make e2e-v3} & repetitions in Tables~\ref{tab:S-throughput}--\ref{tab:S-e2e-skab}\\
+Second-environment re-execution & \texttt{results/\allowbreak{}v7/\allowbreak{}reexec\_\allowbreak{}cloud/\allowbreak{}} & \texttt{tools/\allowbreak{}reexec/\allowbreak{}reproduce\_\allowbreak{}subset.sh} (Table~\ref{tab:S-reexec}) & subsets; Table~\ref{tab:S-reexec}\\
+Corrected-comparator reruns & \texttt{results/\allowbreak{}v9/\allowbreak{}raw/\allowbreak{}*\_\allowbreak{}B5c.jsonl}, \texttt{*\_\allowbreak{}B5Sc.jsonl} & \texttt{experiments/\allowbreak{}v9/\allowbreak{}run\_\allowbreak{}all\_\allowbreak{}b5c.sh}; frozen configurations; analysis \texttt{tools/\allowbreak{}v9/\allowbreak{}build\_\allowbreak{}corrected\_\allowbreak{}results.sh} & as the stages; \YRunsRerun\\
+Attacker-model robustness and controls & \texttt{results/\allowbreak{}v9/\allowbreak{}raw/\allowbreak{}attacker\_\allowbreak{}consistent\_\allowbreak{}impersonator.jsonl}, \texttt{attacker\_\allowbreak{}controls.json} & \texttt{experiments/\allowbreak{}v9/\allowbreak{}run\_\allowbreak{}attacker\_\allowbreak{}consistent.py}, \texttt{attacker\_\allowbreak{}controls.py} & 21--40; \YEfourRunsN\\
+Reference-model check of the corrected B5 & \texttt{results/\allowbreak{}v9/\allowbreak{}b5c\_\allowbreak{}refmodel/\allowbreak{}} & \texttt{tools/\allowbreak{}v9/\allowbreak{}b5c\_\allowbreak{}refmodel\_\allowbreak{}campaign.sh} & generator seeds; \YRefN\ comparisons\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Principal findings of the article and their evidence levels (levels as in Table~\ref{tab:S-levels}).\label{tab:S-findings}}
+\footnotesize
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{1.6cm}>{\raggedright\arraybackslash}p{4.0cm}}
+\toprule
+\textbf{Finding} & \textbf{Level} & \textbf{Evidence}\\
+\midrule
+Final forged admissions are identical for per-identity and feed-level containment in all 15 scenarios and in the four confirmatory workloads under every review schedule (by construction the feed-level comparator can only be lower than PBTI-R with the same reviewer) & A & article Table~\Mref{tab:primary}; Table~\ref{tab:S-full}\\
+Final losses are identical in \VOTwoBFiveIdentical\ of 15 scenarios; the exception is recovery of a beyond-horizon backlog by the reviewer, which PBTI-R matches & A & Table~\ref{tab:S-full}; article Section~\Mref{sec:res-main}\\
+With one-shot 60/10~s review, feed-level containment withholds genuine data longer (E5: $+$\WAoneEfiveBFivehistvsPBTIWdshort~s per observation) but has less exposure in the mixed workload & A & article Table~\Mref{tab:effects}\\
+With event-driven review, availability is equivalent in E5 and E8 and better for B5 in E11b and the mixed workload through recovery (gate G1 not met) & A & article Table~\Mref{tab:effects} and Figure~\Mref{fig:delay}\\
+With matched review, final outcomes are identical or equivalent in every schedule and workload (gate G2); withholding differs with $R\ge 5$~s or 10~s cadence, and feed holds reduce exposure in the mixed workload unless review is event-driven & A & article Section~\Mref{sec:res-review}; Table~\ref{tab:S-a1-tests}\\
+When equivocation coincides with suppressed messages, feed-level holds retain fewer forgeries than Rule L & B, C & article Section~\Mref{sec:res-selective}; Tables~\ref{tab:S-factorial} and~\ref{tab:S-a3f}\\
+Selective holds remove those forgeries at a cost in genuine data; their registered grid gates failed & A (negative), C & article Section~\Mref{sec:res-selective}; Figure~\ref{fig:S-factorial}; Table~\ref{tab:S-gates}\\
+A time-stamp condition for release under revoked keys admits backdated forgeries; an exact-content witness policy prevents them if the witness is trusted & D & article Section~\Mref{sec:res-release}; Table~\ref{tab:S-a5}\\
+$k$ admitted statements change the class and authority of at most $2k$ identities when no lifecycle transition intervenes (proof sketch; bounded checks) & D & article Proposition~\Mref{prop:locality}; Table~\ref{tab:S-bounded}\\
+Most of $W$ in E5 and in the factorial cells is end-of-run loss (observations still missing at the horizon); the extra withholding of the feed-level comparator is delay & B (exploratory) & article Section~\Mref{sec:primary}; Table~\ref{tab:S-v9-wsplit}\\
+With a consistent impersonator every pipeline retains far more forgeries than with the registered one; one-shot feed holds still expose less and withhold more, and event-driven B5 and PBTI-R stay close & B (exploratory) & article Section~\Mref{sec:res-attacker}; Tables~\ref{tab:S-v9-e04}--\ref{tab:S-v9-controls}\\
+Correcting the comparator's known defects changed no registered class, claim gate or prediction; it lowered B5's withholding and losses and raised its exposure slightly where its reviewer acts quickly or factorial stressors combine & that of the rerun stage (DV8) & article Section~\Mref{sec:impl}; Tables~\ref{tab:S-v9-runs} and~\ref{tab:S-v9-classes}\\
+Throughput \RTpRatioBTwo$\times$ and message size \RWireRatioBTwo$\times$ of a Zero-Trust baseline; networked saturation between 1000 and 1250 messages/s on one host & E & article Section~\Mref{sec:res-perf}; Tables~\ref{tab:S-throughput} and~\ref{tab:S-e2e2}\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Registration chronology, amendments and deviations. All plans are self-recorded in the repository with SHA-256 hashes and times written by the executing process; they were not deposited with an external registry, so a hash attests that a file is unchanged, not when it was written.\label{tab:S-chronology}}
+\footnotesize
+\begin{tabularx}{\linewidth}{p{3.2cm}p{2.9cm}X}
+\toprule
+\textbf{Record} & \textbf{Recorded (self-reported)} & \textbf{Content and effect}\\
+\midrule
+First registration (\texttt{research/\allowbreak{}V3/\allowbreak{}PREREGISTRATION.md}, SHA-256 \texttt{91f6b544\ldots}) & 3 Nov 2026, 22:51 UTC$-$6 & outcomes O1, O2; predictions P1--P4; decision rules for comparative wording; written before any feed-level, sweep, release-workflow, batching or new end-to-end result existed\\
+Amendments 1--3 to the first registration & 3 Nov 2026, 23:26 UTC$-$6, before any campaign result was read & exploratory PBTI-R arm; full audits on seeds 1--5; 120~s production phase in the sensitivity analyses; no test or prediction changed\\
+Amendment 4 to the first registration & 4 Nov 2026, 01:06 UTC$-$6 & B5 implementation fix after an audit failure in 2 of 20 mixed-workload runs, and re-run of every B5 and B5s arm; no test or prediction changed\\
+Second registration (\texttt{research/\allowbreak{}V4/\allowbreak{}PREREGISTRATION\_\allowbreak{}V4.md}, SHA-256 \texttt{9d3247ff\ldots}, with the source and configuration hashes) & 5 Nov 2026, 05:39 UTC, before any run on seeds 21--40 & hypotheses H1a--H1d, H3a--H3c; outcomes; families; margins; classification rules; gates G1--G4; replication gate\\
+Amendment to the second registration (SHA-256 \texttt{ac7945bb\ldots}) & 5 Nov 2026, 05:42 UTC, before any confirmatory selective-hold run & eight factorial cells with equivocation high and gates G3F, G4F; motivated by a one-seed pilot (seed 101) with retained forgeries at one grid point; data dependence disclosed\\
+Deviation DV1 & during the re-execution & host restart after 318 of 1{,}320 runs; resumed with the frozen runner; no effect expected (deterministic runs)\\
+Deviation DV2 & during the campaigns & campaigns run in a changed order; frozen source and configurations verified unchanged\\
+Deviation DV3 & after the results & descriptive summaries of the selective-hold grid added; no test, class, family, margin or gate changed\\
+Deviation DV4 & before the amendment & the selective-hold pilot was inspected beyond its error status, which led to the amendment\\
+Deviation DV5 & analysis & the re-execution comparison also excludes audit-outcome fields (reported separately) and two runner labels\\
+Deviation DV6 (found by the post-hoc audit) & analysis & the review-schedule Holm families contain 16 tests the hypotheses do not name (H1a on O2; H1b on O1, O2 and NLX), so the families of O1 and NLX have 84 instead of 80 tests and that of O2 48 instead of 40; conservative; with the families of the text no class or significance changes\\
+Deviation DV7 (found by the post-hoc audit) & analysis & the bootstrap generator is seeded with 20261104 and the CRC32 checksum of each comparison's key, a derivation the plan does not state; it changes intervals only by Monte-Carlo error, and one resampling-dependent class results (Table~\ref{tab:S-gates})\\
+Timing (found by the post-hoc audit) & 3--4 Nov 2026 & the first registration was written after the B1--B4 comparisons with \sys\ had been run (B4 scenario runs started at 17:57 UTC$-$6), so P4 describes stored runs and is reported as descriptive; B5 and its reviewer were debugged in smoke runs on seed 1, which the main evaluation also uses; amendments 1--3 were recorded at 23:26, eight minutes after the campaigns they govern were launched and before any result was read; the re-run with the corrected B5 started at 01:00, six minutes before amendment 4 was recorded\\
+Timing (found by the post-hoc audit) & 5 Nov 2026 & the second registration records single-seed development values that already showed event-driven B5 close to \sys\ in E5; the factorial cells of the amendment ran before the registered grid (DV2); the amendment allows presenting PBTI-SH as useful if either G4 or G4F holds\\
+Deviation (found by the post-hoc audit) & analysis & the first registration says that pairs identical in every seed are not tested; the analysis enters them into the Holm correction with $p=1$ (conservative)\\
+Deviation DV8 & 6 Nov 2026, after all results above & B5 corrected in a separate module (\texttt{src/\allowbreak{}pbti/\allowbreak{}b5\_\allowbreak{}corrected.py}; historical module unchanged) after the audit had found its defects; every B5 and B5s specification rerun on its original seeds and analysed with the unchanged scripts; the article's principal results use the corrected comparator, the historical results are kept\\
+Deviation DV9 & 6 Nov 2026, after all results above & exploratory attacker-model campaign (consistent impersonator, seeds 21--40) and control traces added; not registered, classes descriptive\\
+Note (found by the post-hoc audit) & analysis & the analysis script that classifies the comparisons was not among the hash-frozen files; an AI-performed re-implementation written from the plan text reproduced 1180 of the 1182 classes, the other two (one grid point) depend on bootstrap resampling, and with the seeding of DV7 all 1182 were reproduced exactly\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\noindent\textbf{Re-execution checks.} The re-execution of the main evaluation and the mixed workload under the extended source compared every stored run field by field: \WAzeroIdentical\ of \WAzeroCompared\ runs were identical over \WAzeroFieldComparisons\ field comparisons (wall-clock and audit timings, audit outcomes reported separately, and two runner labels excluded). The second re-execution ran the published commands of the minimal reproduction kit (\texttt{tools/\allowbreak{}reexec/\allowbreak{}reproduce\_\allowbreak{}subset.sh}) in a separate cloud environment, on a fresh copy of the repository, and compared every field except wall-clock timing with the stored rows (Table~\ref{tab:S-reexec}). Both re-executions were run by the same automated process that produced the results, so they show determinism and portability, not independent reproduction. The kit records date, hardware, operating system, package versions, git commit, source and configuration hashes, exact commands, seeds, exit codes and test counts, and is intended to be run by the authors on their own machines. In the second re-execution (\XRxDate; \XRxCpus\ vCPUs, \XRxOS, Python \XRxPython) the runner recorded the same source digest (\texttt{8dfae6decd80\ldots}) and configuration digests as the stored confirmatory campaigns.
+\begin{table}[!htbp]
+\caption{Second-environment re-execution of selected seeds (all fields compared except wall-clock timing: fields containing \texttt{\_\allowbreak{}us}, \texttt{wall\_\allowbreak{}s}, \texttt{audit\_\allowbreak{}static\_\allowbreak{}s}, \texttt{audit\_\allowbreak{}replay\_\allowbreak{}s}).\label{tab:S-reexec}}
+\footnotesize\centering
+\input{generated/tabS_reexec.tex}
+\end{table}
+
+\noindent\textbf{AI-performed checks.} Separate instances of the AI model used for this study, each given the specification, the repository and a narrow task but not the conclusions of the others, performed the following checks. None of them is a human review, and all instances share the training of the model that wrote the code, so errors common to that model would not be caught.
+(i) \emph{Oracle and time-dependent outcomes.} Sixteen hand-computed traces drove the unmodified \sys, B5 and PBTI-SH verifiers, and an implementation of the outcome definitions that shares no code with the repository recomputed the primary outcomes of 20 re-run campaign runs (seeds 1, 2, 21 and 22 and one factorial cell) from its own record of the authoritative set; all 420 run-outcome values agreed with the stored rows, and seven consistency identities held in all 7540 stored rows. The check found two counter defects that affect only Table~\ref{tab:S-holds} and no primary outcome (caption of that table), and it showed that $W$ and NLX depend on the fixed 180~s drain: an observation that is never made available, and a forgery retained to the end, contribute until $T_\mathrm{end}$, so differences between pipelines that differ in end-of-run loss grow with the drain. An exploratory screen with drains 60~s and 120~s shorter (linear correction of the stored rows, which is exact when all losses and releases precede the shortened end; interval-based classes only, without Wilcoxon tests or Holm correction) changed the margin class of 25 of the 222 registered $W$ comparisons, all in the selective-hold analyses (Tables~\ref{tab:S-a3} and~\ref{tab:S-a3f}), and no gate outcome; in the grid, PBTI-SH's withholding was worse than \sys's beyond the margin at 4 points with the registered drain, at 2 with a 120~s drain and at none with a 60~s drain.
+(ii) \emph{Statistics.} A re-implementation of the registered procedures written from the plan text recomputed all 1182 comparisons from the raw rows; Holm-adjusted significance agreed in all of them, and the classes as described in the note of Table~\ref{tab:S-chronology}; it also identified deviations DV6 and DV7.
+(iii) \emph{Locality proof.} A line-by-line audit of the proof against the update rule and the verifier, an implementation-independent exhaustive model checker (4\,068\,762\,624 evidence-state and batch cases) and 1000 random histories (10\,803 receipts) on the unmodified verifier with real signatures found no counterexample; the audit led to the corrected statement of Proposition~\Mref{prop:locality} (hypothesis stated on the schedule, taint and gap-closure flags, reviewer decisions excluded) and to the wording ``proof sketch''.
+(iv) \emph{Source code and the feed-level comparator.} A line-by-line audit of \sys, PBTI-R, PBTI-SH, B5, B5s, the simulator and the oracle against the specification documents, with a minimal reproduction of every suspicion and about 210 single runs of instrumented audit-only subclasses (the repository's classes were not edited), confirmed the Rule L slot states, duplicate handling, staleness checks, release waivers, reviewer checks and schedules, taint and revised revocations, the arm settings and the common random numbers (byte-identical receipt sequences across pipelines in two runs; identical per-label receipt counts in all 1300 campaign--cell--seed groups); the tracer matched the true authoritative set at 1247 mid-run checks. It found four minor defects. (a) B5 holds observations again that its reviewer had released, and can restart a fork after the feed resumed, when a late successor of an already contested slot arrives without new fork evidence; with this corrected in an audit-only subclass, B5's $W$ fell by up to 0.26~s per observation in single mixed-workload runs with periodic review and by at most 0.003~s with event-driven review, O1 and NLX did not change in those runs, and the two matched-review $W$ comparisons closest to the margin stayed worse beyond it (0.695 to 0.679~s and 0.699 to 0.690~s per observation); these single-run estimates of the audit are superseded by the complete reruns with the corrected implementation (\emph{Comparator correction} below). (b) When the reviewer releases a stale case of a held feed, B5 can keep the observation held without an open case (no occurrence in 66 instrumented mixed-workload runs). (c) The hold counter of Table~\ref{tab:S-holds} (see its caption). (d) A raw field counting distinct held observations misses holds made on arrival; it is not used. Defects (a) and (b) can disadvantage B5; all four were subsequently corrected in a separate implementation (\emph{Comparator correction} below). The audit also noted that B5's hold release does not re-run admission and that its resume rule keeps a forked feed held while the device produces (Section~\Mref{sec:pipelines} of the article), that under message loss the missing-message runs of the sensitivity factorial are not always consecutive (identically for every pipeline), and that an audit pass shows internal consistency and replayability rather than correctness against the specification, because decision replay runs the same code. A reference model of B5, written from the specification before any B5 code was read (frozen at 23:50 UTC on 5 November 2026) and compared with the real B5 in 39{,}600 synthetic comparisons and 26 instrumented scenario runs, matched the implementation exactly once six choices that the specification leaves open were restated; without them it matched 23{,}781 comparisons. These choices cut both ways: reviewing cases in identity order favours B5 and PBTI-R equally (with creation order the one-shot reviewer would have lost 175 observations in one E11b run), whereas re-forking from slot state and the absence of review cases for contested slots cost B5 at most 0.014~s per observation in $W$ and 0.0013 in AV5 on the real traces. The model confirmed defects (b) (no occurrence in 146 real runs) and (c) (hold counts 1--9\% too high with one-shot review and 14--38\% with event-driven review) and found no error of its own.
+
+\noindent\textbf{Comparator correction.} Because the confirmatory comparisons set \sys\ against B5, the defects found by the audit were corrected rather than only described. The historical implementation (\texttt{src/\allowbreak{}pbti/\allowbreak{}b5.py}), which produced every frozen result and is listed in the freeze files, is unchanged; the corrected implementation is a separate module (\texttt{src/\allowbreak{}pbti/\allowbreak{}b5\_\allowbreak{}corrected.py}) with four changes. (C1) The feed-level response is triggered only by a receipt that adds new fork evidence: a second admitted version of its identity, an admitted successor link naming another digest for it, or a predecessor link naming none of the admitted versions of its predecessor; a successor that names one of the versions of an already contested predecessor no longer holds released observations again or restarts a hold after a resume. (C2) Every held committed observation has an open review case: a reviewed release of another reason whose re-run admission lands in a held feed continues as that observation's hold case (outcome \texttt{DEFERRED\_\allowbreak{}TO\_\allowbreak{}FEED\_\allowbreak{}HOLD}) instead of being closed without a case; a pending case of another reason for the same wire becomes the hold case; every hold is recorded as a slot-state change, which the event-driven review follows; and a hold case opened while a review decision is applied is decided from the next periodic pass on. (C3) Holds are counted once per transition, and distinct held and recovered observations are counted separately. (C4) The release of a tainted held observation is labelled as such. Identity order within a pass, the absence of review cases for contested identities with resume checked after each hold-case decision, and the event-driven candidate rule are kept; the six points that the specification had left open are now stated there (\texttt{docs/\allowbreak{}BASELINES.md}). \YRegTests\ regression tests reproduce each defect on the historical class and check the corrected behaviour, the kept choices and unchanged behaviour without fork evidence, and in \YRefN\ comparisons over the stream families of the reference model the corrected implementation matched the reference model with the corrected choices on the final authoritative set and every authority interval (\YRefEqual) and on the hold, fork and resume counters (\YRefCounters); it differed from the historical implementation in \YRefHistDiffers\ of these stress streams. Every B5 and B5s specification of the main evaluation, the mixed workload, the sweep, the factorial, the replay, the re-execution with the tracer, the review-schedule evaluation, the selective-hold grid and the factorial cells was rerun with the corrected implementation on its original seeds (\YRunsRerun\ of \YRunsAll\ runs); the frozen rows are kept, and the corrected rows are stored separately with the implementation identifier and the source digest. Historical runs without any fork evidence were reproduced in every outcome field (\YRowsNoforkIdentical\ of \YRowsNofork). The unchanged analysis scripts were then run on a tree in which only the B5 and B5s rows are replaced; outcome definitions, comparison families, margins and gates are those of the registrations. Table~\ref{tab:S-v9-runs} gives the run-level corrected-minus-original differences and Table~\ref{tab:S-v9-classes} the comparisons whose class changed; Data~S1 contains both versions of every per-cell table and comparison. The performance runs of B5 were not repeated: the in-process batching and worker study, whose disposition sequences equal those of \sys, and the end-to-end MQTT runs, in which every receipt was admitted, contain no fork evidence, so the correction cannot change their dispositions, but their timings were not re-measured with the corrected module. The lifecycle matrix (Table~\ref{tab:S-a5}) was recomputed with the corrected B5 and is unchanged (\YAfiveCorrectedDiffs\ differing rows).
+
+\begin{table}[!htbp]
+\caption{Corrected minus historical B5 and B5s, run by run on the same specifications and seeds. Changed: runs in which O1, O2, NLX, $W$ or AV5 differs; the other columns give the range of the differences over all runs of the stage (NLX, $W$ and AV5 only where the tracer ran). Counters (holds, distinct held and recovered observations) are not outcomes and are not counted here.\label{tab:S-v9-runs}}
+\footnotesize\centering
+\input{generated/tabS_correction_runs.tex}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Registered comparisons whose class differs between the historical and the corrected comparator (\YCmpClassChanged\ of \YCmpN\ comparisons of the review-schedule evaluation, the selective-hold grid and the factorial cells; \YCmpEstChanged\ estimates changed at all). Mean paired difference (arm $-$ reference) with 95\% bootstrap interval.\label{tab:S-v9-classes}}
+\footnotesize\centering
+\input{generated/tabS_correction_classes.tex}
+\end{table}
+
+\noindent\textbf{Attacker-model robustness campaign.} The consistent impersonator of the earlier five-seed check (\emph{Exploratory analyses} below; \texttt{experiments/\allowbreak{}v9/\allowbreak{}consistent\_\allowbreak{}impersonator.py}, the same logic moved into an importable module) was run on all 20 seeds 21--40 of the mixed workload of the review-schedule evaluation, for \sys, PBTI-R and B5 with one-shot ($R=60$~s, $C=10$~s) and event-driven review, B5 in its corrected and historical implementations, with the configurations of that evaluation unchanged (\texttt{experiments/\allowbreak{}v9/\allowbreak{}run\_\allowbreak{}attacker\_\allowbreak{}consistent.py}). Registered-attacker values are the frozen rows and, for the corrected B5, its rerun; re-running the registered attacker for seeds 21 and 22 reproduced those rows in \YEfourReproOk\ of \YEfourReproN\ cases. The campaign is exploratory: it was designed after the registered results were known, and its classes use the registered margins descriptively, without family-wise correction (Tables~\ref{tab:S-v9-e04} and~\ref{tab:S-v9-e04-cmp}). Table~\ref{tab:S-v9-controls} lists the six deterministic control traces (\texttt{experiments/\allowbreak{}v9/\allowbreak{}attacker\_\allowbreak{}controls.py}).
+
+\begin{table}[!htbp]
+\caption{Mixed workload with the registered and the consistent impersonator (means per run over seeds 21--40; about 7200 legitimate observations per run). O1: forged observations authoritative at the end; O2: legitimate observations missing at the end; NLX: non-legitimate exposure; $W$: mean withheld seconds per legitimate observation; AV5: share first available within 5~s. Unlabelled B5 rows: corrected implementation.\label{tab:S-v9-e04}}
+\footnotesize\centering
+\input{generated/tabS_attacker_cells.tex}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Paired comparisons in the mixed workload under both attackers (difference = first minus second pipeline over seeds 21--40; B5: corrected implementation). Registered attacker: the registered comparison of Table~\ref{tab:S-a1-tests} where one exists (its interval and class); all other entries: 95\% percentile-bootstrap intervals and classes with the registered margins, used descriptively.\label{tab:S-v9-e04-cmp}}
+\footnotesize\centering
+\input{generated/tabS_attacker_cmp.tex}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Control traces on the real verifiers (one device, ten 1~Hz observations, simulated time to 200~s; the attacker holds the device key and relays through the honest gateway; PBTI-R and B5 with one-shot review, $R=60$~s, $C=10$~s). Forged and genuine counts are of distinct (identity, content) pairs that arrived; exposure and withheld time in record-seconds.\label{tab:S-v9-controls}}
+\footnotesize\centering
+\input{generated/tabS_attacker_controls.tex}
+\end{table}
+
+\noindent\textbf{Reference check (AI-performed).} Every entry of the article's reference list was checked on 6 November 2026 by a separate instance of the same AI model against Crossref or DataCite, the RFC Editor (including errata), the IETF Datatracker or the issuing body; no retraction, correction notice or expression of concern was found. The statement each citation supports was checked against the cited work: from the full or standard text for 48 of the 65 entries, from the abstract for 9 and from catalogue records for 6 (these only identify a standard); the text of two works was not accessible, so AUPS is cited only for what its title states and Holm's procedure for its standard attribution. The C2PA specification is cited in version 2.5, which keeps the cited revocation rule.
+
+\noindent\textbf{Exploratory analyses added after the confirmatory analysis.} Table~\ref{tab:S-v9-wsplit} gives the split of $W$ used in the article: \sys, PBTI-R and PBTI-SH from the re-executed runs described next (their rows are unchanged), and B5 from the corrected reruns, where it is computed in each run from the run's own tracer with the same definitions and sums to the registered $W$ in every run. (i) \emph{Split of $W$ (historical comparator).} \XWdRuns\ registered runs of seeds 21--40 (E5 and the mixed workload for \sys, B5 with one-shot and with event-driven review and PBTI-R with event-driven review; the four factorial cells with equivocation and suppressed runs high for \sys, PBTI-SH and \Bhist) were re-executed with the oracle audit's capture, which reproduced the registered $W$ in \XWdAllMatch\ of them, and $W$ was split into the contribution of observations that are authoritative at the end of the run (delay) and of those that are not (end-of-run loss, not proof that later recovery is impossible). In E5, \XWdEfivePBTILossPct\% of \sys's $W$ was end-of-run loss; \Bhist\ added \XWdEfiveBhistDelayDiff~s of delay per observation and \XWdEfiveBhistLossDiff~s of loss. In the mixed workload the delay was \XWdMixedBhistDelay~s for \Bhist\ and \XWdMixedPBTIDelay~s for \sys, the loss \XWdMixedBhistLoss\ and \XWdMixedPBTILoss~s. In the factorial cells, PBTI-SH had \XWdFGSHvsBhistDelayMin\ to \XWdFGSHvsBhistDelayMax~s per observation less delay than \Bhist\ and \XWdFGSHvsBhistLossMin\ to \XWdFGSHvsBhistLossMax~s more end-of-run loss; \XWdFGSHLossPctMin--\XWdFGSHLossPctMax\% of PBTI-SH's $W$ was end-of-run loss, against \XWdFGBhistLossPctMin--\XWdFGBhistLossPctMax\% for \Bhist\ (98\% of PBTI-SH's withheld time in the cell examined by the oracle audit, counted until the end of the drain). (ii) \emph{Consistent impersonator, five-seed check (historical comparator), superseded by the 20-seed campaign above.} Seeds \XCiSeeds\ of the mixed workload were re-run for \sys, \Bhist, \Bev\ and \Rev\ with the registered attacker, which reproduced the stored rows in \XCiRegMatch\ cases, and with an impersonator of the same capability that chains predecessor links by sequence number, re-sends one cached forgery per identity and drops transport duplicates in the impersonated range. Retained forgeries rose from \XCiRegPBTIOOne\ to \XCiConPBTIOOne\ per run for \sys\ (\XCiRegBhistOOne\ to \XCiConBhistOOne\ for \Bhist), and exposure from \XCiRegPBTINLX\ to \XCiConPBTINLX\ record-seconds for \sys\ and from \XCiRegBhistNLX\ to \XCiConBhistNLX\ for \Bhist. Tools: \texttt{tools/\allowbreak{}v7/\allowbreak{}w\_\allowbreak{}decomposition.py}, \texttt{tools/\allowbreak{}v7/\allowbreak{}consistent\_\allowbreak{}impersonator\_\allowbreak{}check.py}; outputs in \texttt{results/\allowbreak{}v7/\allowbreak{}v7\_\allowbreak{}analysis/}.
+
+\begin{table}[!htbp]
+\caption{Split of the registered withheld time $W$ into delay (observations authoritative at the end of the drain) and end-of-run loss (observations still missing then; not proof that later recovery is impossible), seconds per legitimate observation, means over seeds 21--40; denominator and horizon as for $W$. B5: corrected implementation; exploratory.\label{tab:S-v9-wsplit}}
+\footnotesize\centering
+\input{generated/tabS_wsplit.tex}
+\end{table}
+
+\section{Main Evaluation}\label{sec:S-main}
+\noindent\textbf{Comparisons with B1--B4 (exploratory).} Broker tampering (E2, E3) and timestamp-refreshed replays (E6) passed B1 and B2, whereas for the signing pipelines tampering became loss of the originals, which the broker had acknowledged; exact replays were suppressed by all pipelines. Duplicates, acknowledgement loss, reordering and partitions with reboot (E7, E9, E11/E12) were handled correctly by all pipelines; under clock faults (E10) de-duplication on (device, timestamp) merged \RSOneZeroBOnelegitmissing\ legitimate observations per run in B1--B3, and key rotation during a partition (E13) cost B3 \RSOneThreeBThreelegitmissing. Of the \RPairedTestsTotal\ exploratory comparisons of \sys\ with B1--B4, \RPairedTestsIdentical\ were identical in every seed and \RPairedTestsSignificant\ significant after Holm correction (Table~\ref{tab:S-paired}).
+
+\noindent In the re-execution with the tracer (Table~\ref{tab:S-a0-temporal}), the tracer's final authoritative set matched the pipeline's in \WAzeroTracerMatch\ re-executed runs, and all \WAzeroAuditsPass\ of \WAzeroAudits\ audited runs passed.
+\begin{table}[!htbp]
+\caption{Definitions of the time-dependent outcomes (repository \texttt{src/\allowbreak{}pbti/\allowbreak{}temporal.py}). $A(t)$: authoritative (event identity, content key) pairs; $L$: legitimate observations accepted by a gateway; interval $[0,T_\mathrm{end}]$ = production plus drain (480~s in the scenarios, 300~s in the selective-hold stages), virtual time. One value per run.\label{tab:S-tm-def}}
+\footnotesize
+\begin{tabularx}{\linewidth}{lXl}
+\toprule
+\textbf{Outcome} & \textbf{Definition} & \textbf{Unit}\\
+\midrule
+NLX & $\int |A(t)\setminus \mathrm{pairs}(L)|\,dt$: exposure to non-legitimate authoritative pairs (a forgery retained to the end contributes until $T_\mathrm{end}$) & record-s\\
+$W$ & $\frac{1}{|L|}\sum_{o\in L}\big((T_\mathrm{end}-t_\mathrm{acc}(o)) - |\{t\ge t_\mathrm{acc}(o): o\ \mbox{available}\}|\big)$; includes end-of-run loss, so the contribution of an observation that is never made available grows with the drain & s per observation\\
+AV$d$ & share of $L$ first available within $d\in\{1,5,30,60\}$~s of production (also if later withdrawn) & fraction\\
+KM p50/p90/p99 & Kaplan--Meier quantiles of first availability; never-available observations censored at $T_\mathrm{end}$ & s\\
+Withdrawn & observations available and later not available (once, or at the end) & count\\
+Freshness & per asset at 1~s steps: no correct value available (missing) or age of the latest available correct value behind the latest produced (stale) & fraction, s\\
+Containment latency & time from the first contradictory receipt (other content for the identity, or a successor whose \textsf{prev} contradicts it; any parseable receipt, also one that is rejected) or a revocation with $t_\mathrm{comp}$ to the end of a non-legitimate episode & s\\
+Derived exposure & window-version time during which a derived window includes a non-legitimate input; time to the first version without it & s\\
+Alerts & illustrative monitoring workload (not an application requirement): alert when temp\_c $>$ nominal $+2.5\,^\circ$C; true, false, missed (not raised within 5~s), retracted & count\\
+\bottomrule
+\end{tabularx}
+\end{table}
+\begin{table}[!htbp]
+\caption{Main evaluation: non-legitimate authoritative observations (O1) and missing legitimate observations (O2), means over \RScenarioSeeds\ paired seeds (7200 legitimate observations per run; E1 is zero for all pipelines). B5s: B5 without recovery. $^{*}$: Holm-corrected Wilcoxon $p<0.05$ versus \sys\ in the registered family; $\dagger$: held in the quarantine archive and releasable through review. Comparisons of B1--B4 with \sys: Table~\ref{tab:S-paired}. The 95\% percentile-bootstrap CIs (10{,}000 resamples) of these and of the other per-scenario outcomes (reachable, quarantined or held legitimate observations, duplicate authoritative observations, corrupt and incomplete derived windows, current-value error, holds, releases and persisted bytes per observation) are provided as Data~S1, file \texttt{v3\_\allowbreak{}outcomes\_\allowbreak{}full.csv}.\label{tab:S-full}}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3.2pt}
+\input{generated/tab_outcomes_main.tex}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Two-sided Wilcoxon signed-rank tests of \sys\ versus B1--B4 for non-legitimate authoritative observations, missing legitimate observations and current-value error in each scenario, paired by seed, Holm-corrected within each scenario and across all scenarios of a metric, with the matched-pairs rank-biserial correlation. \RPairedTestsIdentical\ of the \RPairedTestsTotal\ comparisons were identical in every seed; with \RScenarioSeeds\ pairs and no zero differences the smallest attainable exact two-sided $p$ is \RWilcoxonMinP\ before correction. \emph{Provided as Data~S1, file} \texttt{v2\_\allowbreak{}paired\_\allowbreak{}tests.csv}.\label{tab:S-paired}}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Feed-level holds, releases and latency in the main evaluation (means over 20 seeds; rows only where a pipeline forked, held, released or quarantined; last block: mixed workload). Forks: times a feed's fork point was set or lowered by new fork evidence; Held: hold transitions, one per observation entering the held set (an observation held again after later new fork evidence counts again; the historical counter also counted a hold twice when the held observation's own admission supplied the fork evidence, Section~\ref{sec:S-env}); Released: release events of held or quarantined observations by the automated reviewer; Lat.: time from production to authority of released observations (mean over runs of the per-run percentile); Quar.: legitimate observations missing at the end whose message had entered the quarantine archive or a feed hold, including observations in contested slots and in cases rejected by review, which cannot be released (Section~\ref{sec:S-env}); CV wrong: current-value error (does not penalize withheld data); B/obs.: persisted bytes per reachable observation. B5 here uses the one-shot 60/10 schedule (corrected implementation); B5s: B5 without recovery; PBTI-R: \sys\ with the same reviewer (exploratory).\label{tab:S-holds}}
+\footnotesize\centering
+\input{generated/tabS_holds.tex}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Registered comparisons of the main evaluation with a non-zero difference in at least one seed (two-sided Wilcoxon signed-rank on 20 paired seeds; Holm over the 30 tests of each outcome; positive difference: comparison pipeline larger). The other \VXOneIdentical\ of \VXOneTotal\ tests were identical in every seed. Practical thresholds: 1 observation (O1), 72 observations (O2).\label{tab:S-firstreg}}
+\footnotesize\centering
+\input{generated/tabS_registered_tests.tex}
+\end{table}
+\begin{table}[!htbp]
+\caption{Time-dependent outcomes of the main evaluation (re-execution with the tracer; means over 20 seeds). $W$: mean withheld seconds per legitimate observation; AV5: share first available within 5~s; KM p90: Kaplan--Meier 90th percentile of first availability (-- if more than 10\% are never available); Missing$_{fresh}$: share of 1~s samples without any correct available value. B5 uses the one-shot 60/10 schedule.\label{tab:S-a0-temporal}}
+\footnotesize\centering
+\input{generated/tabS_reexec_temporal.tex}
+\end{table}
+
+\section{Confirmatory Evaluation}\label{sec:S-confirm}
+\noindent\textbf{Review-schedule evaluation.} \WAoneRuns\ runs completed with \WAoneErrors\ errors; the tracer matched in \WAoneTracerMatch\ runs and \WAoneAuditsPass\ of \WAoneAudits\ audited runs passed. Notation of the schedules as in the introduction to this document.
+\begingroup\footnotesize
+\input{generated/tabS_review_tests.tex}
+\endgroup
+
+\noindent\textbf{Selective-hold grid.} \WAthreeRuns\ runs completed with \WAthreeErrors\ errors (\WAthreePoints\ grid points); the tracer matched in \WAthreeTracerMatch\ runs and \WAthreeAuditsPass\ of \WAthreeAudits\ audited runs passed.
+{\footnotesize
+\input{generated/tabS_selective_grid.tex}
+}
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/fig_selective_grid.pdf}
+\caption{Selective-hold grid at 5\% equivocation: retained forgeries O1 (left) and withheld time $W$ (right) versus the rate of suppressed messages (means of 20 paired seeds, seeds 21--40; 120~s production). One-shot: one-shot review rule with $R=60$~s and $C=10$~s (PBTI-R\textsubscript{60/10} and \Bhist); event-driven: \Bev. In the left panel \sys, PBTI-R\textsubscript{60/10} and PBTI-SH-T30 coincide. Colour marks the pipeline family, line style and marker the variant. All points: Table~\ref{tab:S-a3}.\label{fig:S-a3}}
+\end{figure}
+
+\noindent\textbf{Selective-hold factorial cells (amendment-informed).} Added after the freeze and before any confirmatory selective-hold run, because the pilot (seed 101) showed retained forgeries at only one of the \WAthreePoints\ points of the registered grid; with 20 seeds, the grid later showed small numbers at ten points (Table~\ref{tab:S-a3}). The amendment added the eight factorial cells with equivocation high (10\%), four of them with suppressed runs high (FG), on fresh seeds 21--40. \WAthreeFRuns\ runs, \WAthreeFErrors\ errors; the tracer matched in \WAthreeFTracerMatch\ runs and \WAthreeFAuditsPass\ of \WAthreeFAudits\ audited runs passed. Gates: G3F \WAthreeFGThree, G4F \WAthreeFGFour.
+\begin{table}[!htbp]
+\caption{Selective holds in the factorial cells (means over seeds 21--40; 120~s production, about 2{,}880 legitimate observations per run). FG: equivocation and suppressed runs both high.\label{tab:S-a3f}}
+\footnotesize\centering
+\input{generated/tabS_selective_cells.tex}
+\end{table}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/fig_selective_cells.pdf}
+\caption{Selective holds in the eight factorial cells with equivocation high (amendment-informed; means of 20 paired seeds, 120~s production, about 2880 legitimate observations per run): retained forgeries O1 (left) and withheld time $W$ (right). $^*$: suppressed runs also high. Colour marks the pipeline family (\sys\ blue, B5 orange, PBTI-SH aqua) and hatching the variant (one-shot: \Bhist; event-driven: \Bev); PBTI-R is identical to \sys\ in every cell and not shown. Values: Table~\ref{tab:S-a3f}.\label{fig:S-factorial}}
+\end{figure}
+
+\noindent All confirmatory comparisons, with mean differences, 95\% and 90\% bootstrap intervals, raw and Holm-adjusted $p$ and classes, are in Data~S1; the comparisons on which gates G3, G4, G3F and G4F depend follow. The class ``eq'' of the grid row with 5\% equivocation and 5\% suppressed messages (O1, versus \sys) is resampling-dependent: its 90\% interval touches $-1$, the margin, and the comparison of the same data with PBTI-R\textsubscript{60/10} is classed inconclusive in Data~S1; no gate depends on it. ``dw'' (different within the margin) means significant with a 95\% interval overlapping the margin, so the point estimate may exceed the margin.
+\begingroup\footnotesize
+\input{generated/tabS_selective_gates.tex}
+\endgroup
+
+\begin{table}[!htbp]
+\caption{Selective-hold controls: \sys\ (re-executed main-evaluation rows) and PBTI-SH on the 16 workloads, and PBTI-SH-T30 on four of them (means over seeds 1--20; descriptive).\label{tab:S-a3-scen}}
+\footnotesize\centering
+\input{generated/tabS_selective_controls.tex}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Lifecycle analysis of reviewed release under revoked credentials (deterministic; repository \texttt{scripts/\allowbreak{}a5\_\allowbreak{}lifecycle\_\allowbreak{}matrix.py}): device and relay keys compromised at $t_c=10$~s, revocation observed at 20~s with $t_\mathrm{comp}=10$~s, reviewer decisions at 30~s (in the superseded-snapshot case a decision at \YEnineRefusedAt~s bound to a superseded snapshot is refused first), ticks to 60~s. Release-evidence policies of the REVOKED\_BUFFERED waiver: none; discretionary (the observation's own time stamp precedes $t_\mathrm{comp}$; used in all scenario campaigns); witness (a token from a time-stamping witness for the exact statement digest, witness time plus clock uncertainty (1~s) before $t_\mathrm{low}$). \sys\ and B5 gave \WAfivePBTIBfiveSame\ results. The interval row sets $t_\mathrm{low}=t_c-$ width/2. The witness's key and clock are trusted by assumption.\label{tab:S-a5}}
+\footnotesize\centering
+\input{generated/tabS_lifecycle.tex}
+\end{table}
+
+\section{Revocation, Sensitivity Analyses, Replay, Ablation and Insider Tampering}\label{sec:S-sens}
+\noindent\textbf{Revocation.} With immediate status refresh ($\Delta=0$), \sys\ tainted \RRevPBTItaint\ commits per run in E14; with a 30~s refresh, \RRevPBTIThreeZerospost\ post-revocation injections per run passed before the refresh and were tainted once the revocation was observed.
+\begin{table}[!htbp]
+\caption{Revocation (E14): post-revocation admissions of attacks with revoked keys, and non-legitimate observations remaining authoritative at the end of the run, by status refresh interval $\Delta$ (means over \RRevSeeds\ seeds).\label{tab:S-revocation}}
+\centering
+\footnotesize
+\input{generated/tab_revocation.tex}
+\end{table}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/fig_sweep.pdf}
+\caption{Stressor sweep: non-legitimate observations authoritative at the end of the run (O1, top) and legitimate observations missing (O2, bottom) per run versus stressor level for \sys, B5 and B4 (means of 20 paired seeds, shaded 95\% bootstrap intervals; 120~s production phase, 2880 legitimate observations per run; exploratory). Where B5 coincides with \sys, its dashed line overlays \sys's. For the five remaining factors (loss, duplicates, reordering, long delay and outage bursts, levels 0--20\%), both outcomes were zero at every level for all three pipelines (stored summary in Data~S1). Definitions of all factors and levels: repository \texttt{docs/\allowbreak{}V3\_\allowbreak{}SWEEP\_\allowbreak{}DESIGN.md}.\label{fig:S-sweep}}
+\end{figure}
+
+\begin{table}[!htbp]
+\caption{Fractional factorial $2^{7-3}_\mathrm{IV}$ at 0 and 10\%: estimated effects on O1 and O2 per run (mean over 20 seeds of the per-seed effect; $^{*}$: 95\% $t$ interval excludes 0; exploratory). A loss, B duplicates, C reordering, D long delay, E clock error ($=ABC$), F equivocation ($=BCD$), G suppressed runs ($=ACD$); main effects are aliased with three-factor interactions, two-factor interactions in the chains shown.\label{tab:S-factorial}}
+\footnotesize\centering
+\input{generated/tabS_factorial.tex}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Replay of SKAB telemetry with injected, labelled stressors (means over 20 seeds; about 14{,}400 legitimate observations per run; exploratory). Avail.: share of reachable legitimate observations authoritative at the end, in rows that SKAB labels normal or anomalous (process anomalies, not attacks). Unstressed controls: \VRpCleanRuns\ runs with \VRpCleanMissingTotal\ missing and \VRpCleanNonlegitTotal\ non-legitimate observations in total. Attributed re-runs traced \VRpResPBTIgw\ of the \VRpResPBTItotal\ observations retained by \sys\ and all \VRpResBFivetotal\ retained by B5 to a compromised, never-revoked gateway forging its legacy device's data, and \VRpResBFourimp\ of B4's \VRpResBFourtotal\ to impersonation that B4 cannot taint.\label{tab:S-skab}}
+\footnotesize\centering
+\input{generated/tabS_replay.tex}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Ablation study on the mixed workload (means over \RAblSeeds\ seeds; baseline rows give B1--B4 on the same workload for reference; $^{*}$: Holm-corrected Wilcoxon $p<0.05$ versus full \sys). Non-legit.: non-legitimate authoritative observations; Quar.: missing observations held in the quarantine archive; Ab1--Ab12: ablated variants.\label{tab:S-ablation}}
+\centering
+\footnotesize
+\input{generated/tab_ablations.tex}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Detection of insider tampering by the offline auditor (runs with detection / runs; 50 objects altered per run, or one checkpoint deleted for T4). Re-run with the final auditor (\VTamperRerunRuns\ runs): the same detection outcome in \VTamperRerunSameDetection, \sys\ detected \VTamperRerunPBTIDetected\ of \VTamperRerunPBTIRuns, and the same check families fired (in T2 decision replay additionally reports disposition mismatches).\label{tab:S-audit}}
+\centering
+\footnotesize
+\input{generated/tab_audit.tex}
+\end{table}
+
+\noindent\textbf{Review-workflow tests.} The workflow is covered by unit tests: release of a stale quarantined observation by an authorized reviewer with a signed evidence record; refusal of an unauthorized reviewer and of a decision with an invalid signature; idempotent duplicate decision, unknown case and revoked reviewer; stale review and conflicting evidence (release fails, slot contested); rejection of an uncorroborated forgery; re-taint of a released observation after a later revocation with recomputation of the current value; recovery after a long gap with a five-second gap horizon; B5 feed hold and release; B5s frozen feed with a new epoch admitted; state determinism over 120 delivery permutations; 15 handcrafted traces of the time-dependent outcomes; the deferring and event-driven review rules and the selective-hold gate; and the witness tokens, lifecycle cases and the complete revocation--quarantine--review--release--taint--correction sequence.
+
+\section{Performance and Deployment}\label{sec:S-perf}
+\noindent Figure~\ref{fig:S-perf} shows the in-process batching and worker study, the per-stage cost of \sys\ and the MQTT/TLS latency reported in the article's Section~\Mref{sec:res-perf}.
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/fig_performance_costs.pdf}
+\caption{(\textbf{a}) In-process throughput versus group-commit batch size (one worker; mean and 95\% CI, \VBtReps\ repetitions). (\textbf{b}) \sys\ and B5 versus signature-verification workers on two vCPUs (batch 128). (\textbf{c}) \sys\ cost by stage (in-process benchmark; Rule L and lineage without the nested commit time, so that the stages add up to the per-message total). (\textbf{d}) MQTT/TLS latency on one host with all roles co-located, p50 (solid) and p99 (dashed), mean and 95\% CI of \VEeReps\ repetitions. Colours as in the article's Figure~\Mref{fig:delay} (\sys\ blue, B5 orange); B2 grey.\label{fig:S-perf}}
+\end{figure}
+
+\noindent\textbf{Containers and hardware protocols.} A hardened container image (base pinned by digest, pinned Debian packages, hash-locked Python dependencies, non-root user, health check) built and passed the unit tests, a smoke run and an MQTT/TLS run, also with a read-only root file system and all capabilities dropped. The repository specifies a three-host MQTT/TLS deployment (edge publisher, broker, verifier; clock synchronization, RTT, bandwidth, 30 repetitions per cell) and a constrained-device signing benchmark (Raspberry-Pi-class; thermal state, power mode, energy). No separate hosts or constrained devices were available, so neither experiment was performed; no result in the article comes from them, and containers on one host are not reported as a multi-host deployment.
+
+{\raggedright\noindent\textbf{Reproduction.} \texttt{python3 -m pytest -q tests/\allowbreak{}}; the campaign commands of Table~\ref{tab:S-stages}; \texttt{python3 scripts/\allowbreak{}compare\_\allowbreak{}a0.py results/\allowbreak{}v4/\allowbreak{}raw/\allowbreak{}A0\_\allowbreak{}core.jsonl}; \texttt{python3 scripts/\allowbreak{}a5\_\allowbreak{}lifecycle\_\allowbreak{}matrix.py}; \texttt{python3 formal/\allowbreak{}v4\_\allowbreak{}locality\_\allowbreak{}lifecycle\_\allowbreak{}check.py}; \texttt{python3 analysis/\allowbreak{}analyze\_\allowbreak{}v4.py}; then the paper build. On the two-vCPU reference host the confirmatory and re-execution campaigns took about six hours; the minimal reproduction kit (\texttt{tools/\allowbreak{}reexec/\allowbreak{}reproduce\_\allowbreak{}subset.sh}) took 81~minutes on two shared vCPUs in the second re-execution and reports every difference.\par}
+
+
+\begin{table}[!htbp]
+\caption{In-process verifier results with SQLite group commit (write-ahead logging, \texttt{synchronous=\allowbreak{}NORMAL}: a commit survives an application crash but can be rolled back by a power loss or operating-system crash; means over \RTpReps\ repetitions; one two-vCPU host). With \RTpReps\ repetitions per pipeline, normality cannot be established reliably (Shapiro--Wilk minimum $p=\RShapiroMinP$), so non-parametric tests were used.\label{tab:S-throughput}}
+\footnotesize\centering
+\input{generated/tabS_throughput.tex}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Verifier saturation throughput (messages/s) by number of devices (in-process, SQLite group commit as in Table~\ref{tab:S-throughput}; means of \RScaleReps\ repetitions).\label{tab:S-scaling}}
+\footnotesize\centering
+\input{generated/tabS_scaling.tex}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{In-process batching and worker study (\VBtN\ messages per run, \VBtReps\ repetitions per cell, randomized order; 2 vCPUs). Latency: time from dispatch of a message's batch to its commit at saturation (the fill time of a batch at an open-loop arrival rate comes on top). Disposition sequences were \VBatchSemanticsIdentical\ across all cells of a pipeline.\label{tab:S-batching}}
+\footnotesize\centering
+\input{generated/tabS_batching.tex}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{MQTT v5 QoS 1 over mutual TLS (Mosquitto), publish-to-commit latency, first series (B1--B3 and \sys; publisher, broker and verifier on one host); means over \REeReps\ repetitions, 95\% bootstrap CI for p99.\label{tab:S-e2e1}}
+\footnotesize\centering
+\input{generated/tabS_e2e.tex}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{MQTT v5 QoS 1 over mutual TLS, second series with \VEeReps\ repetitions per cell (2~s warm-up, 10~s measurement; all roles on one host): latency from publication of the signed message to commit, means over repetitions with 95\% bootstrap CIs. At 1000 messages/s the co-located publisher, verifier and broker used about 1.7 of the two vCPUs (769, 879 and 69~$\mu$s per message for \sys) and the median latency of single repetitions ranged from 8.8 to 187.6~ms, which explains the difference from the five-repetition first series (Table~\ref{tab:S-e2e1}); the runs locate the saturation of the shared host, not the capacity of a dedicated verifier.\label{tab:S-e2e2}}
+\footnotesize\centering\setlength{\tabcolsep}{3pt}
+\input{generated/tabS_e2e_reps.tex}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{SKAB replay through the MQTT/TLS deployment at native rate and 5 and 10$\times$ (24 devices at about 1, 5 and 10 rows/s each; achieved rates in the table; \VEsReps\ repetitions; one host). Lost: sent minus committed.\label{tab:S-e2e-skab}}
+\footnotesize\centering
+\input{generated/tabS_e2e_skab.tex}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Message-size breakdown of a \sys\ message (mean over \XMbN\ messages encoded by the benchmark's edge encoder; 4 gateways $\times$ 6 devices). Bytes are attributed to fields by marginal removal from the canonical JSON; they do not depend on the machine. The CBOR rows are an engineering estimate of the same fields with raw signatures and digests, not an implemented format (both computed by \texttt{tools/\allowbreak{}deploy/\allowbreak{}message\_\allowbreak{}breakdown.py}). The benchmark runs of Table~\ref{tab:S-throughput} averaged \RWirePBTI\ bytes per message (ratio \RWireRatioBTwo) because field values such as sequence numbers grow over their longer runs.\label{tab:S-bytes}}
+\footnotesize\centering
+\input{generated/tab_messagebytes.tex}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Deployment readiness: what was measured, where, and what is missing. ``One host'': a two-vCPU virtual machine (Intel Xeon, 2.1~GHz, 7.8~GB RAM) running every role.\label{tab:S-readiness}}
+\footnotesize
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{3.0cm}>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{4.2cm}}
+\toprule
+\textbf{Property} & \textbf{Status} & \textbf{Evidence in this study} & \textbf{Missing for deployment; prepared protocol}\\
+\midrule
+Admission and containment correctness & measured in simulation & all scenario stages; 24 emulated devices, virtual time & plant data with recorded incidents\\
+Real sensor dynamics & measured, attacks injected & SKAB replay (Table~\ref{tab:S-skab}) & recorded plant attacks\\
+In-process verifier throughput & measured, one host & \RTpPBTI~messages/s, \RTpRatioBTwo$\times$ B2 (Table~\ref{tab:S-throughput}) & more cores, compiled or batch-verifying verifier\\
+Batching and parallel verification & measured, one host & \VBtPBTIbOneTwoEightwFourtp~messages/s at batch 128 with four workers, 3184 at batch 512 with a p99 batch latency of 879~ms (Table~\ref{tab:S-batching}) & more cores\\
+Networked latency (MQTT/TLS) & measured, all roles on one host & p50 \VEePBTIrOneZeroZeroZeropfifty~ms and p99 \VEePBTIrOneZeroZeroZeropninetynine~ms at 1000 messages/s (means of \VEeReps\ repetitions; per-repetition medians 8.8--187.6~ms); the shared host saturates between 1000 and 1250 messages/s (Table~\ref{tab:S-e2e2}) & separate publisher, broker and verifier hosts with measured clock uncertainty (prepared: three-host protocol, \texttt{experiments/\allowbreak{}run\_\allowbreak{}multihost.py})\\
+Message size & measured exactly & \RWirePBTI\ versus \RWireBTwo\ bytes per message in the benchmark runs (\RWireRatioBTwo$\times$; Table~\ref{tab:S-throughput}); \XMbPBTI\ versus \XMbBTwo\ in the field breakdown (Table~\ref{tab:S-bytes}) & binary encoding (estimate only)\\
+Memory growth & measured, in-process & about 2.2~kB of resident memory per message (B2: 0.7~kB); verifier state is never pruned & bounded state (pruning after the epoch drain and horizon)\\
+Storage growth & measured, one host & \XDbPBTI--\XDbPBTIMax\ bytes per message persisted depending on the workload (Tables~\ref{tab:S-throughput}, \ref{tab:S-e2e-skab}), of which evidence about \XEvidenceBytes\ & retention and compaction policy\\
+Device-side signing & measured on a server CPU only & \REdgePBTI~$\mu$s per message & constrained-device benchmark with thermal state and energy (prepared: \texttt{experiments/\allowbreak{}run\_\allowbreak{}device\_\allowbreak{}bench.py})\\
+Hardware-backed keys & not implemented & -- & secure element or TPM support for the signature algorithm, or a COSE algorithm the hardware supports\\
+Clock synchronization & assumed (verifier clock trusted) & -- & measured clock-uncertainty bound across hosts\\
+Crash recovery and restarts & not implemented for the verifier (the store is recreated at start-up, acknowledgements precede the commit, the broker runs without persistence); simulated for gateways only & gateway restart during drain (E11/E12); the simulator acknowledges entries end to end & state reload, acknowledgement after commit, persistent sessions; verifier restart, broker outage and interrupted review on real hosts\\
+Concurrent verifiers & not evaluated & workers only pre-verify signatures & protocol for exchanging conflict evidence between replicas\\
+Witness deployment & deterministic matrix only & Table~\ref{tab:S-a5} & trust and timing model, availability, campaign evaluation\\
+Human review workload & not measured & automated decisions counted & operator study\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Conceptual alignment of \sys\ with standards and reference architectures. This is an architectural mapping, not a claim of compliance or conformance; no certification or conformance testing was performed.\label{tab:S-standards}}
+\footnotesize
+\begin{tabularx}{\linewidth}{lX}
+\toprule
+Reference & Alignment\\
+\midrule
+NIST SP 800-207 & \sys\ applies the decision/enforcement pattern to data objects: the verifier acts as a policy enforcement point and the policy store/PDP as a policy decision point, per data object rather than per session; decisions use identity, dynamic policy and continuously refreshed credential status, and no trust is derived from the network location of the broker.\\
+NIST CSF 2.0 & Protect: integrity of data at rest and in transit (signatures, content addressing); Detect: classification of every receipt, gap and conflict evidence; Respond/Recover: revocation, taint propagation and corrected derived versions; Govern/Identify: versioned policy and asset assignment.\\
+IEC 62443-3-3 / 4-2 & FR1 identification and authentication control (device and workload credentials); FR2 use control (path-bound admission); FR3 system integrity (signed statements, tamper-evident evidence); FR5 restricted data flow (authorized relay paths); FR6 timely response to events (evidence for incident response, taint); FR4 and FR7 are not addressed.\\
+NISTIR 8259A & Device-side prerequisites: device identification (unique keyed identity; the boot epoch is a \sys\ extension, not part of 8259A) and data protection (signing of observations); key storage and update are assumed.\\
+NIST SP 800-82r3 & OT data flows from cells to enterprise systems through managed conduits, with the broker treated as untrusted for data integrity.\\
+IIRA v1.10 / RAMI 4.0 & Placement in the edge-to-enterprise data path between the edge tier and the platform/enterprise tiers; asset identity follows the plant hierarchy.\\
+W3C PROV & Raw observation $\rightarrow$ \texttt{prov:Entity}; device and workload $\rightarrow$ \texttt{prov:Agent} (relay via \texttt{prov:actedOnBehalfOf}); admission and aggregation $\rightarrow$ \texttt{prov:Activity}; derived version \texttt{prov:wasDerivedFrom} inputs. Dispositions, contest/taint status, policy version and credential status have no PROV equivalent.\\
+SPIFFE / X.509-SVID & Workload identity in the relay statement and in short-lived workload certificates; SPIRE attestation is a precondition outside the evaluated mechanism.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\end{document}

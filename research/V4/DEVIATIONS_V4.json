@@ -1,0 +1,37 @@
+[
+ {
+  "id": "DV1",
+  "deviation": "A0_core was interrupted by a host restart after 318 of 1,320 rows and resumed with scripts/run_v4_resume.py, which imports the frozen experiments/run_v4.py (expand, job) unchanged, keeps complete rows and runs only the missing specifications.",
+  "reason": "host restart (uptime reset 2026-11-05 04:34 CST)",
+  "record": "research/V4/DECISION_LOG.md D08; results/v4/raw/A0_core.resume1.manifest.json",
+  "effect_on_results": "none expected: every run is deterministic for its specification and independent of the others; the A0 replication check compares all 1,320 rows with the archive"
+ },
+ {
+  "id": "DV2",
+  "deviation": "Execution order A1_review, A3_factorial (amendment 1), A0_core (resumed), A3_selective, A3_scenarios instead of A0, A1, A3_selective, A3_scenarios followed by A3_factorial, as amendment 1 had stated.",
+  "reason": "robustness against further interruptions after DV1",
+  "record": "research/V4/DECISION_LOG.md D08; logs/v4/chain_progress.txt",
+  "effect_on_results": "none expected: all campaigns used the frozen source and configurations (scripts/verify_prereg_hashes.py: unchanged)"
+ },
+ {
+  "id": "DV3",
+  "deviation": "Descriptive summaries of the A3 joint grid (number of points at which PBTI-SH retained no forgery, ranges of the W and O2 differences, points whose mean reduction exceeded the margin without being classified better) were added to the analysis after the results were known.",
+  "reason": "to explain the gate outcome in the text",
+  "record": "analysis/analyze_v4.py (a3: descriptive summaries); v4_analysis_report.json A3_gates",
+  "effect_on_results": "none: no additional test, no change of classes, families, margins or gates"
+ },
+ {
+  "id": "DV4",
+  "deviation": "The preregistration (Section 1) describes the A1 and A3 pilots on seed 101 as error checks only; the A3 pilot rows were also inspected for retained forgeries, which led to amendment 1.",
+  "reason": "the pilot showed that the joint grid produced retained forgeries at only one point",
+  "record": "research/V4/PREREGISTRATION_V4_AMENDMENT_1.md (Reason: disclosed data dependence); research/V4/DECISION_LOG.md",
+  "effect_on_results": "none on the preregistered campaigns; the amendment's cells were chosen with knowledge of the V3 factorial and of this pilot (seed 101 is disjoint from the confirmatory seeds 21-40)"
+ },
+ {
+  "id": "DV5",
+  "deviation": "The preregistration (Section 8) lists the wall-clock fields excluded from the A0 field-by-field comparison; scripts/compare_a0.py, final before the freeze, also excludes the audit outcome fields (audit_pass, audit_findings), whose results are reported separately (all audited runs passed), and two runner labels whose values differ between the V3 and V4 runners (ablation_name, kind).",
+  "reason": "audits ran on seeds 1-5 only and are reported as pass counts; the runner labels name the runner, not an outcome",
+  "record": "results/v4/summary/A0_comparison.json (skipped_fields, excluded, metadata_values)",
+  "effect_on_results": "none on deterministic outcomes; 1,320 of 1,320 rows identical on all compared fields"
+ }
+]

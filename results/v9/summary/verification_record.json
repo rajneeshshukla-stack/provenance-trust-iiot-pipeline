@@ -1,0 +1,244 @@
+{
+ "started": "2026-11-06T23:33:08Z",
+ "steps": [
+  {
+   "name": "pytest",
+   "command": "/usr/local/bin/python3 -m pytest -q -p no:cacheprovider tests --junitxml=results/v9/summary/pytest_v9.xml",
+   "cwd": "/home/claude/PBTI_v9/release/PBTI_V9_repository",
+   "exit": 0,
+   "seconds": 111.6,
+   "stdout_tail": "........................................................................ [ 36%]\n...............................s........................................ [ 72%]\n........................................................                 [100%]\n199 passed, 1 skipped in 111.29s (0:01:51)\n",
+   "stderr_tail": ""
+  },
+  {
+   "name": "frozen_files",
+   "command": "/usr/local/bin/python3 scripts/verify_prereg_hashes.py",
+   "cwd": "/home/claude/PBTI_v9/release/PBTI_V9_repository",
+   "exit": 0,
+   "seconds": 0.0,
+   "stdout_tail": "{\n \"research/V4/PREREGISTRATION_V4.sha256\": {\n  \"files\": 30,\n  \"changed\": []\n },\n \"research/V4/PREREGISTRATION_V4_AMENDMENT_1.sha256\": {\n  \"files\": 2,\n  \"changed\": []\n }\n}\n",
+   "stderr_tail": ""
+  },
+  {
+   "name": "v9_runs_complete",
+   "ok": true,
+   "detail": {
+    "A1_review_B5c.jsonl": {
+     "rows": 880,
+     "expected": 880,
+     "errors": 0
+    },
+    "v3_scenarios_B5c.jsonl": {
+     "rows": 300,
+     "expected": 300,
+     "errors": 0
+    },
+    "v3_mixed_B5c.jsonl": {
+     "rows": 20,
+     "expected": 20,
+     "errors": 0
+    },
+    "v3_scenarios_B5Sc.jsonl": {
+     "rows": 300,
+     "expected": 300,
+     "errors": 0
+    },
+    "v3_mixed_B5Sc.jsonl": {
+     "rows": 20,
+     "expected": 20,
+     "errors": 0
+    },
+    "A0_core_B5c.jsonl": {
+     "rows": 640,
+     "expected": 640,
+     "errors": 0
+    },
+    "A3_selective_B5c.jsonl": {
+     "rows": 1260,
+     "expected": 1260,
+     "errors": 0
+    },
+    "A3_factorial_B5c.jsonl": {
+     "rows": 480,
+     "expected": 480,
+     "errors": 0
+    },
+    "v3_sweep_B5c.jsonl": {
+     "rows": 940,
+     "expected": 940,
+     "errors": 0
+    },
+    "v3_factorial_B5c.jsonl": {
+     "rows": 320,
+     "expected": 320,
+     "errors": 0
+    },
+    "v3_replay_skab_B5c.jsonl": {
+     "rows": 69,
+     "expected": 69,
+     "errors": 0
+    },
+    "attacker_consistent_impersonator.jsonl": {
+     "rows": 148,
+     "expected": 148,
+     "errors": 0
+    }
+   }
+  },
+  {
+   "name": "v9_single_implementation",
+   "ok": true,
+   "detail": [
+    [
+     "b5_corrected_v9",
+     "53cf2167a1dc2a323799384f61580cf8558d5cc64a633b85f2029669a82c20d1",
+     "714b9b49180be678e030355c4e24361110af0fb83f04be85d66e967c45d2eee4"
+    ],
+    [
+     "corrected",
+     null,
+     null
+    ],
+    [
+     "historical",
+     null,
+     null
+    ]
+   ]
+  },
+  {
+   "name": "corrected_tree_complete_and_invariant",
+   "ok": true,
+   "detail": {
+    "missing_files": []
+   }
+  },
+  {
+   "name": "regenerate_historical",
+   "command": "bash /home/claude/PBTI_v9/release/PBTI_V9_repository/tools/v9/regenerate_analysis.sh /home/claude/PBTI_v9/clean/historical_tree",
+   "cwd": "/home/claude/PBTI_v9/release/PBTI_V9_repository",
+   "exit": 0,
+   "seconds": 15.1,
+   "stdout_tail": "start 2026-11-06T23:35:00Z\nend 2026-11-06T23:35:15Z\n",
+   "stderr_tail": ""
+  },
+  {
+   "name": "regenerated_equals_stored",
+   "ok": true,
+   "detail": {
+    "exit": 0,
+    "differ": {
+     "results/summary": [],
+     "results/v4/summary": []
+    },
+    "rewritten": {
+     "results/summary": 21,
+     "results/v4/summary": 10
+    },
+    "data_s1_sources_not_rewritten": [],
+    "stored_files_not_written_by_the_analysis": {
+     "results/summary": 11,
+     "results/v4/summary": 4
+    }
+   }
+  },
+  {
+   "name": "clean_tests_corrected_b5",
+   "command": "/usr/local/bin/python3 -m pytest -q -p no:cacheprovider tests/test_b5_corrected.py",
+   "cwd": "/home/claude/PBTI_v9/clean/repo",
+   "exit": 0,
+   "seconds": 2.9,
+   "stdout_tail": "............                                                             [100%]\n12 passed in 2.60s\n",
+   "stderr_tail": ""
+  },
+  {
+   "name": "clean_spot_rerun",
+   "command": "/usr/local/bin/python3 experiments/v9/run_v4_b5c.py experiments/v4_configs/A1_review.json --arms B5-d0c1 --out /home/claude/PBTI_v9/clean/spot.jsonl --workers 2",
+   "cwd": "/home/claude/PBTI_v9/clean/repo",
+   "exit": 0,
+   "seconds": 283.6,
+   "stdout_tail": "[A1_review-B5c] 0 rows present, 80 to run\n[A1_review-B5c] 25/80 runs, 0 errors, 93s\n[A1_review-B5c] 50/80 runs, 0 errors, 172s\n[A1_review-B5c] 75/80 runs, 0 errors, 268s\n[A1_review-B5c] 80/80 runs, 0 errors, 283s\nwritten /home/claude/PBTI_v9/clean/spot.jsonl errors 0\n",
+   "stderr_tail": ""
+  },
+  {
+   "name": "clean_spot_rerun_matches_stored",
+   "ok": true,
+   "detail": {
+    "runs": 80,
+    "mismatching_runs": 0
+   }
+  },
+  {
+   "name": "clean_corrected_build",
+   "command": "bash /home/claude/PBTI_v9/clean/repo/tools/v9/build_corrected_results.sh /home/claude/PBTI_v9/clean/manuscript_check /home/claude/PBTI_v9/clean/corrected_tree",
+   "cwd": "/home/claude/PBTI_v9/clean/repo",
+   "exit": 0,
+   "seconds": 23.2,
+   "stdout_tail": "no-fork 9/9\nresults/v4/raw/A0_core.jsonl B5: rows 320 replaced 320 missing 0 outcome-changed 0 no-fork 260/260\nresults/v4/raw/A0_core.jsonl B5S: rows 320 replaced 320 missing 0 outcome-changed 0 no-fork 260/260\nresults/v4/raw/A1_review.jsonl B5: rows 880 replaced 880 missing 0 outcome-changed 203 no-fork 220/220\nresults/v4/raw/A3_selective.jsonl B5: rows 840 replaced 840 missing 0 outcome-changed 197 no-fork 160/160\nresults/v4/raw/A3_selective.jsonl B5S: rows 420 replaced 420 missing 0 outcome-changed 0 no-fork 80/80\nresults/v4/raw/A3_factorial.jsonl B5: rows 320 replaced 320 missing 0 outcome-changed 192 no-fork 0/0\nresults/v4/raw/A3_factorial.jsonl B5S: rows 160 replaced 160 missing 0 outcome-changed 0 no-fork 0/0\nstart 2026-11-06T23:40:03Z\nend 2026-11-06T23:40:19Z\n508 V9 macros; comparisons 1182 (B5: 747), estimates changed 90, class changes 0, gate changes [], prediction changes []; E04 cells 14; W split rows 50\nimported 41 generated files into /home/claude/PBTI_v9/clean/manuscript_check/generated\nadjusted /home/claude/PBTI_v9/clean/manuscript_check/generated/tab_effects.tex 14 rows unchanged\nrelabelled: ['tabS_review_tests.tex', 'tabS_selective_gates.tex', 'tab_effects.tex']\nrelabelled: tabS_lifecycle.tex (superseded-snapshot row)\ngenerated/: 39 used, removed ['tabS_outcomes_full.tex', 'tabS_tests.tex', 'tab_outcomes.tex', 'tab_v4_a1.tex']\ngenerated files and figures written to /home/claude/PBTI_v9/clean/manuscript_check (tree: /home/claude/PBTI_v9/clean/corrected_tree)\n",
+   "stderr_tail": ""
+  },
+  {
+   "name": "clean_build_reproduces_generated_files",
+   "ok": true,
+   "detail": {
+    "generated_compared": 39,
+    "differ": [],
+    "not_written_by_analysis": [
+     "main_xref.tex",
+     "supp_xref.tex"
+    ],
+    "figure_data_differ": []
+   }
+  },
+  {
+   "name": "clean_build_reproduces_v9_summaries",
+   "ok": true,
+   "detail": {
+    "differ": []
+   }
+  },
+  {
+   "name": "claims_check_corrected",
+   "command": "/usr/local/bin/python3 -I /home/claude/PBTI_v9/clean/repo/tools/v9/claims_check.py /home/claude/PBTI_v9/clean/corrected_tree /home/claude/PBTI_v9/clean/claims_corrected.json /home/claude/PBTI_v9/clean/repo/results/v9/summary",
+   "cwd": "/home/claude/PBTI_v9/clean/repo",
+   "exit": 0,
+   "seconds": 0.3,
+   "stdout_tail": "ok   A1_O1_equal_every_seed\nok   A1_matched_event_all_equiv\nok   A1_only_event_all_equiv\nok   A1_worse_cells_slow_schedules\nok   A1_d0c1_mixed_NLX_unresolved\nok   A1_H1d_fast_review_raises_exposure\nok   A1_H1a_pattern\nok   A1_H1b_pattern\nok   A3F_SH_withholds_more_than_Bev\nok   sweep_B5_no_significant_cell\nok   A1_subset_ordering\nok   main_O2_differs_only_E11b\nok   attacker_all_retain\nok   attacker_oneshot_exposes_less\nok   attacker_event_close\nok   B5S_identical_to_historical\nok   all_specifications_rerun\n",
+   "stderr_tail": ""
+  },
+  {
+   "name": "article_statements_hold_on_corrected_data",
+   "ok": true,
+   "detail": {
+    "A1_O1_equal_every_seed": true,
+    "A1_matched_event_all_equiv": true,
+    "A1_only_event_all_equiv": true,
+    "A1_worse_cells_slow_schedules": true,
+    "A1_d0c1_mixed_NLX_unresolved": true,
+    "A1_H1d_fast_review_raises_exposure": true,
+    "A1_H1a_pattern": true,
+    "A1_H1b_pattern": true,
+    "A3F_SH_withholds_more_than_Bev": true,
+    "sweep_B5_no_significant_cell": true,
+    "A1_subset_ordering": true,
+    "main_O2_differs_only_E11b": true,
+    "attacker_all_retain": true,
+    "attacker_oneshot_exposes_less": true,
+    "attacker_event_close": true,
+    "B5S_identical_to_historical": true,
+    "all_specifications_rerun": true
+   }
+  },
+  {
+   "name": "A0_consistency_corrected",
+   "command": "/usr/local/bin/python3 scripts/compare_a0.py results/v4/raw/A0_core.jsonl --out /home/claude/PBTI_v9/clean/A0_corrected_consistency.json",
+   "cwd": "/home/claude/PBTI_v9/clean/corrected_tree",
+   "exit": 0,
+   "seconds": 0.2,
+   "stdout_tail": "{\n \"compared\": 1320,\n \"identical\": 1320,\n \"missing_historical\": [],\n \"errors_new\": 0,\n \"by_arm\": {\n  \"PBTI\": {\n   \"compared\": 320,\n   \"identical\": 320\n  },\n  \"B4\": {\n   \"compared\": 320,\n   \"identical\": 320\n  },\n  \"B5-hist\": {\n   \"compared\": 320,\n   \"identical\": 320\n  },\n  \"B5S\": {\n   \"compared\": 320,\n   \"identical\": 320\n  },\n  \"PBTI-R-hist\": {\n   \"compared\": 40,\n   \"identical\": 40\n  }\n },\n \"metadata_values\": {\n  \"ablation_name='full'->None\": 1240,\n  \"kind='scenario'->'scenario'\": 1220,\n  \"kind='ablation'->'scenario'\": 100,\n  \"ablation_name='baseline'->None\": 80\n },\n \"skipped_fields\": [\n  \"ablation_name\",\n  \"audit_findings\",\n  \"audit_pass\",\n  \"audit_replay_s\",\n  \"audit_static_s\",\n  \"devsign_us_mean\",\n  \"ingest_us_mean\",\n  \"ingest_us_p50\",\n  \"ingest_us_p95\",\n  \"ingest_us_p99\",\n  \"kind\",\n  \"wall_s\",\n  \"wrap_us_mean\"\n ],\n \"excluded\": {\n  \"timing_substrings\": [\n   \"_us\",\n   \"wall\",\n   \"ingest\",\n   \"wrap\",\n   \"devsign\"\n  ],\n  \"suffix\": \"_s\",\n  \"audit_prefix\": \"audit\",\n  \"runner_metadata\": [\n   \"ablation_name\",\n   \"kind\"\n  ]\n },\n \"n_field_comparisons_total\": 63731\n}\ndifferences: 0 []\n",
+   "stderr_tail": ""
+  }
+ ],
+ "ended": "2026-11-06T23:40:25Z",
+ "scope_note": "All checks were run by the automated research process in its own workspace; none is an external, independent reproduction or a human verification."
+}
